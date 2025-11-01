@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "nom": "JJC Cotonou Centre",
+    "ville": "Cotonou",
+    "pays": "Bénin",
+    "adresse": "Avenue Jean-Paul II, Cotonou",
+    "telephone": "+229 XX XX XX XX",
+    "email": "contact@jjc-cotonou.org",
+    "horaires": [
+      {
+        "jour": "Dimanche",
+        "heure": "09:00 - 12:00"
+      },
+      {
+        "jour": "Mercredi",
+        "heure": "18:00 - 20:00"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nom": "JJC Porto-Novo",
+    "ville": "Porto-Novo",
+    "pays": "Bénin",
+    "adresse": "Quartier Gbediga, Porto-Novo",
+    "telephone": "+229 XX XX XX XX",
+    "email": "contact@jjc-portonovo.org",
+    "horaires": [
+      {
+        "jour": "Dimanche",
+        "heure": "09:30 - 12:30"
+      }
+    ]
+  }
+]

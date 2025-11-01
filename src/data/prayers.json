@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "titre": "Prière du matin",
+    "categorie": "Matin",
+    "langue": "fr",
+    "texte": "Seigneur, en ce nouveau jour que tu me donnes, je te rends grâce pour ta bonté et ta fidélité. Guide mes pas aujourd'hui, que mes paroles et mes actions te glorifient. Accorde-moi la sagesse pour faire face aux défis de ce jour. Au nom de Jésus, Amen."
+  },
+  {
+    "id": 2,
+    "titre": "Prière du soir",
+    "categorie": "Soir",
+    "langue": "fr",
+    "texte": "Père céleste, je te remercie pour ce jour que tu m'as accordé. Pardonne-moi mes fautes et mes manquements. Protège ma famille et mes proches durant cette nuit. Que ton repos soit sur nous. Au nom de Jésus, Amen."
+  },
+  {
+    "id": 3,
+    "titre": "Prière d'action de grâces",
+    "categorie": "Action de grâces",
+    "langue": "fr",
+    "texte": "Éternel Dieu, je t'offre mes louanges et mes actions de grâces. Merci pour ta grâce, ton amour et ta protection. Merci pour les bénédictions visibles et invisibles. Tu es digne de toute gloire. Au nom de Jésus, Amen."
+  }
+]
