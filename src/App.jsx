@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BottomNav from './components/layout/BottomNav';
 import ModernHeader from './components/layout/ModernHeader';
@@ -19,6 +19,17 @@ function App() {
   const [selectedCantiqueId, setSelectedCantiqueId] = useState(null);
   const [showSidebar, setShowSidebar] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+
+    // AJOUT : États pour les paramètres
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'blue');
+  const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'medium');
+
+  // AJOUT : Appliquer le thème au chargement
+  useEffect(() => {
+  const savedTheme = localStorage.getItem('theme') || 'blue';
+    setTheme(savedTheme);
+  }, []);
+
 
   const navigateTo = (page) => {
     setCurrentPage(page);

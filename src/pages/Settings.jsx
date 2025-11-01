@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Palette, Volume2, Type, Globe, Moon, Sun } from 'lucide-react';
+import { Palette, Volume2, Type, Globe, Moon, Sun, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Settings = () => {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'blue');
@@ -7,27 +8,77 @@ const Settings = () => {
   const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'medium');
   const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'fr');
   const [audioEnabled, setAudioEnabled] = useState(() => localStorage.getItem('audioEnabled') !== 'false');
+  const [showSaved, setShowSaved] = useState(false);
 
-  // Sauvegarder dans localStorage
-  useEffect(() => {
+// Remplace TOUS les useEffect par ceux-ci :
+
+useEffect(() => {
+  if (localStorage.getItem('theme') !== theme) {
     localStorage.setItem('theme', theme);
-  }, [theme]);
+    document.documentElement.setAttribute('data-theme', theme);
+    showSavedMessage();
+    // Recharger après 1 seconde
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
+  }
+}, [theme]);
 
-  useEffect(() => {
+useEffect(() => {
+  if (localStorage.getItem('darkMode') !== String(darkMode)) {
     localStorage.setItem('darkMode', darkMode);
-  }, [darkMode]);
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    showSavedMessage();
+    // Recharger après 1 seconde
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
+  }
+}, [darkMode]);
 
-  useEffect(() => {
+useEffect(() => {
+  if (localStorage.getItem('fontSize') !== fontSize) {
     localStorage.setItem('fontSize', fontSize);
-  }, [fontSize]);
+    showSavedMessage();
+    // Pas besoin de recharger pour la taille de police
+  }
+}, [fontSize]);
 
-  useEffect(() => {
+useEffect(() => {
+  if (localStorage.getItem('language') !== language) {
     localStorage.setItem('language', language);
-  }, [language]);
+    showSavedMessage();
+  }
+}, [language]);
 
-  useEffect(() => {
+useEffect(() => {
+  if (localStorage.getItem('audioEnabled') !== String(audioEnabled)) {
     localStorage.setItem('audioEnabled', audioEnabled);
-  }, [audioEnabled]);
+    showSavedMessage();
+  }
+}, [audioEnabled]);
+
+  const applyTheme = (themeName) => {
+    const themes = {
+      blue: '#2563eb',
+      green: '#10b981',
+      purple: '#8b5cf6',
+      red: '#ef4444',
+      orange: '#f97316',
+    };
+    
+    const color = themes[themeName] || themes.blue;
+    document.documentElement.style.setProperty('--color-primary', color);
+  };
+
+  const showSavedMessage = () => {
+    setShowSaved(true);
+    setTimeout(() => setShowSaved(false), 1000);
+  };
 
   const themes = [
     { name: 'Bleu', value: 'blue', color: 'bg-blue-600' },
@@ -50,44 +101,73 @@ const Settings = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-
+    <div className="min-h-screen bg-gray-50 pb-24">
+      {/* Message de sauvegarde */}
+      {showSaved && (
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2"
+        >
+          <CheckCircle size={20} />
+          <span className="font-semibold">Rechargement...</span>
+        </motion.div>
+      )}
 
       {/* Contenu */}
-      <div className="p-4 lg:p-6">
+      <div className="p-4">
         <div className="max-w-3xl mx-auto space-y-4">
           
           {/* Thème de couleur */}
-          <div className="bg-white rounded-xl p-6 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-2xl p-6 shadow-md"
+          >
             <div className="flex items-center gap-3 mb-4">
-              <Palette className="text-primary-600" size={24} />
-              <h3 className="text-lg font-bold text-gray-800">Couleur du thème</h3>
+              <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+                <Palette className="text-primary-600" size={20} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-gray-800">Couleur du thème</h3>
+                <p className="text-gray-500 text-xs">Personnalisez l'apparence</p>
+              </div>
             </div>
-            <p className="text-gray-600 text-sm mb-4">Choisissez la couleur principale de l'application</p>
             <div className="grid grid-cols-5 gap-3">
               {themes.map(t => (
-                <button
+                <motion.button
                   key={t.value}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => setTheme(t.value)}
-                  className={`flex flex-col items-center gap-2 p-3 rounded-lg border-2 transition-all ${
-                    theme === t.value ? 'border-primary-600 bg-primary-50' : 'border-gray-200 hover:border-gray-300'
+                  className={`flex flex-col items-center gap-2 p-3 rounded-xl border-2 transition-all ${
+                    theme === t.value ? 'border-primary-600 bg-primary-50 shadow-md' : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  <div className={`w-12 h-12 rounded-full ${t.color}`}></div>
-                  <span className="text-xs text-gray-700">{t.name}</span>
-                </button>
+                  <div className={`w-12 h-12 rounded-full ${t.color} shadow-lg ${theme === t.value ? 'ring-4 ring-primary-200' : ''}`}></div>
+                  <span className={`text-xs font-semibold ${theme === t.value ? 'text-primary-600' : 'text-gray-600'}`}>
+                    {t.name}
+                  </span>
+                </motion.button>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Mode sombre */}
-          <div className="bg-white rounded-xl p-6 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-white rounded-2xl p-6 shadow-md"
+          >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                {darkMode ? <Moon className="text-primary-600" size={24} /> : <Sun className="text-primary-600" size={24} />}
+                <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+                  {darkMode ? <Moon className="text-primary-600" size={20} /> : <Sun className="text-primary-600" size={20} />}
+                </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-800">Mode sombre</h3>
-                  <p className="text-gray-600 text-sm">Activer le thème sombre</p>
+                  <p className="text-gray-500 text-xs">Bientôt disponible</p>
                 </div>
               </div>
               <button
@@ -96,75 +176,102 @@ const Settings = () => {
                   darkMode ? 'bg-primary-600' : 'bg-gray-300'
                 }`}
               >
-                <div
-                  className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform ${
-                    darkMode ? 'translate-x-6' : 'translate-x-0'
-                  }`}
-                ></div>
+                <motion.div
+                  animate={{ x: darkMode ? 24 : 0 }}
+                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                  className="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md"
+                ></motion.div>
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Taille de la police */}
-          <div className="bg-white rounded-xl p-6 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="bg-white rounded-2xl p-6 shadow-md"
+          >
             <div className="flex items-center gap-3 mb-4">
-              <Type className="text-primary-600" size={24} />
-              <h3 className="text-lg font-bold text-gray-800">Taille de la police</h3>
+              <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+                <Type className="text-primary-600" size={20} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-gray-800">Taille de la police</h3>
+                <p className="text-gray-500 text-xs">Pour les cantiques</p>
+              </div>
             </div>
-            <p className="text-gray-600 text-sm mb-4">Ajustez la taille du texte des cantiques</p>
             <div className="grid grid-cols-3 gap-3">
               {fontSizes.map(fs => (
-                <button
+                <motion.button
                   key={fs.value}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => setFontSize(fs.value)}
-                  className={`py-3 px-4 rounded-lg border-2 transition-all ${
+                  className={`py-3 px-4 rounded-xl border-2 transition-all font-semibold ${
                     fontSize === fs.value 
-                      ? 'border-primary-600 bg-primary-50 text-primary-700' 
+                      ? 'border-primary-600 bg-primary-50 text-primary-700 shadow-md' 
                       : 'border-gray-200 text-gray-700 hover:border-gray-300'
                   }`}
                 >
                   {fs.name}
-                </button>
+                </motion.button>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Langue */}
-          <div className="bg-white rounded-xl p-6 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="bg-white rounded-2xl p-6 shadow-md"
+          >
             <div className="flex items-center gap-3 mb-4">
-              <Globe className="text-primary-600" size={24} />
-              <h3 className="text-lg font-bold text-gray-800">Langue</h3>
+              <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+                <Globe className="text-primary-600" size={20} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-gray-800">Langue</h3>
+                <p className="text-gray-500 text-xs">Choisir la langue</p>
+              </div>
             </div>
-            <p className="text-gray-600 text-sm mb-4">Choisissez la langue de l'application</p>
             <div className="space-y-2">
               {languages.map(lang => (
-                <button
+                <motion.button
                   key={lang.value}
+                  whileTap={{ scale: 0.98 }}
                   onClick={() => setLanguage(lang.value)}
-                  className={`w-full flex items-center gap-3 p-4 rounded-lg border-2 transition-all ${
+                  className={`w-full flex items-center gap-3 p-4 rounded-xl border-2 transition-all ${
                     language === lang.value 
-                      ? 'border-primary-600 bg-primary-50' 
+                      ? 'border-primary-600 bg-primary-50 shadow-md' 
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
                   <span className="text-2xl">{lang.flag}</span>
-                  <span className="text-gray-800 font-medium">{lang.name}</span>
+                  <span className="text-gray-800 font-semibold">{lang.name}</span>
                   {language === lang.value && (
-                    <span className="ml-auto text-primary-600">✓</span>
+                    <CheckCircle size={20} className="ml-auto text-primary-600" />
                   )}
-                </button>
+                </motion.button>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Audio */}
-          <div className="bg-white rounded-xl p-6 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="bg-white rounded-2xl p-6 shadow-md"
+          >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Volume2 className="text-primary-600" size={24} />
+                <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+                  <Volume2 className="text-primary-600" size={20} />
+                </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-800">Son de tonalité</h3>
-                  <p className="text-gray-600 text-sm">Activer le son lors de l'ouverture d'un cantique</p>
+                  <p className="text-gray-500 text-xs">Activer/Désactiver le son</p>
                 </div>
               </div>
               <button
@@ -173,21 +280,26 @@ const Settings = () => {
                   audioEnabled ? 'bg-primary-600' : 'bg-gray-300'
                 }`}
               >
-                <div
-                  className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform ${
-                    audioEnabled ? 'translate-x-6' : 'translate-x-0'
-                  }`}
-                ></div>
+                <motion.div
+                  animate={{ x: audioEnabled ? 24 : 0 }}
+                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                  className="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md"
+                ></motion.div>
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Informations */}
-          <div className="bg-primary-50 rounded-xl p-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="bg-gradient-to-br from-primary-50 to-purple-50 rounded-2xl p-6 border border-primary-100"
+          >
             <h3 className="text-lg font-bold text-primary-800 mb-2">Version de l'application</h3>
-            <p className="text-primary-700">Cantique JJC v1.0.0</p>
+            <p className="text-primary-700 font-semibold">Cantique JJC v1.0.0</p>
             <p className="text-primary-600 text-sm mt-2">Dernière mise à jour : Novembre 2025</p>
-          </div>
+          </motion.div>
 
         </div>
       </div>

@@ -10,7 +10,7 @@ const Home = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-purple-50 pb-24 overflow-hidden relative">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pb-24 overflow-hidden relative">
       {/* Cercles décoratifs en arrière-plan */}
       <div className="absolute top-20 right-10 w-40 h-40 bg-primary-200 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute top-60 left-5 w-60 h-60 bg-purple-200 rounded-full blur-3xl opacity-20"></div>
@@ -38,10 +38,10 @@ const Home = ({ onNavigate }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <h1 className="text-2xl font-bold text-gray-800 mb-1">
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">
             Cantiques JJC
           </h1>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500 dark:text-gray-200">
             Louez le Seigneur avec joie
           </p>
         </motion.div>
@@ -76,9 +76,9 @@ const Home = ({ onNavigate }) => {
                 </div>
                 
                 {/* Label */}
-                <span className="text-xs font-semibold text-gray-700">
-                  {action.label}
-                </span>
+              <span className="text-xs font-semibold text-gray-700 dark:text-white drop-shadow-lg">
+                {action.label}
+              </span>
               </motion.div>
             );
           })}

@@ -1,214 +1,228 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, Heart, Share2, Download, Play, Pause, Volume2 } from 'lucide-react';
-import { playTonality } from '../utils/audioUtils';
-import { exportCantiqueToPDF } from '../utils/pdfExport';
+import { ArrowLeft, Heart, Music, Volume2, Play, Pause, Share2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import cantiquesData from '../data/cantiques.json';
 
 const CantiqueDetail = ({ cantiqueId, onBack }) => {
-  const [cantique, setCantique] = useState(null);
   const [isFavorite, setIsFavorite] = useState(false);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [scrollSpeed, setScrollSpeed] = useState(50);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const contentRef = useRef(null);
+  const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'medium');
+  const [isAutoScrolling, setIsAutoScrolling] = useState(false);
   const scrollIntervalRef = useRef(null);
+  const audioRef = useRef(null);
 
-  // Charger le cantique
-  useEffect(() => {
-    import('../data/cantiques.json').then(data => {
-      const found = data.default.find(c => c.id === cantiqueId);
-      setCantique(found);
-    });
+  const cantique = cantiquesData.find(c => c.id === cantiqueId);
 
-    // Vérifier si c'est un favori
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-    setIsFavorite(favorites.includes(cantiqueId));
-  }, [cantiqueId]);
+useEffect(() => {
+  const savedFontSize = localStorage.getItem('fontSize') || 'medium';
+  setFontSize(savedFontSize);
+  
+  const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+  setIsFavorite(favorites.includes(cantiqueId));
 
-  // Fonction de défilement automatique
-  const startAutoScroll = () => {
-    if (isScrolling) {
-      clearInterval(scrollIntervalRef.current);
-      setIsScrolling(false);
-    } else {
-      setIsScrolling(true);
-      scrollIntervalRef.current = setInterval(() => {
-        if (contentRef.current) {
-          contentRef.current.scrollTop += 1;
-          
-          // Arrêter si on arrive en bas
-          if (contentRef.current.scrollTop >= contentRef.current.scrollHeight - contentRef.current.clientHeight) {
-            clearInterval(scrollIntervalRef.current);
-            setIsScrolling(false);
-          }
-        }
-      }, scrollSpeed);
-    }
+  // NE PLUS jouer automatiquement la tonalité
+
+  return () => {
+    stopAutoScroll();
   };
+}, [cantiqueId]);
 
-  // Nettoyer l'interval
-  useEffect(() => {
-    return () => {
-      if (scrollIntervalRef.current) {
-        clearInterval(scrollIntervalRef.current);
-      }
-    };
-  }, []);
-
-// Jouer la tonalité
-const playTonalitySound = () => {
-  if (cantique && cantique.tonalite) {
-    setIsPlaying(true);
-    playTonality(cantique.tonalite.note);
-    setTimeout(() => setIsPlaying(false), 1500);
-  }
-};
-  // Toggle favori
   const toggleFavorite = () => {
     const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    let newFavorites;
+    
     if (isFavorite) {
-      const newFavorites = favorites.filter(id => id !== cantiqueId);
-      localStorage.setItem('favorites', JSON.stringify(newFavorites));
+      newFavorites = favorites.filter(id => id !== cantiqueId);
     } else {
-      favorites.push(cantiqueId);
-      localStorage.setItem('favorites', JSON.stringify(favorites));
+      newFavorites = [...favorites, cantiqueId];
     }
+    
+    localStorage.setItem('favorites', JSON.stringify(newFavorites));
     setIsFavorite(!isFavorite);
   };
 
-  // Partager
-  const handleShare = async () => {
-    if (navigator.share && cantique) {
-      try {
-        await navigator.share({
-          title: `Cantique ${cantique.numero} - ${cantique.titre}`,
-          text: `Découvrez le cantique "${cantique.titre}" de l'église JJC`,
-          url: window.location.href,
-        });
-      } catch (error) {
-        console.log('Partage annulé');
-      }
+const playTonality = () => {
+  // Jouer juste le son, sans afficher le popup
+  const audioEnabled = localStorage.getItem('audioEnabled') !== 'false';
+  
+  if (audioEnabled && audioRef.current) {
+    audioRef.current.play().catch(err => console.log('Audio play error:', err));
+  }
+};
+
+  const toggleAutoScroll = () => {
+    if (isAutoScrolling) {
+      stopAutoScroll();
     } else {
-      alert('Partage bientôt disponible !');
+      startAutoScroll();
     }
   };
 
+  const startAutoScroll = () => {
+    setIsAutoScrolling(true);
+    scrollIntervalRef.current = setInterval(() => {
+      window.scrollBy({
+        top: 1,
+        behavior: 'smooth'
+      });
+    }, 50); // Ajuste la vitesse ici (plus petit = plus rapide)
+  };
+
+  const stopAutoScroll = () => {
+    setIsAutoScrolling(false);
+    if (scrollIntervalRef.current) {
+      clearInterval(scrollIntervalRef.current);
+      scrollIntervalRef.current = null;
+    }
+  };
+
+const handleShare = () => {
+  // On gérera le partage plus tard
+  if (navigator.share) {
+    navigator.share({
+      title: `${cantique.titre} - Cantique JJC`,
+      text: `Découvrez le cantique n°${cantique.numero} : ${cantique.titre}`,
+      url: window.location.href,
+    }).catch(err => console.log('Erreur de partage:', err));
+  } else {
+    // Fallback : copier dans le presse-papier
+    navigator.clipboard.writeText(window.location.href);
+    alert('Lien copié dans le presse-papier !');
+  }
+};
   if (!cantique) {
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Chargement...</p>
+          <p className="text-gray-500 text-lg mb-4">Cantique introuvable</p>
+          <button onClick={onBack} className="text-primary-600 font-semibold">
+            Retour
+          </button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-24">
+      {/* Audio caché pour la tonalité */}
+      <audio ref={audioRef} src={cantique.tonalite.audioFile} />
+
       {/* Header */}
-      <div className="bg-white shadow-sm sticky top-0 z-30">
-        <div className="px-4 py-4 flex items-center gap-4">
-          <button
-            onClick={onBack}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-          >
-            <ArrowLeft size={24} />
-          </button>
-          <div className="flex-1">
-            <h2 className="text-lg font-bold text-gray-800">
-              Cantique {cantique.numero}
-            </h2>
-            <p className="text-sm text-gray-600">{cantique.titre}</p>
+      <div className="bg-gradient-to-br from-primary-600 to-primary-800 text-white px-4 py-4 sticky top-0 z-40 shadow-lg">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3 flex-1">
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={onBack}
+              className="p-2 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm"
+            >
+              <ArrowLeft size={20} />
+            </motion.button>
+            <div className="flex-1 min-w-0">
+              <h2 className="text-lg font-bold truncate">{cantique.titre}</h2>
+              <p className="text-sm text-primary-100">N° {cantique.numero}</p>
+            </div>
           </div>
-          <button
-            onClick={toggleFavorite}
-            className={`p-2 rounded-lg transition-colors ${
-              isFavorite ? 'text-red-500' : 'text-gray-400 hover:text-red-500'
-            }`}
-          >
-            <Heart size={24} fill={isFavorite ? 'currentColor' : 'none'} />
-          </button>
-        </div>
-
-        {/* Contrôles */}
-        <div className="px-4 pb-4 flex gap-2 overflow-x-auto">
-          <button
-            onClick={playTonalitySound}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors whitespace-nowrap ${
-              isPlaying
-                ? 'bg-primary-600 text-white'
-                : 'bg-primary-100 text-primary-700 hover:bg-primary-200'
-            }`}
-          >
-            <Volume2 size={18} />
-            <span>Tonalité: {cantique.tonalite.note}</span>
-          </button>
-
-          <button
-            onClick={startAutoScroll}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors whitespace-nowrap ${
-              isScrolling
-                ? 'bg-green-600 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
-          >
-            {isScrolling ? <Pause size={18} /> : <Play size={18} />}
-            <span>{isScrolling ? 'Pause' : 'Défilement auto'}</span>
-          </button>
-
-          <button
-            onClick={handleShare}
-            className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-lg transition-colors whitespace-nowrap"
-          >
-            <Share2 size={18} />
-            <span>Partager</span>
-          </button>
-
-          <button
-            onClick={() => exportCantiqueToPDF(cantique)}
-            className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-lg transition-colors whitespace-nowrap"
-          >
-            <Download size={18} />
-            <span>PDF</span>
-          </button>
+          <div className="flex items-center gap-2">
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={toggleFavorite}
+              className="p-2 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm"
+            >
+              <Heart size={20} fill={isFavorite ? 'currentColor' : 'none'} />
+            </motion.button>
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={playTonality}
+              className="p-2 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm"
+            >
+              <Volume2 size={20} />
+            </motion.button>
+          </div>
         </div>
       </div>
 
-      {/* Contenu - Paroles */}
-      <div
-        ref={contentRef}
-        className="flex-1 overflow-y-auto px-4 py-6 lg:px-8"
-      >
-        <div className="max-w-2xl mx-auto">
-          {/* Logo JJC */}
-          <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-white font-bold text-2xl">JJC</span>
-            </div>
-            <div className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">
-              {cantique.theme}
-            </div>
-          </div>
 
-          {/* Titre */}
-          <h1 className="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-8">
-            {cantique.titre}
-          </h1>
+      {/* Boutons d'action flottants */}
+      <div className="fixed right-4 bottom-28 z-40 space-y-3">
+        {/* Défilement Auto */}
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          onClick={toggleAutoScroll}
+          className={`p-4 rounded-full shadow-2xl transition-all ${
+            isAutoScrolling 
+              ? 'bg-red-500 hover:bg-red-600' 
+              : 'bg-primary-600 hover:bg-primary-700'
+          } text-white`}
+          title={isAutoScrolling ? 'Arrêter le défilement' : 'Démarrer le défilement'}
+        >
+          {isAutoScrolling ? <Pause size={24} /> : <Play size={24} />}
+        </motion.button>
+
+        {/* Partage */}
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          onClick={handleShare}
+          className="p-4 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl transition-all"
+          title="Partager"
+        >
+          <Share2 size={24} />
+        </motion.button>
+      </div>
+
+      {/* Contenu */}
+      <div className="p-4">
+        <div className="max-w-3xl mx-auto">
+          {/* Info Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-md mb-6"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-lg">
+                  <span className="text-white font-bold text-xl">{cantique.numero}</span>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-gray-800 dark:text-white">{cantique.titre}</h1>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{cantique.theme}</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center gap-2">
+                <Music size={16} className="text-primary-600" />
+                <span className="font-medium">Tonalité: {cantique.tonalite.note}</span>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Paroles */}
-          <div className="bg-white rounded-2xl shadow-sm p-6 lg:p-8">
-            {cantique.paroles.map((ligne, index) => (
-              <p
-                key={index}
-                className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 text-center"
-              >
-                {ligne}
-              </p>
-            ))}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md">
+            <div className="space-y-6">
+              {cantique.paroles && cantique.paroles.length > 0 ? (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <div className={`text-gray-800 dark:text-gray-200 leading-relaxed space-y-3 ${
+                    fontSize === 'small' ? 'text-base' : fontSize === 'large' ? 'text-2xl' : 'text-lg'
+                  }`}>
+                    {cantique.paroles.map((ligne, index) => (
+                      <p key={index}>{ligne}</p>
+                    ))}
+                  </div>
+                </motion.div>
+              ) : (
+                <div className="text-center py-8">
+                  <Music size={48} className="mx-auto text-gray-300 mb-4" />
+                  <p className="text-gray-500">Paroles non disponibles</p>
+                </div>
+              )}
+            </div>
           </div>
-
-          {/* Espace en bas pour le scroll */}
-          <div className="h-32"></div>
         </div>
       </div>
     </div>

@@ -1,3 +1,155 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Thèmes dynamiques */
+:root[data-theme="blue"] {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+}
+
+:root[data-theme="green"] {
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+}
+
+:root[data-theme="purple"] {
+  --color-primary-50: #faf5ff;
+  --color-primary-100: #f3e8ff;
+  --color-primary-200: #e9d5ff;
+  --color-primary-500: #a855f7;
+  --color-primary-600: #9333ea;
+  --color-primary-700: #7e22ce;
+  --color-primary-800: #6b21a8;
+}
+
+:root[data-theme="red"] {
+  --color-primary-50: #fef2f2;
+  --color-primary-100: #fee2e2;
+  --color-primary-200: #fecaca;
+  --color-primary-500: #f87171;
+  --color-primary-600: #ef4444;
+  --color-primary-700: #dc2626;
+  --color-primary-800: #b91c1c;
+}
+
+:root[data-theme="orange"] {
+  --color-primary-50: #fff7ed;
+  --color-primary-100: #ffedd5;
+  --color-primary-200: #fed7aa;
+  --color-primary-500: #fb923c;
+  --color-primary-600: #f97316;
+  --color-primary-700: #ea580c;
+  --color-primary-800: #c2410c;
+}
+
+/* Mode Sombre */
+.dark {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+.dark body {
+  background-color: #1a1a1a !important;
+}
+
+.dark .bg-white {
+  background-color: #2d2d2d !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #1a1a1a !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #2d2d2d !important;
+}
+
+.dark .text-gray-800 {
+  color: #f5f5f5 !important;
+}
+
+.dark .text-gray-700 {
+  color: #e5e5e5 !important;
+}
+
+.dark .text-gray-600 {
+  color: #d4d4d4 !important;
+}
+
+.dark .text-gray-500 {
+  color: #a3a3a3 !important;
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.dark .text-gray-200 {
+  color: #e5e7eb !important;
+}
+
+.dark .border-gray-100 {
+  border-color: #404040 !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #525252 !important;
+}
+
+/* Dégradés en mode sombre */
+.dark .from-primary-50 {
+  --tw-gradient-from: #1a1a1a !important;
+}
+
+.dark .via-white {
+  --tw-gradient-via: #2d2d2d !important;
+}
+
+.dark .to-purple-50 {
+  --tw-gradient-to: #1a1a1a !important;
+}
+
+/* Utilisation des variables CSS */
+.bg-primary-50 { background-color: var(--color-primary-50) !important; }
+.bg-primary-100 { background-color: var(--color-primary-100) !important; }
+.bg-primary-200 { background-color: var(--color-primary-200) !important; }
+.bg-primary-500 { background-color: var(--color-primary-500) !important; }
+.bg-primary-600 { background-color: var(--color-primary-600) !important; }
+.bg-primary-700 { background-color: var(--color-primary-700) !important; }
+.bg-primary-800 { background-color: var(--color-primary-800) !important; }
+
+.text-primary-50 { color: var(--color-primary-50) !important; }
+.text-primary-100 { color: var(--color-primary-100) !important; }
+.text-primary-200 { color: var(--color-primary-200) !important; }
+.text-primary-500 { color: var(--color-primary-500) !important; }
+.text-primary-600 { color: var(--color-primary-600) !important; }
+.text-primary-700 { color: var(--color-primary-700) !important; }
+.text-primary-800 { color: var(--color-primary-800) !important; }
+
+.border-primary-100 { border-color: var(--color-primary-100) !important; }
+.border-primary-200 { border-color: var(--color-primary-200) !important; }
+.border-primary-600 { border-color: var(--color-primary-600) !important; }
+
+.from-primary-500 { --tw-gradient-from: var(--color-primary-500) !important; }
+.from-primary-600 { --tw-gradient-from: var(--color-primary-600) !important; }
+.from-primary-700 { --tw-gradient-from: var(--color-primary-700) !important; }
+
+.to-primary-600 { --tw-gradient-to: var(--color-primary-600) !important; }
+.to-primary-700 { --tw-gradient-to: var(--color-primary-700) !important; }
+.to-primary-800 { --tw-gradient-to: var(--color-primary-800) !important; }
+.to-primary-900 { --tw-gradient-to: var(--color-primary-900) !important; }
+
+.via-primary-700 { --tw-gradient-via: var(--color-primary-700) !important; }
+
+.ring-primary-200 { --tw-ring-color: var(--color-primary-200) !important; }
