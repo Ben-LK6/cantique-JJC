@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, Heart, Music, Volume2, Play, Pause, Share2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import cantiquesData from '../data/cantiques.json';
+import { cantiques } from '../data/cantiques';
 
 const CantiqueDetail = ({ cantiqueId, onBack }) => {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -10,7 +10,7 @@ const CantiqueDetail = ({ cantiqueId, onBack }) => {
   const scrollIntervalRef = useRef(null);
   const audioRef = useRef(null);
 
-  const cantique = cantiquesData.find(c => c.id === cantiqueId);
+  const cantique = cantiques.find(c => c.id === cantiqueId);
 
 useEffect(() => {
   const savedFontSize = localStorage.getItem('fontSize') || 'medium';
@@ -18,8 +18,6 @@ useEffect(() => {
   
   const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
   setIsFavorite(favorites.includes(cantiqueId));
-
-  // NE PLUS jouer automatiquement la tonalité
 
   return () => {
     stopAutoScroll();
@@ -41,15 +39,40 @@ useEffect(() => {
   };
 
 const playTonality = () => {
-  // Jouer juste le son, sans afficher le popup
-  const audioEnabled = localStorage.getItem('audioEnabled') !== 'false';
-  
-  if (audioEnabled && audioRef.current) {
-    audioRef.current.play().catch(err => console.log('Audio play error:', err));
+  // Créer un contexte audio et jouer la tonalité
+  try {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    // Fréquences des notes
+    const frequencies = {
+      'C': 261.63, 'D': 293.66, 'E': 329.63, 'F': 349.23,
+      'G': 392.00, 'A': 440.00, 'B': 493.88
+    };
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    oscillator.frequency.setValueAtTime(frequencies[cantique.tonalite.note] || 440, audioContext.currentTime);
+    oscillator.type = 'sine';
+    
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1.5);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 1.5);
+  } catch (error) {
+    console.log('Erreur audio:', error);
+    // Fallback: vibration si disponible
+    if (navigator.vibrate) {
+      navigator.vibrate(200);
+    }
   }
 };
 
   const toggleAutoScroll = () => {
+    console.log('Toggle clicked, current state:', isAutoScrolling);
     if (isAutoScrolling) {
       stopAutoScroll();
     } else {
@@ -58,16 +81,24 @@ const playTonality = () => {
   };
 
   const startAutoScroll = () => {
+    console.log('Starting auto scroll');
     setIsAutoScrolling(true);
+    
+    // Défilement simple et continu
     scrollIntervalRef.current = setInterval(() => {
-      window.scrollBy({
-        top: 1,
-        behavior: 'smooth'
-      });
-    }, 50); // Ajuste la vitesse ici (plus petit = plus rapide)
+      window.scrollBy(0, 2); // 2px à chaque fois
+    }, 80); // Toutes les 80ms
+    
+    // Arrêter automatiquement après 60 secondes
+    setTimeout(() => {
+      if (isAutoScrolling) {
+        stopAutoScroll();
+      }
+    }, 60000);
   };
 
   const stopAutoScroll = () => {
+    console.log('Stopping auto scroll');
     setIsAutoScrolling(false);
     if (scrollIntervalRef.current) {
       clearInterval(scrollIntervalRef.current);
@@ -103,7 +134,7 @@ const handleShare = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-24">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Audio caché pour la tonalité */}
       <audio ref={audioRef} src={cantique.tonalite.audioFile} />
 
@@ -144,10 +175,9 @@ const handleShare = () => {
 
 
       {/* Boutons d'action flottants */}
-      <div className="fixed right-4 bottom-28 z-40 space-y-3">
+      <div className="fixed right-4 bottom-20 lg:bottom-8 z-40 space-y-3">
         {/* Défilement Auto */}
-        <motion.button
-          whileTap={{ scale: 0.9 }}
+        <button
           onClick={toggleAutoScroll}
           className={`p-4 rounded-full shadow-2xl transition-all ${
             isAutoScrolling 
@@ -157,7 +187,7 @@ const handleShare = () => {
           title={isAutoScrolling ? 'Arrêter le défilement' : 'Démarrer le défilement'}
         >
           {isAutoScrolling ? <Pause size={24} /> : <Play size={24} />}
-        </motion.button>
+        </button>
 
         {/* Partage */}
         <motion.button
@@ -171,7 +201,7 @@ const handleShare = () => {
       </div>
 
       {/* Contenu */}
-      <div className="p-4">
+      <div className="p-4 pb-20 lg:pb-8">
         <div className="max-w-3xl mx-auto">
           {/* Info Card */}
           <motion.div
@@ -207,7 +237,7 @@ const handleShare = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <div className={`text-gray-800 dark:text-gray-200 leading-relaxed space-y-3 ${
+                  <div className={`cantique-text text-gray-800 dark:text-gray-200 leading-relaxed space-y-3 ${
                     fontSize === 'small' ? 'text-base' : fontSize === 'large' ? 'text-2xl' : 'text-lg'
                   }`}>
                     {cantique.paroles.map((ligne, index) => (
@@ -223,6 +253,9 @@ const handleShare = () => {
               )}
             </div>
           </div>
+          
+          {/* Espace pour le défilement */}
+          <div className="h-screen"></div>
         </div>
       </div>
     </div>

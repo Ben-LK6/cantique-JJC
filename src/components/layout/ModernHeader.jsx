@@ -1,5 +1,6 @@
 import { ArrowLeft, Search, Menu } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const ModernHeader = ({ 
   title, 
@@ -11,6 +12,7 @@ const ModernHeader = ({
   onMenuClick,
   rightButtons
 }) => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
     <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 sticky top-0 z-40 shadow-lg">
       <div className="px-4 py-4">
@@ -50,6 +52,7 @@ const ModernHeader = ({
           {showSearch && (
             <motion.button
               whileTap={{ scale: 0.9 }}
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="p-2.5 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm"
             >
               <Search size={20} className="text-white" strokeWidth={2.5} />
@@ -61,11 +64,12 @@ const ModernHeader = ({
           </div>
         </div>
 
-        {/* Search Bar - Disparaît, on garde juste l'icône */}
-        {showSearch && (
+        {/* Search Bar - Apparaît seulement quand l'icône est cliquée */}
+        {showSearch && isSearchOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden"
           >
             <div className="relative">
@@ -75,6 +79,7 @@ const ModernHeader = ({
                 placeholder="Rechercher..."
                 className="w-full pl-11 pr-4 py-3 bg-white/10 backdrop-blur-md text-white placeholder-primary-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/20 transition-all border border-white/20"
                 onChange={(e) => onSearch && onSearch(e.target.value)}
+                autoFocus
               />
             </div>
           </motion.div>

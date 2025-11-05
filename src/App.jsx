@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import BottomNav from './components/layout/BottomNav';
 import ModernHeader from './components/layout/ModernHeader';
 import Sidebar from './components/layout/Sidebar';
@@ -19,6 +18,7 @@ function App() {
   const [selectedCantiqueId, setSelectedCantiqueId] = useState(null);
   const [showSidebar, setShowSidebar] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedTheme, setSelectedTheme] = useState('');
 
     // AJOUT : États pour les paramètres
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'blue');
@@ -31,11 +31,12 @@ function App() {
   }, []);
 
 
-  const navigateTo = (page) => {
+  const navigateTo = (page, themeFilter = '') => {
     setCurrentPage(page);
     setSelectedCantiqueId(null);
     setShowSidebar(false);
     setSearchTerm('');
+    setSelectedTheme(themeFilter);
   };
 
   const openCantique = (id) => {
@@ -92,7 +93,7 @@ function App() {
         return <Home onNavigate={navigateTo} />;
       
       case 'cantiques':
-        return <Cantiques onSelectCantique={openCantique} searchTerm={searchTerm} />;
+        return <Cantiques onSelectCantique={openCantique} searchTerm={searchTerm} selectedTheme={selectedTheme} />;
       
       case 'cantique-detail':
         return <CantiqueDetail cantiqueId={selectedCantiqueId} onBack={backToCantiques} />;
@@ -132,10 +133,16 @@ function App() {
         <Sidebar onNavigate={navigateTo} currentPage={currentPage} />
       </div>
 
-      {/* Sidebar Mobile */}
+      {/* Sidebar Mobile Overlay */}
       {showSidebar && (
         <div className="lg:hidden">
-          <Sidebar onNavigate={navigateTo} currentPage={currentPage} />
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={() => setShowSidebar(false)}
+          />
+          <div className="fixed top-0 left-0 h-full z-50">
+            <Sidebar onNavigate={navigateTo} currentPage={currentPage} />
+          </div>
         </div>
       )}
 
@@ -151,19 +158,11 @@ function App() {
 
         {/* Page Content */}
         <main className="flex-1 overflow-y-auto">
-          <motion.div
-            key={currentPage}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.2 }}
-          >
-            {renderPage()}
-          </motion.div>
+          {renderPage()}
         </main>
 
         {/* Bottom Navigation - Mobile Only */}
-        <div className="lg:hidden">
+        <div className="lg:hidden bottom-nav-container">
           <BottomNav currentPage={currentPage} onNavigate={navigateTo} />
         </div>
       </div>

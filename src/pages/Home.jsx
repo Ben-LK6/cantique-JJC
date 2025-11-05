@@ -1,147 +1,148 @@
-import { motion } from 'framer-motion';
-import { Book, HandHeart, Heart, MapPin, Sparkles, Music, Search } from 'lucide-react';
+import { Book, Heart, Sparkles, Music, HandHeart, ChevronUp, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
+import { cantiques } from '../data/cantiques';
 
 const Home = ({ onNavigate }) => {
+  const [showThemes, setShowThemes] = useState(false);
+  
+  // Récupérer les thèmes uniques avec compteurs
+  const themes = cantiques.reduce((acc, cantique) => {
+    const theme = cantique.theme;
+    if (!acc[theme]) {
+      acc[theme] = { name: theme, count: 0, emoji: getThemeEmoji(theme) };
+    }
+    acc[theme].count++;
+    return acc;
+  }, {});
+  
+  const themeList = Object.values(themes);
+  
+  function getThemeEmoji(theme) {
+    const emojiMap = {
+      'Louange': '🎵',
+      'Adoration': '🙏',
+      'Action de grâces': '🙌',
+      'Prière': '💫',
+      'Confiance': '💪'
+    };
+    return emojiMap[theme] || '🎶';
+  }
+  
+  const handleThemeSelect = (theme) => {
+    setShowThemes(false);
+    onNavigate('cantiques', theme);
+  };
   const quickActions = [
     { icon: Book, label: 'Cantiques', path: 'cantiques', color: 'from-blue-500 to-blue-600', emoji: '📖' },
-    { icon: HandHeart, label: 'Prières', path: 'prayers', color: 'from-purple-500 to-purple-600', emoji: '🙏' },
     { icon: Heart, label: 'Favoris', path: 'favoris', color: 'from-red-500 to-red-600', emoji: '❤️' },
-    { icon: MapPin, label: 'Églises', path: 'churches', color: 'from-green-500 to-green-600', emoji: '⛪' },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pb-24 overflow-hidden relative">
-      {/* Cercles décoratifs en arrière-plan */}
-      <div className="absolute top-20 right-10 w-40 h-40 bg-primary-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute top-60 left-5 w-60 h-60 bg-purple-200 rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-40 right-5 w-48 h-48 bg-blue-200 rounded-full blur-3xl opacity-25"></div>
-
-      {/* Hero Section Simple */}
-      <div className="relative z-10 pt-8 pb-6 px-6 text-center">
-        <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-          className="mb-4"
-        >
-          {/* Logo Église - Grande ronde */}
-          <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center shadow-2xl border-4 border-white relative">
-            <div className="absolute inset-0 bg-white/20 rounded-full animate-ping"></div>
-            <div className="relative text-center">
-              <span className="text-white font-bold text-4xl">JJC</span>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800 pb-24">
+      {/* Hero Section */}
+      <div className="pt-12 pb-8 px-6 text-center">
+        {/* Logo */}
+        <div className="mb-6">
+          <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg">
+            <img src="/images/logo.jpeg" alt="JJC Logo" className="w-full h-full object-cover" />
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-        >
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
             Cantiques JJC
           </h1>
-          <p className="text-sm text-gray-500 dark:text-gray-200">
+          <p className="text-gray-600 dark:text-gray-300">
             Louez le Seigneur avec joie
           </p>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Actions Rapides en Cercles */}
-      <div className="px-6 mb-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="flex flex-wrap justify-center gap-6"
-        >
+      {/* Actions Principales */}
+      <div className="px-6 mb-8">
+        <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
           {quickActions.map((action, index) => {
             const Icon = action.icon;
             
             return (
-              <motion.div
+              <div
                 key={action.path + index}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.7 + index * 0.1, type: "spring" }}
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                whileTap={{ scale: 0.95 }}
                 onClick={() => onNavigate(action.path)}
-                className="flex flex-col items-center cursor-pointer"
+                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-gray-100 dark:border-gray-700"
               >
-                {/* Cercle avec icône */}
-                <div className={`w-20 h-20 bg-gradient-to-br ${action.color} rounded-full flex items-center justify-center shadow-xl mb-2 relative`}>
-                  <div className="absolute inset-0 bg-white/20 rounded-full animate-pulse"></div>
-                  <span className="text-3xl relative z-10">{action.emoji}</span>
+                <div className={`w-16 h-16 bg-gradient-to-br ${action.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
+                  <span className="text-2xl">{action.emoji}</span>
                 </div>
-                
-                {/* Label */}
-              <span className="text-xs font-semibold text-gray-700 dark:text-white drop-shadow-lg">
-                {action.label}
-              </span>
-              </motion.div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white text-center">
+                  {action.label}
+                </h3>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
 
-      {/* Verset du jour - Card élégante */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2 }}
-        className="mx-6 mb-6"
-      >
-        <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 relative overflow-hidden">
-          {/* Décoration */}
-          <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary-100 to-purple-100 rounded-full -mr-12 -mt-12 opacity-50"></div>
-          
-          <div className="relative z-10">
-            <div className="flex items-center gap-2 mb-3">
-              <Sparkles className="text-primary-600" size={20} />
-              <h3 className="text-sm font-bold text-primary-600 uppercase tracking-wide">
-                Verset du jour
-              </h3>
-            </div>
-            <p className="text-gray-800 text-base leading-relaxed mb-3 italic">
-              "Louez l'Eternel ! Chantez à l'Eternel un cantique nouveau ! Chantez ses louanges dans l'assemblée des fidèles !"
-            </p>
-            <p className="text-gray-500 text-sm font-semibold">
-              — Psaumes 149:1
-            </p>
+      {/* Verset du jour */}
+      <div className="mx-6 mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700">
+          <div className="flex items-center gap-2 mb-4">
+            <Sparkles className="text-blue-600 dark:text-blue-400" size={20} />
+            <h3 className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wide">
+              Verset du jour
+            </h3>
           </div>
+          <p className="text-gray-800 dark:text-gray-200 text-base leading-relaxed mb-3 italic">
+            "Louez l'Eternel ! Chantez à l'Eternel un cantique nouveau ! Chantez ses louanges dans l'assemblée des fidèles !"
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">
+            — Psaumes 149:1
+          </p>
         </div>
-      </motion.div>
+      </div>
 
-      {/* Stats Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.4 }}
-        className="mx-6"
-      >
-        <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-6 shadow-xl text-white">
-          <div className="flex items-center justify-around">
-            <div className="text-center">
-              <Music size={24} className="mx-auto mb-2 opacity-80" />
-              <div className="text-3xl font-bold mb-1">10</div>
-              <div className="text-xs text-primary-100">Cantiques</div>
-            </div>
-            <div className="w-px h-16 bg-white/30"></div>
-            <div className="text-center">
-              <HandHeart size={24} className="mx-auto mb-2 opacity-80" />
-              <div className="text-3xl font-bold mb-1">3</div>
-              <div className="text-xs text-primary-100">Prières</div>
-            </div>
-            <div className="w-px h-16 bg-white/30"></div>
-            <div className="text-center">
-              <Heart size={24} className="mx-auto mb-2 opacity-80" fill="currentColor" />
-              <div className="text-3xl font-bold mb-1">•</div>
-              <div className="text-xs text-primary-100">Favoris</div>
-            </div>
+      {/* Overlay pour fermer le dropdown */}
+      {showThemes && (
+        <div 
+          className="fixed inset-0 z-40" 
+          onClick={() => setShowThemes(false)}
+        />
+      )}
+      
+      {/* Sélecteur de Thème */}
+      <div className="mx-6 relative z-50">
+        {/* Dropdown des thèmes - apparaît au-dessus */}
+        {showThemes && (
+          <div className="absolute bottom-full left-0 right-0 mb-2 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {themeList.map((theme, index) => (
+              <button
+                key={index}
+                onClick={() => handleThemeSelect(theme.name)}
+                className="w-full px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors text-left border-b border-gray-100 dark:border-gray-700 last:border-b-0"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-lg">{theme.emoji}</span>
+                  <div>
+                    <h3 className="font-medium text-gray-900 dark:text-white text-sm">{theme.name}</h3>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">{theme.count} cantique{theme.count > 1 ? 's' : ''}</p>
+                  </div>
+                </div>
+              </button>
+            ))}
           </div>
-        </div>
-      </motion.div>
+        )}
+        
+        {/* Bouton flèche */}
+        <button
+          onClick={() => setShowThemes(!showThemes)}
+          className="w-full bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2"
+        >
+          <Music size={20} />
+          <span className="font-medium">Thèmes</span>
+          {showThemes ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
+        </button>
+      </div>
+      
+
     </div>
   );
 };

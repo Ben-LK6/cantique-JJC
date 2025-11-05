@@ -10,8 +10,8 @@ const About = () => {
         <div className="max-w-3xl mx-auto space-y-6">
           {/* Logo et Nom */}
           <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 text-white text-center">
-            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-primary-600 font-bold text-4xl">JJC</span>
+            <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+              <img src="/images/logo.jpeg" alt="JJC Logo" className="w-full h-full object-cover" />
             </div>
             <h1 className="text-3xl font-bold mb-2">Cantique JJC</h1>
             <p className="text-primary-100">Application officielle de cantiques</p>

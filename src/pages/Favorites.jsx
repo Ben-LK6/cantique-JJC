@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Heart, Music, HandHeart } from 'lucide-react';
-import cantiquesData from '../data/cantiques.json';
-import prayersData from '../data/prayers.json';
+import { cantiques } from '../data/cantiques';
+import { prieres } from '../data/prieres';
 
 const Favorites = ({ onSelectCantique }) => {
   const [activeTab, setActiveTab] = useState('cantiques');
@@ -14,12 +14,12 @@ const Favorites = ({ onSelectCantique }) => {
     const prayerIds = JSON.parse(localStorage.getItem('favoritePrayers') || '[]');
 
     // Récupérer les cantiques favoris
-    const cantiques = cantiquesData.filter(c => cantiqueIds.includes(c.id));
-    setFavoriteCantiques(cantiques);
+    const favoriteC = cantiques.filter(c => cantiqueIds.includes(c.id));
+    setFavoriteCantiques(favoriteC);
 
     // Récupérer les prières favorites
-    const prayers = prayersData.filter(p => prayerIds.includes(p.id));
-    setFavoritePrayers(prayers);
+    const favoriteP = prieres.filter(p => prayerIds.includes(p.id));
+    setFavoritePrayers(favoriteP);
   }, []);
 
   return (
