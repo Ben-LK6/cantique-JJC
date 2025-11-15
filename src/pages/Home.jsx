@@ -1,36 +1,39 @@
 import { Book, Heart, Sparkles, Music, HandHeart, ChevronUp, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { cantiques } from '../data/cantiques';
+import { categories } from '../data/categoriesMapping';
 
 const Home = ({ onNavigate }) => {
-  const [showThemes, setShowThemes] = useState(false);
+  const [showCategories, setShowCategories] = useState(false);
   
-  // Récupérer les thèmes uniques avec compteurs
-  const themes = cantiques.reduce((acc, cantique) => {
-    const theme = cantique.theme;
-    if (!acc[theme]) {
-      acc[theme] = { name: theme, count: 0, emoji: getThemeEmoji(theme) };
+  // Récupérer les catégories uniques avec compteurs
+  const categoriesData = cantiques.reduce((acc, cantique) => {
+    const categorie = cantique.categorie;
+    if (!acc[categorie]) {
+      acc[categorie] = { name: categorie, count: 0, emoji: getCategorieEmoji(categorie) };
     }
-    acc[theme].count++;
+    acc[categorie].count++;
     return acc;
   }, {});
   
-  const themeList = Object.values(themes);
+  const categoriesList = Object.values(categoriesData);
   
-  function getThemeEmoji(theme) {
+  function getCategorieEmoji(categorie) {
     const emojiMap = {
-      'Louange': '🎵',
-      'Adoration': '🙏',
-      'Action de grâces': '🙌',
-      'Prière': '💫',
-      'Confiance': '💪'
+      'Oylọ': '🎵',
+      'Opẹ': '🙏',
+      'Pipa': '🎶',
+      'Wedagbe': '💫',
+      'Hokọnamẹ': '💪',
+      'Azọn Jiwheyẹwhe tọn': '⚙️',
+      'Owanyi Jiwheyẹwhe tọn': '❤️'
     };
-    return emojiMap[theme] || '🎶';
+    return emojiMap[categorie] || '🎶';
   }
   
-  const handleThemeSelect = (theme) => {
-    setShowThemes(false);
-    onNavigate('cantiques', theme);
+  const handleCategorieSelect = (categorie) => {
+    setShowCategories(false);
+    onNavigate('cantiques', categorie);
   };
   const quickActions = [
     { icon: Book, label: 'Cantiques', path: 'cantiques', color: 'from-blue-500 to-blue-600', emoji: '📖' },
@@ -101,29 +104,29 @@ const Home = ({ onNavigate }) => {
       </div>
 
       {/* Overlay pour fermer le dropdown */}
-      {showThemes && (
+      {showCategories && (
         <div 
           className="fixed inset-0 z-40" 
-          onClick={() => setShowThemes(false)}
+          onClick={() => setShowCategories(false)}
         />
       )}
       
-      {/* Sélecteur de Thème */}
+      {/* Sélecteur de Catégorie */}
       <div className="mx-6 relative z-50">
-        {/* Dropdown des thèmes - apparaît au-dessus */}
-        {showThemes && (
-          <div className="absolute bottom-full left-0 right-0 mb-2 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-            {themeList.map((theme, index) => (
+        {/* Dropdown des catégories - apparaît au-dessus */}
+        {showCategories && (
+          <div className="absolute bottom-full left-0 right-0 mb-2 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden max-h-80 overflow-y-auto">
+            {categoriesList.map((categorie, index) => (
               <button
                 key={index}
-                onClick={() => handleThemeSelect(theme.name)}
+                onClick={() => handleCategorieSelect(categorie.name)}
                 className="w-full px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors text-left border-b border-gray-100 dark:border-gray-700 last:border-b-0"
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-lg">{theme.emoji}</span>
+                  <span className="text-lg">{categorie.emoji}</span>
                   <div>
-                    <h3 className="font-medium text-gray-900 dark:text-white text-sm">{theme.name}</h3>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">{theme.count} cantique{theme.count > 1 ? 's' : ''}</p>
+                    <h3 className="font-medium text-gray-900 dark:text-white text-sm">{categorie.name}</h3>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">{categorie.count} cantique{categorie.count > 1 ? 's' : ''}</p>
                   </div>
                 </div>
               </button>
@@ -133,12 +136,12 @@ const Home = ({ onNavigate }) => {
         
         {/* Bouton flèche */}
         <button
-          onClick={() => setShowThemes(!showThemes)}
+          onClick={() => setShowCategories(!showCategories)}
           className="w-full bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2"
         >
           <Music size={20} />
-          <span className="font-medium">Thèmes</span>
-          {showThemes ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
+          <span className="font-medium">Catégories</span>
+          {showCategories ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
         </button>
       </div>
       

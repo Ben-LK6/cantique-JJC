@@ -1,13 +1,14 @@
 import { Music } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { cantiques } from '../data/cantiques';
+import { categories } from '../data/categoriesMapping';
 import FilterButton from '../components/common/FilterButton';
 
 const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedTheme }) => {
   const [selectedTheme, setSelectedTheme] = useState(preSelectedTheme || 'Tous');
 
-  // Récupérer les thèmes uniques
-  const themes = ['Tous', ...new Set(cantiques.map(c => c.theme))];
+  // Utiliser toutes les catégories disponibles (même sans cantiques)
+  const allCategories = ['Tous', ...categories];
   
   // Mettre à jour le thème sélectionné si un thème est passé depuis l'accueil
   useEffect(() => {
@@ -22,9 +23,9 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
       cantique.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
       cantique.numero.includes(searchTerm);
     
-    const matchTheme = selectedTheme === 'Tous' || cantique.theme === selectedTheme;
+    const matchCategorie = !selectedTheme || selectedTheme === 'Tous' || cantique.categorie === selectedTheme;
     
-    return matchSearch && matchTheme;
+    return matchSearch && matchCategorie;
   });
 
   return (
@@ -81,7 +82,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
                     </div>
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-semibold">
-                        {cantique.theme}
+                        {cantique.categorie}
                       </span>
                       <div className="flex items-center gap-1 text-gray-500">
                         <Music size={14} />
@@ -111,7 +112,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
 
       {/* Bouton Flottant de Filtre */}
       <FilterButton 
-        options={themes}
+        options={allCategories}
         selected={selectedTheme}
         onSelect={setSelectedTheme}
         color="primary"

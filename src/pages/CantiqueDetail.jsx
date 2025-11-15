@@ -216,7 +216,7 @@ const handleShare = () => {
                 </div>
                 <div>
                   <h1 className="text-xl font-bold text-gray-800 dark:text-white">{cantique.titre}</h1>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">{cantique.theme}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{cantique.categorie}</p>
                 </div>
               </div>
             </div>

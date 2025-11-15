@@ -46,7 +46,7 @@ export const exportCantiqueToPDF = (cantique) => {
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(100, 100, 100);
-  doc.text(`Thème: ${cantique.theme}`, pageWidth / 2, yPosition, { align: 'center' });
+  doc.text(`Catégorie: ${cantique.categorie}`, pageWidth / 2, yPosition, { align: 'center' });
   
   yPosition += 8;
 

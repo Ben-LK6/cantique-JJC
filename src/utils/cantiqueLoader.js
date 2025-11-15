@@ -54,7 +54,7 @@ const parseCantique = (text, numero) => {
     id: parseInt(numero),
     numero: numero.padStart(3, '0'),
     titre: metadata.titre || 'Sans titre',
-    theme: metadata.theme || 'Général',
+    categorie: metadata.categorie || 'Hokọnamẹ',
     langue: 'fr',
     paroles,
     tonalite: {
@@ -129,7 +129,7 @@ const parsePriere = (text, numero) => {
     id: parseInt(numero),
     numero: numero.padStart(3, '0'),
     titre: metadata.titre || 'Sans titre',
-    theme: metadata.theme || 'Général',
+    categorie: metadata.categorie || 'Hokọnamẹ',
     contenu
   };
 };

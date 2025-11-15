@@ -86,7 +86,7 @@ const Favorites = ({ onSelectCantique }) => {
                           </div>
                           <div className="flex items-center gap-2 text-sm text-gray-500">
                             <span className="px-2 py-1 bg-primary-50 text-primary-700 rounded">
-                              {cantique.theme}
+                              {cantique.categorie}
                             </span>
                             <Music size={14} />
                             <span>Tonalité: {cantique.tonalite.note}</span>
