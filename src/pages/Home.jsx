@@ -1,34 +1,56 @@
 import { Book, Heart, Sparkles, Music, HandHeart, ChevronUp, ChevronDown, RefreshCw } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { cantiques } from '../data/cantiques';
-import { categories } from '../data/categoriesMapping';
+import { getCantiques, getCategories } from '../utils/cantiqueUtils';
 import { getRandomVerset, getThemeColor } from '../data/versets';
+import { t } from '../data/translations';
 
 const Home = ({ onNavigate }) => {
   const [showCategories, setShowCategories] = useState(false);
   const [currentVerset, setCurrentVerset] = useState(null);
+  const [cantiques, setCantiques] = useState([]);
+  const [categoriesData, setCategoriesData] = useState({});
 
   // Charger un verset aléatoire au montage du composant
   useEffect(() => {
     setCurrentVerset(getRandomVerset());
+    loadCantiques();
   }, []);
+
+  // Fonction pour charger les cantiques selon la langue
+  const loadCantiques = () => {
+    const currentCantiques = getCantiques();
+    setCantiques(currentCantiques);
+    
+    // Récupérer les catégories uniques avec compteurs
+    const data = currentCantiques.reduce((acc, cantique) => {
+      const categorie = cantique.theme;
+      if (!acc[categorie]) {
+        acc[categorie] = { name: categorie, count: 0, emoji: getCategorieEmoji(categorie) };
+      }
+      acc[categorie].count++;
+      return acc;
+    }, {});
+    setCategoriesData(data);
+  };
 
   // Fonction pour changer de verset
   const refreshVerset = () => {
     setCurrentVerset(getRandomVerset());
   };
   
-  // Récupérer les catégories uniques avec compteurs
-  const categoriesData = cantiques.reduce((acc, cantique) => {
-    const categorie = cantique.categorie;
-    if (!acc[categorie]) {
-      acc[categorie] = { name: categorie, count: 0, emoji: getCategorieEmoji(categorie) };
-    }
-    acc[categorie].count++;
-    return acc;
-  }, {});
-  
   const categoriesList = Object.values(categoriesData);
+
+  // Écouter les changements de langue des cantiques
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      if (e.key === 'cantiqueLanguage') {
+        loadCantiques();
+      }
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
   
   function getCategorieEmoji(categorie) {
     const emojiMap = {
@@ -48,8 +70,8 @@ const Home = ({ onNavigate }) => {
     onNavigate('cantiques', categorie);
   };
   const quickActions = [
-    { icon: Book, label: 'Cantiques', path: 'cantiques', color: 'from-blue-500 to-blue-600', emoji: '📖' },
-    { icon: Heart, label: 'Favoris', path: 'favoris', color: 'from-red-500 to-red-600', emoji: '❤️' },
+    { icon: Book, label: t('cantiques'), path: 'cantiques', color: 'from-blue-500 to-blue-600', emoji: '📖' },
+    { icon: Heart, label: t('favorites'), path: 'favoris', color: 'from-red-500 to-red-600', emoji: '❤️' },
   ];
 
   return (
@@ -65,10 +87,10 @@ const Home = ({ onNavigate }) => {
 
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            Cantiques JJC
+            {t('appTitle')}
           </h1>
           <p className="text-gray-600 dark:text-gray-300">
-            Louez le Seigneur avec joie
+            {t('appSubtitle')}
           </p>
         </div>
       </div>
@@ -118,7 +140,7 @@ const Home = ({ onNavigate }) => {
                   <div className="flex items-center gap-2">
                     <Sparkles size={20} className="text-white" />
                     <h3 className="text-sm font-bold text-white uppercase tracking-wide">
-                      Verset du jour
+                      {t('verseOfDay')}
                     </h3>
                   </div>
                   <button
@@ -191,7 +213,7 @@ const Home = ({ onNavigate }) => {
           className="w-full bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2"
         >
           <Music size={20} />
-          <span className="font-medium">Catégories</span>
+          <span className="font-medium">{t('categories')}</span>
           {showCategories ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
         </button>
       </div>

@@ -1,16 +1,18 @@
-import { Home, Book, Heart, MapPin, Info, Settings, HandHeart } from 'lucide-react';
+import { Home, Book, Heart, MapPin, Info, Settings, HandHeart, Languages } from 'lucide-react';
+import { t } from '../../data/translations';
 
 const Sidebar = ({ onNavigate, currentPage }) => {
 
   const menuItems = [
-    { icon: Home, label: 'Accueil', path: 'home' },
-    { icon: Book, label: 'Cantiques', path: 'cantiques' },
-    { icon: HandHeart, label: 'Prières', path: 'prayers' },
-    { icon: Heart, label: 'Favoris', path: 'favoris' },
-    { icon: MapPin, label: 'Trouver une église', path: 'churches' },
-    { icon: Info, label: 'Instructions', path: 'instructions' },
-    { icon: Info, label: 'À propos', path: 'about' },
-    { icon: Settings, label: 'Paramètres', path: 'settings' },
+    { icon: Home, label: t('home'), path: 'home' },
+    { icon: Book, label: t('cantiques'), path: 'cantiques' },
+    { icon: HandHeart, label: t('prayers'), path: 'prayers' },
+    { icon: Heart, label: t('favorites'), path: 'favoris' },
+    { icon: MapPin, label: t('findChurch'), path: 'churches' },
+    { icon: Languages, label: t('cantiqueLanguage'), path: 'cantique-language' },
+    { icon: Info, label: t('instructions'), path: 'instructions' },
+    { icon: Info, label: t('about'), path: 'about' },
+    { icon: Settings, label: t('settings'), path: 'settings' },
   ];
 
   const handleNavigation = (path) => {
@@ -26,11 +28,11 @@ const Sidebar = ({ onNavigate, currentPage }) => {
               <img src="/images/logo.jpeg" alt="JJC Logo" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h1 className="text-xl font-bold">Cantique JJC</h1>
+              <h1 className="text-xl font-bold">{t('appTitle')}</h1>
               <p className="text-xs text-primary-100">v1.0.0</p>
             </div>
           </div>
-          <p className="text-sm text-primary-100">Cantiques & Prières</p>
+          <p className="text-sm text-primary-100">{t('cantiques')} & {t('prayers')}</p>
         </div>
 
         {/* Menu Items */}
@@ -62,8 +64,8 @@ const Sidebar = ({ onNavigate, currentPage }) => {
             </div>
           </div>
           <p className="font-semibold text-gray-700">Église JJC</p>
-          <p className="mt-1">© 2025 - Tous droits réservés</p>
-          <p className="mt-2 text-primary-600">Made with ❤️ for God's glory</p>
+          <p className="mt-1">{t('copyright')}</p>
+          <p className="mt-2 text-primary-600">{t('madeWith')}</p>
         </div>
       </aside>
   );

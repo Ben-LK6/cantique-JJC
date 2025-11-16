@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Palette, Volume2, Type, Globe, Moon, Sun, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { t } from '../data/translations';
 
 const Settings = () => {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'blue');
@@ -52,6 +53,10 @@ useEffect(() => {
   if (localStorage.getItem('language') !== language) {
     localStorage.setItem('language', language);
     showSavedMessage();
+    // Recharger après 1 seconde pour appliquer les traductions
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   }
 }, [language]);
 
@@ -89,15 +94,14 @@ useEffect(() => {
   ];
 
   const fontSizes = [
-    { name: 'Petit', value: 'small' },
-    { name: 'Moyen', value: 'medium' },
-    { name: 'Grand', value: 'large' },
+    { name: t('small'), value: 'small' },
+    { name: t('medium'), value: 'medium' },
+    { name: t('large'), value: 'large' },
   ];
 
   const languages = [
     { name: 'Français', value: 'fr', flag: '🇫🇷' },
     { name: 'English', value: 'en', flag: '🇬🇧' },
-    { name: 'Español', value: 'es', flag: '🇪🇸' },
   ];
 
   return (
@@ -111,7 +115,7 @@ useEffect(() => {
           className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2"
         >
           <CheckCircle size={20} />
-          <span className="font-semibold">Rechargement...</span>
+          <span className="font-semibold">{t('reloading')}</span>
         </motion.div>
       )}
 
@@ -130,8 +134,8 @@ useEffect(() => {
                 <Palette className="text-primary-600" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-800">Couleur du thème</h3>
-                <p className="text-gray-500 text-xs">Personnalisez l'apparence</p>
+                <h3 className="text-lg font-bold text-gray-800">{t('colorTheme')}</h3>
+                <p className="text-gray-500 text-xs">{t('customizeAppearance')}</p>
               </div>
             </div>
             <div className="grid grid-cols-5 gap-3">
@@ -166,8 +170,8 @@ useEffect(() => {
                   {darkMode ? <Moon className="text-primary-600" size={20} /> : <Sun className="text-primary-600" size={20} />}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-800">Mode sombre</h3>
-                  <p className="text-gray-500 text-xs">Bientôt disponible</p>
+                  <h3 className="text-lg font-bold text-gray-800">{t('darkMode')}</h3>
+                  <p className="text-gray-500 text-xs">{t('comingSoon')}</p>
                 </div>
               </div>
               <button
@@ -197,8 +201,8 @@ useEffect(() => {
                 <Type className="text-primary-600" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-800">Taille de la police</h3>
-                <p className="text-gray-500 text-xs">Pour les cantiques</p>
+                <h3 className="text-lg font-bold text-gray-800">{t('fontSize')}</h3>
+                <p className="text-gray-500 text-xs">{t('forCantiques')}</p>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-3">
@@ -231,8 +235,8 @@ useEffect(() => {
                 <Globe className="text-primary-600" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-800">Langue</h3>
-                <p className="text-gray-500 text-xs">Choisir la langue</p>
+                <h3 className="text-lg font-bold text-gray-800">{t('interfaceLanguage')}</h3>
+                <p className="text-gray-500 text-xs">{t('frenchOrEnglish')}</p>
               </div>
             </div>
             <div className="space-y-2">
@@ -270,8 +274,8 @@ useEffect(() => {
                   <Volume2 className="text-primary-600" size={20} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-800">Son de tonalité</h3>
-                  <p className="text-gray-500 text-xs">Activer/Désactiver le son</p>
+                  <h3 className="text-lg font-bold text-gray-800">{t('tonalitySound')}</h3>
+                  <p className="text-gray-500 text-xs">{t('enableDisableSound')}</p>
                 </div>
               </div>
               <button
@@ -296,9 +300,9 @@ useEffect(() => {
             transition={{ delay: 0.5 }}
             className="bg-gradient-to-br from-primary-50 to-purple-50 rounded-2xl p-6 border border-primary-100"
           >
-            <h3 className="text-lg font-bold text-primary-800 mb-2">Version de l'application</h3>
-            <p className="text-primary-700 font-semibold">Cantique JJC v1.0.0</p>
-            <p className="text-primary-600 text-sm mt-2">Dernière mise à jour : Novembre 2025</p>
+            <h3 className="text-lg font-bold text-primary-800 mb-2">{t('appVersion')}</h3>
+            <p className="text-primary-700 font-semibold">{t('appTitle')} v1.0.0</p>
+            <p className="text-primary-600 text-sm mt-2">{t('lastUpdate')} : Novembre 2025</p>
           </motion.div>
 
         </div>

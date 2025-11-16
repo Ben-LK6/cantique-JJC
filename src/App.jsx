@@ -10,7 +10,7 @@ import Favorites from './pages/Favorites';
 import FindChurch from './pages/FindChurch';
 import About from './pages/About';
 import Settings from './pages/Settings';
-
+import CantiqueLanguage from './pages/CantiqueLanguage';
 import Instructions from './pages/Instructions';
 
 function App() {
@@ -78,7 +78,8 @@ function App() {
         return { title: 'À Propos', showMenu: true };
       case 'settings':
         return { title: 'Paramètres', showMenu: true };
-
+      case 'cantique-language':
+        return { title: 'Langue des Cantiques', showMenu: true };
       case 'instructions':
         return { title: 'Instructions', showMenu: true };
       default:
@@ -112,7 +113,8 @@ function App() {
       case 'settings':
         return <Settings />;
       
-
+      case 'cantique-language':
+        return <CantiqueLanguage />;
       
       case 'instructions':
         return <Instructions />;

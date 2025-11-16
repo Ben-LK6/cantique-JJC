@@ -1,4 +1,5 @@
 import { Church, Users, Heart, Mail, Phone } from 'lucide-react';
+import { t } from '../data/translations';
 
 const About = () => {
   return (
@@ -13,7 +14,7 @@ const About = () => {
             <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
               <img src="/images/logo.jpeg" alt="JJC Logo" className="w-full h-full object-cover" />
             </div>
-            <h1 className="text-3xl font-bold mb-2">Cantique JJC</h1>
+            <h1 className="text-3xl font-bold mb-2">{t('appTitle')}</h1>
             <p className="text-primary-100">Application officielle de cantiques</p>
             <p className="text-primary-200 text-sm mt-2">Version 1.0.0</p>
           </div>
@@ -22,13 +23,13 @@ const About = () => {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <Church className="text-primary-600" size={24} />
-              <h3 className="text-xl font-bold text-gray-800">À propos de JJC</h3>
+              <h3 className="text-xl font-bold text-gray-800">{t('aboutJJC')}</h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
               L'église JJC (Jésus-Christ Joie et Consolation) est une communauté chrétienne 
               dédiée à l'adoration de Dieu et au service du prochain. Nous croyons en la 
               puissance de la louange et de la prière pour transformer les vies et glorifier 
-              le Seigneur 
+              le Seigneur                                                                                                                                                                                                                                                                                       
             </p>
           </div>
 
@@ -36,7 +37,7 @@ const About = () => {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <Heart className="text-primary-600" size={24} />
-              <h3 className="text-xl font-bold text-gray-800">Notre Mission</h3>
+              <h3 className="text-xl font-bold text-gray-800">{t('ourMission')}</h3>
             </div>
             <p className="text-gray-700 leading-relaxed mb-4">
               Cette application a été créée pour faciliter l'accès aux cantiques de l'église JJC, 
@@ -44,7 +45,7 @@ const About = () => {
               culte, à la maison ou en déplacement, accédez facilement à vos cantiques préférés.
             </p>
             <div className="bg-primary-50 rounded-lg p-4">
-              <p className="text-primary-800 font-medium mb-2">Fonctionnalités :</p>
+              <p className="text-primary-800 font-medium mb-2">{t('features')}</p>
               <ul className="space-y-2 text-gray-700">
                 <li>✓ Accès hors ligne à tous les cantiques</li>
                 <li>✓ Recherche facile par numéro ou titre</li>
@@ -60,7 +61,7 @@ const About = () => {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <Users className="text-primary-600" size={24} />
-              <h3 className="text-xl font-bold text-gray-800">Créateurs</h3>
+              <h3 className="text-xl font-bold text-gray-800">{t('creators')}</h3>
             </div>
             <div className="space-y-3">
               <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
@@ -80,7 +81,7 @@ const About = () => {
 
           {/* Contact */}
           <div className="bg-white rounded-xl p-6 shadow-sm">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Contact & Support</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-4">{t('contactSupport')}</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail size={20} className="text-gray-400" />

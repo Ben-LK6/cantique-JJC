@@ -1,14 +1,38 @@
 import { Music } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { cantiques } from '../data/cantiques';
-import { categories } from '../data/categoriesMapping';
+import { getCantiques, getCategories } from '../utils/cantiqueUtils';
 import FilterButton from '../components/common/FilterButton';
+import { t } from '../data/translations';
 
 const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedTheme }) => {
-  const [selectedTheme, setSelectedTheme] = useState(preSelectedTheme || 'Tous');
+  const [selectedTheme, setSelectedTheme] = useState(preSelectedTheme || t('all'));
+  const [cantiques, setCantiques] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-  // Utiliser toutes les catégories disponibles (même sans cantiques)
-  const allCategories = ['Tous', ...categories];
+  // Charger les cantiques selon la langue choisie
+  useEffect(() => {
+    const loadCantiques = () => {
+      const currentCantiques = getCantiques();
+      const currentCategories = getCategories();
+      setCantiques(currentCantiques);
+      setCategories([t('all'), ...currentCategories]);
+    };
+
+    loadCantiques();
+    
+    // Écouter les changements de langue
+    const handleStorageChange = (e) => {
+      if (e.key === 'cantiqueLanguage') {
+        loadCantiques();
+      }
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
+
+  // Utiliser toutes les catégories disponibles
+  const allCategories = categories;
   
   // Mettre à jour le thème sélectionné si un thème est passé depuis l'accueil
   useEffect(() => {
@@ -23,18 +47,28 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
       cantique.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
       cantique.numero.includes(searchTerm);
     
-    const matchCategorie = !selectedTheme || selectedTheme === 'Tous' || cantique.categorie === selectedTheme;
+    const matchCategorie = !selectedTheme || selectedTheme === t('all') || cantique.theme === selectedTheme;
     
     return matchSearch && matchCategorie;
   });
 
+  const currentLanguage = localStorage.getItem('cantiqueLanguage') || 'fon';
+  const languageLabel = currentLanguage === 'yoruba' ? 'Yoruba 🇳🇬' : 'Fon 🇧🇯';
+
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      {/* Indication de la langue */}
+      <div className="px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
+        <p className="text-xs text-blue-700 font-medium text-center">
+          🌍 {t('language')}: <span className="font-bold">{languageLabel}</span>
+        </p>
+      </div>
+      
       {/* Indication du filtre actif */}
-      {selectedTheme !== 'Tous' && (
+      {selectedTheme !== t('all') && (
         <div className="px-4 py-3 bg-primary-50 border-b border-primary-100">
           <p className="text-sm text-primary-700 font-medium text-center">
-            📚 Filtre actif : <span className="font-bold">{selectedTheme}</span>
+            📚 {t('activeFilter')} : <span className="font-bold">{selectedTheme}</span>
           </p>
         </div>
       )}
@@ -45,7 +79,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
           {/* Compteur */}
           <div className="flex items-center justify-between mb-4">
             <p className="text-gray-600 text-sm font-medium">
-              {filteredCantiques.length} cantique{filteredCantiques.length > 1 ? 's' : ''}
+              {filteredCantiques.length} {filteredCantiques.length > 1 ? t('cantiques_plural') : t('cantique')}
             </p>
             {searchTerm && (
               <p className="text-primary-600 text-sm">
@@ -97,9 +131,9 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
               <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Music size={48} className="text-gray-300" />
               </div>
-              <p className="text-gray-500 text-lg font-semibold mb-2">Aucun cantique trouvé</p>
+              <p className="text-gray-500 text-lg font-semibold mb-2">{t('noCantiquesFound')}</p>
               <p className="text-gray-400 text-sm">
-                {searchTerm ? `Aucun résultat pour "${searchTerm}"` : 'Essayez un autre filtre'}
+                {searchTerm ? `${t('noResultsFor')} "${searchTerm}"` : t('tryAnotherFilter')}
               </p>
             </div>
           )}

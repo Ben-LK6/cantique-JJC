@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, Heart, Music, Volume2, Play, Pause, Share2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { cantiques } from '../data/cantiques';
+import { getCantiqueById } from '../utils/cantiqueUtils';
+import { t } from '../data/translations';
 
 const CantiqueDetail = ({ cantiqueId, onBack }) => {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -10,7 +11,7 @@ const CantiqueDetail = ({ cantiqueId, onBack }) => {
   const scrollIntervalRef = useRef(null);
   const audioRef = useRef(null);
 
-  const cantique = cantiques.find(c => c.id === cantiqueId);
+  const cantique = getCantiqueById(cantiqueId);
 
 useEffect(() => {
   const savedFontSize = localStorage.getItem('fontSize') || 'medium';
@@ -117,16 +118,16 @@ const handleShare = () => {
   } else {
     // Fallback : copier dans le presse-papier
     navigator.clipboard.writeText(window.location.href);
-    alert('Lien copié dans le presse-papier !');
+    alert(t('linkCopied'));
   }
 };
   if (!cantique) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <p className="text-gray-500 text-lg mb-4">Cantique introuvable</p>
+          <p className="text-gray-500 text-lg mb-4">{t('cantiqueNotFound')}</p>
           <button onClick={onBack} className="text-primary-600 font-semibold">
-            Retour
+            {t('back')}
           </button>
         </div>
       </div>
@@ -184,7 +185,7 @@ const handleShare = () => {
               ? 'bg-red-500 hover:bg-red-600' 
               : 'bg-primary-600 hover:bg-primary-700'
           } text-white`}
-          title={isAutoScrolling ? 'Arrêter le défilement' : 'Démarrer le défilement'}
+          title={isAutoScrolling ? t('stopScrolling') : t('startScrolling')}
         >
           {isAutoScrolling ? <Pause size={24} /> : <Play size={24} />}
         </button>
@@ -194,7 +195,7 @@ const handleShare = () => {
           whileTap={{ scale: 0.9 }}
           onClick={handleShare}
           className="p-4 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl transition-all"
-          title="Partager"
+          title={t('share')}
         >
           <Share2 size={24} />
         </motion.button>
@@ -216,14 +217,14 @@ const handleShare = () => {
                 </div>
                 <div>
                   <h1 className="text-xl font-bold text-gray-800 dark:text-white">{cantique.titre}</h1>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">{cantique.categorie}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{cantique.theme}</p>
                 </div>
               </div>
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center gap-2">
                 <Music size={16} className="text-primary-600" />
-                <span className="font-medium">Tonalité: {cantique.tonalite.note}</span>
+                <span className="font-medium">{t('tonality')}: {cantique.tonalite.note}</span>
               </div>
             </div>
           </motion.div>
@@ -248,7 +249,7 @@ const handleShare = () => {
               ) : (
                 <div className="text-center py-8">
                   <Music size={48} className="mx-auto text-gray-300 mb-4" />
-                  <p className="text-gray-500">Paroles non disponibles</p>
+                  <p className="text-gray-500">{t('lyricsNotAvailable')}</p>
                 </div>
               )}
             </div>
