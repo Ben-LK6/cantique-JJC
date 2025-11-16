@@ -65,10 +65,6 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
                 
                 <div className="flex items-start gap-4 relative z-10">
-                  {/* Logo */}
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden shadow-lg">
-                    <img src="/images/logo.jpeg" alt="JJC Logo" className="w-full h-full object-cover" />
-                  </div>
 
                   {/* Infos */}
                   <div className="flex-1 min-w-0">

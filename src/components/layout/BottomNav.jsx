@@ -1,4 +1,4 @@
-import { Home, Book, Gift, HandHeart, Settings } from 'lucide-react';
+import { Home, Book, HandHeart, Settings, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const BottomNav = ({ currentPage, onNavigate }) => {
@@ -6,7 +6,7 @@ const BottomNav = ({ currentPage, onNavigate }) => {
     { icon: Home, label: 'Accueil', path: 'home' },
     { icon: HandHeart, label: 'Prières', path: 'prayers' },
     null, // Espace central pour Cantiques
-    { icon: Gift, label: 'Don', path: 'donation' },
+    { icon: Heart, label: 'Favoris', path: 'favoris' },
     { icon: Settings, label: 'Paramètres', path: 'settings' },
   ];
 

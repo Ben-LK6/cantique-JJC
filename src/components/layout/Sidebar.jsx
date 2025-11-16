@@ -1,4 +1,4 @@
-import { Home, Book, Heart, MapPin, Info, Settings, Gift, HandHeart } from 'lucide-react';
+import { Home, Book, Heart, MapPin, Info, Settings, HandHeart } from 'lucide-react';
 
 const Sidebar = ({ onNavigate, currentPage }) => {
 
@@ -10,7 +10,6 @@ const Sidebar = ({ onNavigate, currentPage }) => {
     { icon: MapPin, label: 'Trouver une église', path: 'churches' },
     { icon: Info, label: 'Instructions', path: 'instructions' },
     { icon: Info, label: 'À propos', path: 'about' },
-    { icon: Gift, label: 'Faire un don', path: 'donation' },
     { icon: Settings, label: 'Paramètres', path: 'settings' },
   ];
 
