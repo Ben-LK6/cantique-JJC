@@ -28,7 +28,7 @@ const About = () => {
               L'église JJC (Jésus-Christ Joie et Consolation) est une communauté chrétienne 
               dédiée à l'adoration de Dieu et au service du prochain. Nous croyons en la 
               puissance de la louange et de la prière pour transformer les vies et glorifier 
-              le Seigneur.
+              le Seigneur 
             </p>
           </div>
 
