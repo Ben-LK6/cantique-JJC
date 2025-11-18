@@ -1,4 +1,4 @@
-import { Home, Book, HandHeart, Settings, Heart } from 'lucide-react';
+import { Home, Book, HandHeart, Settings, Globe } from 'lucide-react';  // Changé Heart par Globe
 import { motion } from 'framer-motion';
 
 const BottomNav = ({ currentPage, onNavigate }) => {
@@ -6,7 +6,7 @@ const BottomNav = ({ currentPage, onNavigate }) => {
     { icon: Home, label: 'Accueil', path: 'home' },
     { icon: HandHeart, label: 'Prières', path: 'prayers' },
     null, // Espace central pour Cantiques
-    { icon: Heart, label: 'Favoris', path: 'favoris' },
+    { icon: Globe, label: 'Langue des cantiques', path: 'langues' },  // Changé de Heart/Favoris/favoris à Globe/Langue des cantiques/langues
     { icon: Settings, label: 'Paramètres', path: 'settings' },
   ];
 
