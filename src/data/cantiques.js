@@ -5,7 +5,7 @@ export const cantiques = [
   {
     id: 1,
     numero: "001",
-    titre: "Mi wa na mi 'nọ pọ do sẹn Jesu ooo",
+    titre: "Mi wa na mi 'nọ pọ do sẹn Jesu",
     categorie: "Oylọ",
     paroles: [
       "1. Mi wa na mi 'nọ pọ do sẹn Jesu",
