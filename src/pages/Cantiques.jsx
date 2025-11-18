@@ -47,7 +47,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
       cantique.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
       cantique.numero.includes(searchTerm);
     
-    const matchCategorie = !selectedTheme || selectedTheme === t('all') || cantique.theme === selectedTheme;
+    const matchCategorie = !selectedTheme || selectedTheme === t('all') || cantique.categorie === selectedTheme;
     
     return matchSearch && matchCategorie;
   });
@@ -146,7 +146,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
         selected={selectedTheme}
         onSelect={setSelectedTheme}
         color="primary"
-        label="Thèmes"
+        label={t('categories')}
       />
     </div>
   );

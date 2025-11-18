@@ -21,6 +21,6 @@ export const getCantiqueById = (id) => {
 // Fonction pour obtenir les catégories selon la langue
 export const getCategories = () => {
   const currentCantiques = getCantiques();
-  const categories = [...new Set(currentCantiques.map(c => c.theme))];
+  const categories = [...new Set(currentCantiques.map(c => c.categorie))];
   return categories;
 };

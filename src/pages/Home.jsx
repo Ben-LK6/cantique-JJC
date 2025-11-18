@@ -23,7 +23,7 @@ const Home = ({ onNavigate }) => {
     
     // Récupérer les catégories uniques avec compteurs
     const data = currentCantiques.reduce((acc, cantique) => {
-      const categorie = cantique.theme;
+      const categorie = cantique.categorie;
       if (!acc[categorie]) {
         acc[categorie] = { name: categorie, count: 0, emoji: getCategorieEmoji(categorie) };
       }
@@ -60,7 +60,17 @@ const Home = ({ onNavigate }) => {
       'Wedagbe': '💫',
       'Hokọnamẹ': '💪',
       'Azọn Jiwheyẹwhe tọn': '⚙️',
-      'Owanyi Jiwheyẹwhe tọn': '❤️'
+      'Owanyi Jiwheyẹwhe tọn': '❤️',
+      'Adọgbo po todido po': '🌆',
+      'Whlẹpọn po awhangba yisenọ tọn po': '🌟',
+      'Huhlọn Jiwheyẹwhe tọn': '💪',
+      'Odẹ': '🙏',
+      'Yopovu lẹ': '👶',
+      'Afọnńu': '🌅',
+      'Tenu': '🌆',
+      'Alọwle': '👰',
+      'Jaya': '🎉',
+      'Kọndopọ wiwe': '📜'
     };
     return emojiMap[categorie] || '🎶';
   }
