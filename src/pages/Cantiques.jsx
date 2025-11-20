@@ -53,7 +53,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
   });
 
   const currentLanguage = localStorage.getItem('cantiqueLanguage') || 'fon';
-  const languageLabel = currentLanguage === 'yoruba' ? 'Yoruba 🇳🇬' : 'Fon 🇧🇯';
+  const languageLabel = currentLanguage === 'yoruba' ? t('yoruba') + ' 🇳🇬' : t('fon') + ' 🇧🇯';
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
