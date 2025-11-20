@@ -5202,7 +5202,7 @@ export const cantiques = [
     id: 153,
     numero: "153",
     titre: "Hiẹ Oklunọ olọn",
-    categorie: getCategorieAvecDefaut(153),
+    categorie: "Ovẹ na jona ylando tọn",
     paroles: [
       "S.M. Ps.84:2",
       "",
@@ -5237,7 +5237,7 @@ export const cantiques = [
     id: 154,
     numero: "154",
     titre: "Mawenọ wẹ yẹn yin",
-    categorie: getCategorieAvecDefaut(154),
+    categorie: "Ovẹ na jona ylando tọn",
     paroles: [
       "S.M. Jọb.42:6",
       "",
@@ -5272,7 +5272,7 @@ export const cantiques = [
     id: 155,
     numero: "155",
     titre: "Le 'whe hunhun to 'kle",
-    categorie: getCategorieAvecDefaut(155),
+    categorie: "Pipa",
     paroles: [
       "6s. Ps.34:1",
       "\"Oyẹn na nọ dona Oklunọ ta whepoponu. Pipa Etọn",
@@ -5326,7 +5326,7 @@ export const cantiques = [
     id: 156,
     numero: "156",
     titre: "Le yẹn mọ do, 'nu madọn mẹ",
-    categorie: getCategorieAvecDefaut(156),
+    categorie: "Autres",
     paroles: [
       "6.8.8.6. Joh.1:29 \"Pọn, Lengbọvu Jiwheyẹwhe tọn\" .",
       "",
@@ -5366,7 +5366,7 @@ export const cantiques = [
     id: 157,
     numero: "157",
     titre: "Yẹn jo nulẹpọ na Jesu",
-    categorie: getCategorieAvecDefaut(157),
+    categorie: "Ovẹ na jona ylando tọn",
     paroles: [
       "8.7.8.7. & Ref. Mat.10:28.",
       "\"Pọn, mi lẹ ko jo onu lẹpo dayi, mi ko sọ hodo we\"",
@@ -5410,7 +5410,7 @@ export const cantiques = [
     id: 158,
     numero: "158",
     titre: "'Yiha gbọpenọ, 'whe de tin",
-    categorie: getCategorieAvecDefaut(158),
+    categorie: "Awhanfunnfun gbigbọ tọn",
     paroles: [
       "L.M & Ref Mat.24:13",
       "\"Sigba ewọ he do akọn na jẹ podo wẹ yẹ na whlẹn gan\"",
@@ -5446,7 +5446,7 @@ export const cantiques = [
     id: 159,
     numero: "159",
     titre: "Ye sọ ylọ mi d'azọn ṣe nu",
-    categorie: getCategorieAvecDefaut(159),
+    categorie: "Azọn Jiwheyẹwhe tọn",
     paroles: [
       "C.M. Lọm.12:11.",
       "\"To azọn wiwa mẹ, mi wadidọ blo\"",
@@ -5477,7 +5477,7 @@ export const cantiques = [
     id: 160,
     numero: "160",
     titre: "Mau ni whla we na mi n'sọ pe",
-    categorie: getCategorieAvecDefaut(160),
+    categorie: "Whẹntintọn po E zun whedenu po",
     paroles: [
       "9.8.8.9.&Ref Deut.31:8",
       "\"Oklunọ, ewọ wẹ to yiyi to nukọn towe, Ewọ na tin po",
@@ -5516,7 +5516,7 @@ export const cantiques = [
     id: 161,
     numero: "161",
     titre: "Mi dẹ n'Ahọlu Gigo daho nọ",
-    categorie: getCategorieAvecDefaut(161),
+    categorie: "Sinṣen wiwe",
     paroles: [
       "10.10.11.11",
       "\"Oklunọ Jiwheyẹwhe ṣe, Hiẹ klo gbahu\"Ps.104:1.",
@@ -5557,7 +5557,7 @@ export const cantiques = [
     id: 162,
     numero: "162",
     titre: "Kẹmẹ, mi ze Jesu d'aga",
-    categorie: getCategorieAvecDefaut(162),
+    categorie: "Pipa",
     paroles: [
       "C.M. Sọhìa.17:14",
       "Ewọ wẹ Oklunọ ọklunọ lẹ tọn podọ Ahọlu Ahọlu lẹ tọn",
@@ -5598,7 +5598,7 @@ export const cantiques = [
     id: 163,
     numero: "163",
     titre: "Wa 'dẹ afonu tọn",
-    categorie: getCategorieAvecDefaut(163),
+    categorie: "Afọnńu",
     paroles: [
       "S.M. Ps.55:17.",
       "\"To tenu, to afọnnu podọ to ọklẹ wẹ yẹn na nọ hodẹ\"",
@@ -5629,7 +5629,7 @@ export const cantiques = [
     id: 164,
     numero: "164",
     titre: "Otọ ṣe ṣe 'dẹ ṣe",
-    categorie: getCategorieAvecDefaut(164),
+    categorie: "Odẹ",
     paroles: [
       "6.6.6.6. Ps.61:1",
       "Ṣe avigbẹ ṣe, Jiwheyẹwhe, dayi ọdẹ ṣe go.",
@@ -5660,7 +5660,7 @@ export const cantiques = [
     id: 165,
     numero: "165",
     titre: "Jesu mi jlo na pli",
-    categorie: getCategorieAvecDefaut(165),
+    categorie: "Kọnđopọ wiwe",
     paroles: [
       "6.8.8.6.D. Eks. 16:25",
       "Na egbe wẹ gbọjẹzan na Oklunọ",
@@ -5698,7 +5698,7 @@ export const cantiques = [
     id: 166,
     numero: "166",
     titre: "Wiwe, Wiwe, Wiwe, 'Tọ Ganhupo",
-    categorie: getCategorieAvecDefaut(166),
+    categorie: "Sinṣen wiwe",
     paroles: [
       "11.12.12.10. Sọhìa.4:8. Ye ma gbọjẹ to ọkle po ọzan",
       "po dọmọ, Wiwe wiwe wiwe Oklunọ",
@@ -5730,7 +5730,7 @@ export const cantiques = [
     id: 167,
     numero: "167",
     titre: "Oklunọ 'lọn p'aihon tọn po",
-    categorie: getCategorieAvecDefaut(167),
+    categorie: "Pipa",
     paroles: [
       "8s. 4. Ps.116:12.",
       "\"Etẹ yẹn na na Oklunọ na Dagbe ẹtọn lẹpo\"",
@@ -5786,7 +5786,7 @@ export const cantiques = [
     id: 168,
     numero: "168",
     titre: "Otẹn po, t'Owhe lẹngbọvu tọn gbe",
-    categorie: getCategorieAvecDefaut(168),
+    categorie: "Oylọ",
     paroles: [
       "10.10.10. Luk.14:22.",
       "\"Mi ko basi ehe a zọn mi lẹpo, otẹn gbẹ sọ po\"",
@@ -5842,7 +5842,7 @@ export const cantiques = [
     id: 169,
     numero: "169",
     titre: "Ylandonọ mi lẹnvọjọ",
-    categorie: getCategorieAvecDefaut(169),
+    categorie: "Hokọńamẹ",
     paroles: [
       "17.7.7.7.D Ezek.33:11.",
       "\"Mi lẹnvọjọ sọn ali ylankan mitọn mẹ, etẹwutu mi na",
@@ -5890,7 +5890,7 @@ export const cantiques = [
     id: 170,
     numero: "170",
     titre: "Gbẹzan ṣe t'asi we",
-    categorie: getCategorieAvecDefaut(170),
+    categorie: "Gbezan yisenọ tọn",
     paroles: [
       "S.M. Ps.31:15 \"Gbẹzan ṣe lẹpo to alọ towe mẹ\"",
       "",
@@ -5925,7 +5925,7 @@ export const cantiques = [
     id: 171,
     numero: "171",
     titre: "Whenuena yẹn pọn satin lọ",
-    categorie: getCategorieAvecDefaut(171),
+    categorie: "Oya, oku po fọńsọńku Jesu tọn po",
     paroles: [
       "L.M. Gal.6:14.",
       "\"Ye ni ka mọ yẹn to ogọ yi, adavo to satin Jesu Klisti",
@@ -5957,7 +5957,7 @@ export const cantiques = [
     id: 172,
     numero: "172",
     titre: "Otan jawu wanyi tọn!",
-    categorie: getCategorieAvecDefaut(172),
+    categorie: "Wedagbe",
     paroles: [
       "7.6.7.6.8.8.8.7 Joh.3:16. \"Jiwheyẹwhe yiwan na aihon",
       "sọmọ, E jo ovi detọn Etọn na mi\"",
@@ -5999,7 +5999,7 @@ export const cantiques = [
     id: 173,
     numero: "173",
     titre: "Yisẹnọ lẹ, mi t'ayajẹ",
-    categorie: getCategorieAvecDefaut(173),
+    categorie: "Wedagbe",
     paroles: [
       "8.7.8.7.8.7. Mat.2:2 \"Milẹ kọ wa lita ayi nẹ\"",
       "",
@@ -6044,7 +6044,7 @@ export const cantiques = [
     id: 174,
     numero: "174",
     titre: "Wa nọ he mi Oklunọ ṣe",
-    categorie: getCategorieAvecDefaut(174),
+    categorie: "Afọnńu",
     paroles: [
       "L.M. Ps.101:2 \"Whẹtẹnu wẹ hiẹ na wa de?\"",
       "",
@@ -6079,7 +6079,7 @@ export const cantiques = [
     id: 175,
     numero: "175",
     titre: "A zan 'wa ylan tọn blo",
-    categorie: getCategorieAvecDefaut(175),
+    categorie: "Hokọńamẹ",
     paroles: [
       "6.5.6.5. Jak.4:7",
       "\"Mi diọ avun nukun sọ lẹgba, e na Họn sọn mi de\"",
@@ -6120,7 +6120,7 @@ export const cantiques = [
     id: 176,
     numero: "176",
     titre: "Lẹdo 'fin Jiwheyẹwhe tọn",
-    categorie: getCategorieAvecDefaut(176),
+    categorie: "Yopovu lẹ",
     paroles: [
       "C.M. & Ref Osọhìa.7:1.",
       "\"Ye ko yan avọ yetọn lẹ bo sọ lẹ yẹ zun wewe to ohun",
@@ -6168,7 +6168,7 @@ export const cantiques = [
     id: 177,
     numero: "177",
     titre: "Jikun dona tọn na sọ ja",
-    categorie: getCategorieAvecDefaut(177),
+    categorie: "Awhanfunnfun gbigbọ tọn",
     paroles: [
       "8.7.8.7. & Ref. Ezek.34:26.",
       "\"Jikun dona tọn na sọ ja.",
@@ -6206,7 +6206,7 @@ export const cantiques = [
     id: 178,
     numero: "178",
     titre: "Yẹn nọtẹ to pagbe Klist'Ahọl' tọn ji",
-    categorie: getCategorieAvecDefaut(178),
+    categorie: "Whlẹpọn po awhangba yisenọ tọn po",
     paroles: [
       "\"Le pagbe Jiwheyẹwhe tọn na su sọ, emẹ wẹ mọwẹ te\"",
       "2 Kọlini.1:20.",
@@ -6244,7 +6244,7 @@ export const cantiques = [
     id: 179,
     numero: "179",
     titre: "Na gohọ T'we yọn sọ le!",
-    categorie: getCategorieAvecDefaut(179),
+    categorie: "Pipa",
     paroles: [
       "D.7s Ps.84:1",
       "\"Na wẹ gohọ Towe lẹ yọn whanpẹ do Oklunọ!\" .",
@@ -6291,7 +6291,7 @@ export const cantiques = [
     id: 180,
     numero: "180",
     titre: "Mi dopẹ na Mau",
-    categorie: getCategorieAvecDefaut(180),
+    categorie: "Opẹ",
     paroles: [
       "6.7.6.7.6.6.6.6. I Otan.29:13.",
       "Be dinvie, Jiwheyẹwhe mitọn,mi dopẹ na wẹ, bo sọ pa",
@@ -6330,7 +6330,7 @@ export const cantiques = [
     id: 181,
     numero: "181",
     titre: "Ayi ṣe jaya to 'Klunọ mẹ",
-    categorie: getCategorieAvecDefaut(181),
+    categorie: "Awhanfunnfun gbigbọ tọn",
     paroles: [
       "9.8.9.8. & Ref. Filip. 4:4",
       "Be dinvie, mi tayajẹ to Oklunọ mẹ to whepoponu.",
@@ -6368,7 +6368,7 @@ export const cantiques = [
     id: 182,
     numero: "182",
     titre: "Wa nọ he mi, ozan ko ku",
-    categorie: getCategorieAvecDefaut(182),
+    categorie: "Tenu",
     paroles: [
       "10.10.10.10 Luk.24:29. Nọ he mi, na ozan ko",
       "ku.",
@@ -6409,7 +6409,7 @@ export const cantiques = [
     id: 183,
     numero: "183",
     titre: "Jesu, dona mi so mi n'yi",
-    categorie: getCategorieAvecDefaut(183),
+    categorie: "Tenu",
     paroles: [
       "8.8.8.D. Isa.60:20. Na Oklunọ na yin hinhọn madopodo",
       "na wẹ",
@@ -6452,7 +6452,7 @@ export const cantiques = [
     id: 184,
     numero: "184",
     titre: "To diọdọ gbẹ tọn lẹpo mẹ",
-    categorie: getCategorieAvecDefaut(184),
+    categorie: "Whlẹpọn po awhangba yisenọ tọn po",
     paroles: [
       "C.M. Ps.34:1. Yẹn na nọ dona Oklunọ to whepoponu",
       "",
@@ -6487,7 +6487,7 @@ export const cantiques = [
     id: 185,
     numero: "185",
     titre: "'Hol' Gigonọ, yẹyinọ",
-    categorie: getCategorieAvecDefaut(185),
+    categorie: "Autres",
     paroles: [
       "7.4.7.4.5.7.4. Ps. 70:4.",
       "Na ye he jlo whlengan Etọn lẹ,ni to didọ whepoponu",
@@ -6526,7 +6526,7 @@ export const cantiques = [
     id: 186,
     numero: "186",
     titre: "Mi wa mi 'nọpọ bo jihan",
-    categorie: getCategorieAvecDefaut(186),
+    categorie: "Oylọ",
     paroles: [
       "8.6.8.6.8.8.8.6. I Joh.4:8. Wanyi wẹ Jiwheyẹwhe",
       "",
@@ -6572,7 +6572,7 @@ export const cantiques = [
     id: 187,
     numero: "187",
     titre: "Mi pa Ẹ, mi pa Ẹ",
-    categorie: getCategorieAvecDefaut(187),
+    categorie: "Yopovu lẹ",
     paroles: [
       "",
       "1. Mi pa Ẹ, mi pa Ẹ, mi yọpọ flinflin lẹ",
@@ -6593,7 +6593,7 @@ export const cantiques = [
     id: 188,
     numero: "188",
     titre: "Dọ otan Jesu tọn na mi",
-    categorie: getCategorieAvecDefaut(188),
+    categorie: "Wedagbe",
     paroles: [
       "8s.4s.5s.4s..",
       "",
@@ -6639,7 +6639,7 @@ export const cantiques = [
     id: 189,
     numero: "189",
     titre: "Fọn azọn Towe, Jesu",
-    categorie: getCategorieAvecDefaut(189),
+    categorie: "Azọn Jiwheyẹwhe tọn",
     paroles: [
       "S.M. & Ref. Hab.3:2. Oklunọ e, gbọ azọn Towe ni fọn",
       "",
@@ -6679,7 +6679,7 @@ export const cantiques = [
     id: 190,
     numero: "190",
     titre: "Oklunọ ja, aihon na whan",
-    categorie: getCategorieAvecDefaut(190),
+    categorie: "Gigọwa Oklunọ tọn",
     paroles: [
       "L.M. Ps.96:13. E ja nado dawhẹ aihon tọn.",
       "",
@@ -6714,7 +6714,7 @@ export const cantiques = [
     id: 191,
     numero: "191",
     titre: "Jawu wẹ Jiwheyẹwhe ṣe",
-    categorie: getCategorieAvecDefaut(191),
+    categorie: "Sinṣen wiwe",
     paroles: [
       "C.M Isa.57:15. Yẹn nọ nọ ofi he yiaga bo we, hẹ",
       "ewọ ga he tindọ gbigbọ ovọjọ po whiwhẹ po tọn",
@@ -6760,7 +6760,7 @@ export const cantiques = [
     id: 192,
     numero: "192",
     titre: "Whlẹngantọ mitọn vivẹ",
-    categorie: getCategorieAvecDefaut(192),
+    categorie: "Sinṣen wiwe",
     paroles: [
       "D.7s 6s. I Pit.1:8. Mẹhe miwlẹ yiwanna bo ma mọ.",
       "",
@@ -6800,7 +6800,7 @@ export const cantiques = [
     id: 193,
     numero: "193",
     titre: "Wa, nugbonọ lẹ",
-    categorie: getCategorieAvecDefaut(193),
+    categorie: "Oylọ",
     paroles: [
       "6.6.10.5.6.&Ref. Luk.2:15.Mi gbọ mi ni yi Bẹtlẹhẹmu",
       "dinvie.",
@@ -6836,31 +6836,298 @@ export const cantiques = [
       "    Miwa mi ni dẹ bo sẹn etc. Niṣẹ."
     ],
     tonalite: { note: "E" }
+  },
+  {
+    id: 194,
+    numero: "194",
+    titre: "Towe wẹ onu he yin ṣe lẹpo",
+    categorie: "Lẹnvojo",
+    paroles: [
+      "12s.11s. Joh.17:10. Towe wẹ onu he yin ṣe lẹpo. Ṣe sọ",
+      "                        wẹ Towe.",
+      "",
+      "1. Oklunọ yẹn sa ko ṣe 'gbẹ Towe",
+      "He to wanyin T'we tọn dọ",
+      "Ṣigba njlo na fọn to yisẹ wamẹ",
+      "Na do sẹpọ wẹ do gọ.",
+      "    Dọn mi dogo, dogo Oklunọ",
+      "    Do satin he a ku do kọn",
+      "    Dọn mi dogo, dogo, dogo Oklunọ,",
+      "    Do 'hun Towe gbẹnọ mẹ",
+      "",
+      "2. Jale lẹ mi wẹ, na azọn Towe",
+      "Gbọn jọmiọn Towe dali",
+      "Gbọ na pọn aga gbọn yisẹ dali",
+      "Na jlo ṣe ni yin Towe.",
+      "    Dọn mi dogo, dogo Oklunọ. etc.",
+      "",
+      "3. A! Homẹhun gan hiho Dopo tọn",
+      "He yẹn zan to 'fin T'we kọn",
+      "Whenu yẹn hodẹ hlan wẹ Oklunọ",
+      "Bọ mi dọho di hontọn.",
+      "    Dọn mi dogo, dogo Oklunọ. etc.",
+      "",
+      "4. Wanyi sisosiso he nma gan dọ",
+      "Kaka nna do sa'to jẹ",
+      "Ayajẹ daho he yẹn ma gan dọ",
+      "Kaka nna biọ gbọjẹ mẹ.",
+      "    Dọn mi dogo, dogo Oklunọ. etc. Nisẹ."
+    ],
+    tonalite: { note: "F" }
+  },
+  {
+    id: 195,
+    numero: "195",
+    titre: "Mi wa de, mi se, gbigbọ mitọn na sọ mọ ogbẹ",
+    categorie: "Oylọ",
+    paroles: [
+      "9.9.9.6 Isa.55:13 Mi wa de, mi se, gbigbọ mitọn na sọ mọ ogbẹ",
+      "",
+      "1. Wa Jesu de hiẹ sọ dọngban blo",
+      "Ho 'Tọn mẹ E d'ali hia mi te",
+      "E nọte sẹnsẹn mitọn egbe",
+      "E dọ dẹdẹ do wa",
+      "    Ayajẹ pipe mitọn na yin",
+      "    Yin gbigbọ mitọn gan sọn Ylando mẹ",
+      "    Bo mi na sọ to dewe, Jesu",
+      "    To gbẹmavọ lọ mẹ.",
+      "",
+      "2. Gbọ yọpọ lẹ ni wa, ṣe gbẹ 'Tọn",
+      "Gbigbọ lẹpo ni gọ n'ayajẹ",
+      "Mi ni de Jesu di mẹvivẹ",
+      "Mi nọte blo mi wa.",
+      "    Ayajẹ pipe mitọn na yin etc.",
+      "",
+      "3. Flin dọ E to mide to egbe",
+      "Doto 'sẹn 'Tọn bo sọ yin pipe",
+      "Ṣe le gbe 'Tọn dido dẹdẹ dọ",
+      "Mi yọpọ ṣe lẹ wa. Nisẹ.",
+      "    Ayajẹ pipe mitọn na yin etc. Nisẹ."
+    ],
+    tonalite: { note: "G" }
+  },
+  {
+    id: 196,
+    numero: "196",
+    titre: "Mi ni yi pipe mẹ",
+    categorie: "Gbezan yisenọ tọn",
+    paroles: [
+      "10s.5s. Heb.6.1. Mi ni yi pipe mẹ.",
+      "",
+      "1. Na yi siso to jlo Jesu tọn mẹ",
+      "T'azan lẹpo gbe",
+      "Na he aga to yọnẹn Etọn mẹ",
+      "Po jọmiọn 'Tọn po",
+      "    Hẹn mi siso susu",
+      "    Ze mi yiji aga",
+      "    Na mi nuyọnẹn deji",
+      "    To ho wiwe Towe mẹ.",
+      "",
+      "2. Na yi sisọ to jlo Jesu tọn mẹ",
+      "Sisosiso gọ",
+      "Gbẹzan ṣe lẹpo niyin Jesu tọn",
+      "Po jlo Etọn po.",
+      "    Hẹn mi siso susu etc.",
+      "",
+      "3. Na yi sisọ yin whlepọn tlẹ sọ wa",
+      "Sisosiso gọ",
+      "Na hẹn adọ ayi to Jesu mẹ",
+      "Bo sẹn sisẹn gọ",
+      "    Hẹn mi siso susu etc.",
+      "",
+      "4. Ze mi d'aga to jlẹ whlẹpọn tọn mẹ",
+      "Bo hẹn mi luntọn",
+      "Hẹn mi yin awhangbatọ di Towe",
+      "Kaka jẹ podo.",
+      "    Hẹn mi siso susu etc. Nisẹ."
+    ],
+    tonalite: { note: "A" }
+  },
+  {
+    id: 197,
+    numero: "197",
+    titre: "Yẹn na nọ jihan hlan Oklunọ",
+    categorie: "Autres",
+    paroles: [
+      "6.6.8.4.D. Ps.104:33. Yẹn na nọ jihan hlan Oklunọ",
+      "                            whenuena yẹn tin to ogbẹ",
+      "",
+      "1. Ayi ṣe, pa Họlu 'lọn tọn",
+      "Hẹn pipa wa nukọn 'Tọn",
+      "Hiẹ he yẹ pọngbọ bo jona",
+      "Mẹnu ye do pa d' ewọ",
+      "    Pa Oklunọ, pa Oklunọ",
+      "    P'Ahọlu madopodo.",
+      "",
+      "2. P' Ẹ na lẹblanu he dọhia",
+      "Na 'tọ lẹ to whlepọn mẹ",
+      "Pa Ẹ dopo lọ wẹ tẹgbẹ",
+      "E dọngban nado sa'di",
+      "    Pa Oklunọ, pa Oklunọ etc.",
+      "",
+      "3. E to mi go pọn di Otọ",
+      "E yọn ma dọgan mitọn",
+      "E to mi whla t'awa 'tọn mẹ",
+      "Bo nọ whlen mi kẹntọ si",
+      "    Pa Oklunọ, pa Oklunọ etc.",
+      "",
+      "4. Mi to sisẹ di vovo lẹ",
+      "He jẹhon fu bọ ye yọ",
+      "'Whenu mi tin bo sọ nọ ku",
+      "Jiyẹwhe to dopo lọ",
+      "    Pa Oklunọ, pa Oklunọ etc.",
+      "",
+      "5. Angẹli mi wa sẹn he mi",
+      "Mi nọ mọ Ẹn po nukun po",
+      "Owhe po 'sun po mi dẹ nẹ",
+      "P'aihọnmẹnu lẹ po",
+      "    Pa Oklunọ, pa Oklunọ etc. Nisẹ."
+    ],
+    tonalite: { note: "B" }
+  },
+  {
+    id: 198,
+    numero: "198",
+    titre: "Pan nukọn mi na ye ni sọ whlen mi gan",
+    categorie: "Awhanfunnfun gbigbọ tọn",
+    paroles: [
+      "11s Isa.45:22. Pan nukọn mi na ye ni sọ whlen mi gan.",
+      "",
+      "1. Ogbẹ tin na ye he pinpọn Jesu t'aga",
+      "Ogbẹ tin na we to Kalfali",
+      "Ylandonọ pọn Jesu he ye whe hiẹ wutu",
+      "Pọn Jesu hiẹ na sọ mọ ogbẹ",
+      "    Pọn pọn pọn bo gan",
+      "    Ylandonọ pọn Jesu he ye whe hiẹ wutu",
+      "    Pọn Jesu hiẹ na sọ mọ ogbẹ.",
+      "",
+      "2. Ylando tẹ wutu wẹ ye do whe d'atin go",
+      "Be hiẹ tọn wutu ma wẹ e yin",
+      "Hun etọn he sisa na lewẹ Ylando tọn",
+      "Be ma ko klọ aho t'we lẹpo ṣe?",
+      "    Pọn pọn pọn bo gan etc.",
+      "",
+      "3. Avi podẹ towe po ma gan basi ye",
+      "Hun Jesu tọn kẹdẹ 'gan whlen mẹ",
+      "Yi wẹndagbe se E na jo Ylando na we",
+      "Hun Etọn na lẹ we we sese.",
+      "    Pọn pọn pọn bo gan etc.",
+      "",
+      "4. Hiho Etọn wẹ nu na pọngbọ pipe mi",
+      "Dodo Etọn wẹ tudonu mitọn",
+      "Avọ dodo tọn he E jlo na a ni ze do",
+      "Avọ devo ma sọ tin na wẹ.",
+      "",
+      "5. A zan 'yi awẹ blo Jesu to te pọn we",
+      "E ko wa whlẹnganzọn towe vọ",
+      "Whla dopo wẹ E ku bo sọ fo azọn lọ",
+      "Nude ma sọ po ye na sọ wa.",
+      "",
+      "6. Yi Jesu d'ayi mẹ, yi po ayajẹ po",
+      "Gbẹ madopodo lẹzun towe",
+      "Yọnẹn nugbonugbo dọ oku ju gbọn ji we",
+      "Jesu nugbo towe tin togbẹ. Nisẹ."
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 199,
+    numero: "199",
+    titre: "Mi to yiyi nukọn, klistian 'whanfuntọ",
+    categorie: "Gbezan yisenọ tọn",
+    paroles: [
+      "11s Deut.31:6",
+      "",
+      "1. Mi to yiyi nukọn, klistian 'whanfuntọ",
+      "Sa topipọn Jesu, he tin to nukọn",
+      "Klisti Klunọ mitọn wẹ 'whangan mitọn",
+      "Pọn asia Etọn tin t'awhan nukọn",
+      "    Mi to yiyi nukọn, klistian 'whanfuntọ",
+      "    Sa to pinpọn Jesu he tin to nukọn.",
+      "",
+      "2. Toyin Jesu tọn mẹ, 'whan lẹgba tọn Họn",
+      "Klistian awhanfuntọ, yi t'awhangba mẹ",
+      "Lọnzo to sisisọ t'abobo gbe mẹ",
+      "Gbẹtọ lẹpo, mi dabobo, bo jihan d'aga.",
+      "    Mi to yiyi nukọn, etc.",
+      "",
+      "3. Di awhanvipẹ lẹ, w' agun Mau tọn",
+      "Mi to yiyi t'ali he 'to lẹ gbọn ji",
+      "Ye ma klan mi dovo, dopo wẹ mi yin",
+      "Dopo wẹ Todido, 'plọn, dopo wẹ wanyi",
+      "    Mi to yiyi nukọn, etc.",
+      "",
+      "4. Ofin pahọludu he lẹ sọgan va",
+      "Ṣigba agun Jesu tọn na tin tẹgbẹ",
+      "Lọnzo ma sọgan siyon ta na agun he",
+      "Mi do pagbe Jesu tọn, e he ma gan diọ.",
+      "    Mi to yiyi nukọn, etc.",
+      "",
+      "5. Mi wa mi ni zọn yi mi Gbẹtọ lẹpo",
+      "Mi dogbepọ hẹ mi ji awhangba han",
+      "Gigo, pipa, yẹyi hlan Klist'Ahọlu,",
+      "Ehe wẹ na yin 'han mitọn kaka yi.",
+      "    Mi to yiyi nukọn, etc. Nisẹ"
+    ],
+    tonalite: { note: "D" }
+  },
+  {
+    id: 200,
+    numero: "200",
+    titre: "Mi dọnudo Jesu 'ye whe",
+    categorie: "Oya, oku po fọnṣọnku Jesu tọn po",
+    paroles: [
+      "D.8s. 7s.",
+      "Zannu he didotọ le gbẹdayi dopolo wẹ sọ lẹzun",
+      "gangansu họlọnglọẹnmẹ tọn. Malk.12:10",
+      "",
+      "1. Mi dọnudo Jesu 'ye whe",
+      "Ahọlu Galili tọn",
+      "Hiẹ duya na Ylando mitọn",
+      "Nado whlen mi gan vọnu",
+      "Mi dọn'do Whlẹngantọ mitọn",
+      "He hẹn winyan mitọn lẹ",
+      "Gbọn huhlọn hun T'we tọn dali",
+      "Mi mọ 'gbẹ 'yin Towe mẹ.",
+      "",
+      "2. Lẹngbovu he Jiyẹwhe de",
+      "Hiẹ hẹn ylan mitọn lẹpo",
+      "Owanyi Ganhunupo tọn",
+      "E do de yewu na mi",
+      "Gbọn hun Etọn vivẹ dali",
+      "Wẹ mi nọ mọ jona yi",
+      "Bọ ye hunhọn 'lọn tọn na mi",
+      "Mi ko gbọwhẹ he Mau.",
+      "",
+      "3. Mi don'do Jesu to'fin ji",
+      "He d'Ahọlu Gigo mẹ",
+      "Mẹhe 'lọnnu le to pipa",
+      "He sin ayi to 'Tọ de",
+      "Finẹ E to vẹvẹ na mi",
+      "Bo to 'tẹn basi na mi",
+      "E ma na gbọ vẹvẹ na mi",
+      "Bọ mi na biọ Gigo mẹ.",
+      "",
+      "4. Gbọ mi n'yan vale bo dẹ nẹ",
+      "Mẹhe jẹ na mi ni sẹn",
+      "Mi ni to pipa Ẹ tẹgbẹ",
+      "E jẹ ye ni ze E daga",
+      "Angẹl lẹ mi wa sẹn hẹ mi",
+      "Mi jihan vivi hugan",
+      "Mi wa pa Whlẹngantọ hẹ mi",
+      "Mi jihan hlan Emanuel. Nisẹ."
+    ],
+    tonalite: { note: "E" }
   }
 ];
 
-import { getCategorieByNumero } from './categoriesMapping.js';
-
-// Fonction helper pour obtenir la catégorie avec "Autres" par défaut
-function getCategorieAvecDefaut(numero) {
-  const num = parseInt(numero);
-  const categorie = getCategorieByNumero(num);
-  // Si la catégorie retournée est "Hokọnamẹ" (valeur par défaut du mapping), 
-  // on vérifie si le numéro est vraiment dans la liste des "Hokọnamẹ"
-  const hokọnamẹNumbers = [11, 13, 46, 103, 126, 169, 175];
-  if (categorie === "Hokọnamẹ" && !hokọnamẹNumbers.includes(num)) {
-    return "Autres";
-  }
-  return categorie;
-}
-
-// Fonction helper pour ajouter un nouveau cantique avec la bonne catégorie
-export function createCantique(id, numero, titre, paroles, tonalite) {
+// Fonction helper pour ajouter un nouveau cantique avec une catégorie par défaut
+export function createCantique(id, numero, titre, paroles, tonalite, categorie = "Autres") {
   return {
     id,
     numero: numero.toString().padStart(3, '0'),
     titre,
-    categorie: getCategorieAvecDefaut(numero),
+    categorie,
     paroles,
     tonalite
   };

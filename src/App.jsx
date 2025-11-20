@@ -63,13 +63,12 @@ function App() {
       case 'cantique-detail':
         return null;
       case 'prayers':
-  return { 
-    title: 'Prières', 
-    showSearch: true, 
-    showMenu: true,
-    onSearch: (term) => setSearchTerm(term)
-  };
-        return <Prayers searchTerm={searchTerm} />;
+        return { 
+          title: 'Prières', 
+          showSearch: true, 
+          showMenu: true,
+          onSearch: (term) => setSearchTerm(term)
+        };
       case 'favoris':
         return { title: 'Mes Favoris', showMenu: true };
       case 'churches':
