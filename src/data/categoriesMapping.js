@@ -80,9 +80,56 @@ export const categoriesMapping = {
   64: "Adọgbo po todido po", 65: "Adọgbo po todido po", 78: "Adọgbo po todido po", 
   141: "Adọgbo po todido po", 215: "Adọgbo po todido po", 262: "Adọgbo po todido po", 263: "Adọgbo po todido po",
   
+  // Tenu nududu Oklunọ tọn
+  49: "Tenu nududu Oklunọ tọn", 106: "Tenu nududu Oklunọ tọn", 213: "Tenu nududu Oklunọ tọn", 
+  224: "Tenu nududu Oklunọ tọn", 250: "Tenu nududu Oklunọ tọn",
+  
+  // Oya, oku po fọnsọnku Jesu tọn po
+  82: "Oya, oku po fọnsọnku Jesu tọn po", 130: "Oya, oku po fọnsọnku Jesu tọn po", 131: "Oya, oku po fọnsọnku Jesu tọn po", 
+  132: "Oya, oku po fọnsọnku Jesu tọn po", 171: "Oya, oku po fọnsọnku Jesu tọn po", 200: "Oya, oku po fọnsọnku Jesu tọn po", 
+  207: "Oya, oku po fọnsọnku Jesu tọn po", 232: "Oya, oku po fọnsọnku Jesu tọn po", 249: "Oya, oku po fọnsọnku Jesu tọn po", 
+  251: "Oya, oku po fọnsọnku Jesu tọn po",
+  
+  // Batẹmu, klandovo po kọndopọ wiwe po
+  52: "Batẹmu, klandovo po kọndopọ wiwe po", 53: "Batẹmu, klandovo po kọndopọ wiwe po", 54: "Batẹmu, klandovo po kọndopọ wiwe po", 
+  57: "Batẹmu, klandovo po kọndopọ wiwe po", 124: "Batẹmu, klandovo po kọndopọ wiwe po", 138: "Batẹmu, klandovo po kọndopọ wiwe po", 
+  108: "Batẹmu, klandovo po kọndopọ wiwe po", 109: "Batẹmu, klandovo po kọndopọ wiwe po", 111: "Batẹmu, klandovo po kọndopọ wiwe po", 
+  112: "Batẹmu, klandovo po kọndopọ wiwe po", 137: "Batẹmu, klandovo po kọndopọ wiwe po", 140: "Batẹmu, klandovo po kọndopọ wiwe po", 
+  165: "Batẹmu, klandovo po kọndopọ wiwe po", 220: "Batẹmu, klandovo po kọndopọ wiwe po",
+  
+  // Sinṣen wiwe
+  35: "Sinṣen wiwe", 45: "Sinṣen wiwe", 58: "Sinṣen wiwe", 59: "Sinṣen wiwe", 71: "Sinṣen wiwe", 
+  91: "Sinṣen wiwe", 107: "Sinṣen wiwe", 147: "Sinṣen wiwe", 161: "Sinṣen wiwe", 166: "Sinṣen wiwe", 
+  192: "Sinṣen wiwe", 204: "Sinṣen wiwe", 225: "Sinṣen wiwe", 242: "Sinṣen wiwe",
+  
+  // Ovẹ na jona ylando tọn
+  92: "Ovẹ na jona ylando tọn", 144: "Ovẹ na jona ylando tọn", 151: "Ovẹ na jona ylando tọn", 
+  152: "Ovẹ na jona ylando tọn", 153: "Ovẹ na jona ylando tọn", 154: "Ovẹ na jona ylando tọn", 
+  157: "Ovẹ na jona ylando tọn",
+  
+  // Lẹnvojo
+  105: "Lẹnvojo", 194: "Lẹnvojo", 245: "Lẹnvojo",
+  
+  // Finfọn gbigbọ tọn
+  133: "Finfọn gbigbọ tọn", 136: "Finfọn gbigbọ tọn", 158: "Finfọn gbigbọ tọn", 177: "Finfọn gbigbọ tọn", 
+  181: "Finfọn gbigbọ tọn", 198: "Finfọn gbigbọ tọn", 209: "Finfọn gbigbọ tọn", 219: "Finfọn gbigbọ tọn", 
+  210: "Finfọn gbigbọ tọn", 211: "Finfọn gbigbọ tọn", 214: "Finfọn gbigbọ tọn",
+  
+  // Whẹntintọn po E zun whedenu po
+  48: "Whẹntintọn po E zun whedenu po", 89: "Whẹntintọn po E zun whedenu po", 100: "Whẹntintọn po E zun whedenu po", 
+  160: "Whẹntintọn po E zun whedenu po", 221: "Whẹntintọn po E zun whedenu po", 227: "Whẹntintọn po E zun whedenu po", 
+  231: "Whẹntintọn po E zun whedenu po", 260: "Whẹntintọn po E zun whedenu po",
+  
+  // Yise, fligo po hihọ po
+  122: "Yise, fligo po hihọ po", 239: "Yise, fligo po hihọ po", 148: "Yise, fligo po hihọ po", 
+  149: "Yise, fligo po hihọ po",
+  
   // Hokọnamẹ
   11: "Hokọnamẹ", 13: "Hokọnamẹ", 46: "Hokọnamẹ", 103: "Hokọnamẹ", 126: "Hokọnamẹ", 
-  169: "Hokọnamẹ", 175: "Hokọnamẹ"
+  169: "Hokọnamẹ", 175: "Hokọnamẹ",
+  
+  // Gigọwa Oklunọ tọn
+  190: "Gigọwa Oklunọ tọn", 208: "Gigọwa Oklunọ tọn", 248: "Gigọwa Oklunọ tọn"
 };
 
 // Fonction pour obtenir la catégorie d'un cantique
@@ -120,5 +167,6 @@ export const categories = [
   "Whẹntintọn po E zun whedenu po",
   "Yise, fligo po hihọ po",
   "Hokọnamẹ",
-  "Gigọwa Oklunọ tọn"
+  "Gigọwa Oklunọ tọn",
+  "Autres"
 ];
