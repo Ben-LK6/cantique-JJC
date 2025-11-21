@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Heart, Music, HandHeart } from 'lucide-react';
-import { cantiques } from '../data/cantiques';
+import { getCantiques } from '../utils/cantiqueUtils';
 import { prieres } from '../data/prieres';
 
 const Favorites = ({ onSelectCantique }) => {
@@ -8,18 +8,33 @@ const Favorites = ({ onSelectCantique }) => {
   const [favoriteCantiques, setFavoriteCantiques] = useState([]);
   const [favoritePrayers, setFavoritePrayers] = useState([]);
 
-  useEffect(() => {
+  const loadFavorites = () => {
     // Charger les favoris depuis localStorage
     const cantiqueIds = JSON.parse(localStorage.getItem('favorites') || '[]');
     const prayerIds = JSON.parse(localStorage.getItem('favoritePrayers') || '[]');
 
-    // Récupérer les cantiques favoris
-    const favoriteC = cantiques.filter(c => cantiqueIds.includes(c.id));
+    // Récupérer les cantiques favoris selon la langue actuelle
+    const currentCantiques = getCantiques();
+    const favoriteC = currentCantiques.filter(c => cantiqueIds.includes(c.id));
     setFavoriteCantiques(favoriteC);
 
     // Récupérer les prières favorites
     const favoriteP = prieres.filter(p => prayerIds.includes(p.id));
     setFavoritePrayers(favoriteP);
+  };
+
+  useEffect(() => {
+    loadFavorites();
+    
+    // Écouter les changements de langue
+    const handleStorageChange = (e) => {
+      if (e.key === 'cantiqueLanguage' || e.key === 'favorites') {
+        loadFavorites();
+      }
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
   return (

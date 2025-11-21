@@ -254,9 +254,6 @@ const handleShare = () => {
               )}
             </div>
           </div>
-          
-          {/* Espace pour le défilement */}
-          <div className="h-screen"></div>
         </div>
       </div>
     </div>
