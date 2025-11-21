@@ -6947,7 +6947,7 @@ export const cantiques = [
     id: 197,
     numero: "197",
     titre: "Yẹn na nọ jihan hlan Oklunọ",
-    categorie: "Autres",
+    categorie: "Hokọn namẹ",
     paroles: [
       "6.6.8.4.D. Ps.104:33. Yẹn na nọ jihan hlan Oklunọ",
       "                            whenuena yẹn tin to ogbẹ",
@@ -7123,7 +7123,7 @@ export const cantiques = [
     id: 201,
     numero: "201",
     titre: "Ji pipa han hlan Oklunọ",
-    categorie: "Autres",
+    categorie: "Pipa",
     paroles: [
       "L.M. Isa.42:11. Gbọ mẹhe to ose mẹ lẹ ni jihan.",
       "",
@@ -7173,7 +7173,7 @@ export const cantiques = [
     id: 202,
     numero: "202",
     titre: "Jesu, yẹn ko ze satin ṣe",
-    categorie: "Autres",
+    categorie: "Gbezan yisenọ tọn",
     paroles: [
       "D.8s.7s. Malk.10:21 Bo wa ze satin, bo hodo mi.",
       "",
@@ -7219,7 +7219,7 @@ export const cantiques = [
     id: 203,
     numero: "203",
     titre: "Whenu E na wa, whenu e na wa",
-    categorie: "Autres",
+    categorie: "Hokọn namẹ",
     paroles: [
       "8.6.8.5.",
       "",
@@ -7250,7 +7250,7 @@ export const cantiques = [
     id: 204,
     numero: "204",
     titre: "Jiyẹwhe lọn p'aihọn tọn po",
-    categorie: "Autres",
+    categorie: "Sinṣen wiwe",
     paroles: [
       "L.M. Joh.1:4.",
       "Emẹ wẹ ogbẹ te, ogbẹ lọ sọ wẹ hihọn aihọn tọn.",
@@ -7286,7 +7286,7 @@ export const cantiques = [
     id: 205,
     numero: "205",
     titre: "T'agbowhẹn gbẹ tọn he to hiho jẹ yenji mẹ",
-    categorie: "Autres",
+    categorie: "Whlẹpọn po awhangba yisenọ tọn po",
     paroles: [
       "12s. 10s Heb.6:19.",
       "",
@@ -7317,7 +7317,7 @@ export const cantiques = [
     id: 206,
     numero: "206",
     titre: "Hiẹ 'ho Jiwheyẹwhe tọn",
-    categorie: "Autres",
+    categorie: "Wedagbe",
     paroles: [
       "D.7s.6s Kol.3:16. \"Mi gbọ oho Klisti tọn ni no no mi mẹ",
       "                        to susu gege mẹ.",
@@ -7364,7 +7364,7 @@ export const cantiques = [
     id: 207,
     numero: "207",
     titre: "Oklunọ ṣe du 'ya nami",
-    categorie: "Autres",
+    categorie: "Oya, oku po fọnṣọn ku Jesu tọn po",
     paroles: [
       "9s.7s. Sohia.5:12.",
       "",
@@ -7407,7 +7407,7 @@ export const cantiques = [
     id: 208,
     numero: "208",
     titre: "Nto nukọn yi t'ali lọ ji",
-    categorie: "Autres",
+    categorie: "Gigọwa Oklunọ tọn",
     paroles: [
       "Ps.61:12. Dọn mi yi awiyan he yiji hu mi ji",
       "",
@@ -7450,7 +7450,7 @@ export const cantiques = [
     id: 209,
     numero: "209",
     titre: "Homẹ ṣe hun dọ 'Tọ mitọn 'lọn tọn",
-    categorie: "Autres",
+    categorie: "Awhanfunnfun gbigbọ tọn",
     paroles: [
       "10.10.10.10. & Ref. Mal.1:2. \"Yẹn ko yiwan na mi",
       "                                wẹ Oklunọ dọ\"",
@@ -7494,7 +7494,7 @@ export const cantiques = [
     id: 210,
     numero: "210",
     titre: "Jiyẹwhe mitọn to mi mẹ",
-    categorie: "Autres",
+    categorie: "Awhanfunnfun gbigbọ tọn",
     paroles: [
       "8s.7s. Ezek.34:26. \"Yẹn na so hẹn ye po fihe lẹdo",
       "                        oso ṣe le po zun dona; yẹn bo naso hẹn na",
@@ -7534,7 +7534,7 @@ export const cantiques = [
     id: 211,
     numero: "211",
     titre: "Yẹn yonẹn dọ mẹflitọ ṣe tin",
-    categorie: "Autres",
+    categorie: "Awhanfunnfun gbigbọ tọn",
     paroles: [
       "9.8.9.8. Job.19:25. \"Podọ yẹn, nyonẹn dọ Mẹflitọ ṣe",
       "                        tin togbẹ\"",
@@ -7570,7 +7570,7 @@ export const cantiques = [
     id: 212,
     numero: "212",
     titre: "Do mi họ Jehova daho",
-    categorie: "Autres",
+    categorie: "Odẹ",
     paroles: [
       "8s.7s. Ps.73:24 \"Hiẹ na yi alọ Towe do de mi do",
       "                    ali ji podo to enẹ godo, Hiẹ na yi mi do gigo mẹ\"",
@@ -7609,7 +7609,7 @@ export const cantiques = [
     id: 213,
     numero: "213",
     titre: "Sisa de tin he gọ na 'hun",
-    categorie: "Autres",
+    categorie: "Tenu nududu Oklunọ tọn",
     paroles: [
       "C.M. Zek.13:1. To azan lọ gbe, asisa nuvo de na",
       "                hun na owhe Davidi tọn.",
@@ -7645,7 +7645,7 @@ export const cantiques = [
     id: 214,
     numero: "214",
     titre: "Yẹn ko ji hontọn he Jesu",
-    categorie: "Autres",
+    categorie: "Awhanfunnfun gbigbọ tọn",
     paroles: [
       "Ohan Sol. 2:16.",
       "",
@@ -7685,7 +7685,7 @@ export const cantiques = [
     id: 215,
     numero: "215",
     titre: "Ahun ku mi dọ yẹn do Jesu",
-    categorie: "Autres",
+    categorie: "Adọgbo po todido po",
     paroles: [
       "",
       "1. Ahun ku mi dọ yẹn do Jesu",
