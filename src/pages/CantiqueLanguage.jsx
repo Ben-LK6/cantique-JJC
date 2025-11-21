@@ -3,7 +3,7 @@ import { Languages, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { t } from '../data/translations';
 
-const CantiqueLanguage = () => {
+const CantiqueLanguage = ({ onNavigate }) => {
   const [cantiqueLanguage, setCantiqueLanguage] = useState(() => 
     localStorage.getItem('cantiqueLanguage') || 'fon'
   );
@@ -19,8 +19,15 @@ const CantiqueLanguage = () => {
         key: 'cantiqueLanguage',
         newValue: cantiqueLanguage
       }));
+      
+      // Naviguer automatiquement vers les cantiques après un délai
+      if (onNavigate) {
+        setTimeout(() => {
+          onNavigate('cantiques');
+        }, 1500);
+      }
     }
-  }, [cantiqueLanguage]);
+  }, [cantiqueLanguage, onNavigate]);
 
   const showSavedMessage = () => {
     setShowSaved(true);

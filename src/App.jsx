@@ -113,7 +113,7 @@ function App() {
         return <Settings />;
       
       case 'cantique-language':
-        return <CantiqueLanguage />;
+        return <CantiqueLanguage onNavigate={navigateTo} />;
       
       case 'instructions':
         return <Instructions />;
