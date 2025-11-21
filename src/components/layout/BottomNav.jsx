@@ -1,11 +1,10 @@
-import { Home, Book, HandHeart, Settings, Globe } from 'lucide-react';  // Changé Heart par Globe
+import { Home, Settings, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const BottomNav = ({ currentPage, onNavigate }) => {
   const navItems = [
     { icon: Home, label: 'Accueil', path: 'home' },
-    { icon: HandHeart, label: 'Prières', path: 'prayers' },
-    { icon: Globe, label: 'Langue des cantiques', path: 'langues' },
+    null, // Espace central pour Langue des cantiques
     { icon: Settings, label: 'Paramètres', path: 'settings' },
   ];
 
@@ -16,7 +15,9 @@ const BottomNav = ({ currentPage, onNavigate }) => {
         <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 shadow-2xl">
           <div className="flex items-center justify-around px-3 py-4 relative">
             {navItems.map((item, index) => {
-
+              if (!item) {
+                return <div key="spacer" className="w-14"></div>;
+              }
 
               const isActive = currentPage === item.path;
               const Icon = item.icon;
@@ -54,7 +55,39 @@ const BottomNav = ({ currentPage, onNavigate }) => {
           </div>
         </div>
 
-
+        {/* Bouton Central Flottant - Langue des cantiques */}
+        <div className="absolute left-1/2 bottom-8 transform -translate-x-1/2">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => onNavigate('cantique-language')}
+            className="relative"
+          >
+            {/* Cercles animés de pulsation */}
+            <motion.div
+              animate={{ 
+                scale: [1, 1.3, 1],
+                opacity: [0.4, 0, 0.4]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute inset-0 bg-blue-400 rounded-full blur-xl"
+            ></motion.div>
+            
+            {/* Bouton principal avec dégradé et ombre */}
+            <div className="relative w-24 h-24 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-full shadow-2xl flex flex-col items-center justify-center border-4 border-white">
+              <div className="flex flex-col items-center">
+                <Globe size={24} className="text-white drop-shadow-lg mb-0.5" strokeWidth={2.5} />
+                <span className="text-white text-xs font-bold drop-shadow-lg tracking-tight leading-none">
+                  Langue des cantiques
+                </span>
+              </div>
+            </div>
+          </motion.button>
+        </div>
       </div>
     </div>
   );
