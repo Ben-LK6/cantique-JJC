@@ -221,7 +221,6 @@ const Home = ({ onNavigate }) => {
                 key={action.path + index}
                 onClick={() => onNavigate(action.path)}
                 className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-gray-100 dark:border-gray-700"
-                style={{ pointerEvents: 'auto' }}
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${action.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
                   <span className="text-2xl">{action.emoji}</span>
@@ -286,23 +285,21 @@ const Home = ({ onNavigate }) => {
       {/* Overlay pour fermer le dropdown */}
       {showCategories && (
         <div 
-          className="fixed inset-0 z-40 bg-transparent" 
+          className="fixed inset-0 z-40" 
           onClick={() => setShowCategories(false)}
-          style={{ pointerEvents: 'auto' }}
         />
       )}
       
       {/* Sélecteur de Catégorie */}
-      <div className="mx-6 relative z-50" style={{ pointerEvents: 'auto' }}>
+      <div className="mx-6 relative z-50">
         {/* Dropdown des catégories - apparaît au-dessus */}
         {showCategories && (
-          <div className="absolute bottom-full left-0 right-0 mb-2 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden max-h-80 overflow-y-auto z-50" style={{ pointerEvents: 'auto' }}>
+          <div className="absolute bottom-full left-0 right-0 mb-2 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden max-h-80 overflow-y-auto z-50">
             {categoriesList.map((categorie, index) => (
               <button
                 key={index}
                 onClick={() => handleCategorieSelect(categorie.name)}
-                className="w-full px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors text-left border-b border-gray-100 dark:border-gray-700 last:border-b-0 cursor-pointer"
-                style={{ pointerEvents: 'auto' }}
+                className="w-full px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors text-left border-b border-gray-100 dark:border-gray-700 last:border-b-0"
               >
                 <div className="flex items-center gap-3">
                   <span className="text-lg">{categorie.emoji}</span>
@@ -319,8 +316,7 @@ const Home = ({ onNavigate }) => {
         {/* Bouton flèche */}
         <button
           onClick={() => setShowCategories(!showCategories)}
-          className="w-full bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2 cursor-pointer"
-          style={{ pointerEvents: 'auto' }}
+          className="w-full bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2"
         >
           <Music size={20} />
           <span className="font-medium">{t('categories')}</span>

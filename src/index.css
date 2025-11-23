@@ -667,14 +667,13 @@ body, html {
   color: #ffffff !important;
 }
 
-/* Désactiver la sélection sur les éléments interactifs */
+/* Éléments interactifs */
 button, .cursor-pointer, [role="button"] {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
-  pointer-events: auto !important;
-  cursor: pointer !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
 
 /* Permettre la sélection uniquement sur le texte des cantiques */
@@ -695,30 +694,15 @@ button, .cursor-pointer, [role="button"] {
   background-color: rgba(96, 165, 250, 0.1) !important;
 }
 
-/* S'assurer que les boutons sont cliquables */
+/* Boutons cliquables */
 button {
-  pointer-events: auto !important;
-  cursor: pointer !important;
-  touch-action: manipulation !important;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cursor-pointer {
-  pointer-events: auto !important;
-  cursor: pointer !important;
-  touch-action: manipulation !important;
-}
-
-/* Corriger les z-index pour les éléments interactifs */
-.relative {
-  z-index: auto;
-}
-
-.z-10 {
-  z-index: 10;
-}
-
-.z-50 {
-  z-index: 50;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 /* Styles spécifiques pour les menus en mode sombre */
