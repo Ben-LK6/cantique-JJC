@@ -1,6 +1,7 @@
 import { ArrowLeft, Search, Menu } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { t } from '../../data/translations';
 
 const ModernHeader = ({ 
   title, 
@@ -76,7 +77,7 @@ const ModernHeader = ({
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary-300" size={18} />
               <input
                 type="text"
-                placeholder="Rechercher..."
+                placeholder={t('easySearch')}
                 className="w-full pl-11 pr-4 py-3 bg-white/10 backdrop-blur-md text-white placeholder-primary-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/20 transition-all border border-white/20"
                 onChange={(e) => onSearch && onSearch(e.target.value)}
                 autoFocus

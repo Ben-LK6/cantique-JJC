@@ -12,6 +12,7 @@ import About from './pages/About';
 import Settings from './pages/Settings';
 import CantiqueLanguage from './pages/CantiqueLanguage';
 import Instructions from './pages/Instructions';
+import { t } from './data/translations';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -55,7 +56,7 @@ function App() {
         return null;
       case 'cantiques':
         return { 
-          title: 'Cantiques', 
+          title: t('cantiques'), 
           showSearch: true, 
           showMenu: true,
           onSearch: (term) => setSearchTerm(term)
@@ -64,25 +65,25 @@ function App() {
         return null;
       case 'prayers':
         return { 
-          title: 'Prières', 
+          title: t('prayers'), 
           showSearch: true, 
           showMenu: true,
           onSearch: (term) => setSearchTerm(term)
         };
       case 'favoris':
-        return { title: 'Mes Favoris', showMenu: true };
+        return { title: t('myFavorites'), showMenu: true };
       case 'churches':
-        return { title: 'Trouver une Église', showSearch: true, showMenu: true };
+        return { title: t('findChurch'), showSearch: true, showMenu: true };
       case 'about':
-        return { title: 'À Propos', showMenu: true };
+        return { title: t('about'), showMenu: true };
       case 'settings':
-        return { title: 'Paramètres', showMenu: true };
+        return { title: t('settings'), showMenu: true };
       case 'cantique-language':
-        return { title: 'Langue des Cantiques', showMenu: true };
+        return { title: t('cantiqueLanguageTitle'), showMenu: true };
       case 'instructions':
-        return { title: 'Instructions', showMenu: true };
+        return { title: t('instructions'), showMenu: true };
       default:
-        return { title: 'JJC', showMenu: true };
+        return { title: t('appTitle'), showMenu: true };
     }
   };
 

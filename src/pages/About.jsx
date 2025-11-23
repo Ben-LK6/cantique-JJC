@@ -26,10 +26,7 @@ const About = () => {
               <h3 className="text-xl font-bold text-gray-800">{t('aboutJJC')}</h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              L'église JJC (Jésus-Christ Joie et Consolation) est une communauté chrétienne 
-              dédiée à l'adoration de Dieu et au service du prochain. Nous croyons en la 
-              puissance de la louange et de la prière pour transformer les vies et glorifier 
-              le Seigneur                                                                                                                                                                                                                                                                                       
+              {t('aboutJJCText')}
             </p>
           </div>
 
@@ -40,19 +37,17 @@ const About = () => {
               <h3 className="text-xl font-bold text-gray-800">{t('ourMission')}</h3>
             </div>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Cette application a été créée pour faciliter l'accès aux cantiques de l'église JJC, 
-              permettant à chacun de louer Dieu à tout moment et en tout lieu. Que vous soyez au 
-              culte, à la maison ou en déplacement, accédez facilement à vos cantiques préférés.
+              {t('missionText')}
             </p>
             <div className="bg-primary-50 rounded-lg p-4">
               <p className="text-primary-800 font-medium mb-2">{t('features')}</p>
               <ul className="space-y-2 text-gray-700">
-                <li>✓ Accès hors ligne à tous les cantiques</li>
-                <li>✓ Recherche facile par numéro ou titre</li>
-                <li>✓ Défilement automatique des paroles</li>
-                <li>✓ Tonalité de chaque cantique</li>
-                <li>✓ Prières quotidiennes</li>
-                <li>✓ Localisation des églises JJC</li>
+                <li>✓ {t('offlineAccess')}</li>
+                <li>✓ {t('easySearch')}</li>
+                <li>✓ {t('autoScroll')}</li>
+                <li>✓ {t('tonalityInfo')}</li>
+                <li>✓ {t('dailyPrayers')}</li>
+                <li>✓ {t('churchLocation')}</li>
               </ul>
             </div>
           </div>
@@ -69,12 +64,12 @@ const About = () => {
                   <span className="text-white font-bold text-lg">B</span>
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">Développeur Principal</p>
-                  <p className="text-sm text-gray-600">Conception & Développement</p>
+                  <p className="font-semibold text-gray-800">{t('mainDeveloper')}</p>
+                  <p className="text-sm text-gray-600">{t('designDevelopment')}</p>
                 </div>
               </div>
               <p className="text-gray-600 text-sm">
-                Développé avec ❤️ pour la gloire de Dieu et le service de l'église JJC
+                {t('developedWith')}
               </p>
             </div>
           </div>
@@ -109,10 +104,10 @@ const About = () => {
           {/* Copyright */}
           <div className="text-center py-4">
             <p className="text-gray-500 text-sm">
-              © 2025 Église JJC. Tous droits réservés.
+              {t('copyright')}
             </p>
             <p className="text-gray-400 text-xs mt-1">
-              Made with ❤️ for God's glory
+              {t('madeWith')}
             </p>
           </div>
         </div>

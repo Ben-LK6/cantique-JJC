@@ -1,11 +1,12 @@
 import { Home, Settings, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { t } from '../../data/translations';
 
 const BottomNav = ({ currentPage, onNavigate }) => {
   const navItems = [
-    { icon: Home, label: 'Accueil', path: 'home' },
+    { icon: Home, label: t('home'), path: 'home' },
     null, // Espace central pour Langue des cantiques
-    { icon: Settings, label: 'Paramètres', path: 'settings' },
+    { icon: Settings, label: t('settings'), path: 'settings' },
   ];
 
   return (
@@ -82,7 +83,7 @@ const BottomNav = ({ currentPage, onNavigate }) => {
               <div className="flex flex-col items-center">
                 <Globe size={24} className="text-white drop-shadow-lg mb-0.5" strokeWidth={2.5} />
                 <span className="text-white text-xs font-bold drop-shadow-lg tracking-tight leading-none">
-                  Langue des cantiques
+                  {t('cantiqueLanguage')}
                 </span>
               </div>
             </div>

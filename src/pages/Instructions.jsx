@@ -1,4 +1,5 @@
 import { Book, Search, Heart, Play, Share2, Download, Settings, MapPin } from 'lucide-react';
+import { t } from '../data/translations';
 
 const Instructions = () => {
   const sections = [
@@ -88,11 +89,10 @@ const Instructions = () => {
           
           <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 text-white">
             <h1 className="text-2xl lg:text-3xl font-bold mb-3">
-              Guide d'utilisation
+              {t('userGuide')}
             </h1>
             <p className="text-primary-100">
-              Découvrez comment utiliser toutes les fonctionnalités de l'application 
-              Cantique JJC pour une meilleure expérience de louange.
+              {t('discoverFeatures')}
             </p>
           </div>
 
@@ -118,7 +118,7 @@ const Instructions = () => {
           ))}
 
           <div className="bg-primary-50 rounded-xl p-6">
-            <h3 className="text-lg font-bold text-primary-800 mb-4">💡 Astuces & Conseils</h3>
+            <h3 className="text-lg font-bold text-primary-800 mb-4">💡 {t('tipsAndTricks')}</h3>
             <ul className="space-y-3 text-primary-700">
               <li className="flex items-start gap-3">
                 <span className="text-primary-600 mt-1">✓</span>
@@ -144,7 +144,7 @@ const Instructions = () => {
           </div>
 
           <div className="bg-white rounded-xl p-6 shadow-sm">
-            <h3 className="text-lg font-bold text-gray-800 mb-4">❓ Questions Fréquentes</h3>
+            <h3 className="text-lg font-bold text-gray-800 mb-4">❓ {t('frequentQuestions')}</h3>
             <div className="space-y-4">
               <div>
                 <p className="font-semibold text-gray-800 mb-1">
@@ -174,12 +174,12 @@ const Instructions = () => {
           </div>
 
           <div className="bg-white rounded-xl p-6 shadow-sm text-center">
-            <h3 className="text-lg font-bold text-gray-800 mb-2">Besoin d'aide ?</h3>
+            <h3 className="text-lg font-bold text-gray-800 mb-2">{t('needHelp')}</h3>
             <p className="text-gray-600 mb-4">
               Si vous avez des questions ou rencontrez des problèmes, n'hésitez pas à nous contacter.
             </p>
             <button className="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors">
-              Contacter le Support
+              {t('contactSupport')}
             </button>
           </div>
 

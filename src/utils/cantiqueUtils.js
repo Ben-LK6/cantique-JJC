@@ -1,5 +1,6 @@
 import { cantiques } from '../data/cantiques';
 import { cantiquesYoruba } from '../data/cantiquesYoruba';
+import { categoriesYoruba } from '../data/categoriesYoruba';
 
 // Fonction pour obtenir les cantiques selon la langue choisie
 export const getCantiques = () => {
@@ -20,6 +21,12 @@ export const getCantiqueById = (id) => {
 
 // Fonction pour obtenir les catégories selon la langue
 export const getCategories = () => {
+  const cantiqueLanguage = localStorage.getItem('cantiqueLanguage') || 'fon';
+  
+  if (cantiqueLanguage === 'yoruba') {
+    return categoriesYoruba;
+  }
+  
   const currentCantiques = getCantiques();
   const categories = [...new Set(currentCantiques.map(c => c.categorie))];
   return categories;

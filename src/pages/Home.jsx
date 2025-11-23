@@ -1,7 +1,7 @@
-import { Book, Heart, Sparkles, Music, HandHeart, ChevronUp, ChevronDown, RefreshCw } from 'lucide-react';
+import { Book, Heart, Sparkles, Music, HandHeart, ChevronUp, ChevronDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { getCantiques, getCategories } from '../utils/cantiqueUtils';
-import { getRandomVerset, getThemeColor } from '../data/versets';
+import { getRandomVerset, getThemeColor } from '../data/versetsTranslations';
 import { t } from '../data/translations';
 
 const Home = ({ onNavigate }) => {
@@ -33,10 +33,43 @@ const Home = ({ onNavigate }) => {
     setCategoriesData(data);
   };
 
-  // Fonction pour changer de verset
-  const refreshVerset = () => {
-    setCurrentVerset(getRandomVerset());
-  };
+
+  
+  // Recharger le verset quand la langue change et timer pour minuit
+  useEffect(() => {
+    const handleLanguageChange = (e) => {
+      if (e.key === 'language') {
+        setCurrentVerset(getRandomVerset());
+      }
+    };
+    
+    // Timer pour changer le verset à minuit
+    const setupMidnightTimer = () => {
+      const now = new Date();
+      const tomorrow = new Date(now);
+      tomorrow.setDate(now.getDate() + 1);
+      tomorrow.setHours(0, 0, 0, 0);
+      
+      const timeUntilMidnight = tomorrow.getTime() - now.getTime();
+      
+      const timer = setTimeout(() => {
+        setCurrentVerset(getRandomVerset());
+        // Configurer le timer pour le jour suivant
+        setupMidnightTimer();
+      }, timeUntilMidnight);
+      
+      return timer;
+    };
+    
+    const midnightTimer = setupMidnightTimer();
+    
+    window.addEventListener('storage', handleLanguageChange);
+    
+    return () => {
+      window.removeEventListener('storage', handleLanguageChange);
+      clearTimeout(midnightTimer);
+    };
+  }, []);
   
   const categoriesList = Object.values(categoriesData);
 
@@ -85,7 +118,79 @@ const Home = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800 pb-24">
+    <div className="min-h-screen relative overflow-hidden pb-24">
+      {/* Fond avec dégradé et éléments musicaux */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
+        {/* Clés de sol flottantes avec animations */}
+        <div className="absolute top-10 left-8 text-blue-200 dark:text-blue-800 opacity-30 transform rotate-12 animate-float">
+          <svg width="40" height="60" viewBox="0 0 24 36" fill="currentColor">
+            <path d="M12 0C8.5 0 6 2.5 6 6c0 2 1 3.8 2.5 5L6 14c-1.5 1.5-2 3.5-2 5.5 0 3.5 2.5 6.5 6 6.5s6-3 6-6.5c0-2-0.5-4-2-5.5l-2.5-3c1.5-1.2 2.5-3 2.5-5C14 2.5 11.5 0 8 0z"/>
+          </svg>
+        </div>
+        <div className="absolute top-32 right-12 text-purple-200 dark:text-purple-800 opacity-25 transform -rotate-6 animate-float-reverse">
+          <svg width="35" height="50" viewBox="0 0 24 36" fill="currentColor">
+            <path d="M12 0C8.5 0 6 2.5 6 6c0 2 1 3.8 2.5 5L6 14c-1.5 1.5-2 3.5-2 5.5 0 3.5 2.5 6.5 6 6.5s6-3 6-6.5c0-2-0.5-4-2-5.5l-2.5-3c1.5-1.2 2.5-3 2.5-5C14 2.5 11.5 0 8 0z"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-40 left-16 text-pink-200 dark:text-pink-800 opacity-20 transform rotate-45 animate-drift">
+          <svg width="30" height="45" viewBox="0 0 24 36" fill="currentColor">
+            <path d="M12 0C8.5 0 6 2.5 6 6c0 2 1 3.8 2.5 5L6 14c-1.5 1.5-2 3.5-2 5.5 0 3.5 2.5 6.5 6 6.5s6-3 6-6.5c0-2-0.5-4-2-5.5l-2.5-3c1.5-1.2 2.5-3 2.5-5C14 2.5 11.5 0 8 0z"/>
+          </svg>
+        </div>
+        <div className="absolute top-64 left-4 text-indigo-200 dark:text-indigo-800 opacity-15 transform -rotate-12 animate-pulse-soft">
+          <svg width="25" height="35" viewBox="0 0 24 36" fill="currentColor">
+            <path d="M12 0C8.5 0 6 2.5 6 6c0 2 1 3.8 2.5 5L6 14c-1.5 1.5-2 3.5-2 5.5 0 3.5 2.5 6.5 6 6.5s6-3 6-6.5c0-2-0.5-4-2-5.5l-2.5-3c1.5-1.2 2.5-3 2.5-5C14 2.5 11.5 0 8 0z"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-20 right-8 text-cyan-200 dark:text-cyan-800 opacity-25 transform rotate-30 animate-float">
+          <svg width="45" height="65" viewBox="0 0 24 36" fill="currentColor">
+            <path d="M12 0C8.5 0 6 2.5 6 6c0 2 1 3.8 2.5 5L6 14c-1.5 1.5-2 3.5-2 5.5 0 3.5 2.5 6.5 6 6.5s6-3 6-6.5c0-2-0.5-4-2-5.5l-2.5-3c1.5-1.2 2.5-3 2.5-5C14 2.5 11.5 0 8 0z"/>
+          </svg>
+        </div>
+        
+        {/* Notes de musique avec animations */}
+        <div className="absolute top-20 right-20 text-blue-300 dark:text-blue-700 opacity-40 animate-pulse-soft">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="14" r="3"/>
+            <path d="M9 18V6l12-3v12"/>
+          </svg>
+        </div>
+        <div className="absolute top-48 right-4 text-purple-300 dark:text-purple-700 opacity-35 animate-drift">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="14" r="3"/>
+            <path d="M9 18V6l12-3v12"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-32 left-20 text-pink-300 dark:text-pink-700 opacity-30 animate-float-reverse">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="14" r="3"/>
+            <path d="M9 18V6l12-3v12"/>
+          </svg>
+        </div>
+        
+        {/* Plus de clés de sol au lieu des portées */}
+        <div className="absolute bottom-1/4 right-1/3 text-teal-400 dark:text-teal-600 opacity-45 transform -rotate-45 animate-drift drop-shadow-md">
+          <svg width="36" height="54" viewBox="0 0 24 36" fill="currentColor">
+            <path d="M12 0C8.5 0 6 2.5 6 6c0 2 1 3.8 2.5 5L6 14c-1.5 1.5-2 3.5-2 5.5 0 3.5 2.5 6.5 6 6.5s6-3 6-6.5c0-2-0.5-4-2-5.5l-2.5-3c1.5-1.2 2.5-3 2.5-5C14 2.5 11.5 0 8 0z"/>
+          </svg>
+        </div>
+        <div className="absolute top-2/3 left-1/4 text-amber-400 dark:text-amber-600 opacity-35 transform rotate-135 animate-float drop-shadow-md">
+          <svg width="28" height="42" viewBox="0 0 24 36" fill="currentColor">
+            <path d="M12 0C8.5 0 6 2.5 6 6c0 2 1 3.8 2.5 5L6 14c-1.5 1.5-2 3.5-2 5.5 0 3.5 2.5 6.5 6 6.5s6-3 6-6.5c0-2-0.5-4-2-5.5l-2.5-3c1.5-1.2 2.5-3 2.5-5C14 2.5 11.5 0 8 0z"/>
+          </svg>
+        </div>
+        
+        {/* Cercles décoratifs avec animations */}
+        <div className="absolute top-16 left-1/2 w-32 h-32 bg-gradient-to-br from-blue-200 to-purple-200 dark:from-blue-900 dark:to-purple-900 rounded-full opacity-20 blur-xl animate-pulse-soft"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-gradient-to-br from-pink-200 to-orange-200 dark:from-pink-900 dark:to-orange-900 rounded-full opacity-15 blur-lg animate-drift"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-cyan-200 to-blue-200 dark:from-cyan-900 dark:to-blue-900 rounded-full opacity-25 blur-md animate-float"></div>
+      </div>
+      
+      {/* Contenu principal */}
+      <div className="relative z-10">
       {/* Hero Section */}
       <div className="pt-12 pb-8 px-6 text-center">
         {/* Logo */}
@@ -145,21 +250,12 @@ const Home = ({ onNavigate }) => {
               
               {/* Contenu de la carte */}
               <div className="relative z-10">
-                {/* Header avec icône et bouton refresh */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <Sparkles size={20} className="text-white" />
-                    <h3 className="text-sm font-bold text-white uppercase tracking-wide">
-                      {t('verseOfDay')}
-                    </h3>
-                  </div>
-                  <button
-                    onClick={refreshVerset}
-                    className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-                    title="Nouveau verset"
-                  >
-                    <RefreshCw size={16} className="text-white" />
-                  </button>
+                {/* Header avec icône */}
+                <div className="flex items-center gap-2 mb-4">
+                  <Sparkles size={20} className="text-white" />
+                  <h3 className="text-sm font-bold text-white uppercase tracking-wide">
+                    {t('verseOfDay')}
+                  </h3>
                 </div>
                 
                 {/* Texte du verset */}
@@ -229,6 +325,7 @@ const Home = ({ onNavigate }) => {
       </div>
       
 
+      </div>
     </div>
   );
 };

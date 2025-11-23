@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Heart, Music, HandHeart } from 'lucide-react';
 import { getCantiques } from '../utils/cantiqueUtils';
-import { prieres } from '../data/prieres';
+import { getPrayers } from '../data/prayersTranslations';
+import { t } from '../data/translations';
 
 const Favorites = ({ onSelectCantique }) => {
   const [activeTab, setActiveTab] = useState('cantiques');
@@ -18,8 +19,9 @@ const Favorites = ({ onSelectCantique }) => {
     const favoriteC = currentCantiques.filter(c => cantiqueIds.includes(c.id));
     setFavoriteCantiques(favoriteC);
 
-    // Récupérer les prières favorites
-    const favoriteP = prieres.filter(p => prayerIds.includes(p.id));
+    // Récupérer les prières favorites selon la langue actuelle
+    const currentPrayers = getPrayers();
+    const favoriteP = currentPrayers.filter(p => prayerIds.includes(p.id));
     setFavoritePrayers(favoriteP);
   };
 
@@ -28,7 +30,7 @@ const Favorites = ({ onSelectCantique }) => {
     
     // Écouter les changements de langue
     const handleStorageChange = (e) => {
-      if (e.key === 'cantiqueLanguage' || e.key === 'favorites') {
+      if (e.key === 'cantiqueLanguage' || e.key === 'favorites' || e.key === 'language') {
         loadFavorites();
       }
     };
@@ -53,7 +55,7 @@ const Favorites = ({ onSelectCantique }) => {
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              📖 Cantiques ({favoriteCantiques.length})
+              📖 {t('cantiques')} ({favoriteCantiques.length})
             </button>
             <button
               onClick={() => setActiveTab('prayers')}
@@ -63,7 +65,7 @@ const Favorites = ({ onSelectCantique }) => {
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              🙏 Prières ({favoritePrayers.length})
+              🙏 {t('prayers')} ({favoritePrayers.length})
             </button>
           </div>
         </div>
@@ -114,8 +116,8 @@ const Favorites = ({ onSelectCantique }) => {
               ) : (
                 <div className="text-center py-12">
                   <Heart size={48} className="mx-auto text-gray-300 mb-4" />
-                  <p className="text-gray-500 text-lg mb-2">Aucun cantique favori</p>
-                  <p className="text-gray-400">Ajoutez des cantiques à vos favoris en cliquant sur le ❤️</p>
+                  <p className="text-gray-500 text-lg mb-2">{t('noFavoriteCantiques')}</p>
+                  <p className="text-gray-400">{t('addToFavorites')}</p>
                 </div>
               )}
             </>
@@ -161,8 +163,8 @@ const Favorites = ({ onSelectCantique }) => {
               ) : (
                 <div className="text-center py-12">
                   <Heart size={48} className="mx-auto text-gray-300 mb-4" />
-                  <p className="text-gray-500 text-lg mb-2">Aucune prière favorite</p>
-                  <p className="text-gray-400">Ajoutez des prières à vos favoris en cliquant sur le ❤️</p>
+                  <p className="text-gray-500 text-lg mb-2">{t('noFavoritePrayers')}</p>
+                  <p className="text-gray-400">{t('addPrayersToFavorites')}</p>
                 </div>
               )}
             </>

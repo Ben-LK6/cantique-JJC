@@ -202,7 +202,7 @@ const handleShare = () => {
       </div>
 
       {/* Contenu */}
-      <div className="p-4 pb-20 lg:pb-8">
+      <div className="p-4 pb-32 lg:pb-16">
         <div className="max-w-3xl mx-auto">
           {/* Info Card */}
           <motion.div
@@ -238,12 +238,39 @@ const handleShare = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <div className={`cantique-text text-gray-800 dark:text-gray-200 leading-relaxed space-y-3 ${
+                  <div className={`cantique-text text-gray-800 dark:text-gray-200 leading-relaxed ${
                     fontSize === 'small' ? 'text-base' : fontSize === 'large' ? 'text-2xl' : 'text-lg'
                   }`}>
-                    {cantique.paroles.map((ligne, index) => (
-                      <p key={index}>{ligne}</p>
-                    ))}
+                    {cantique.paroles.map((ligne, index) => {
+                      // Détecter si c'est le début d'un couplet (commence par un chiffre suivi d'un point)
+                      const verseMatch = ligne.trim().match(/^(\d+\.)(.*)/);
+                      const isEmpty = ligne.trim() === '';
+                      // Détecter les refrains (lignes qui commencent par des espaces)
+                      const isRefrain = ligne.startsWith('    ') && ligne.trim() !== '';
+                      
+                      return (
+                        <div key={index}>
+                          {/* Ajouter un espace avant chaque nouveau couplet (sauf le premier) */}
+                          {verseMatch && index > 0 && (
+                            <div className="h-6"></div>
+                          )}
+                          <p className={`${
+                            isEmpty ? 'h-2' : 'mb-1'
+                          } ${
+                            isRefrain ? 'italic text-gray-600 dark:text-gray-300 pl-4' : ''
+                          }`}>
+                            {verseMatch ? (
+                              <>
+                                <span className="font-bold text-gray-900 dark:text-white">{verseMatch[1]}</span>
+                                <span>{verseMatch[2]}</span>
+                              </>
+                            ) : (
+                              ligne
+                            )}
+                          </p>
+                        </div>
+                      );
+                    })}
                   </div>
                 </motion.div>
               ) : (

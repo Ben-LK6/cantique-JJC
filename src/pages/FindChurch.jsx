@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Search, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import churchesData from '../data/churches.json';
+import { t } from '../data/translations';
 
 const FindChurch = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,14 +17,14 @@ const FindChurch = () => {
       <div className="bg-white shadow-sm sticky top-0 z-30">
         <div className="px-4 py-4 lg:px-6">
           <h2 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
-            Trouver une Église JJC
+            {t('findChurch')}
           </h2>
           
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
             <input
               type="text"
-              placeholder="Rechercher par ville ou nom..."
+              placeholder={t('easySearch')}
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -35,7 +36,7 @@ const FindChurch = () => {
       <div className="p-4 lg:p-6">
         <div className="max-w-4xl mx-auto">
           <p className="text-gray-600 mb-4">
-            {filteredChurches.length} église(s) trouvée(s)
+            {filteredChurches.length} {filteredChurches.length > 1 ? 'églises trouvées' : 'église trouvée'}
           </p>
 
           <div className="space-y-4">

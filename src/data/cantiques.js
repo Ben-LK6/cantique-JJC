@@ -13,7 +13,7 @@ export const cantiques = [
       "Dagbe Jesu wa n'aihọn lẹpo",
       "Mẹde ma sọ yonẹn nẹ",
       "",
-      "Mi wa, mi wa,",
+      "*Mi wa, mi wa,*",
       "Mi wa na mi n'do kolo ayi",
       "Do sẹn Jesu",
       "Jesu wẹ whlẹngantọ he mi tindo",

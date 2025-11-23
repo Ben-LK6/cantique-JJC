@@ -1,23 +1,46 @@
 import { HandHeart, Heart, ArrowLeft } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import prayersData from '../data/prayers.json';
+import { getPrayers, getPrayerCategories } from '../data/prayersTranslations';
 import FilterButton from '../components/common/FilterButton';
+import { t } from '../data/translations';
 
 const Prayers = ({ searchTerm }) => {
-  const [selectedCategory, setSelectedCategory] = useState('Toutes');
+  const [selectedCategory, setSelectedCategory] = useState(t('all'));
   const [selectedPrayer, setSelectedPrayer] = useState(null);
+  const [prayersData, setPrayersData] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [favorites, setFavorites] = useState(() => {
     return JSON.parse(localStorage.getItem('favoritePrayers') || '[]');
   });
 
-  // Récupérer les catégories uniques
-  const categories = ['Toutes', ...new Set(prayersData.map(p => p.categorie))];
+  // Charger les prières selon la langue
+  useEffect(() => {
+    const loadPrayers = () => {
+      const currentPrayers = getPrayers();
+      const currentCategories = [t('all'), ...getPrayerCategories()];
+      setPrayersData(currentPrayers);
+      setCategories(currentCategories);
+      setSelectedCategory(t('all'));
+    };
+
+    loadPrayers();
+    
+    // Écouter les changements de langue
+    const handleStorageChange = (e) => {
+      if (e.key === 'language') {
+        loadPrayers();
+      }
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
 
   // Filtrer les prières
   const filteredPrayers = prayersData.filter(prayer => {
     const matchSearch = !searchTerm || prayer.titre.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchCategory = selectedCategory === 'Toutes' || prayer.categorie === selectedCategory;
+    const matchCategory = selectedCategory === t('all') || prayer.categorie === selectedCategory;
     return matchSearch && matchCategory;
   });
 
@@ -120,10 +143,10 @@ const Prayers = ({ searchTerm }) => {
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       {/* Indication du filtre actif */}
-      {selectedCategory !== 'Toutes' && (
+      {selectedCategory !== t('all') && (
         <div className="px-4 py-3 bg-purple-50 border-b border-purple-100">
           <p className="text-sm text-purple-700 font-medium text-center">
-            🙏 Filtre actif : <span className="font-bold">{selectedCategory}</span>
+            🙏 {t('activeFilter')} : <span className="font-bold">{selectedCategory}</span>
           </p>
         </div>
       )}
@@ -134,7 +157,7 @@ const Prayers = ({ searchTerm }) => {
           {/* Compteur */}
           <div className="flex items-center justify-between mb-4">
             <p className="text-gray-600 text-sm font-medium">
-              {filteredPrayers.length} prière{filteredPrayers.length > 1 ? 's' : ''}
+              {filteredPrayers.length} {filteredPrayers.length > 1 ? t('prayers') : 'prière'}
             </p>
             {searchTerm && (
               <p className="text-purple-600 text-sm">
@@ -203,9 +226,9 @@ const Prayers = ({ searchTerm }) => {
               <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <HandHeart size={48} className="text-gray-300" />
               </div>
-              <p className="text-gray-500 text-lg font-semibold mb-2">Aucune prière trouvée</p>
+              <p className="text-gray-500 text-lg font-semibold mb-2">{t('noFavoritePrayers')}</p>
               <p className="text-gray-400 text-sm">
-                {searchTerm ? `Aucun résultat pour "${searchTerm}"` : 'Essayez un autre filtre'}
+                {searchTerm ? `${t('noResultsFor')} "${searchTerm}"` : t('tryAnotherFilter')}
               </p>
             </motion.div>
           )}
@@ -218,7 +241,7 @@ const Prayers = ({ searchTerm }) => {
         selected={selectedCategory}
         onSelect={setSelectedCategory}
         color="purple"
-        label="Catégories"
+        label={t('categories')}
       />
     </div>
   );

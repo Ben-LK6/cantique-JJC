@@ -97,7 +97,28 @@ export const translations = {
     linkCopied: "Lien copié dans le presse-papier !",
     
     // Thèmes/Catégories
-    all: "Tous"
+    all: "Tous",
+    
+    // Instructions
+    userGuide: "Guide d'utilisation",
+    discoverFeatures: "Découvrez comment utiliser toutes les fonctionnalités de l'application Cantique JJC pour une meilleure expérience de louange.",
+    howToUseCantiques: "Comment utiliser les Cantiques",
+    autoScroll: "Défilement Automatique",
+    manageFavorites: "Gérer vos Favoris",
+    shareCantique: "Partager un Cantique",
+    downloadPDF: "Télécharger en PDF",
+    customizeApp: "Personnaliser l'Application",
+    tipsAndTricks: "Astuces & Conseils",
+    frequentQuestions: "Questions Fréquentes",
+    needHelp: "Besoin d'aide ?",
+    contactSupport: "Contacter le Support",
+    
+    // Catégories de prières
+    morning: "Matin",
+    evening: "Soir",
+    thanksgiving: "Action de grâces",
+    family: "Famille",
+    wisdom: "Sagesse"
   },
   
   en: {
@@ -197,7 +218,28 @@ export const translations = {
     linkCopied: "Link copied to clipboard!",
     
     // Thèmes/Catégories
-    all: "All"
+    all: "All",
+    
+    // Instructions
+    userGuide: "User Guide",
+    discoverFeatures: "Discover how to use all the features of the JJC Hymns app for a better worship experience.",
+    howToUseCantiques: "How to Use Hymns",
+    autoScroll: "Auto Scroll",
+    manageFavorites: "Manage Your Favorites",
+    shareCantique: "Share a Hymn",
+    downloadPDF: "Download as PDF",
+    customizeApp: "Customize the App",
+    tipsAndTricks: "Tips & Tricks",
+    frequentQuestions: "Frequently Asked Questions",
+    needHelp: "Need help?",
+    contactSupport: "Contact Support",
+    
+    // Prayer categories
+    morning: "Morning",
+    evening: "Evening",
+    thanksgiving: "Thanksgiving",
+    family: "Family",
+    wisdom: "Wisdom"
   }
 };
 
