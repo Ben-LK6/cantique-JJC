@@ -22,18 +22,35 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTheme, setSelectedTheme] = useState('');
 
+  // localStorage sécurisé
+  const safeGetItem = (key, defaultValue) => {
+    try {
+      return localStorage.getItem(key) || defaultValue;
+    } catch (e) {
+      return defaultValue;
+    }
+  };
+  
+  const safeSetItem = (key, value) => {
+    try {
+      localStorage.setItem(key, value);
+    } catch (e) {
+      console.warn('localStorage not available');
+    }
+  };
+
   // États pour les paramètres
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'blue');
-  const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'medium');
-  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('darkMode') === 'true');
+  const [theme, setTheme] = useState(() => safeGetItem('theme', 'blue'));
+  const [fontSize, setFontSize] = useState(() => safeGetItem('fontSize', 'medium'));
+  const [darkMode, setDarkMode] = useState(() => safeGetItem('darkMode', 'false') === 'true');
 
   // Optimisations mobiles
   useMobileOptimization();
 
   // Appliquer le thème et mode sombre au chargement
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'blue';
-    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    const savedTheme = safeGetItem('theme', 'blue');
+    const savedDarkMode = safeGetItem('darkMode', 'false') === 'true';
     
     setTheme(savedTheme);
     setDarkMode(savedDarkMode);
@@ -50,7 +67,7 @@ function App() {
   // Appliquer le thème quand il change
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    safeSetItem('theme', theme);
   }, [theme]);
 
 

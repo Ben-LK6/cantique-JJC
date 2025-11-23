@@ -219,5 +219,35 @@
   box-sizing: border-box;
 }
 
+/* Corrections mobiles essentielles */
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Permettre la sélection de texte pour les cantiques */
+.cantique-text, .selectable-text {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Empêcher le zoom sur les inputs */
+input, textarea, select {
+  font-size: 16px;
+}
+
+/* Bottom nav fixe */
+.bottom-nav-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 
 
