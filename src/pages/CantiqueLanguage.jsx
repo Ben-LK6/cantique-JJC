@@ -20,11 +20,11 @@ const CantiqueLanguage = ({ onNavigate }) => {
         newValue: cantiqueLanguage
       }));
       
-      // Naviguer automatiquement vers les cantiques après un délai
+      // Naviguer automatiquement vers les cantiques après un délai réduit
       if (onNavigate) {
         setTimeout(() => {
           onNavigate('cantiques');
-        }, 1500);
+        }, 300);
       }
     }
   }, [cantiqueLanguage, onNavigate]);

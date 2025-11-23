@@ -1,6 +1,6 @@
 import { Music } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { getCantiques, getCategories } from '../utils/cantiqueUtils';
+import { useState, useEffect, useMemo } from 'react';
+import { getCantiques, getCategories, clearCache } from '../utils/cantiqueUtils';
 import FilterButton from '../components/common/FilterButton';
 import { t } from '../data/translations';
 
@@ -23,6 +23,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
     // Écouter les changements de langue
     const handleStorageChange = (e) => {
       if (e.key === 'cantiqueLanguage') {
+        clearCache(); // Vider le cache lors du changement de langue
         loadCantiques();
       }
     };
@@ -41,16 +42,18 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
     }
   }, [preSelectedTheme]);
 
-  // Filtrer les cantiques
-  const filteredCantiques = cantiques.filter(cantique => {
-    const matchSearch = !searchTerm || 
-      cantique.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      cantique.numero.includes(searchTerm);
-    
-    const matchCategorie = !selectedTheme || selectedTheme === t('all') || cantique.categorie === selectedTheme;
-    
-    return matchSearch && matchCategorie;
-  });
+  // Filtrer les cantiques avec useMemo pour optimiser les performances
+  const filteredCantiques = useMemo(() => {
+    return cantiques.filter(cantique => {
+      const matchSearch = !searchTerm || 
+        cantique.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        cantique.numero.includes(searchTerm);
+      
+      const matchCategorie = !selectedTheme || selectedTheme === t('all') || cantique.categorie === selectedTheme;
+      
+      return matchSearch && matchCategorie;
+    });
+  }, [cantiques, searchTerm, selectedTheme]);
 
   const currentLanguage = localStorage.getItem('cantiqueLanguage') || 'fon';
   const languageLabel = currentLanguage === 'yoruba' ? t('yoruba') + ' 🇳🇬' : t('fon') + ' 🇧🇯';

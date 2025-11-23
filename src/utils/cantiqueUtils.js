@@ -2,15 +2,31 @@ import { cantiques } from '../data/cantiques';
 import { cantiquesYoruba } from '../data/cantiquesYoruba';
 import { categoriesYoruba } from '../data/categoriesYoruba';
 
+// Cache pour éviter les recalculs
+let cachedData = {
+  fon: { cantiques: null, categories: null },
+  yoruba: { cantiques: null, categories: null }
+};
+
 // Fonction pour obtenir les cantiques selon la langue choisie
 export const getCantiques = () => {
   const cantiqueLanguage = localStorage.getItem('cantiqueLanguage') || 'fon';
   
-  if (cantiqueLanguage === 'yoruba') {
-    return cantiquesYoruba;
+  // Utiliser le cache si disponible
+  if (cachedData[cantiqueLanguage].cantiques) {
+    return cachedData[cantiqueLanguage].cantiques;
   }
   
-  return cantiques; // Par défaut, retourner les cantiques en Fon
+  let result;
+  if (cantiqueLanguage === 'yoruba') {
+    result = cantiquesYoruba;
+  } else {
+    result = cantiques;
+  }
+  
+  // Mettre en cache
+  cachedData[cantiqueLanguage].cantiques = result;
+  return result;
 };
 
 // Fonction pour obtenir un cantique spécifique par ID selon la langue
@@ -23,11 +39,28 @@ export const getCantiqueById = (id) => {
 export const getCategories = () => {
   const cantiqueLanguage = localStorage.getItem('cantiqueLanguage') || 'fon';
   
-  if (cantiqueLanguage === 'yoruba') {
-    return categoriesYoruba;
+  // Utiliser le cache si disponible
+  if (cachedData[cantiqueLanguage].categories) {
+    return cachedData[cantiqueLanguage].categories;
   }
   
-  const currentCantiques = getCantiques();
-  const categories = [...new Set(currentCantiques.map(c => c.categorie))];
-  return categories;
+  let result;
+  if (cantiqueLanguage === 'yoruba') {
+    result = categoriesYoruba;
+  } else {
+    const currentCantiques = getCantiques();
+    result = [...new Set(currentCantiques.map(c => c.categorie))];
+  }
+  
+  // Mettre en cache
+  cachedData[cantiqueLanguage].categories = result;
+  return result;
+};
+
+// Fonction pour vider le cache (utile lors du changement de langue)
+export const clearCache = () => {
+  cachedData = {
+    fon: { cantiques: null, categories: null },
+    yoruba: { cantiques: null, categories: null }
+  };
 };
