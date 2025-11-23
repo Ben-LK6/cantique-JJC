@@ -219,12 +219,16 @@
 * {
   box-sizing: border-box;
   -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Désactiver la sélection par défaut sauf pour le texte */
+button, .cursor-pointer, [role="button"], nav, .nav-item {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 /* SYSTÈME UNIFORME POUR TOUS LES MOBILES ET TABLETTES */
