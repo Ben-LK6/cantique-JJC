@@ -21,14 +21,26 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTheme, setSelectedTheme] = useState('');
 
-    // AJOUT : États pour les paramètres
+  // États pour les paramètres
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'blue');
   const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'medium');
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('darkMode') === 'true');
 
-  // AJOUT : Appliquer le thème au chargement
+  // Appliquer le thème et mode sombre au chargement
   useEffect(() => {
-  const savedTheme = localStorage.getItem('theme') || 'blue';
+    const savedTheme = localStorage.getItem('theme') || 'blue';
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    
     setTheme(savedTheme);
+    setDarkMode(savedDarkMode);
+    
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    if (savedDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }, []);
 
 
@@ -127,7 +139,7 @@ function App() {
   const headerConfig = getHeaderConfig();
 
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
+    <div className="flex h-screen bg-gray-50 dark:bg-gray-900 overflow-hidden">
       {/* Sidebar Desktop */}
       <div className="hidden lg:block">
         <Sidebar onNavigate={navigateTo} currentPage={currentPage} />

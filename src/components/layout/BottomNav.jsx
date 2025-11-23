@@ -13,7 +13,7 @@ const BottomNav = ({ currentPage, onNavigate }) => {
     <div className="w-full">
       <div className="relative">
         {/* Barre principale - Bleu dégradé */}
-        <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 shadow-2xl">
+        <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 shadow-2xl">
           <div className="flex items-center justify-around px-3 py-4 relative">
             {navItems.map((item, index) => {
               if (!item) {
