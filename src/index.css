@@ -224,6 +224,8 @@ body, html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 /* Permettre la sélection de texte pour les cantiques */
@@ -236,7 +238,10 @@ body, html {
 
 /* Empêcher le zoom sur les inputs */
 input, textarea, select {
-  font-size: 16px;
+  font-size: 16px !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /* Bottom nav fixe */
@@ -246,7 +251,17 @@ input, textarea, select {
   left: 0;
   right: 0;
   z-index: 9999;
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Protection contre les erreurs CSS */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Variables CSS sécurisées */
+:root {
+  --vh: 1vh;
 }
 
 

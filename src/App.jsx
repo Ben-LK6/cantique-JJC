@@ -24,18 +24,20 @@ function App() {
 
   // localStorage sécurisé
   const safeGetItem = (key, defaultValue) => {
+    if (typeof window === 'undefined') return defaultValue;
     try {
-      return localStorage.getItem(key) || defaultValue;
-    } catch (e) {
+      return window.localStorage?.getItem(key) || defaultValue;
+    } catch {
       return defaultValue;
     }
   };
   
   const safeSetItem = (key, value) => {
+    if (typeof window === 'undefined') return;
     try {
-      localStorage.setItem(key, value);
-    } catch (e) {
-      console.warn('localStorage not available');
+      window.localStorage?.setItem(key, value);
+    } catch {
+      // Ignorer silencieusement
     }
   };
 

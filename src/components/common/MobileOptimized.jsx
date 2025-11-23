@@ -1,46 +1,23 @@
 import { useEffect } from 'react';
 
-// Hook pour optimiser l'expérience mobile
+// Hook mobile simplifié pour éviter les crashes
 export const useMobileOptimization = () => {
   useEffect(() => {
-    // Empêcher le zoom sur double-tap
-    let lastTouchEnd = 0;
-    const preventZoom = (e) => {
-      const now = (new Date()).getTime();
-      if (now - lastTouchEnd <= 300) {
-        e.preventDefault();
-      }
-      lastTouchEnd = now;
-    };
-    
-    document.addEventListener('touchend', preventZoom, { passive: false });
-    
-    // Gérer la hauteur du viewport sur mobile
+    // Juste gérer la hauteur du viewport de façon sécurisée
     const setVH = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      try {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      } catch (e) {
+        // Ignorer les erreurs
+      }
     };
     
     setVH();
     window.addEventListener('resize', setVH);
-    window.addEventListener('orientationchange', setVH);
-    
-    // Empêcher le pull-to-refresh sur iOS
-    const preventPullToRefresh = (e) => {
-      if (e.touches.length === 1 && e.touches[0].clientY > 0) {
-        e.preventDefault();
-      }
-    };
-    
-    document.addEventListener('touchstart', preventPullToRefresh, { passive: false });
-    document.addEventListener('touchmove', preventPullToRefresh, { passive: false });
     
     return () => {
-      document.removeEventListener('touchend', preventZoom);
       window.removeEventListener('resize', setVH);
-      window.removeEventListener('orientationchange', setVH);
-      document.removeEventListener('touchstart', preventPullToRefresh);
-      document.removeEventListener('touchmove', preventPullToRefresh);
     };
   }, []);
 };
