@@ -42,10 +42,10 @@ const Sidebar = ({ onNavigate, currentPage }) => {
             return (
               <button
                 key={index}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all mb-2 ${
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all mb-2 menu-item ${
                   isActive 
                     ? 'bg-primary-600 text-white shadow-md' 
-                    : 'text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-gray-700 hover:text-primary-600 dark:hover:text-primary-400'
+                    : 'text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400'
                 }`}
                 onClick={() => handleNavigation(item.path)}
               >

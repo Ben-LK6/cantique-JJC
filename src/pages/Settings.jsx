@@ -105,7 +105,7 @@ useEffect(() => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-24">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-24">
       {/* Message de sauvegarde */}
       {showSaved && (
         <motion.div
@@ -127,15 +127,15 @@ useEffect(() => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-2xl p-6 shadow-md"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
-                <Palette className="text-primary-600" size={20} />
+              <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/20 rounded-xl flex items-center justify-center">
+                <Palette className="text-primary-600 dark:text-primary-400" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-800">{t('colorTheme')}</h3>
-                <p className="text-gray-500 text-xs">{t('customizeAppearance')}</p>
+                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">{t('colorTheme')}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-xs">{t('customizeAppearance')}</p>
               </div>
             </div>
             <div className="grid grid-cols-5 gap-3">
@@ -145,11 +145,17 @@ useEffect(() => {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setTheme(t.value)}
                   className={`flex flex-col items-center gap-2 p-3 rounded-xl border-2 transition-all ${
-                    theme === t.value ? 'border-primary-600 bg-primary-50 shadow-md' : 'border-gray-200 hover:border-gray-300'
+                    theme === t.value 
+                      ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/20 shadow-md' 
+                      : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
                   }`}
                 >
                   <div className={`w-12 h-12 rounded-full ${t.color} shadow-lg ${theme === t.value ? 'ring-4 ring-primary-200' : ''}`}></div>
-                  <span className={`text-xs font-semibold ${theme === t.value ? 'text-primary-600' : 'text-gray-600'}`}>
+                  <span className={`text-xs font-semibold ${
+                    theme === t.value 
+                      ? 'text-primary-600 dark:text-primary-400' 
+                      : 'text-gray-600 dark:text-gray-300'
+                  }`}>
                     {t.name}
                   </span>
                 </motion.button>
@@ -162,22 +168,22 @@ useEffect(() => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="bg-white rounded-2xl p-6 shadow-md"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
-                  {darkMode ? <Moon className="text-primary-600" size={20} /> : <Sun className="text-primary-600" size={20} />}
+                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/20 rounded-xl flex items-center justify-center">
+                  {darkMode ? <Moon className="text-primary-600 dark:text-primary-400" size={20} /> : <Sun className="text-primary-600 dark:text-primary-400" size={20} />}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-800">{t('darkMode')}</h3>
-                  <p className="text-gray-500 text-xs">{t('comingSoon')}</p>
+                  <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">{t('darkMode')}</h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-xs">{t('comingSoon')}</p>
                 </div>
               </div>
               <button
                 onClick={() => setDarkMode(!darkMode)}
                 className={`relative w-14 h-8 rounded-full transition-colors ${
-                  darkMode ? 'bg-primary-600' : 'bg-gray-300'
+                  darkMode ? 'bg-primary-600' : 'bg-gray-300 dark:bg-gray-600'
                 }`}
               >
                 <motion.div
@@ -194,15 +200,15 @@ useEffect(() => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-2xl p-6 shadow-md"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
-                <Type className="text-primary-600" size={20} />
+              <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/20 rounded-xl flex items-center justify-center">
+                <Type className="text-primary-600 dark:text-primary-400" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-800">{t('fontSize')}</h3>
-                <p className="text-gray-500 text-xs">{t('forCantiques')}</p>
+                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">{t('fontSize')}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-xs">{t('forCantiques')}</p>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-3">
@@ -213,8 +219,8 @@ useEffect(() => {
                   onClick={() => setFontSize(fs.value)}
                   className={`py-3 px-4 rounded-xl border-2 transition-all font-semibold ${
                     fontSize === fs.value 
-                      ? 'border-primary-600 bg-primary-50 text-primary-700 shadow-md' 
-                      : 'border-gray-200 text-gray-700 hover:border-gray-300'
+                      ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400 shadow-md' 
+                      : 'border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-500'
                   }`}
                 >
                   {fs.name}
@@ -228,15 +234,15 @@ useEffect(() => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-white rounded-2xl p-6 shadow-md"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
-                <Globe className="text-primary-600" size={20} />
+              <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/20 rounded-xl flex items-center justify-center">
+                <Globe className="text-primary-600 dark:text-primary-400" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-800">{t('interfaceLanguage')}</h3>
-                <p className="text-gray-500 text-xs">{t('frenchOrEnglish')}</p>
+                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">{t('interfaceLanguage')}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-xs">{t('frenchOrEnglish')}</p>
               </div>
             </div>
             <div className="space-y-2">
@@ -247,14 +253,14 @@ useEffect(() => {
                   onClick={() => setLanguage(lang.value)}
                   className={`w-full flex items-center gap-3 p-4 rounded-xl border-2 transition-all ${
                     language === lang.value 
-                      ? 'border-primary-600 bg-primary-50 shadow-md' 
-                      : 'border-gray-200 hover:border-gray-300'
+                      ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/20 shadow-md' 
+                      : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
                   }`}
                 >
                   <span className="text-2xl">{lang.flag}</span>
-                  <span className="text-gray-800 font-semibold">{lang.name}</span>
+                  <span className="text-gray-800 dark:text-gray-200 font-semibold">{lang.name}</span>
                   {language === lang.value && (
-                    <CheckCircle size={20} className="ml-auto text-primary-600" />
+                    <CheckCircle size={20} className="ml-auto text-primary-600 dark:text-primary-400" />
                   )}
                 </motion.button>
               ))}
@@ -266,22 +272,22 @@ useEffect(() => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-white rounded-2xl p-6 shadow-md"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
-                  <Volume2 className="text-primary-600" size={20} />
+                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/20 rounded-xl flex items-center justify-center">
+                  <Volume2 className="text-primary-600 dark:text-primary-400" size={20} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-800">{t('tonalitySound')}</h3>
-                  <p className="text-gray-500 text-xs">{t('enableDisableSound')}</p>
+                  <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">{t('tonalitySound')}</h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-xs">{t('enableDisableSound')}</p>
                 </div>
               </div>
               <button
                 onClick={() => setAudioEnabled(!audioEnabled)}
                 className={`relative w-14 h-8 rounded-full transition-colors ${
-                  audioEnabled ? 'bg-primary-600' : 'bg-gray-300'
+                  audioEnabled ? 'bg-primary-600' : 'bg-gray-300 dark:bg-gray-600'
                 }`}
               >
                 <motion.div

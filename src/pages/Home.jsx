@@ -118,9 +118,9 @@ const Home = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden pb-24">
+    <div className="h-full relative overflow-hidden pb-24">
       {/* Fond avec dégradé et éléments musicaux */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-slate-900">
         {/* Clés de sol flottantes avec animations */}
         <div className="absolute top-10 left-8 text-blue-200 dark:text-blue-800 opacity-30 transform rotate-12 animate-float">
           <svg width="40" height="60" viewBox="0 0 24 36" fill="currentColor">
@@ -294,7 +294,7 @@ const Home = ({ onNavigate }) => {
       <div className="mx-6 relative z-50">
         {/* Dropdown des catégories - apparaît au-dessus */}
         {showCategories && (
-          <div className="absolute bottom-full left-0 right-0 mb-2 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden max-h-80 overflow-y-auto">
+          <div className="absolute bottom-full left-0 right-0 mb-2 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden max-h-80 overflow-y-auto z-50">
             {categoriesList.map((categorie, index) => (
               <button
                 key={index}
