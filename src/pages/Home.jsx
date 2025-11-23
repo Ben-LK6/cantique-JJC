@@ -118,7 +118,7 @@ const Home = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden pb-24 bg-gray-50 dark:bg-gray-900">
+    <div className="h-full relative overflow-hidden pb-24">
       {/* Fond avec dégradé et éléments musicaux */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-slate-900">
         {/* Clés de sol flottantes avec animations */}

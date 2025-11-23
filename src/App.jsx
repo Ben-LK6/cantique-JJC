@@ -138,7 +138,7 @@ function App() {
   const headerConfig = getHeaderConfig();
 
   return (
-    <div className="uniform-flex-col uniform-min-h-screen bg-gray-50 dark:bg-gray-900 overflow-hidden safe-area-top safe-area-left safe-area-right">
+    <div className="flex h-screen bg-gray-50 dark:bg-gray-900 overflow-hidden safe-area-top safe-area-left safe-area-right">
       {/* Sidebar Desktop */}
       <div className="hidden lg:block">
         <Sidebar onNavigate={navigateTo} currentPage={currentPage} />
@@ -158,7 +158,7 @@ function App() {
       )}
 
       {/* Main Content */}
-      <div className="uniform-flex-col uniform-w-full uniform-h-full overflow-hidden">
+      <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
         {headerConfig && (
           <ModernHeader 
@@ -168,8 +168,8 @@ function App() {
         )}
 
         {/* Page Content */}
-        <main className="uniform-w-full uniform-h-full overflow-y-auto scroll-container pb-16 lg:pb-0">
-          <div className="uniform-container uniform-min-h-screen">
+        <main className="flex-1 overflow-y-auto scroll-container pb-16 lg:pb-0">
+          <div className="min-h-full">
             {renderPage()}
           </div>
         </main>
