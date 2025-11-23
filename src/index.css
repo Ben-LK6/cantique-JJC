@@ -264,5 +264,308 @@ input, textarea, select {
   --vh: 1vh;
 }
 
+/* RESPONSIVITÉ MOBILE/TABLETTE */
+
+/* Texte responsive */
+.text-responsive-xs { font-size: 0.75rem; }
+.text-responsive-sm { font-size: 0.875rem; }
+.text-responsive-base { font-size: 1rem; }
+.text-responsive-lg { font-size: 1.125rem; }
+.text-responsive-xl { font-size: 1.25rem; }
+
+@media (min-width: 768px) {
+  .text-responsive-xs { font-size: 0.875rem; }
+  .text-responsive-sm { font-size: 1rem; }
+  .text-responsive-base { font-size: 1.125rem; }
+  .text-responsive-lg { font-size: 1.25rem; }
+  .text-responsive-xl { font-size: 1.5rem; }
+}
+
+/* Espacement responsive */
+.spacing-responsive { padding: 1rem; }
+@media (min-width: 768px) { .spacing-responsive { padding: 1.5rem; } }
+@media (min-width: 1024px) { .spacing-responsive { padding: 2rem; } }
+
+/* Boutons responsive */
+.btn-responsive {
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .btn-responsive {
+    min-height: 48px;
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+/* Cartes responsive */
+.card-responsive {
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .card-responsive {
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.card-responsive:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Grille responsive */
+.grid-responsive-1 { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.grid-responsive-2 { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.grid-responsive-3 { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+
+@media (min-width: 640px) {
+  .grid-responsive-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-responsive-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Container responsive */
+.container-responsive {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) { .container-responsive { padding: 0 1.5rem; } }
+@media (min-width: 768px) { .container-responsive { padding: 0 2rem; } }
+@media (min-width: 1024px) { .container-responsive { max-width: 1024px; } }
+@media (min-width: 1280px) { .container-responsive { max-width: 1280px; } }
+
+/* Navigation responsive */
+.nav-responsive {
+  height: 56px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .nav-responsive {
+    height: 64px;
+    padding: 0 2rem;
+  }
+}
+
+/* Hauteur mobile dynamique */
+.min-h-screen-mobile {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Optimisations tablette */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text-responsive-base { font-size: 1.125rem; }
+  .spacing-responsive { padding: 1.25rem; }
+  .btn-responsive { padding: 1rem 1.75rem; }
+}
+
+/* Mode paysage mobile */
+@media (orientation: landscape) and (max-height: 500px) {
+  .nav-responsive { height: 48px; }
+  .spacing-responsive { padding: 0.75rem; }
+  .text-responsive-base { font-size: 0.875rem; }
+}
+
+/* Classes d'appareils dynamiques */
+.is-mobile .desktop-only { display: none !important; }
+.is-desktop .mobile-only { display: none !important; }
+.is-tablet .mobile-only { display: none !important; }
+
+.is-mobile .tablet-desktop-only { display: none !important; }
+.is-desktop .mobile-tablet-only { display: none !important; }
+
+/* Ajustements spécifiques par appareil */
+.is-mobile .text-responsive-base { font-size: 0.875rem; }
+.is-tablet .text-responsive-base { font-size: 1rem; }
+.is-desktop .text-responsive-base { font-size: 1.125rem; }
+
+.is-mobile .spacing-responsive { padding: 0.75rem; }
+.is-tablet .spacing-responsive { padding: 1.25rem; }
+.is-desktop .spacing-responsive { padding: 1.5rem; }
+
+/* Corrections navigation mode sombre */
+.dark .bg-white {
+  background-color: #1f2937 !important;
+}
+
+.dark .nav-responsive {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+/* Corrections spécifiques pour les barres de navigation */
+.dark .bg-gradient-to-r.from-primary-600 {
+  background: linear-gradient(to right, #374151, #1f2937, #374151) !important;
+}
+
+.dark .border-white {
+  border-color: #4b5563 !important;
+}
+
+/* Corrections page d'accueil mode sombre */
+.dark .bg-gray-50 {
+  background-color: #111827 !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #1f2937 !important;
+}
+
+.dark .border-gray-100 {
+  border-color: #374151 !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #4b5563 !important;
+}
+
+/* Forcer le fond principal sombre */
+.dark .bg-gradient-to-br.from-blue-50 {
+  background: linear-gradient(to bottom right, #111827, #1f2937, #0f172a) !important;
+}
+
+.dark .from-blue-50 {
+  --tw-gradient-from: #111827 !important;
+}
+
+.dark .via-purple-50 {
+  --tw-gradient-via: #1f2937 !important;
+}
+
+.dark .to-pink-50 {
+  --tw-gradient-to: #0f172a !important;
+}
+
+/* Textes principaux en blanc en mode sombre */
+.dark .text-gray-900 {
+  color: #ffffff !important;
+}
+
+.dark .text-gray-800 {
+  color: #f9fafb !important;
+}
+
+.dark .text-gray-700 {
+  color: #e5e7eb !important;
+}
+
+/* Améliorer la lisibilité de la barre de navigation */
+.bottom-nav-container {
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* Rendre la barre de navigation transparente */
+.bg-gradient-to-r.from-primary-600 {
+  background: transparent !important;
+}
+
+.dark .bg-gradient-to-r.from-primary-600 {
+  background: transparent !important;
+}
+
+/* Fond pour les éléments sélectionnés dans la navigation */
+.bg-white\/20 {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.dark .bg-white\/20 {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.dark .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Corriger les textes de la barre de navigation en mode sombre */
+.dark .text-primary-200 {
+  color: #ffffff !important;
+}
+
+.dark .text-primary-300 {
+  color: #f3f4f6 !important;
+}
+
+.dark .text-white {
+  color: #ffffff !important;
+}
+
+/* Forcer les textes blancs en mode sombre pour la navigation */
+.dark .bottom-nav-container .text-primary-200,
+.dark .bottom-nav-container .text-primary-300 {
+  color: #ffffff !important;
+}
+
+.dark .bottom-nav-container .text-white {
+  color: #ffffff !important;
+}
+
+/* Ajouter un padding en bas pour éviter que la navigation masque le contenu */
+.pb-20 {
+  padding-bottom: 5rem !important;
+}
+
+.pb-24 {
+  padding-bottom: 6rem !important;
+}
+
+/* Forcer un padding minimum sur toutes les pages avec navigation */
+body {
+  padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+}
+
+/* S'assurer que le contenu ne passe pas sous la navigation */
+.min-h-screen {
+  min-height: calc(100vh - 80px) !important;
+}
+
+/* Couleurs de sélection de texte améliorées */
+::selection {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+::-moz-selection {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* Mode sombre - couleurs de sélection contrastées */
+.dark ::selection {
+  background-color: #fbbf24 !important;
+  color: #000000 !important;
+}
+
+.dark ::-moz-selection {
+  background-color: #fbbf24 !important;
+  color: #000000 !important;
+}
+
 
 

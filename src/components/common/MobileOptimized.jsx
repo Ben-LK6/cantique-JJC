@@ -1,13 +1,21 @@
 import { useEffect } from 'react';
 
-// Hook mobile simplifié pour éviter les crashes
+// Hook mobile avec responsivité sécurisée
 export const useMobileOptimization = () => {
   useEffect(() => {
-    // Juste gérer la hauteur du viewport de façon sécurisée
+    // Gérer la hauteur du viewport et la responsivité
     const setVH = () => {
       try {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
+        
+        // Détecter le type d'appareil
+        const isMobile = window.innerWidth < 768;
+        const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+        
+        document.documentElement.classList.toggle('is-mobile', isMobile);
+        document.documentElement.classList.toggle('is-tablet', isTablet);
+        document.documentElement.classList.toggle('is-desktop', !isMobile && !isTablet);
       } catch (e) {
         // Ignorer les erreurs
       }
@@ -15,9 +23,11 @@ export const useMobileOptimization = () => {
     
     setVH();
     window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
     
     return () => {
       window.removeEventListener('resize', setVH);
+      window.removeEventListener('orientationchange', setVH);
     };
   }, []);
 };

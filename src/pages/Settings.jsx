@@ -177,7 +177,6 @@ useEffect(() => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">{t('darkMode')}</h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-xs">{t('comingSoon')}</p>
                 </div>
               </div>
               <button

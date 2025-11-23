@@ -8,14 +8,17 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
   const [selectedTheme, setSelectedTheme] = useState(preSelectedTheme || t('all'));
   const [cantiques, setCantiques] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Charger les cantiques selon la langue choisie
   useEffect(() => {
     const loadCantiques = () => {
+      setIsLoading(true);
       const currentCantiques = getCantiques();
       const currentCategories = getCategories();
       setCantiques(currentCantiques);
       setCategories([t('all'), ...currentCategories]);
+      setIsLoading(false);
     };
 
     loadCantiques();
@@ -128,8 +131,8 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
             ))}
           </div>
 
-          {/* Message si aucun résultat */}
-          {filteredCantiques.length === 0 && (
+          {/* Message si aucun résultat (seulement après chargement) */}
+          {!isLoading && filteredCantiques.length === 0 && (
             <div className="text-center py-16">
               <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Music size={48} className="text-gray-300" />
