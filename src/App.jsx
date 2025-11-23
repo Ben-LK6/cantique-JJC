@@ -13,6 +13,7 @@ import Settings from './pages/Settings';
 import CantiqueLanguage from './pages/CantiqueLanguage';
 import Instructions from './pages/Instructions';
 import { t } from './data/translations';
+import { useMobileOptimization } from './components/common/MobileOptimized';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -21,15 +22,25 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTheme, setSelectedTheme] = useState('');
 
-    // AJOUT : États pour les paramètres
+  // États pour les paramètres
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'blue');
   const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'medium');
 
-  // AJOUT : Appliquer le thème au chargement
+  // Optimisations mobiles
+  useMobileOptimization();
+
+  // Appliquer le thème au chargement
   useEffect(() => {
-  const savedTheme = localStorage.getItem('theme') || 'blue';
+    const savedTheme = localStorage.getItem('theme') || 'blue';
     setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
+
+  // Appliquer le thème quand il change
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
 
   const navigateTo = (page, themeFilter = '') => {
@@ -127,7 +138,7 @@ function App() {
   const headerConfig = getHeaderConfig();
 
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
+    <div className="uniform-flex-col uniform-min-h-screen bg-gray-50 dark:bg-gray-900 overflow-hidden safe-area-top safe-area-left safe-area-right">
       {/* Sidebar Desktop */}
       <div className="hidden lg:block">
         <Sidebar onNavigate={navigateTo} currentPage={currentPage} />
@@ -137,7 +148,7 @@ function App() {
       {showSidebar && (
         <div className="lg:hidden">
           <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            className="fixed inset-0 bg-black bg-opacity-50 z-40 touch-target"
             onClick={() => setShowSidebar(false)}
           />
           <div className="fixed top-0 left-0 h-full z-50">
@@ -147,7 +158,7 @@ function App() {
       )}
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col overflow-hidden">
+      <div className="uniform-flex-col uniform-w-full uniform-h-full overflow-hidden">
         {/* Header */}
         {headerConfig && (
           <ModernHeader 
@@ -157,12 +168,14 @@ function App() {
         )}
 
         {/* Page Content */}
-        <main className="flex-1 overflow-y-auto">
-          {renderPage()}
+        <main className="uniform-w-full uniform-h-full overflow-y-auto scroll-container pb-16 lg:pb-0">
+          <div className="uniform-container uniform-min-h-screen">
+            {renderPage()}
+          </div>
         </main>
 
         {/* Bottom Navigation - Mobile Only */}
-        <div className="lg:hidden bottom-nav-container">
+        <div className="lg:hidden bottom-nav-container safe-area-bottom">
           <BottomNav currentPage={currentPage} onNavigate={navigateTo} />
         </div>
       </div>

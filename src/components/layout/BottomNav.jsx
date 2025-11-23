@@ -27,8 +27,8 @@ const BottomNav = ({ currentPage, onNavigate }) => {
                 <motion.button
                   key={item.path}
                   onClick={() => onNavigate(item.path)}
-                  className={`flex flex-col items-center justify-center min-w-[60px] py-2 px-2 rounded-2xl transition-all ${
-                    isActive ? 'bg-white/20 backdrop-blur-sm' : ''
+                  className={`flex flex-col items-center justify-center min-w-[60px] py-2 px-2 rounded-2xl transition-all menu-item ${
+                    isActive ? 'bg-white/20 dark:bg-white/10 backdrop-blur-sm' : ''
                   }`}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -41,12 +41,12 @@ const BottomNav = ({ currentPage, onNavigate }) => {
                   >
                     <Icon 
                       size={24} 
-                      className={`${isActive ? 'text-white drop-shadow-lg' : 'text-primary-200'}`}
+                      className={`${isActive ? 'text-white drop-shadow-lg' : 'text-primary-200 dark:text-primary-300'}`}
                       strokeWidth={isActive ? 3 : 2}
                     />
                   </motion.div>
                   <span className={`text-xs mt-1.5 font-bold ${
-                    isActive ? 'text-white' : 'text-primary-200'
+                    isActive ? 'text-white' : 'text-primary-200 dark:text-primary-300'
                   }`}>
                     {item.label}
                   </span>
