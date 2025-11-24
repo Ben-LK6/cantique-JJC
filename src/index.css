@@ -478,13 +478,13 @@ input, textarea, select {
   -webkit-backdrop-filter: blur(20px) !important;
 }
 
-/* Rendre la barre de navigation transparente */
+/* Restaurer les couleurs originales des barres de navigation */
 .bg-gradient-to-r.from-primary-600 {
-  background: transparent !important;
+  background: linear-gradient(to right, #2563eb, #1d4ed8, #1e40af) !important;
 }
 
 .dark .bg-gradient-to-r.from-primary-600 {
-  background: transparent !important;
+  background: linear-gradient(to right, #374151, #1f2937, #374151) !important;
 }
 
 /* Fond pour les éléments sélectionnés dans la navigation */
@@ -565,6 +565,49 @@ body {
 .dark ::-moz-selection {
   background-color: #fbbf24 !important;
   color: #000000 !important;
+}
+
+/* Améliorer le contraste des éléments sélectionnés en mode sombre */
+.dark .border-primary-600.bg-primary-50 {
+  background-color: #374151 !important;
+  border-color: #60a5fa !important;
+}
+
+.dark .text-primary-700 {
+  color: #ffffff !important;
+}
+
+.dark .text-primary-600 {
+  color: #60a5fa !important;
+}
+
+.dark .text-primary-400 {
+  color: #93c5fd !important;
+}
+
+/* Styles spécifiques pour les boutons sélectionnés en mode sombre */
+.dark .bg-primary-50 {
+  background-color: #374151 !important;
+}
+
+.dark .bg-primary-900\/20 {
+  background-color: #1f2937 !important;
+}
+
+/* Améliorer la visibilité du texte dans les éléments sélectionnés */
+.dark .border-primary-600 .text-gray-800 {
+  color: #ffffff !important;
+}
+
+.dark .border-primary-600 .text-gray-200 {
+  color: #ffffff !important;
+}
+
+/* Contraste amélioré pour les cartes sélectionnées */
+.dark .border-primary-600 {
+  background-color: #1f2937 !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) !important;
 }
 
 

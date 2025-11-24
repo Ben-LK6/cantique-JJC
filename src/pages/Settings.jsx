@@ -146,14 +146,14 @@ useEffect(() => {
                   onClick={() => setTheme(t.value)}
                   className={`flex flex-col items-center gap-2 p-3 rounded-xl border-2 transition-all ${
                     theme === t.value 
-                      ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/20 shadow-md' 
+                      ? 'border-primary-600 bg-primary-50 dark:bg-gray-700 dark:border-primary-400 shadow-md' 
                       : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
                   }`}
                 >
                   <div className={`w-12 h-12 rounded-full ${t.color} shadow-lg ${theme === t.value ? 'ring-4 ring-primary-200' : ''}`}></div>
                   <span className={`text-xs font-semibold ${
                     theme === t.value 
-                      ? 'text-primary-600 dark:text-primary-400' 
+                      ? 'text-primary-600 dark:text-white' 
                       : 'text-gray-600 dark:text-gray-300'
                   }`}>
                     {t.name}
@@ -218,7 +218,7 @@ useEffect(() => {
                   onClick={() => setFontSize(fs.value)}
                   className={`py-3 px-4 rounded-xl border-2 transition-all font-semibold ${
                     fontSize === fs.value 
-                      ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400 shadow-md' 
+                      ? 'border-primary-600 bg-primary-50 dark:bg-gray-700 dark:border-primary-400 text-primary-700 dark:text-white shadow-md' 
                       : 'border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-500'
                   }`}
                 >
@@ -252,12 +252,16 @@ useEffect(() => {
                   onClick={() => setLanguage(lang.value)}
                   className={`w-full flex items-center gap-3 p-4 rounded-xl border-2 transition-all ${
                     language === lang.value 
-                      ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/20 shadow-md' 
+                      ? 'border-primary-600 bg-primary-50 dark:bg-gray-700 dark:border-primary-400 shadow-md' 
                       : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
                   }`}
                 >
                   <span className="text-2xl">{lang.flag}</span>
-                  <span className="text-gray-800 dark:text-gray-200 font-semibold">{lang.name}</span>
+                  <span className={`font-semibold ${
+                    language === lang.value 
+                      ? 'text-gray-800 dark:text-white' 
+                      : 'text-gray-800 dark:text-gray-200'
+                  }`}>{lang.name}</span>
                   {language === lang.value && (
                     <CheckCircle size={20} className="ml-auto text-primary-600 dark:text-primary-400" />
                   )}
