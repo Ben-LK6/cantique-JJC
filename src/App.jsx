@@ -198,7 +198,7 @@ function App() {
         )}
 
         {/* Page Content */}
-        <main className="flex-1 overflow-y-auto scroll-container pb-16 lg:pb-0">
+        <main className="flex-1 overflow-y-auto scroll-container pb-nav-compact lg:pb-0">
           <div className="min-h-full">
             {renderPage()}
           </div>
