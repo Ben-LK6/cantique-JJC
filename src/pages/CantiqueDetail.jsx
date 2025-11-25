@@ -3,6 +3,7 @@ import { ArrowLeft, Heart, Music, Volume2, Play, Pause, Share2 } from 'lucide-re
 import { motion, AnimatePresence } from 'framer-motion';
 import { getCantiqueById } from '../utils/cantiqueUtils';
 import { getTonalityColor, getTonalityBadgeClass, getTonalityTextClass } from '../utils/tonalityColors';
+
 import { t } from '../data/translations';
 
 const CantiqueDetail = ({ cantiqueId, onBack }) => {
@@ -109,7 +110,6 @@ const playTonality = () => {
   };
 
 const handleShare = () => {
-  // On gérera le partage plus tard
   if (navigator.share) {
     navigator.share({
       title: `${cantique.titre} - Cantique JJC`,
@@ -117,11 +117,12 @@ const handleShare = () => {
       url: window.location.href,
     }).catch(err => console.log('Erreur de partage:', err));
   } else {
-    // Fallback : copier dans le presse-papier
     navigator.clipboard.writeText(window.location.href);
     alert(t('linkCopied'));
   }
 };
+
+
   if (!cantique) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">

@@ -43,7 +43,7 @@ function App() {
   };
 
   // États pour les paramètres
-  const [theme, setTheme] = useState(() => safeGetItem('theme', 'blue'));
+  const [theme, setTheme] = useState(() => safeGetItem('theme', 'lightblue'));
   const [fontSize, setFontSize] = useState(() => safeGetItem('fontSize', 'medium'));
   const [darkMode, setDarkMode] = useState(() => safeGetItem('darkMode', 'false') === 'true');
 
@@ -53,7 +53,7 @@ function App() {
   // Appliquer le thème et mode sombre au chargement
   useEffect(() => {
     initializeTheme();
-    const savedTheme = safeGetItem('theme', 'blue');
+    const savedTheme = safeGetItem('theme', 'lightblue');
     const savedDarkMode = safeGetItem('darkMode', 'false') === 'true';
     
     setTheme(savedTheme);

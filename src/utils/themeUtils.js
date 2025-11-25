@@ -31,7 +31,7 @@ export const applyThemeColors = (themeName) => {
     }
   };
   
-  const themeColors = themes[themeName] || themes.blue;
+  const themeColors = themes[themeName] || themes.lightblue;
   Object.entries(themeColors).forEach(([shade, color]) => {
     document.documentElement.style.setProperty(`--color-primary-${shade}`, color);
   });
@@ -39,7 +39,7 @@ export const applyThemeColors = (themeName) => {
 
 // Initialiser le thème au chargement
 export const initializeTheme = () => {
-  const savedTheme = localStorage.getItem('theme') || 'blue';
+  const savedTheme = localStorage.getItem('theme') || 'lightblue';
   const savedDarkMode = localStorage.getItem('darkMode') === 'true';
   
   document.documentElement.setAttribute('data-theme', savedTheme);

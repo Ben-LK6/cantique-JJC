@@ -5,7 +5,7 @@ import { t } from '../data/translations';
 import { applyThemeColors, changeTheme } from '../utils/themeUtils';
 
 const Settings = () => {
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'blue');
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'lightblue');
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem('darkMode') === 'true');
   const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'medium');
   const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'fr');

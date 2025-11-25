@@ -66,9 +66,9 @@ export const translations = {
     
     // À propos
     aboutJJC: "À propos de JJC",
-    aboutJJCText: "L'église JJC (Jésus-Christ Joie et Consolation) est une communauté chrétienne dédiée à l'adoration de Dieu et au service du prochain. Nous croyons en la puissance de la louange et de la prière pour transformer les vies et glorifier le Seigneur",
+    aboutJJCText: "L'ÉGLISE ÉVANGÉLIQUE JJC (Jéhovah par Jésus-Christ) est une communauté chrétienne dédiée à l'adoration de Dieu et au service du prochain. Nous croyons en la puissance de la louange et de la prière pour transformer les vies et glorifier le Seigneur",
     ourMission: "Notre Mission",
-    missionText: "Cette application a été créée pour faciliter l'accès aux cantiques de l'église JJC, permettant à chacun de louer Dieu à tout moment et en tout lieu. Que vous soyez au culte, à la maison ou en déplacement, accédez facilement à vos cantiques préférés.",
+    missionText: "Cette application a été créée pour faciliter l'accès aux cantiques de L'ÉGLISE ÉVANGÉLIQUE JJC, permettant à chacun de louer Dieu à tout moment et en tout lieu. Que vous soyez au culte, à la maison ou en déplacement, accédez facilement à vos cantiques préférés.",
     features: "Fonctionnalités :",
     offlineAccess: "Accès hors ligne à tous les cantiques",
     easySearch: "Recherche facile par numéro ou titre",
@@ -79,9 +79,9 @@ export const translations = {
     creators: "Créateurs",
     mainDeveloper: "Développeur Principal",
     designDevelopment: "Conception & Développement",
-    developedWith: "Développé avec ❤️ pour la gloire de Dieu et le service de l'église JJC",
+    developedWith: "Développé avec ❤️ pour la gloire de Dieu et le service de L'ÉGLISE ÉVANGÉLIQUE JJC",
     contactSupport: "Contact & Support",
-    copyright: "© 2025 Église JJC. Tous droits réservés.",
+    copyright: "© 2025 L'ÉGLISE ÉVANGÉLIQUE JJC. Tous droits réservés.",
     madeWith: "Made with ❤️ for God's glory",
     
     // Actions
@@ -187,9 +187,9 @@ export const translations = {
     
     // À propos
     aboutJJC: "About JJC",
-    aboutJJCText: "JJC Church (Jesus Christ Joy and Consolation) is a Christian community dedicated to worshiping God and serving others. We believe in the power of praise and prayer to transform lives and glorify the Lord",
+    aboutJJCText: "THE EVANGELICAL CHURCH JJC (Jehovah through Jesus Christ) is a Christian community dedicated to worshiping God and serving others. We believe in the power of praise and prayer to transform lives and glorify the Lord",
     ourMission: "Our Mission",
-    missionText: "This application was created to facilitate access to JJC church hymns, allowing everyone to praise God anytime and anywhere. Whether you're at worship, at home or traveling, easily access your favorite hymns.",
+    missionText: "This application was created to facilitate access to THE EVANGELICAL CHURCH JJC hymns, allowing everyone to praise God anytime and anywhere. Whether you're at worship, at home or traveling, easily access your favorite hymns.",
     features: "Features:",
     offlineAccess: "Offline access to all hymns",
     easySearch: "Easy search by number or title",
@@ -200,9 +200,9 @@ export const translations = {
     creators: "Creators",
     mainDeveloper: "Main Developer",
     designDevelopment: "Design & Development",
-    developedWith: "Developed with ❤️ for God's glory and JJC church service",
+    developedWith: "Developed with ❤️ for God's glory and THE EVANGELICAL CHURCH JJC service",
     contactSupport: "Contact & Support",
-    copyright: "© 2025 JJC Church. All rights reserved.",
+    copyright: "© 2025 THE EVANGELICAL CHURCH JJC. All rights reserved.",
     madeWith: "Made with ❤️ for God's glory",
     
     // Actions
