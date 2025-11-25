@@ -113,8 +113,8 @@ const Home = ({ onNavigate }) => {
     onNavigate('cantiques', categorie);
   };
   const quickActions = [
-    { icon: Book, label: t('cantiques'), path: 'cantiques', color: 'from-primary-500 to-primary-600', emoji: '📖' },
-    { icon: Heart, label: t('favorites'), path: 'favoris', color: 'from-primary-500 to-primary-600', emoji: '❤️' },
+    { icon: Book, label: t('cantiques'), path: 'cantiques', emoji: '📖' },
+    { icon: Heart, label: t('favorites'), path: 'favoris', emoji: '❤️' },
   ];
 
   return (
@@ -223,7 +223,12 @@ const Home = ({ onNavigate }) => {
                 onClick={() => onNavigate(action.path)}
                 className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-gray-100 dark:border-gray-700"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${action.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
+                <div 
+                  className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 mx-auto"
+                  style={{
+                    background: 'linear-gradient(to bottom right, var(--color-primary-500), var(--color-primary-600))'
+                  }}
+                >
                   <span className="text-2xl">{action.emoji}</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white text-center">
@@ -240,7 +245,12 @@ const Home = ({ onNavigate }) => {
         <div className="mx-6 mb-8">
           <div className="relative overflow-hidden">
             {/* Carte avec dégradé basé sur le thème */}
-            <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-6 shadow-xl text-white relative">
+            <div 
+              className="rounded-2xl p-6 shadow-xl text-white relative"
+              style={{
+                background: 'linear-gradient(to bottom right, var(--color-primary-500), var(--color-primary-700))'
+              }}
+            >
               {/* Motif décoratif en arrière-plan */}
               <div className="absolute top-0 right-0 w-32 h-32 opacity-20">
                 <div className="w-full h-full rounded-full bg-white/30 transform translate-x-8 -translate-y-8"></div>
@@ -317,7 +327,16 @@ const Home = ({ onNavigate }) => {
         {/* Bouton flèche */}
         <button
           onClick={() => setShowCategories(!showCategories)}
-          className="w-full bg-primary-600 hover:bg-primary-700 rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2"
+          className="w-full rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2"
+          style={{
+            background: 'linear-gradient(to bottom right, var(--color-primary-600), var(--color-primary-700))',
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = 'linear-gradient(to bottom right, var(--color-primary-700), var(--color-primary-800))';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = 'linear-gradient(to bottom right, var(--color-primary-600), var(--color-primary-700))';
+          }}
         >
           <Music size={20} />
           <span className="font-medium">{t('categories')}</span>
