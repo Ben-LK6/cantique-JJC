@@ -65,16 +65,28 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       {/* Indication de la langue */}
-      <div className="px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
-        <p className="text-xs text-blue-700 font-medium text-center">
+      <div 
+        className="px-4 py-2 border-b"
+        style={{
+          background: 'linear-gradient(to right, var(--color-primary-50), var(--color-primary-100))',
+          borderColor: 'var(--color-primary-200)'
+        }}
+      >
+        <p className="text-xs font-medium text-center" style={{ color: 'var(--color-primary-700)' }}>
           🌍 {t('language')}: <span className="font-bold">{languageLabel}</span>
         </p>
       </div>
       
       {/* Indication du filtre actif */}
       {selectedTheme !== t('all') && (
-        <div className="px-4 py-3 bg-primary-50 border-b border-primary-100">
-          <p className="text-sm text-primary-700 font-medium text-center">
+        <div 
+          className="px-4 py-3 border-b"
+          style={{
+            backgroundColor: 'var(--color-primary-50)',
+            borderColor: 'var(--color-primary-100)'
+          }}
+        >
+          <p className="text-sm font-medium text-center" style={{ color: 'var(--color-primary-700)' }}>
             📚 {t('activeFilter')} : <span className="font-bold">{selectedTheme}</span>
           </p>
         </div>
@@ -89,7 +101,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
               {filteredCantiques.length} {filteredCantiques.length > 1 ? t('cantiques_plural') : t('cantique')}
             </p>
             {searchTerm && (
-              <p className="text-primary-600 text-sm">
+              <p className="text-sm" style={{ color: 'var(--color-primary-600)' }}>
                 🔍 "{searchTerm}"
               </p>
             )}
@@ -100,17 +112,26 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
               <div
                 key={cantique.id}
                 onClick={() => onSelectCantique(cantique.id)}
-                className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow cursor-pointer border-l-4 border-primary-600"
+                className="bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow cursor-pointer border-l-4"
+                style={{ borderLeftColor: 'var(--color-primary-600)' }}
               >
                 {/* Gradient Background subtil */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+                <div 
+                  className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16 opacity-50"
+                  style={{
+                    background: `linear-gradient(to bottom right, var(--color-primary-50), transparent)`
+                  }}
+                ></div>
                 
                 <div className="flex items-start gap-4 relative z-10">
 
                   {/* Infos */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="px-2 py-1 bg-primary-600 text-white rounded-lg text-sm font-bold">
+                      <span 
+                        className="px-2 py-1 text-white rounded-lg text-sm font-bold"
+                        style={{ backgroundColor: 'var(--color-primary-600)' }}
+                      >
                         {cantique.numero}
                       </span>
                       <h3 className="text-lg font-bold text-gray-800 leading-tight line-clamp-2">
@@ -118,7 +139,13 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
                       </h3>
                     </div>
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-semibold">
+                      <span 
+                        className="px-3 py-1 rounded-full text-xs font-semibold"
+                        style={{
+                          backgroundColor: 'var(--color-primary-50)',
+                          color: 'var(--color-primary-700)'
+                        }}
+                      >
                         {cantique.categorie}
                       </span>
                       <div className="flex items-center gap-1">

@@ -29,12 +29,21 @@ const FilterButton = ({ options, selected, onSelect, color = 'primary', label = 
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(true)}
-        className={`fixed right-4 bottom-24 z-40 bg-gradient-to-r ${colors.button} text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 text-sm font-semibold`}
+        className="fixed right-4 bottom-24 z-40 text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 text-sm font-semibold"
+        style={{
+          background: 'linear-gradient(to right, var(--color-primary-500), var(--color-primary-600))'
+        }}
       >
         <Filter size={16} />
         <span>{label}</span>
         {selected !== 'Tous' && selected !== 'Toutes' && (
-          <span className={`${colors.badge} text-xs px-1.5 py-0.5 rounded-full font-bold`}>
+          <span 
+            className="text-xs px-1.5 py-0.5 rounded-full font-bold"
+            style={{
+              backgroundColor: 'white',
+              color: 'var(--color-primary-600)'
+            }}
+          >
             1
           </span>
         )}
@@ -92,9 +101,13 @@ const FilterButton = ({ options, selected, onSelect, color = 'primary', label = 
                         }}
                         className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all text-sm ${
                           isSelected
-                            ? `${colors.selected} shadow-md`
-                            : `bg-gray-50 text-gray-700 ${colors.hover}`
+                            ? 'shadow-md'
+                            : 'bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600'
                         }`}
+                        style={isSelected ? {
+                          backgroundColor: 'var(--color-primary-600)',
+                          color: 'white'
+                        } : {}}
                       >
                         <span className="font-semibold">{option}</span>
                         {isSelected && (

@@ -69,10 +69,15 @@ const CantiqueLanguage = ({ onNavigate }) => {
         <div className="max-w-2xl mx-auto">
           
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-6 text-white text-center mb-6">
+          <div 
+            className="rounded-2xl p-6 text-white text-center mb-6"
+            style={{
+              background: 'linear-gradient(to right, var(--color-primary-600), var(--color-primary-800))'
+            }}
+          >
             <Languages size={48} className="mx-auto mb-3" />
             <h1 className="text-2xl font-bold mb-2">{t('cantiqueLanguageTitle')}</h1>
-            <p className="text-primary-100">
+            <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
               {t('chooseLanguageForCantiques')}
             </p>
           </div>
@@ -91,21 +96,28 @@ const CantiqueLanguage = ({ onNavigate }) => {
                   onClick={() => setCantiqueLanguage(lang.value)}
                   className={`w-full flex items-center gap-4 p-5 rounded-xl border-2 transition-all ${
                     cantiqueLanguage === lang.value 
-                      ? 'border-primary-600 bg-primary-50 shadow-md' 
-                      : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                      ? 'shadow-md' 
+                      : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700'
                   }`}
+                  style={cantiqueLanguage === lang.value ? {
+                    borderColor: 'var(--color-primary-600)',
+                    backgroundColor: 'var(--color-primary-50)'
+                  } : {}}
                 >
                   <div className="text-4xl">{lang.flag}</div>
                   <div className="flex-1 text-left">
-                    <h3 className={`text-lg font-bold ${
-                      cantiqueLanguage === lang.value ? 'text-primary-700' : 'text-gray-800'
-                    }`}>
+                    <h3 
+                      className="text-lg font-bold"
+                      style={{
+                        color: cantiqueLanguage === lang.value ? 'var(--color-primary-700)' : undefined
+                      }}
+                    >
                       {lang.name}
                     </h3>
                     <p className="text-gray-600 text-sm">{lang.description}</p>
                   </div>
                   {cantiqueLanguage === lang.value && (
-                    <CheckCircle size={24} className="text-primary-600" />
+                    <CheckCircle size={24} style={{ color: 'var(--color-primary-600)' }} />
                   )}
                 </motion.button>
               ))}
@@ -113,12 +125,18 @@ const CantiqueLanguage = ({ onNavigate }) => {
           </motion.div>
 
           {/* Information */}
-          <div className="mt-6 bg-blue-50 rounded-xl p-4 border border-blue-200">
+          <div 
+            className="mt-6 rounded-xl p-4 border"
+            style={{
+              backgroundColor: 'var(--color-primary-50)',
+              borderColor: 'var(--color-primary-200)'
+            }}
+          >
             <div className="flex items-start gap-3">
-              <div className="text-blue-600 text-xl">ℹ️</div>
+              <div className="text-xl" style={{ color: 'var(--color-primary-600)' }}>ℹ️</div>
               <div>
-                <h4 className="font-semibold text-blue-800 mb-1">{t('information')}</h4>
-                <p className="text-blue-700 text-sm">
+                <h4 className="font-semibold mb-1" style={{ color: 'var(--color-primary-800)' }}>{t('information')}</h4>
+                <p className="text-sm" style={{ color: 'var(--color-primary-700)' }}>
                   {t('cantiqueLanguageInfo')}
                 </p>
               </div>
