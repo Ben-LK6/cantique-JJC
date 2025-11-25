@@ -14,6 +14,7 @@ import CantiqueLanguage from './pages/CantiqueLanguage';
 import Instructions from './pages/Instructions';
 import { t } from './data/translations';
 import { useMobileOptimization } from './components/common/MobileOptimized';
+import { initializeTheme, applyThemeColors } from './utils/themeUtils';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -51,24 +52,18 @@ function App() {
 
   // Appliquer le thème et mode sombre au chargement
   useEffect(() => {
+    initializeTheme();
     const savedTheme = safeGetItem('theme', 'blue');
     const savedDarkMode = safeGetItem('darkMode', 'false') === 'true';
     
     setTheme(savedTheme);
     setDarkMode(savedDarkMode);
-    
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    
-    if (savedDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
   }, []);
 
   // Appliquer le thème quand il change
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    applyThemeColors(theme);
     safeSetItem('theme', theme);
   }, [theme]);
 
@@ -94,7 +89,7 @@ function App() {
   const getHeaderConfig = () => {
     switch (currentPage) {
       case 'home':
-        return null;
+        return { title: t('home'), showMenu: true };
       case 'cantiques':
         return { 
           title: t('cantiques'), 

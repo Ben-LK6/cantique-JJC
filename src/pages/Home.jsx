@@ -1,7 +1,7 @@
 import { Book, Heart, Sparkles, Music, HandHeart, ChevronUp, ChevronDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { getCantiques, getCategories } from '../utils/cantiqueUtils';
-import { getRandomVerset, getThemeColor } from '../data/versetsTranslations';
+import { getRandomVerset } from '../data/versetsTranslations';
 import { t } from '../data/translations';
 
 const Home = ({ onNavigate }) => {
@@ -113,8 +113,8 @@ const Home = ({ onNavigate }) => {
     onNavigate('cantiques', categorie);
   };
   const quickActions = [
-    { icon: Book, label: t('cantiques'), path: 'cantiques', color: 'from-blue-500 to-blue-600', emoji: '📖' },
-    { icon: Heart, label: t('favorites'), path: 'favoris', color: 'from-red-500 to-red-600', emoji: '❤️' },
+    { icon: Book, label: t('cantiques'), path: 'cantiques', color: 'from-primary-500 to-primary-600', emoji: '📖' },
+    { icon: Heart, label: t('favorites'), path: 'favoris', color: 'from-primary-500 to-primary-600', emoji: '❤️' },
   ];
 
   return (
@@ -204,8 +204,9 @@ const Home = ({ onNavigate }) => {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
             {t('appTitle')}
           </h1>
-          <p className="text-gray-600 dark:text-gray-300">
-            {t('appSubtitle')}
+          <p className="text-gray-600 dark:text-gray-300 text-center italic">
+            Psaume 149:1<br/>
+            « Louez l'Éternel ! Chantez à l'Éternel un cantique nouveau ! Chantez ses louanges dans l'assemblée des fidèles ! »
           </p>
         </div>
       </div>
@@ -239,7 +240,7 @@ const Home = ({ onNavigate }) => {
         <div className="mx-6 mb-8">
           <div className="relative overflow-hidden">
             {/* Carte avec dégradé basé sur le thème */}
-            <div className={`bg-gradient-to-br ${getThemeColor(currentVerset.theme)} rounded-2xl p-6 shadow-xl text-white relative`}>
+            <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-6 shadow-xl text-white relative">
               {/* Motif décoratif en arrière-plan */}
               <div className="absolute top-0 right-0 w-32 h-32 opacity-20">
                 <div className="w-full h-full rounded-full bg-white/30 transform translate-x-8 -translate-y-8"></div>
@@ -316,7 +317,7 @@ const Home = ({ onNavigate }) => {
         {/* Bouton flèche */}
         <button
           onClick={() => setShowCategories(!showCategories)}
-          className="w-full bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2"
+          className="w-full bg-primary-600 hover:bg-primary-700 rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2"
         >
           <Music size={20} />
           <span className="font-medium">{t('categories')}</span>

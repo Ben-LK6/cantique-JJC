@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, Heart, Music, Volume2, Play, Pause, Share2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getCantiqueById } from '../utils/cantiqueUtils';
+import { getTonalityColor, getTonalityBadgeClass, getTonalityTextClass } from '../utils/tonalityColors';
 import { t } from '../data/translations';
 
 const CantiqueDetail = ({ cantiqueId, onBack }) => {
@@ -223,8 +224,11 @@ const handleShare = () => {
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center gap-2">
-                <Music size={16} className="text-primary-600" />
-                <span className="font-medium">{t('tonality')}: {cantique.tonalite.note}</span>
+                <Music size={16} className={getTonalityTextClass(cantique.tonalite.note)} />
+                <span className="font-medium">{t('tonality')}:</span>
+                <span className={`px-3 py-1 rounded-full text-sm font-bold ${getTonalityBadgeClass(cantique.tonalite.note)}`}>
+                  {cantique.tonalite.note}
+                </span>
               </div>
             </div>
           </motion.div>

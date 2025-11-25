@@ -1,6 +1,7 @@
 import { Music } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { getCantiques, getCategories, clearCache } from '../utils/cantiqueUtils';
+import { getTonalityBadgeClass, getTonalityTextClass } from '../utils/tonalityColors';
 import FilterButton from '../components/common/FilterButton';
 import { t } from '../data/translations';
 
@@ -120,9 +121,11 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
                       <span className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-semibold">
                         {cantique.categorie}
                       </span>
-                      <div className="flex items-center gap-1 text-gray-500">
-                        <Music size={14} />
-                        <span className="text-xs font-medium">{cantique.tonalite.note}</span>
+                      <div className="flex items-center gap-1">
+                        <Music size={14} className={getTonalityTextClass(cantique.tonalite.note)} />
+                        <span className={`px-2 py-1 rounded-full text-xs font-bold ${getTonalityBadgeClass(cantique.tonalite.note)}`}>
+                          {cantique.tonalite.note}
+                        </span>
                       </div>
                     </div>
                   </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Palette, Volume2, Type, Globe, Moon, Sun, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { t } from '../data/translations';
+import { applyThemeColors, changeTheme } from '../utils/themeUtils';
 
 const Settings = () => {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'blue');
@@ -11,17 +12,21 @@ const Settings = () => {
   const [audioEnabled, setAudioEnabled] = useState(() => localStorage.getItem('audioEnabled') !== 'false');
   const [showSaved, setShowSaved] = useState(false);
 
+  // Appliquer le thème initial
+  useEffect(() => {
+    applyTheme(theme);
+  }, []);
+
 // Remplace TOUS les useEffect par ceux-ci :
 
 useEffect(() => {
   if (localStorage.getItem('theme') !== theme) {
-    localStorage.setItem('theme', theme);
-    document.documentElement.setAttribute('data-theme', theme);
+    changeTheme(theme);
     showSavedMessage();
-    // Recharger après 1 seconde
+    // Recharger immédiatement
     setTimeout(() => {
       window.location.reload();
-    }, 1000);
+    }, 100);
   }
 }, [theme]);
 
@@ -67,18 +72,7 @@ useEffect(() => {
   }
 }, [audioEnabled]);
 
-  const applyTheme = (themeName) => {
-    const themes = {
-      blue: '#2563eb',
-      green: '#10b981',
-      purple: '#8b5cf6',
-      red: '#ef4444',
-      orange: '#f97316',
-    };
-    
-    const color = themes[themeName] || themes.blue;
-    document.documentElement.style.setProperty('--color-primary', color);
-  };
+  const applyTheme = applyThemeColors;
 
   const showSavedMessage = () => {
     setShowSaved(true);
@@ -91,6 +85,8 @@ useEffect(() => {
     { name: 'Violet', value: 'purple', color: 'bg-purple-600' },
     { name: 'Rouge', value: 'red', color: 'bg-red-600' },
     { name: 'Orange', value: 'orange', color: 'bg-orange-600' },
+    { name: 'Rose', value: 'pink', color: 'bg-pink-600' },
+    { name: 'Indigo', value: 'indigo', color: 'bg-indigo-600' },
   ];
 
   const fontSizes = [
@@ -138,7 +134,7 @@ useEffect(() => {
                 <p className="text-gray-500 dark:text-gray-400 text-xs">{t('customizeAppearance')}</p>
               </div>
             </div>
-            <div className="grid grid-cols-5 gap-3">
+            <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-7 gap-3">
               {themes.map(t => (
                 <motion.button
                   key={t.value}

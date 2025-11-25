@@ -13,7 +13,7 @@ const BottomNav = ({ currentPage, onNavigate }) => {
     <div className="w-full">
       <div className="relative">
         {/* Barre principale - Bleu dégradé */}
-        <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 shadow-2xl">
+        <div className="nav-theme shadow-2xl">
           <div className="flex items-center justify-around px-3 py-2 relative">
             {navItems.map((item, index) => {
               if (!item) {
@@ -75,11 +75,11 @@ const BottomNav = ({ currentPage, onNavigate }) => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="absolute inset-0 bg-blue-400 rounded-full blur-lg"
+              className="absolute inset-0 nav-pulse-theme rounded-full blur-lg"
             ></motion.div>
             
             {/* Bouton principal avec dégradé et ombre */}
-            <div className="relative w-20 h-20 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-full shadow-xl flex flex-col items-center justify-center border-3 border-white">
+            <div className="relative w-20 h-20 nav-button-theme rounded-full shadow-xl flex flex-col items-center justify-center border-3 border-white">
               <div className="flex flex-col items-center">
                 <Globe size={20} className="text-white drop-shadow-lg mb-0.5" strokeWidth={2.5} />
                 <span className="text-white text-xs font-bold drop-shadow-lg tracking-tight leading-none">
