@@ -149,14 +149,16 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
         </div>
       </div>
 
-      {/* Bouton Flottant de Filtre */}
-      <FilterButton 
-        options={allCategories}
-        selected={selectedTheme}
-        onSelect={setSelectedTheme}
-        color="primary"
-        label={t('categories')}
-      />
+      {/* Bouton Flottant de Filtre - Position fixe */}
+      <div className="fixed right-4 bottom-4 z-50">
+        <FilterButton 
+          options={allCategories}
+          selected={selectedTheme}
+          onSelect={setSelectedTheme}
+          color="primary"
+          label={t('categories')}
+        />
+      </div>
     </div>
   );
 };

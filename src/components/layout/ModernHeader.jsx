@@ -15,7 +15,7 @@ const ModernHeader = ({
 }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
-    <div className="nav-theme sticky top-0 z-40 shadow-lg">
+    <div className="nav-theme sticky top-0 z-50 shadow-lg">
       <div className="px-4 py-4">
         {/* Top Row */}
         <div className="flex items-center justify-between mb-3">

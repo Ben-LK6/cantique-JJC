@@ -86,7 +86,7 @@ useEffect(() => {
     { name: 'Rouge', value: 'red', color: 'bg-red-600' },
     { name: 'Orange', value: 'orange', color: 'bg-orange-600' },
     { name: 'Rose', value: 'pink', color: 'bg-pink-600' },
-    { name: 'Indigo', value: 'indigo', color: 'bg-indigo-600' },
+    { name: 'Bleu clair', value: 'lightblue', color: 'bg-sky-600' },
   ];
 
   const fontSizes = [
