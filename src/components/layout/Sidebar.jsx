@@ -20,7 +20,7 @@ const Sidebar = ({ onNavigate, currentPage }) => {
   };
 
   return (
-    <aside className="h-full w-72 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+    <aside className="h-full w-72 bg-white dark:bg-gray-800 shadow-2xl flex flex-col pt-16 lg:pt-0">
         {/* Logo / Header */}
         <div className="p-6 bg-gradient-to-br from-primary-600 to-primary-800 dark:from-gray-700 dark:to-gray-900 text-white">
           <div className="flex items-center gap-3 mb-2">

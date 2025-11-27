@@ -629,13 +629,34 @@ body {
   }
 }
 
-/* Couleurs de sélection de texte qui s'adaptent au thème */
+/* Couleurs de sélection de texte qui s'adaptent au thème - Compatibilité maximale */
 ::selection {
   background-color: var(--color-primary-600) !important;
   color: #ffffff !important;
 }
 
 ::-moz-selection {
+  background-color: var(--color-primary-600) !important;
+  color: #ffffff !important;
+}
+
+::-webkit-selection {
+  background-color: var(--color-primary-600) !important;
+  color: #ffffff !important;
+}
+
+/* Sélection pour tous les éléments */
+*::selection {
+  background-color: var(--color-primary-600) !important;
+  color: #ffffff !important;
+}
+
+*::-moz-selection {
+  background-color: var(--color-primary-600) !important;
+  color: #ffffff !important;
+}
+
+*::-webkit-selection {
   background-color: var(--color-primary-600) !important;
   color: #ffffff !important;
 }
@@ -651,26 +672,68 @@ body {
   color: #000000 !important;
 }
 
-/* Barre de sélection mobile qui s'adapte au thème */
-::-webkit-selection {
-  background-color: var(--color-primary-600) !important;
-  color: #ffffff !important;
-}
-
 .dark ::-webkit-selection {
   background-color: var(--color-primary-400) !important;
   color: #000000 !important;
 }
 
-/* Styles pour les barres de sélection sur mobile */
-*::-webkit-selection {
-  background-color: var(--color-primary-600) !important;
-  color: #ffffff !important;
+.dark *::selection {
+  background-color: var(--color-primary-400) !important;
+  color: #000000 !important;
+}
+
+.dark *::-moz-selection {
+  background-color: var(--color-primary-400) !important;
+  color: #000000 !important;
 }
 
 .dark *::-webkit-selection {
   background-color: var(--color-primary-400) !important;
   color: #000000 !important;
+}
+
+/* Fallback pour navigateurs très anciens */
+body {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Force l'application du thème sur la sélection */
+:root[data-theme="blue"] ::selection,
+:root[data-theme="blue"] *::selection {
+  background-color: #2563eb !important;
+}
+
+:root[data-theme="green"] ::selection,
+:root[data-theme="green"] *::selection {
+  background-color: #16a34a !important;
+}
+
+:root[data-theme="purple"] ::selection,
+:root[data-theme="purple"] *::selection {
+  background-color: #9333ea !important;
+}
+
+:root[data-theme="red"] ::selection,
+:root[data-theme="red"] *::selection {
+  background-color: #dc2626 !important;
+}
+
+:root[data-theme="orange"] ::selection,
+:root[data-theme="orange"] *::selection {
+  background-color: #ea580c !important;
+}
+
+:root[data-theme="pink"] ::selection,
+:root[data-theme="pink"] *::selection {
+  background-color: #db2777 !important;
+}
+
+:root[data-theme="lightblue"] ::selection,
+:root[data-theme="lightblue"] *::selection {
+  background-color: #0284c7 !important;
 }
 
 /* Améliorer le contraste des éléments sélectionnés en mode sombre */
@@ -781,6 +844,49 @@ body {
 
 .dark .to-primary-800 {
   --tw-gradient-to: var(--color-primary-800) !important;
+}
+
+/* Forcer la sélection en mode sombre avec fallback */
+.dark :root[data-theme="blue"] ::selection,
+.dark :root[data-theme="blue"] *::selection {
+  background-color: #60a5fa !important;
+  color: #000000 !important;
+}
+
+.dark :root[data-theme="green"] ::selection,
+.dark :root[data-theme="green"] *::selection {
+  background-color: #4ade80 !important;
+  color: #000000 !important;
+}
+
+.dark :root[data-theme="purple"] ::selection,
+.dark :root[data-theme="purple"] *::selection {
+  background-color: #c084fc !important;
+  color: #000000 !important;
+}
+
+.dark :root[data-theme="red"] ::selection,
+.dark :root[data-theme="red"] *::selection {
+  background-color: #f87171 !important;
+  color: #000000 !important;
+}
+
+.dark :root[data-theme="orange"] ::selection,
+.dark :root[data-theme="orange"] *::selection {
+  background-color: #fb923c !important;
+  color: #000000 !important;
+}
+
+.dark :root[data-theme="pink"] ::selection,
+.dark :root[data-theme="pink"] *::selection {
+  background-color: #f472b6 !important;
+  color: #000000 !important;
+}
+
+.dark :root[data-theme="lightblue"] ::selection,
+.dark :root[data-theme="lightblue"] *::selection {
+  background-color: #38bdf8 !important;
+  color: #000000 !important;
 }
 
 /* Popup de filtre en mode sombre */

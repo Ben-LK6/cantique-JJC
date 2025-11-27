@@ -44,6 +44,7 @@ export const initializeTheme = () => {
   
   document.documentElement.setAttribute('data-theme', savedTheme);
   applyThemeColors(savedTheme);
+  forceSelectionTheme(savedTheme);
   
   if (savedDarkMode) {
     document.documentElement.classList.add('dark');
@@ -58,6 +59,9 @@ export const changeTheme = (themeName) => {
   document.documentElement.setAttribute('data-theme', themeName);
   applyThemeColors(themeName);
   
+  // Forcer l'application du thème sur la sélection
+  forceSelectionTheme(themeName);
+  
   // Forcer la mise à jour de tous les éléments
   const elements = document.querySelectorAll('[class*="primary"]');
   elements.forEach(el => {
@@ -65,4 +69,51 @@ export const changeTheme = (themeName) => {
     el.offsetHeight;
     el.style.display = '';
   });
+};
+
+// Forcer l'application du thème sur la sélection de texte
+export const forceSelectionTheme = (themeName) => {
+  const themeColors = {
+    blue: '#2563eb',
+    green: '#16a34a',
+    purple: '#9333ea',
+    red: '#dc2626',
+    orange: '#ea580c',
+    pink: '#db2777',
+    lightblue: '#0284c7'
+  };
+  
+  const color = themeColors[themeName] || themeColors.lightblue;
+  
+  // Créer ou mettre à jour les styles de sélection
+  let styleElement = document.getElementById('selection-theme-styles');
+  if (!styleElement) {
+    styleElement = document.createElement('style');
+    styleElement.id = 'selection-theme-styles';
+    document.head.appendChild(styleElement);
+  }
+  
+  const isDark = document.documentElement.classList.contains('dark');
+  const darkColors = {
+    blue: '#60a5fa',
+    green: '#4ade80',
+    purple: '#c084fc',
+    red: '#f87171',
+    orange: '#fb923c',
+    pink: '#f472b6',
+    lightblue: '#38bdf8'
+  };
+  
+  const darkColor = darkColors[themeName] || darkColors.lightblue;
+  
+  styleElement.textContent = `
+    ::selection, *::selection, ::-webkit-selection, *::-webkit-selection, ::-moz-selection, *::-moz-selection {
+      background-color: ${color} !important;
+      color: #ffffff !important;
+    }
+    .dark ::selection, .dark *::selection, .dark ::-webkit-selection, .dark *::-webkit-selection, .dark ::-moz-selection, .dark *::-moz-selection {
+      background-color: ${darkColor} !important;
+      color: #000000 !important;
+    }
+  `;
 };

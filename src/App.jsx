@@ -173,10 +173,10 @@ function App() {
       {showSidebar && (
         <div className="lg:hidden">
           <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 touch-target"
+            className="fixed inset-0 bg-black bg-opacity-50 z-30 touch-target"
             onClick={() => setShowSidebar(false)}
           />
-          <div className="fixed top-0 left-0 h-full z-50">
+          <div className="fixed top-0 left-0 h-full z-40">
             <Sidebar onNavigate={navigateTo} currentPage={currentPage} />
           </div>
         </div>
