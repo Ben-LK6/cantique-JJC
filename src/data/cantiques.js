@@ -7,6 +7,10 @@ export const cantiques = [
     numero: "001",
     titre: "Mi wa na mi 'nọ pọ do sẹn Jesu",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_001.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Mi wa na mi 'nọ pọ do sẹn Jesu",
       "Miw akọta lẹpo",
@@ -38,6 +42,10 @@ export const cantiques = [
     numero: "002",
     titre: "Wazọn, wazọn na Jesu",
     categorie: "Azọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_002.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Wazọn, wazọn na Jesu",
       "Mi mẹdide 'ton lẹ",
@@ -74,6 +82,10 @@ export const cantiques = [
     numero: "003",
     titre: "Mi dopẹ na Jehova",
     categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_003.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Mi dopẹ na Jehova",
       "Bo sọ dopẹ na Jesu",
@@ -108,6 +120,10 @@ export const cantiques = [
     numero: "004",
     titre: "Ogbẹ yọyo mẹ mi jeyi",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_004.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Ogbẹ yọyo mẹ mi jeyi",
       "Ogbẹ ayajẹ lọ tọn",
@@ -138,6 +154,10 @@ export const cantiques = [
     numero: "005",
     titre: "Mi t'ayajẹ yisenọ lẹ",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_005.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Mi t'ayajẹ yisenọ lẹ",
       "Gbọjẹ sisẹpọ",
@@ -180,6 +200,10 @@ export const cantiques = [
     numero: "006",
     titre: "Pipotọ Israẹli tọn",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_006.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Pipotọ Israẹli tọn",
       "Mi gọ wa Jesu de",
@@ -216,6 +240,10 @@ export const cantiques = [
     numero: "007",
     titre: "Jesu wẹ mẹ vi vẹ ṣe",
     categorie: "Owanyi Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_007.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Joh.3 :16. 15 :14. Gal.1 :4.",
       "",
@@ -254,6 +282,10 @@ export const cantiques = [
     numero: "008",
     titre: "Mẹnu lẹ wẹ yin 'vi Jakọbtọn ?",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_008.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Mẹnu lẹ wẹ yin 'vi Jakọbtọn ?",
       "Mẹhe yin ovi Isrẹli tọn",
@@ -294,6 +326,10 @@ export const cantiques = [
     numero: "009",
     titre: "Satan wẹ to 'bu do na mẹ",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_009.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "LM  Mat.10 :39. Jak.1 :12.Sọh.2 :10",
       "",
@@ -330,6 +366,10 @@ export const cantiques = [
     numero: "010",
     titre: "Mi pa gigo na Jehova",
     categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_010.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "LM Joh.3 :15,17",
       "",
@@ -367,6 +407,10 @@ export const cantiques = [
     numero: "011",
     titre: "Flin 'sẹn he Jiwheyẹwhe do",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_011.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Flin 'sẹn he Jiwheyẹwhe do",
       "Hiẹ ma ha tindo yẹwhe devo",
@@ -408,6 +452,10 @@ export const cantiques = [
     numero: "012",
     titre: "Mẹhe yinwanna Jesu lẹ",
     categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_012.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Mẹhe yinwanna Jesu lẹ",
       "Mi dopẹ na Jesu",
@@ -442,6 +490,10 @@ export const cantiques = [
     numero: "013",
     titre: "Mẹnu wẹ na sẹn vodun",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_013.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.7",
       "",
@@ -479,6 +531,10 @@ export const cantiques = [
     numero: "014",
     titre: "Mi gbọ mi hodo 'sẹn",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_014.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "5.S. Mat.22 :36-40",
       "",
@@ -515,6 +571,10 @@ export const cantiques = [
     numero: "015",
     titre: "Homẹgble 'tọn ko sẹpọ",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_015.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6s7.Isa.42 :14-15.1 Mat.24 :21.",
       "",
@@ -567,6 +627,10 @@ export const cantiques = [
     numero: "016",
     titre: "Wazọn towe a o gbọjẹ blo",
     categorie: "Azọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_016.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "LM Joh.14 :12. 2Tim.4 :5",
       "",
@@ -603,6 +667,10 @@ export const cantiques = [
     numero: "017",
     titre: "Yisenọ ni nọte",
     categorie: "Whlẹpọn po awhangba yisenọ tọn po",
+    audio: {
+      audioFile: `/audio/cantique_017.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.H. Joh.1 :2,12.",
       "",
@@ -646,6 +714,10 @@ export const cantiques = [
     numero: "018",
     titre: "Mi nọ yi homẹ vivi",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_018.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S. Ps.95 :1-2. 96 :3,9",
       "",
@@ -682,6 +754,10 @@ export const cantiques = [
     numero: "019",
     titre: "Yisenọ ma na yin wunvinọ",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_019.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "12s Howh.24 :5. Mat.10 :16.Efe.5 :7.",
       "",
@@ -725,6 +801,10 @@ export const cantiques = [
     numero: "020",
     titre: "Fie jehovah gbahọ do ?",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_020.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.K Isa.66 :1-2. Owal 7 :48-49",
       "Heb 9 :11",
@@ -758,6 +838,10 @@ export const cantiques = [
     numero: "021",
     titre: "Oklunọ e, yẹn tọn jeyi",
     categorie: "Azọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_021.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "5S 8S Mat.10 :19-20",
       "",
@@ -793,6 +877,10 @@ export const cantiques = [
     numero: "022",
     titre: "E zin na Jehovah",
     categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_022.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Gal. 1 :15",
       "",
@@ -831,6 +919,10 @@ export const cantiques = [
     numero: "023",
     titre: "Yẹwhe tẹ wẹ sọ Jehova ?",
     categorie: "Huhlọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_023.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.O Isa 46 :5",
       "",
@@ -863,6 +955,10 @@ export const cantiques = [
     numero: "024",
     titre: "Ye ko se oho Towe",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_024.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7SS 1Pit 3 :15",
       "",
@@ -905,6 +1001,10 @@ export const cantiques = [
     numero: "025",
     titre: "Jehovah ! Yẹwhe tẹ ka wẹ",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_025.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "JS Ps 89 :8",
       "",
@@ -950,6 +1050,10 @@ export const cantiques = [
     numero: "026",
     titre: "Okluno ṣe!",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_026.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "SS",
       "",
@@ -997,6 +1101,10 @@ export const cantiques = [
     numero: "027",
     titre: "Owe wiwe Jesu tọn",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_027.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S",
       "",
@@ -1033,6 +1141,10 @@ export const cantiques = [
     numero: "028",
     titre: "Aliho Jesu tọn jan bo sọ jlọ",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_028.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "22S",
       "",
@@ -1061,6 +1173,10 @@ export const cantiques = [
     numero: "029",
     titre: "Whenu Yẹwhe Jehovah ko da mi",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_029.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.Z. Howhin.23 :22.",
       "",
@@ -1103,6 +1219,10 @@ export const cantiques = [
     numero: "030",
     titre: "Yiseno lẹ ni lennu pọn",
     categorie: "Azọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_030.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "K.S.",
       "",
@@ -1131,6 +1251,10 @@ export const cantiques = [
     numero: "031",
     titre: "Eyin mẹde ma yọn",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_031.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "G.SS. Joh.17 :7-9",
       "",
@@ -1181,6 +1305,10 @@ export const cantiques = [
     numero: "032",
     titre: "Nẹmu ye sọgan flin",
     categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_032.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Lom.5 :8-11. 1Pit.3 :18-19",
       "",
@@ -1222,6 +1350,10 @@ export const cantiques = [
     numero: "033",
     titre: "Yisenọ lẹ fie mi jeyi ?",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_033.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.P.S Isa.65 :17-19",
       "",
@@ -1261,6 +1393,10 @@ export const cantiques = [
     numero: "034",
     titre: "Oklunọ ṣe Jesu",
     categorie: "Azọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_034.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "SM Joh.17 :1-23",
       "",
@@ -1300,7 +1436,11 @@ export const cantiques = [
     id: 35,
     numero: "035",
     titre: "Wa Gbigbọ Wiwe ,wa !",
-    categorie: "Huhlọn Jiwheyẹwhe tọn",
+    categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_035.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "SM Joh.14 :26",
       "",
@@ -1337,6 +1477,10 @@ export const cantiques = [
     numero: "036",
     titre: "Hiẹ do na hodẹ",
     categorie: "Odẹ",
+    audio: {
+      audioFile: `/audio/cantique_036.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "PM Mat.18 :19-20",
       "",
@@ -1373,6 +1517,10 @@ export const cantiques = [
     numero: "037",
     titre: "Mi wa na mi n'pa Jesu",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_037.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "N.N.S.",
       "",
@@ -1404,6 +1552,10 @@ export const cantiques = [
     numero: "038",
     titre: "Yin yẹn tlẹ tindo 'dẹ fọtọn",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_038.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "CM Ps.145 :1",
       "",
@@ -1440,6 +1592,10 @@ export const cantiques = [
     numero: "039",
     titre: "Ogbe jọmiọn tọn",
     categorie: "Owanyi Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_039.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.P.M. Gal.1 :4. Efe.2. :8-9",
       "",
@@ -1477,6 +1633,10 @@ export const cantiques = [
     numero: "040",
     titre: "Dotu d'Ego yisenọ",
     categorie: "Whlẹpọn po awhangba yisenọ tọn po",
+    audio: {
+      audioFile: `/audio/cantique_040.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S 6SS Isa.8 :10. Lom.8 :31",
       "",
@@ -1507,6 +1667,10 @@ export const cantiques = [
     numero: "041",
     titre: "Mi nọ dope na Jesu",
     categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_041.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8S 6S.5 Isa.53 :5-6",
       "",
@@ -1553,6 +1717,10 @@ export const cantiques = [
     numero: "042",
     titre: "Yẹn na yi homẹ",
     categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_042.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M 1Kọlint.1 :26",
       "",
@@ -1594,6 +1762,10 @@ export const cantiques = [
     numero: "043",
     titre: "Mẹnu wẹ yin họntọn vivẹ ?",
     categorie: "Owanyi Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_043.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8S 4S Joh.15 :14",
       "",
@@ -1641,6 +1813,10 @@ export const cantiques = [
     numero: "044",
     titre: "To huhlọn Jehova tọn mẹ",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_044.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8S.4S Ps.118 :6-7",
       "",
@@ -1678,7 +1854,11 @@ export const cantiques = [
     id: 45,
     numero: "045",
     titre: "T'azan wiwe he gbe",
-    categorie: "Hokọnamẹ",
+    categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_045.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Mat.28 :1",
       "",
@@ -1710,6 +1890,10 @@ export const cantiques = [
     numero: "046",
     titre: "Na yẹn na wa do setonu",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_046.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Mat.4 :10. O.O.S.",
       "",
@@ -1736,6 +1920,10 @@ export const cantiques = [
     numero: "047",
     titre: "Yẹn dotu do Jesu go",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_047.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.7.",
       "",
@@ -1766,7 +1954,11 @@ export const cantiques = [
     id: 48,
     numero: "048",
     titre: "Omẹ ṣẹ , e zun whedenu",
-    categorie: "Hokọnamẹ",
+    categorie: "Whẹntintọn po E zun whedenu po",
+    audio: {
+      audioFile: `/audio/cantique_048.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S 2Kọlin.13 :11-14.",
       "",
@@ -1798,7 +1990,11 @@ export const cantiques = [
     id: 49,
     numero: "049",
     titre: "Jesu yẹn jlo olan Towe",
-    categorie: "Hokọnamẹ",
+    categorie: "Tenu nududu Oklunọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_049.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S Luk.22 :14-22",
       "",
@@ -1825,6 +2021,10 @@ export const cantiques = [
     numero: "050",
     titre: "Mi pa 'klunọ mitọn Jesu",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_050.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "",
@@ -1861,6 +2061,10 @@ export const cantiques = [
     numero: "051",
     titre: "Jesu we huhlon sẹ",
     categorie: "Huhlọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_051.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Ps. 147 :4",
       "",
@@ -1881,7 +2085,11 @@ export const cantiques = [
     id: 52,
     numero: "052",
     titre: "Jesu hiẹ wẹ yin 'Klunọ ṣe",
-    categorie: "Kọndopọ wiwe",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_052.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -1912,7 +2120,11 @@ export const cantiques = [
     id: 53,
     numero: "053",
     titre: "Mẹ wiwe lẹ ma do dibu",
-    categorie: "Kọndopọ wiwe",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_053.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Gen.22 :13-18",
       "",
@@ -1948,7 +2160,11 @@ export const cantiques = [
     id: 54,
     numero: "054",
     titre: "Yẹn jlo dọ homẹ ṣe ni we",
-    categorie: "Kọndopọ wiwe",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_054.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -1980,6 +2196,10 @@ export const cantiques = [
     numero: "055",
     titre: "A juyi blo whlẹngantọ ṣe",
     categorie: "Odẹ",
+    audio: {
+      audioFile: `/audio/cantique_055.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8S 5S",
       "",
@@ -2010,6 +2230,10 @@ export const cantiques = [
     numero: "056",
     titre: "Dotu do Jesu go",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_056.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "",
@@ -2040,7 +2264,11 @@ export const cantiques = [
     id: 57,
     numero: "057",
     titre: "Mi gbẹ sọ tin t'ogbẹ",
-    categorie: "Kọndopọ wiwe",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_057.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "",
@@ -2076,7 +2304,11 @@ export const cantiques = [
     id: 58,
     numero: "058",
     titre: "Jesu mi nukun do",
-    categorie: "Hokọnamẹ",
+    categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_058.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "",
@@ -2102,7 +2334,11 @@ export const cantiques = [
     id: 59,
     numero: "059",
     titre: "Jesu pọn devi Towe lẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_059.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -2134,6 +2370,10 @@ export const cantiques = [
     numero: "060",
     titre: "Mẹnu lẹ die di sunwhlẹvu",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_060.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8S 7S 4S 7 Sọhìa.19:6-8",
       "",
@@ -2171,7 +2411,11 @@ export const cantiques = [
     id: 61,
     numero: "061",
     titre: "Ojọtọ agbasa se tọn",
-    categorie: "Adọgbo po todido po",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_061.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "LM",
       "",
@@ -2203,6 +2447,10 @@ export const cantiques = [
     numero: "062",
     titre: "Etẹwutu mi t'awubla",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_062.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Joh.5:28.",
       "",
@@ -2224,6 +2472,10 @@ export const cantiques = [
     numero: "063",
     titre: "Mi se 'gbe he sọn lọn mẹ !",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_063.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S",
       "",
@@ -2250,6 +2502,10 @@ export const cantiques = [
     numero: "064",
     titre: "To aihọn he godo",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_064.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M. Osọhìa 21:4",
       "",
@@ -2283,6 +2539,10 @@ export const cantiques = [
     numero: "065",
     titre: "Mi na pe gbẹ lọ mẹ",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_065.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.",
       "",
@@ -2322,6 +2582,10 @@ export const cantiques = [
     numero: "066",
     titre: "Yisenọ mi kuo",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_066.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.",
       "",
@@ -2354,6 +2618,10 @@ export const cantiques = [
     numero: "067",
     titre: "Yisenọ bla gbaja",
     categorie: "Whlẹpọn po awhangba yisenọ tọn po",
+    audio: {
+      audioFile: `/audio/cantique_067.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.",
       "",
@@ -2372,6 +2640,10 @@ export const cantiques = [
     numero: "068",
     titre: "Jesu Hiẹ dọ to wanyi mẹ",
     categorie: "Odẹ",
+    audio: {
+      audioFile: `/audio/cantique_068.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Mat.18:19-20",
       "",
@@ -2398,6 +2670,10 @@ export const cantiques = [
     numero: "069",
     titre: "Jesu wa dọho hẹ mi",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_069.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Mat.18:19-20",
       "",
@@ -2419,6 +2695,10 @@ export const cantiques = [
     numero: "070",
     titre: "Nukun de tin m'nọ sa' mlọngọ",
     categorie: "Huhlọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_070.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Isa. 40:28",
       "",
@@ -2444,7 +2724,11 @@ export const cantiques = [
     id: 71,
     numero: "071",
     titre: "Degbe dona Tọn Sọn 'lọn mẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_071.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "",
@@ -2481,6 +2765,10 @@ export const cantiques = [
     numero: "072",
     titre: "Jesu 'Tọ yọpọ lẹ tọn",
     categorie: "Yopovu lẹ",
+    audio: {
+      audioFile: `/audio/cantique_072.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S. Malk.10:14",
       "",
@@ -2502,6 +2790,10 @@ export const cantiques = [
     numero: "073",
     titre: "Jesu Hiẹ go wẹ mi do do",
     categorie: "Yopovu lẹ",
+    audio: {
+      audioFile: `/audio/cantique_073.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -2523,6 +2815,10 @@ export const cantiques = [
     numero: "074",
     titre: "Jesu yi wanyi do nọte",
     categorie: "Yopovu lẹ",
+    audio: {
+      audioFile: `/audio/cantique_074.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Malk.10:16",
       "",
@@ -2548,7 +2844,11 @@ export const cantiques = [
     id: 75,
     numero: "075",
     titre: "E jẹ na mi Jiwheyẹwhe",
-    categorie: "Afọnńu",
+    categorie: "Afọnnu",
+    audio: {
+      audioFile: `/audio/cantique_075.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Ps.92:1",
       "",
@@ -2585,6 +2885,10 @@ export const cantiques = [
     numero: "076",
     titre: "Aihọn he mẹ wẹ ogle mẹ",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_076.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "K.S. Mat.13:24-30, 36-43",
       "",
@@ -2624,6 +2928,10 @@ export const cantiques = [
     numero: "077",
     titre: "Mi yiwan na jlo aihọn tọn,",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_077.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. 1Joh.2:15",
       "",
@@ -2650,6 +2958,10 @@ export const cantiques = [
     numero: "078",
     titre: "To aihọn gbigble he godo",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_078.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S.6S",
       "",
@@ -2676,6 +2988,10 @@ export const cantiques = [
     numero: "079",
     titre: "Gigo jẹ hẹ we Jesu",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_079.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S.6S",
       "",
@@ -2710,6 +3026,10 @@ export const cantiques = [
     numero: "080",
     titre: "Le Jesu jo ofin Etọn do",
     categorie: "Yopovu lẹ",
+    audio: {
+      audioFile: `/audio/cantique_080.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -2741,6 +3061,10 @@ export const cantiques = [
     numero: "081",
     titre: "Yẹn jlo na to 'tan lọ se",
     categorie: "Owanyi Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_081.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S.6S",
       "",
@@ -2769,7 +3093,11 @@ export const cantiques = [
     id: 82,
     numero: "082",
     titre: "Oso de tin hlan aganu",
-    categorie: "Hokọnamẹ",
+    categorie: "Oya, oku po fọnsọnku Jesu tọn po",
+    audio: {
+      audioFile: `/audio/cantique_082.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -2806,6 +3134,10 @@ export const cantiques = [
     numero: "083",
     titre: "Jesu Hiẹ lẹblanu nọ",
     categorie: "Yopovu lẹ",
+    audio: {
+      audioFile: `/audio/cantique_083.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6S.5S",
       "",
@@ -2832,6 +3164,10 @@ export const cantiques = [
     numero: "084",
     titre: "Hosanna! Mi jihan d'aga",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_084.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -2873,6 +3209,10 @@ export const cantiques = [
     numero: "085",
     titre: "Yẹn yi 'nuflo tata",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_085.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "",
@@ -2905,6 +3245,10 @@ export const cantiques = [
     numero: "086",
     titre: "Otọ mitọn he to 'lọn mẹ",
     categorie: "Odẹ",
+    audio: {
+      audioFile: `/audio/cantique_086.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -2936,6 +3280,10 @@ export const cantiques = [
     numero: "087",
     titre: "Mi yi dodo he do ayi",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_087.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "",
@@ -2961,6 +3309,10 @@ export const cantiques = [
     numero: "088",
     titre: "Wa gọ na mi to 'họ he mẹ",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_088.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "",
@@ -2986,7 +3338,11 @@ export const cantiques = [
     id: 89,
     numero: "089",
     titre: "Hiẹ ma mọ le 'nu lọ yọn do",
-    categorie: "Hokọnamẹ",
+    categorie: "Whẹntintọn po E zun whedenu po",
+    audio: {
+      audioFile: `/audio/cantique_089.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -3013,6 +3369,10 @@ export const cantiques = [
     numero: "090",
     titre: "Jesu yiwan na mi gbau",
     categorie: "Owanyi Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_090.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "",
       "1. Jesu yiwan na mi gbau",
@@ -3035,7 +3395,11 @@ export const cantiques = [
     id: 91,
     numero: "091",
     titre: "Jesu wa pli hẹ mi",
-    categorie: "Hokọnamẹ",
+    categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_091.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "",
       "1. Jesu wa pli hẹ mi",
@@ -3065,7 +3429,11 @@ export const cantiques = [
     id: 92,
     numero: "092",
     titre: "Oklunọ ṣe n dawha ylọ",
-    categorie: "Hokọnamẹ",
+    categorie: "Ovẹ na jona ylando tọn",
+    audio: {
+      audioFile: `/audio/cantique_092.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "",
       "1. Oklunọ ṣe n dawha ylọ",
@@ -3093,6 +3461,10 @@ export const cantiques = [
     numero: "093",
     titre: "Oklunọ wẹ huhlọn se lẹ",
     categorie: "Azọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_093.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "",
       "1. Oklunọ wẹ huhlọn se lẹ",
@@ -3133,6 +3505,10 @@ export const cantiques = [
     numero: "094",
     titre: "Oklunọ ṣe yẹn jlo na yi",
     categorie: "Yopovu lẹ",
+    audio: {
+      audioFile: `/audio/cantique_094.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s.",
       "",
@@ -3170,7 +3546,11 @@ export const cantiques = [
     id: 95,
     numero: "095",
     titre: "To 'wu ozan tọn lẹpo mẹ",
-    categorie: "Afọnńu",
+    categorie: "Afọnnu",
+    audio: {
+      audioFile: `/audio/cantique_095.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -3202,6 +3582,10 @@ export const cantiques = [
     numero: "096",
     titre: "Azan egbe tọn vọ",
     categorie: "Tenu",
+    audio: {
+      audioFile: `/audio/cantique_096.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.5.6.5 Howh.3:24",
       "",
@@ -3223,6 +3607,10 @@ export const cantiques = [
     numero: "097",
     titre: "Odona Edẹn tọn lọ",
     categorie: "Alọwle",
+    audio: {
+      audioFile: `/audio/cantique_097.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s.6s. 1 Pit.3:7.",
       "",
@@ -3264,6 +3652,10 @@ export const cantiques = [
     numero: "098",
     titre: "Oklunọ degbe Towe",
     categorie: "Alọwle",
+    audio: {
+      audioFile: `/audio/cantique_098.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "",
       "1. Oklunọ degbe Towe",
@@ -3302,6 +3694,10 @@ export const cantiques = [
     numero: "099",
     titre: "Jesu do ede hia nugbo",
     categorie: "Alọwle",
+    audio: {
+      audioFile: `/audio/cantique_099.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -3337,7 +3733,11 @@ export const cantiques = [
     id: 100,
     numero: "100",
     titre: "Otọ jale se 'dẹ miton",
-    categorie: "Hokọnamẹ",
+    categorie: "Whẹntintọn po E zun whedenu po",
+    audio: {
+      audioFile: `/audio/cantique_100.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "",
       "1. Otọ jale se 'dẹ miton",
@@ -3363,6 +3763,10 @@ export const cantiques = [
     numero: "101",
     titre: "Azan daho de we yẹn de",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_101.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Jijohonọ 28",
       "",
@@ -3397,6 +3801,10 @@ export const cantiques = [
     numero: "102",
     titre: "Azon mi to wiwa lepo",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_102.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "CM.",
       "",
@@ -3426,7 +3834,11 @@ export const cantiques = [
     id: 103,
     numero: "103",
     titre: "Mi mẹhe t'aihọn mẹ lẹpo",
-    categorie: "Pipa",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_103.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M Ps.100:1-5",
       "",
@@ -3458,6 +3870,10 @@ export const cantiques = [
     numero: "104",
     titre: "Whenuena whlepọn lẹdo mi",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_104.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s.",
       "",
@@ -3507,7 +3923,11 @@ export const cantiques = [
     id: 105,
     numero: "105",
     titre: "Hiẹ lẹgọ wa 'whe towe gbe",
-    categorie: "Hokọnamẹ",
+    categorie: "Lẹnvojo",
+    audio: {
+      audioFile: `/audio/cantique_105.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M",
       "",
@@ -3538,7 +3958,11 @@ export const cantiques = [
     id: 106,
     numero: "106",
     titre: "Jesu Ohun Towe kẹdẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Tenu nududu Oklunọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_106.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M",
       "",
@@ -3563,7 +3987,11 @@ export const cantiques = [
     id: 107,
     numero: "107",
     titre: "Sinsẹn Jesu tọn wẹ yọn",
-    categorie: "Hokọnamẹ",
+    categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_107.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s",
       "",
@@ -3583,7 +4011,11 @@ export const cantiques = [
     id: 108,
     numero: "108",
     titre: "Jesu Whlengantọ ṣe",
-    categorie: "Hokọnamẹ",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_108.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M",
       "",
@@ -3603,7 +4035,11 @@ export const cantiques = [
     id: 109,
     numero: "109",
     titre: "Yẹn jo de do na we",
-    categorie: "Hokọnamẹ",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_109.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6s Joh.10:15",
       "",
@@ -3635,6 +4071,10 @@ export const cantiques = [
     numero: "110",
     titre: "Etẹ Jesu na sọ wa",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_110.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7S",
       "",
@@ -3659,7 +4099,11 @@ export const cantiques = [
     id: 111,
     numero: "111",
     titre: "Plọn mi Oklunọ ! Yẹn n'sọgan",
-    categorie: "Hokọnamẹ",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_111.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M",
       "",
@@ -3679,7 +4123,11 @@ export const cantiques = [
     id: 112,
     numero: "112",
     titre: "Dọho ho na mi Oklunọ ṣe",
-    categorie: "Hokọnamẹ",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_112.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s.",
       "",
@@ -3705,7 +4153,11 @@ export const cantiques = [
     id: 113,
     numero: "113",
     titre: "Etẹ nna na Jiwheyẹwhe",
-    categorie: "Hokọnamẹ",
+    categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_113.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -3730,7 +4182,11 @@ export const cantiques = [
     id: 114,
     numero: "114",
     titre: "Tẹ do bibeli go 'yin nupo' tlẹ vọ",
-    categorie: "Hokọnamẹ",
+    categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_114.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Jos.1:8. 2Tim.3:16. Ps.119:105",
       "",
@@ -3759,7 +4215,11 @@ export const cantiques = [
     id: 115,
     numero: "115",
     titre: "Gbọn hihọ Jehova tọn mẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_115.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "",
@@ -3779,7 +4239,11 @@ export const cantiques = [
     id: 116,
     numero: "116",
     titre: "Họntọn daho de wẹ Jesu",
-    categorie: "Hokọnamẹ",
+    categorie: "Owanyi Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_116.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s",
       "",
@@ -3817,7 +4281,11 @@ export const cantiques = [
     id: 117,
     numero: "117",
     titre: "Se 'gbe Jesu tọn he didọ",
-    categorie: "Hokọnamẹ",
+    categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_117.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s. 7s. Mat.24:14. Malk.13:10. 16:15-16",
       "",
@@ -3863,7 +4331,11 @@ export const cantiques = [
     id: 118,
     numero: "118",
     titre: "Jiwheyẹwh' alọgọ mitọn",
-    categorie: "Hokọnamẹ",
+    categorie: "Whlẹpọn po awhangba yisenọ tọn po",
+    audio: {
+      audioFile: `/audio/cantique_118.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M",
       "",
@@ -3893,7 +4365,11 @@ export const cantiques = [
     id: 119,
     numero: "119",
     titre: "Gbọ mi n' yi homẹ hunhun",
-    categorie: "Hokọnamẹ",
+    categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_119.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s Ps.136",
       "",
@@ -3938,7 +4414,11 @@ export const cantiques = [
     id: 120,
     numero: "120",
     titre: "Jiwheyẹwhe madopodo",
-    categorie: "Hokọnamẹ",
+    categorie: "Odẹ",
+    audio: {
+      audioFile: `/audio/cantique_120.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -3973,7 +4453,11 @@ export const cantiques = [
     id: 121,
     numero: "121",
     titre: "Jesu hẹn dagbe lọ wa",
-    categorie: "Hokọnamẹ",
+    categorie: "Odẹ",
+    audio: {
+      audioFile: `/audio/cantique_121.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -4003,7 +4487,11 @@ export const cantiques = [
     id: 122,
     numero: "122",
     titre: "Yise ṣe pinpọn We",
-    categorie: "Hokọnamẹ",
+    categorie: "Yise, fligo po hihọ po",
+    audio: {
+      audioFile: `/audio/cantique_122.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6s 4s Ps.123:2.",
       "",
@@ -4046,7 +4534,11 @@ export const cantiques = [
     id: 123,
     numero: "123",
     titre: "Wa la pipa 'Tọn pe",
-    categorie: "Hokọnamẹ",
+    categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_123.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M",
       "",
@@ -4076,7 +4568,11 @@ export const cantiques = [
     id: 124,
     numero: "124",
     titre: "Yọnnu he ye ji Islaẹli mẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_124.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -4111,7 +4607,11 @@ export const cantiques = [
     id: 125,
     numero: "125",
     titre: "Jesu Whlẹngantọ ṣe",
-    categorie: "Hokọnamẹ",
+    categorie: "Odẹ",
+    audio: {
+      audioFile: `/audio/cantique_125.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "",
@@ -4146,7 +4646,11 @@ export const cantiques = [
     id: 126,
     numero: "126",
     titre: "Nọvisunnu , nọviyọnnu",
-    categorie: "Alọwle",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_126.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "",
@@ -4182,6 +4686,10 @@ export const cantiques = [
     numero: "127",
     titre: "Gigo hlan Oklunọ he wa'nu daho",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_127.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11.11.11.11 & Ref",
       "Ps.29:2 Mi na gigohlan Oklunọ",
@@ -4214,7 +4722,11 @@ export const cantiques = [
     id: 128,
     numero: "128",
     titre: "Jaya to 'Klunọ mẹ, jaya",
-    categorie: "Jaya",
+    categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_128.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. & Ref",
       "Filip .4:4 'Mi nọ jaya to Oklunọ mẹ whepoponu'",
@@ -4256,7 +4768,11 @@ export const cantiques = [
     id: 129,
     numero: "129",
     titre: "Yọpọ 'Họlu lọn tọn lẹ",
-    categorie: "Jaya",
+    categorie: "Yopovu lẹ",
+    audio: {
+      audioFile: `/audio/cantique_129.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s Gal.4:4",
       "",
@@ -4296,7 +4812,11 @@ export const cantiques = [
     id: 130,
     numero: "130",
     titre: "Jesu to 'gbẹ kaka yi",
-    categorie: "Wedagbe",
+    categorie: "Oya, oku po fọnsọnku Jesu tọn po",
+    audio: {
+      audioFile: `/audio/cantique_130.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.8.7.8.4.",
       "Sọhìa.1:18. Dayi ego, Yẹn tin to ogbẹ kaka doyi",
@@ -4337,7 +4857,11 @@ export const cantiques = [
     id: 131,
     numero: "131",
     titre: "Avun lọn fo,awhan sọ gbọ",
-    categorie: "Wedagbe",
+    categorie: "Oya, oku po fọnsọnku Jesu tọn po",
+    audio: {
+      audioFile: `/audio/cantique_131.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.8.8.4 . Ps.98:1 E ko wa onu jawu.",
       "ff Haleluya,Haleluya,Haleluya",
@@ -4373,7 +4897,11 @@ export const cantiques = [
     id: 132,
     numero: "132",
     titre: "Klisti 'Klunọ fọn sọn 'ku",
-    categorie: "Wedagbe",
+    categorie: "Oya, oku po fọnsọnku Jesu tọn po",
+    audio: {
+      audioFile: `/audio/cantique_132.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.7. & Aleluya",
       "Malk.16:6 Klisti ko fọn sọn ku",
@@ -4415,7 +4943,11 @@ export const cantiques = [
     id: 133,
     numero: "133",
     titre: "Bokọnọ daho de to' fi",
-    categorie: "Hokọnamẹ",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_133.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7. & Ref.",
       "Mat.28:20 Oyen na tin po mi po to whepoponu",
@@ -4470,7 +5002,11 @@ export const cantiques = [
     id: 134,
     numero: "134",
     titre: "Mi kun 'pẹn lọ gangan",
-    categorie: "Hokọnamẹ",
+    categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_134.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.6.6.8.8. Isa.61:1 E ko do mi hlan nado la hunhun oganho tọn na ogantọ lẹ.",
       "",
@@ -4512,7 +5048,11 @@ export const cantiques = [
     id: 135,
     numero: "135",
     titre: "Ylandonọ mi wa Jesu de",
-    categorie: "Hokọnamẹ",
+    categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_135.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7. Isa.1:18",
       "",
@@ -4542,7 +5082,11 @@ export const cantiques = [
     id: 136,
     numero: "136",
     titre: "Jesu ho T'we do' gbẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_136.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.6.6. Ps.110:105",
       "",
@@ -4582,7 +5126,11 @@ export const cantiques = [
     id: 137,
     numero: "137",
     titre: "Etẹ wẹ 'gan lẹ mẹ we",
-    categorie: "Hokọnamẹ",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_137.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.8.7.8.7&ref. 1Joh.1:17",
       "",
@@ -4619,7 +5167,11 @@ export const cantiques = [
     id: 138,
     numero: "138",
     titre: "Be hiẹ yi Jesu de na lẹwe huhlọn ?",
-    categorie: "Hokọnamẹ",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_138.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11.11.11.11.& Ref . Sohia.1:15",
       "",
@@ -4657,6 +5209,10 @@ export const cantiques = [
     numero: "139",
     titre: "Awinyan Madopodo",
     categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_139.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.D Ps.27:5",
       "",
@@ -4694,7 +5250,11 @@ export const cantiques = [
     id: 140,
     numero: "140",
     titre: "Yi gbẹzan se Oklunọ",
-    categorie: "Hokọnamẹ",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_140.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.7 Lom.12:1",
       "",
@@ -4734,7 +5294,11 @@ export const cantiques = [
     id: 141,
     numero: "141",
     titre: "Le mi zọn hẹ 'Klunọ",
-    categorie: "Hokọnamẹ",
+    categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_141.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.6.7.6.D Mat. I 1:29",
       "",
@@ -4787,6 +5351,10 @@ export const cantiques = [
     numero: "142",
     titre: "Whenu oyu aihon tọn yin jẹ ji we",
     categorie: "Whlẹpọn po awhangba yisenọ tọn po",
+    audio: {
+      audioFile: `/audio/cantique_142.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11.11.11.11.& Ref. Lom.8:18",
       "",
@@ -4824,6 +5392,10 @@ export const cantiques = [
     numero: "143",
     titre: "Nna sẹpọ Jiyẹwhe, nna sẹpọ We",
     categorie: "Gbezan yisenọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_143.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.4.6.4.6.6.4. Ps.143:10",
       "",
@@ -4873,6 +5445,10 @@ export const cantiques = [
     numero: "144",
     titre: "Ylandonọ: yẹn jlo dona",
     categorie: "Ovẹ na jona ylando tọn",
+    audio: {
+      audioFile: `/audio/cantique_144.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.7. Luk. 18:13.",
       "",
@@ -4913,6 +5489,10 @@ export const cantiques = [
     numero: "145",
     titre: "Fọn ayi' ṣe, po Owhe po",
     categorie: "Afọnnu",
+    audio: {
+      audioFile: `/audio/cantique_145.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "",
@@ -4953,6 +5533,10 @@ export const cantiques = [
     numero: "146",
     titre: "Hinhọn vivi 'fọnnu he tọn",
     categorie: "Afọnnu",
+    audio: {
+      audioFile: `/audio/cantique_146.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Ps.91:4.",
       "",
@@ -4978,6 +5562,10 @@ export const cantiques = [
     numero: "147",
     titre: "Jesu! Owhe dodo tọn",
     categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_147.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "",
       "1. Jesu! Owhe dodo tọn",
@@ -5022,6 +5610,10 @@ export const cantiques = [
     numero: "148",
     titre: "Le Klisti fli gbigbọ ṣe gọ",
     categorie: "Yise, fligo po hihọ po",
+    audio: {
+      audioFile: `/audio/cantique_148.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. & ref Joh.8:32",
       "",
@@ -5053,6 +5645,10 @@ export const cantiques = [
     numero: "149",
     titre: "Mẹfligọ! Otan de wẹ",
     categorie: "Yise, fligo po hihọ po",
+    audio: {
+      audioFile: `/audio/cantique_149.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.8.9.8. & Ref. Ps.48:8",
       "",
@@ -5089,7 +5685,11 @@ export const cantiques = [
     id: 150,
     numero: "150",
     titre: "Hosana hlan 'vi David' tọn",
-    categorie: "Autres",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_150.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Mat.21:9",
       "",
@@ -5125,6 +5725,10 @@ export const cantiques = [
     numero: "151",
     titre: "'Klunọ wa leblan' bo jo na",
     categorie: "Ovẹ na jona ylando tọn",
+    audio: {
+      audioFile: `/audio/cantique_151.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Whẹdatọ. 10:15",
       "",
@@ -5165,6 +5769,10 @@ export const cantiques = [
     numero: "152",
     titre: "'Klunọ, di tokuẹṣantọ nẹ",
     categorie: "Ovẹ na jona ylando tọn",
+    audio: {
+      audioFile: `/audio/cantique_152.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Luk.18:13",
       "",
@@ -5200,6 +5808,10 @@ export const cantiques = [
     numero: "153",
     titre: "Hiẹ Oklunọ olọn",
     categorie: "Ovẹ na jona ylando tọn",
+    audio: {
+      audioFile: `/audio/cantique_153.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Ps.84:2",
       "",
@@ -5235,6 +5847,10 @@ export const cantiques = [
     numero: "154",
     titre: "Mawenọ wẹ yẹn yin",
     categorie: "Ovẹ na jona ylando tọn",
+    audio: {
+      audioFile: `/audio/cantique_154.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Jọb.42:6",
       "",
@@ -5270,6 +5886,10 @@ export const cantiques = [
     numero: "155",
     titre: "Le 'whe hunhun to 'kle",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_155.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6s. Ps.34:1",
       "\"Oyẹn na nọ dona Oklunọ ta whepoponu. Pipa Etọn",
@@ -5323,7 +5943,11 @@ export const cantiques = [
     id: 156,
     numero: "156",
     titre: "Le yẹn mọ do, 'nu madọn mẹ",
-    categorie: "Autres",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_156.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.8.8.6. Joh.1:29 \"Pọn, Lengbọvu Jiwheyẹwhe tọn\" .",
       "",
@@ -5364,6 +5988,10 @@ export const cantiques = [
     numero: "157",
     titre: "Yẹn jo nulẹpọ na Jesu",
     categorie: "Ovẹ na jona ylando tọn",
+    audio: {
+      audioFile: `/audio/cantique_157.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7. & Ref. Mat.10:28.",
       "\"Pọn, mi lẹ ko jo onu lẹpo dayi, mi ko sọ hodo we\"",
@@ -5407,7 +6035,11 @@ export const cantiques = [
     id: 158,
     numero: "158",
     titre: "'Yiha gbọpenọ, 'whe de tin",
-    categorie: "Awhanfunnfun gbigbọ tọn",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_158.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M & Ref Mat.24:13",
       "\"Sigba ewọ he do akọn na jẹ podo wẹ yẹ na whlẹn gan\"",
@@ -5444,6 +6076,10 @@ export const cantiques = [
     numero: "159",
     titre: "Ye sọ ylọ mi d'azọn ṣe nu",
     categorie: "Azọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_159.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Lọm.12:11.",
       "\"To azọn wiwa mẹ, mi wadidọ blo\"",
@@ -5475,6 +6111,10 @@ export const cantiques = [
     numero: "160",
     titre: "Mau ni whla we na mi n'sọ pe",
     categorie: "Whẹntintọn po E zun whedenu po",
+    audio: {
+      audioFile: `/audio/cantique_160.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.8.8.9.&Ref Deut.31:8",
       "\"Oklunọ, ewọ wẹ to yiyi to nukọn towe, Ewọ na tin po",
@@ -5514,6 +6154,10 @@ export const cantiques = [
     numero: "161",
     titre: "Mi dẹ n'Ahọlu Gigo daho nọ",
     categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_161.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10.10.11.11",
       "\"Oklunọ Jiwheyẹwhe ṣe, Hiẹ klo gbahu\"Ps.104:1.",
@@ -5555,6 +6199,10 @@ export const cantiques = [
     numero: "162",
     titre: "Kẹmẹ, mi ze Jesu d'aga",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_162.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Sọhìa.17:14",
       "Ewọ wẹ Oklunọ ọklunọ lẹ tọn podọ Ahọlu Ahọlu lẹ tọn",
@@ -5595,7 +6243,11 @@ export const cantiques = [
     id: 163,
     numero: "163",
     titre: "Wa 'dẹ afonu tọn",
-    categorie: "Afọnńu",
+    categorie: "Afọnnu",
+    audio: {
+      audioFile: `/audio/cantique_163.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Ps.55:17.",
       "\"To tenu, to afọnnu podọ to ọklẹ wẹ yẹn na nọ hodẹ\"",
@@ -5627,6 +6279,10 @@ export const cantiques = [
     numero: "164",
     titre: "Otọ ṣe ṣe 'dẹ ṣe",
     categorie: "Odẹ",
+    audio: {
+      audioFile: `/audio/cantique_164.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.6.6. Ps.61:1",
       "Ṣe avigbẹ ṣe, Jiwheyẹwhe, dayi ọdẹ ṣe go.",
@@ -5657,7 +6313,11 @@ export const cantiques = [
     id: 165,
     numero: "165",
     titre: "Jesu mi jlo na pli",
-    categorie: "Kọnđopọ wiwe",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_165.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.8.8.6.D. Eks. 16:25",
       "Na egbe wẹ gbọjẹzan na Oklunọ",
@@ -5696,6 +6356,10 @@ export const cantiques = [
     numero: "166",
     titre: "Wiwe, Wiwe, Wiwe, 'Tọ Ganhupo",
     categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_166.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11.12.12.10. Sọhìa.4:8. Ye ma gbọjẹ to ọkle po ọzan",
       "po dọmọ, Wiwe wiwe wiwe Oklunọ",
@@ -5728,6 +6392,10 @@ export const cantiques = [
     numero: "167",
     titre: "Oklunọ 'lọn p'aihon tọn po",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_167.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s. 4. Ps.116:12.",
       "\"Etẹ yẹn na na Oklunọ na Dagbe ẹtọn lẹpo\"",
@@ -5784,6 +6452,10 @@ export const cantiques = [
     numero: "168",
     titre: "Otẹn po, t'Owhe lẹngbọvu tọn gbe",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_168.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10.10.10. Luk.14:22.",
       "\"Mi ko basi ehe a zọn mi lẹpo, otẹn gbẹ sọ po\"",
@@ -5839,7 +6511,11 @@ export const cantiques = [
     id: 169,
     numero: "169",
     titre: "Ylandonọ mi lẹnvọjọ",
-    categorie: "Hokọńamẹ",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_169.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "17.7.7.7.D Ezek.33:11.",
       "\"Mi lẹnvọjọ sọn ali ylankan mitọn mẹ, etẹwutu mi na",
@@ -5888,6 +6564,10 @@ export const cantiques = [
     numero: "170",
     titre: "Gbẹzan ṣe t'asi we",
     categorie: "Gbezan yisenọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_170.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Ps.31:15 \"Gbẹzan ṣe lẹpo to alọ towe mẹ\"",
       "",
@@ -5922,7 +6602,11 @@ export const cantiques = [
     id: 171,
     numero: "171",
     titre: "Whenuena yẹn pọn satin lọ",
-    categorie: "Oya, oku po fọńsọńku Jesu tọn po",
+    categorie: "Oya, oku po fọnsọnku Jesu tọn po",
+    audio: {
+      audioFile: `/audio/cantique_171.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Gal.6:14.",
       "\"Ye ni ka mọ yẹn to ogọ yi, adavo to satin Jesu Klisti",
@@ -5955,6 +6639,10 @@ export const cantiques = [
     numero: "172",
     titre: "Otan jawu wanyi tọn!",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_172.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.6.7.6.8.8.8.7 Joh.3:16. \"Jiwheyẹwhe yiwan na aihon",
       "sọmọ, E jo ovi detọn Etọn na mi\"",
@@ -5997,6 +6685,10 @@ export const cantiques = [
     numero: "173",
     titre: "Yisẹnọ lẹ, mi t'ayajẹ",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_173.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7.8.7. Mat.2:2 \"Milẹ kọ wa lita ayi nẹ\"",
       "",
@@ -6041,7 +6733,11 @@ export const cantiques = [
     id: 174,
     numero: "174",
     titre: "Wa nọ he mi Oklunọ ṣe",
-    categorie: "Afọnńu",
+    categorie: "Afọnnu",
+    audio: {
+      audioFile: `/audio/cantique_174.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Ps.101:2 \"Whẹtẹnu wẹ hiẹ na wa de?\"",
       "",
@@ -6076,7 +6772,11 @@ export const cantiques = [
     id: 175,
     numero: "175",
     titre: "A zan 'wa ylan tọn blo",
-    categorie: "Hokọńamẹ",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_175.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.5.6.5. Jak.4:7",
       "\"Mi diọ avun nukun sọ lẹgba, e na Họn sọn mi de\"",
@@ -6118,6 +6818,10 @@ export const cantiques = [
     numero: "176",
     titre: "Lẹdo 'fin Jiwheyẹwhe tọn",
     categorie: "Yopovu lẹ",
+    audio: {
+      audioFile: `/audio/cantique_176.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. & Ref Osọhìa.7:1.",
       "\"Ye ko yan avọ yetọn lẹ bo sọ lẹ yẹ zun wewe to ohun",
@@ -6165,7 +6869,11 @@ export const cantiques = [
     id: 177,
     numero: "177",
     titre: "Jikun dona tọn na sọ ja",
-    categorie: "Awhanfunnfun gbigbọ tọn",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_177.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7. & Ref. Ezek.34:26.",
       "\"Jikun dona tọn na sọ ja.",
@@ -6204,6 +6912,10 @@ export const cantiques = [
     numero: "178",
     titre: "Yẹn nọtẹ to pagbe Klist'Ahọl' tọn ji",
     categorie: "Whlẹpọn po awhangba yisenọ tọn po",
+    audio: {
+      audioFile: `/audio/cantique_178.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "\"Le pagbe Jiwheyẹwhe tọn na su sọ, emẹ wẹ mọwẹ te\"",
       "2 Kọlini.1:20.",
@@ -6242,6 +6954,10 @@ export const cantiques = [
     numero: "179",
     titre: "Na gohọ T'we yọn sọ le!",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_179.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s Ps.84:1",
       "\"Na wẹ gohọ Towe lẹ yọn whanpẹ do Oklunọ!\" .",
@@ -6289,6 +7005,10 @@ export const cantiques = [
     numero: "180",
     titre: "Mi dopẹ na Mau",
     categorie: "Opẹ",
+    audio: {
+      audioFile: `/audio/cantique_180.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.7.6.7.6.6.6.6. I Otan.29:13.",
       "Be dinvie, Jiwheyẹwhe mitọn,mi dopẹ na wẹ, bo sọ pa",
@@ -6327,7 +7047,11 @@ export const cantiques = [
     id: 181,
     numero: "181",
     titre: "Ayi ṣe jaya to 'Klunọ mẹ",
-    categorie: "Awhanfunnfun gbigbọ tọn",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_181.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.8.9.8. & Ref. Filip. 4:4",
       "Be dinvie, mi tayajẹ to Oklunọ mẹ to whepoponu.",
@@ -6366,6 +7090,10 @@ export const cantiques = [
     numero: "182",
     titre: "Wa nọ he mi, ozan ko ku",
     categorie: "Tenu",
+    audio: {
+      audioFile: `/audio/cantique_182.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10.10.10.10 Luk.24:29. Nọ he mi, na ozan ko",
       "ku.",
@@ -6407,6 +7135,10 @@ export const cantiques = [
     numero: "183",
     titre: "Jesu, dona mi so mi n'yi",
     categorie: "Tenu",
+    audio: {
+      audioFile: `/audio/cantique_183.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.8.8.D. Isa.60:20. Na Oklunọ na yin hinhọn madopodo",
       "na wẹ",
@@ -6450,6 +7182,10 @@ export const cantiques = [
     numero: "184",
     titre: "To diọdọ gbẹ tọn lẹpo mẹ",
     categorie: "Whlẹpọn po awhangba yisenọ tọn po",
+    audio: {
+      audioFile: `/audio/cantique_184.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Ps.34:1. Yẹn na nọ dona Oklunọ to whepoponu",
       "",
@@ -6484,7 +7220,11 @@ export const cantiques = [
     id: 185,
     numero: "185",
     titre: "'Hol' Gigonọ, yẹyinọ",
-    categorie: "Autres",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_185.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.4.7.4.5.7.4. Ps. 70:4.",
       "Na ye he jlo whlengan Etọn lẹ,ni to didọ whepoponu",
@@ -6524,6 +7264,10 @@ export const cantiques = [
     numero: "186",
     titre: "Mi wa mi 'nọpọ bo jihan",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_186.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.6.8.6.8.8.8.6. I Joh.4:8. Wanyi wẹ Jiwheyẹwhe",
       "",
@@ -6570,6 +7314,10 @@ export const cantiques = [
     numero: "187",
     titre: "Mi pa Ẹ, mi pa Ẹ",
     categorie: "Yopovu lẹ",
+    audio: {
+      audioFile: `/audio/cantique_187.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "",
       "1. Mi pa Ẹ, mi pa Ẹ, mi yọpọ flinflin lẹ",
@@ -6591,6 +7339,10 @@ export const cantiques = [
     numero: "188",
     titre: "Dọ otan Jesu tọn na mi",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_188.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.4s.5s.4s..",
       "",
@@ -6637,6 +7389,10 @@ export const cantiques = [
     numero: "189",
     titre: "Fọn azọn Towe, Jesu",
     categorie: "Azọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_189.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. & Ref. Hab.3:2. Oklunọ e, gbọ azọn Towe ni fọn",
       "",
@@ -6677,6 +7433,10 @@ export const cantiques = [
     numero: "190",
     titre: "Oklunọ ja, aihon na whan",
     categorie: "Gigọwa Oklunọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_190.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Ps.96:13. E ja nado dawhẹ aihon tọn.",
       "",
@@ -6711,7 +7471,11 @@ export const cantiques = [
     id: 191,
     numero: "191",
     titre: "Jawu wẹ Jiwheyẹwhe ṣe",
-    categorie: "Sinṣen wiwe",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_191.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M Isa.57:15. Yẹn nọ nọ ofi he yiaga bo we, hẹ",
       "ewọ ga he tindọ gbigbọ ovọjọ po whiwhẹ po tọn",
@@ -6758,6 +7522,10 @@ export const cantiques = [
     numero: "192",
     titre: "Whlẹngantọ mitọn vivẹ",
     categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_192.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s 6s. I Pit.1:8. Mẹhe miwlẹ yiwanna bo ma mọ.",
       "",
@@ -6798,6 +7566,10 @@ export const cantiques = [
     numero: "193",
     titre: "Wa, nugbonọ lẹ",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_193.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.10.5.6.&Ref. Luk.2:15.Mi gbọ mi ni yi Bẹtlẹhẹmu",
       "dinvie.",
@@ -6839,6 +7611,10 @@ export const cantiques = [
     numero: "194",
     titre: "Towe wẹ onu he yin ṣe lẹpo",
     categorie: "Lẹnvojo",
+    audio: {
+      audioFile: `/audio/cantique_194.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "12s.11s. Joh.17:10. Towe wẹ onu he yin ṣe lẹpo. Ṣe sọ",
       "                        wẹ Towe.",
@@ -6877,6 +7653,10 @@ export const cantiques = [
     numero: "195",
     titre: "Mi wa de, mi se, gbigbọ mitọn na sọ mọ ogbẹ",
     categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_195.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.9.9.6 Isa.55:13 Mi wa de, mi se, gbigbọ mitọn na sọ mọ ogbẹ",
       "",
@@ -6908,6 +7688,10 @@ export const cantiques = [
     numero: "196",
     titre: "Mi ni yi pipe mẹ",
     categorie: "Gbezan yisenọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_196.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10s.5s. Heb.6.1. Mi ni yi pipe mẹ.",
       "",
@@ -6944,7 +7728,11 @@ export const cantiques = [
     id: 197,
     numero: "197",
     titre: "Yẹn na nọ jihan hlan Oklunọ",
-    categorie: "Hokọn namẹ",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_197.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.8.4.D. Ps.104:33. Yẹn na nọ jihan hlan Oklunọ",
       "                            whenuena yẹn tin to ogbẹ",
@@ -6986,7 +7774,11 @@ export const cantiques = [
     id: 198,
     numero: "198",
     titre: "Pan nukọn mi na ye ni sọ whlen mi gan",
-    categorie: "Awhanfunnfun gbigbọ tọn",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_198.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11s Isa.45:22. Pan nukọn mi na ye ni sọ whlen mi gan.",
       "",
@@ -7032,6 +7824,10 @@ export const cantiques = [
     numero: "199",
     titre: "Mi to yiyi nukọn, klistian 'whanfuntọ",
     categorie: "Gbezan yisenọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_199.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11s Deut.31:6",
       "",
@@ -7072,7 +7868,11 @@ export const cantiques = [
     id: 200,
     numero: "200",
     titre: "Mi dọnudo Jesu 'ye whe",
-    categorie: "Oya, oku po fọnṣọnku Jesu tọn po",
+    categorie: "Oya, oku po fọnsọnku Jesu tọn po",
+    audio: {
+      audioFile: `/audio/cantique_200.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s. 7s.",
       "Zannu he didotọ le gbẹdayi dopolo wẹ sọ lẹzun",
@@ -7121,6 +7921,10 @@ export const cantiques = [
     numero: "201",
     titre: "Ji pipa han hlan Oklunọ",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_201.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Isa.42:11. Gbọ mẹhe to ose mẹ lẹ ni jihan.",
       "",
@@ -7171,6 +7975,10 @@ export const cantiques = [
     numero: "202",
     titre: "Jesu, yẹn ko ze satin ṣe",
     categorie: "Gbezan yisenọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_202.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s. Malk.10:21 Bo wa ze satin, bo hodo mi.",
       "",
@@ -7216,7 +8024,11 @@ export const cantiques = [
     id: 203,
     numero: "203",
     titre: "Whenu E na wa, whenu e na wa",
-    categorie: "Hokọn namẹ",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_203.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.6.8.5.",
       "",
@@ -7248,6 +8060,10 @@ export const cantiques = [
     numero: "204",
     titre: "Jiyẹwhe lọn p'aihọn tọn po",
     categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_204.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Joh.1:4.",
       "Emẹ wẹ ogbẹ te, ogbẹ lọ sọ wẹ hihọn aihọn tọn.",
@@ -7284,6 +8100,10 @@ export const cantiques = [
     numero: "205",
     titre: "T'agbowhẹn gbẹ tọn he to hiho jẹ yenji mẹ",
     categorie: "Whlẹpọn po awhangba yisenọ tọn po",
+    audio: {
+      audioFile: `/audio/cantique_205.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "12s. 10s Heb.6:19.",
       "",
@@ -7315,6 +8135,10 @@ export const cantiques = [
     numero: "206",
     titre: "Hiẹ 'ho Jiwheyẹwhe tọn",
     categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_206.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s.6s Kol.3:16. \"Mi gbọ oho Klisti tọn ni no no mi mẹ",
       "                        to susu gege mẹ.",
@@ -7361,7 +8185,11 @@ export const cantiques = [
     id: 207,
     numero: "207",
     titre: "Oklunọ ṣe du 'ya nami",
-    categorie: "Oya, oku po fọnṣọn ku Jesu tọn po",
+    categorie: "Oya, oku po fọnsọnku Jesu tọn po",
+    audio: {
+      audioFile: `/audio/cantique_207.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9s.7s. Sohia.5:12.",
       "",
@@ -7405,6 +8233,10 @@ export const cantiques = [
     numero: "208",
     titre: "Nto nukọn yi t'ali lọ ji",
     categorie: "Gigọwa Oklunọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_208.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Ps.61:12. Dọn mi yi awiyan he yiji hu mi ji",
       "",
@@ -7447,7 +8279,11 @@ export const cantiques = [
     id: 209,
     numero: "209",
     titre: "Homẹ ṣe hun dọ 'Tọ mitọn 'lọn tọn",
-    categorie: "Awhanfunnfun gbigbọ tọn",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_209.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10.10.10.10. & Ref. Mal.1:2. \"Yẹn ko yiwan na mi",
       "                                wẹ Oklunọ dọ\"",
@@ -7491,7 +8327,11 @@ export const cantiques = [
     id: 210,
     numero: "210",
     titre: "Jiyẹwhe mitọn to mi mẹ",
-    categorie: "Awhanfunnfun gbigbọ tọn",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_210.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s. Ezek.34:26. \"Yẹn na so hẹn ye po fihe lẹdo",
       "                        oso ṣe le po zun dona; yẹn bo naso hẹn na",
@@ -7531,7 +8371,11 @@ export const cantiques = [
     id: 211,
     numero: "211",
     titre: "Yẹn yonẹn dọ mẹflitọ ṣe tin",
-    categorie: "Awhanfunnfun gbigbọ tọn",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_211.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.8.9.8. Job.19:25. \"Podọ yẹn, nyonẹn dọ Mẹflitọ ṣe",
       "                        tin togbẹ\"",
@@ -7568,6 +8412,10 @@ export const cantiques = [
     numero: "212",
     titre: "Do mi họ Jehova daho",
     categorie: "Odẹ",
+    audio: {
+      audioFile: `/audio/cantique_212.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s. Ps.73:24 \"Hiẹ na yi alọ Towe do de mi do",
       "                    ali ji podo to enẹ godo, Hiẹ na yi mi do gigo mẹ\"",
@@ -7607,6 +8455,10 @@ export const cantiques = [
     numero: "213",
     titre: "Sisa de tin he gọ na 'hun",
     categorie: "Tenu nududu Oklunọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_213.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Zek.13:1. To azan lọ gbe, asisa nuvo de na",
       "                hun na owhe Davidi tọn.",
@@ -7642,7 +8494,11 @@ export const cantiques = [
     id: 214,
     numero: "214",
     titre: "Yẹn ko ji hontọn he Jesu",
-    categorie: "Awhanfunnfun gbigbọ tọn",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_214.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Ohan Sol. 2:16.",
       "",
@@ -7683,6 +8539,10 @@ export const cantiques = [
     numero: "215",
     titre: "Ahun ku mi dọ yẹn do Jesu",
     categorie: "Adọgbo po todido po",
+    audio: {
+      audioFile: `/audio/cantique_215.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "",
       "1. Ahun ku mi dọ yẹn do Jesu",
@@ -7713,6 +8573,10 @@ export const cantiques = [
     numero: "216",
     titre: "Pa Oklunọ Ganhunupo",
     categorie: "Pipa",
+    audio: {
+      audioFile: `/audio/cantique_216.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "14.14.4.7.8. Kol.1:16 « Na to e mẹ wẹ ye da onu lẹpo, onu he to lọnmẹ po ehe to aihọn mẹ lẹ po »",
       "",
@@ -7750,7 +8614,11 @@ export const cantiques = [
     id: 217,
     numero: "217",
     titre: "Be otẹn de tin na Jesu",
-    categorie: "Oylọ",
+    categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_217.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s. Sohia.3:20 « Dayi ego, yẹn nọte tọ họntonu, bo sọ to họn huhu »",
       "",
@@ -7787,7 +8655,11 @@ export const cantiques = [
     id: 218,
     numero: "218",
     titre: "Dọ 'tan dopo lọ na mi",
-    categorie: "Owanyi Jiwheyẹwhe tọn",
+    categorie: "Wedagbe",
+    audio: {
+      audioFile: `/audio/cantique_218.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s.6s. 1Joh.4:10",
       "",
@@ -7833,7 +8705,11 @@ export const cantiques = [
     id: 219,
     numero: "219",
     titre: "Yẹn jlo na to 'tan lọ pi",
-    categorie: "Owanyi Jiwheyẹwhe tọn",
+    categorie: "Finfọn gbigbọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_219.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s.6s. Isa.52:7 « Na wẹ afo mehe hen wẹndagbe wa tọn ka yọn whanpẹ sọ le to oso lẹ ji »",
       "",
@@ -7879,7 +8755,11 @@ export const cantiques = [
     id: 220,
     numero: "220",
     titre: "Tegbẹ Hiẹ wẹ Oklunọ ṣe",
-    categorie: "Pipa",
+    categorie: "Batẹmu, klandovo po kọndopọ wiwe po",
+    audio: {
+      audioFile: `/audio/cantique_220.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s. Avigbe Jel.5:19. « Hiẹ Oklunọ wẹ tin kaka doi »",
       "",
@@ -7917,6 +8797,548 @@ export const cantiques = [
       "Kaka tẹgbe, kaka tẹgbe etc. Niṣẹ"
     ],
     tonalite: { note: "G" }
+  },
+  {
+    id: 221,
+    numero: "221",
+    titre: "Wa nọ hẹ mi gbigbọ 'lọn tọn",
+    categorie: "Whẹntintọn po E zun whedenu po",
+    audio: {
+      audioFile: `/audio/cantique_221.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "D.7s.6s.",
+      "",
+      "1. Wa nọ hẹ  mi  gbigbọ 'lọn tọn",
+      "Biọ ho ṣe mẹn yi egbe",
+      "Yi ho ṣe mẹ n'yin nọtẹn T'wẹ",
+      "Vẹ Towe to huhu mi",
+      "    Yẹn to vẹvẹ bo sọ to te",
+      "    Yẹn ni yin Towe kẹdẹ",
+      "    Templi Towe wẹ ho ṣe mẹ",
+      "    Nọ nọ ho ṣe mẹ tẹgbẹ.",
+      "",
+      "2. Na huhlọn gigọ Towe mi",
+      "Bo gọ fla to ho ṣe mẹ",
+      "Yi wanyi ṣe ni yin Towe",
+      "Lẹ mi hẹn mi zun wiwe",
+      "    Yẹn to vẹvẹ bo sọ to 'te etc.",
+      "",
+      "3. Gbigbọ wanyi tọn wa na mi",
+      "Klọ ylando ṣe sọn finẹ",
+      "Hiẹ kẹdẹ wẹ gbigbọ ṣe jlo",
+      "Lẹ ho ṣe mẹ zun wiwe",
+      "    Yẹn to vẹvẹ bo to 'te etc.",
+      "",
+      "4. Gbigbọ 'lọn tọn biọ họmẹ wa",
+      "Ndọ nudo wẹ kudozọn",
+      "Nyise dọ Hiẹ ko biọ yẹn mẹ",
+      "A jo mi do gbede blọ",
+      "    Ntẹ do gowe to yise mẹ",
+      "    Dona he yẹn ko mọ yi",
+      "    Sọ vọ gọ fla to ho ṣe mẹ",
+      "    Gigo na sọ yin Towe. Niṣẹ"
+    ],
+    tonalite: { note: "D" }
+  },
+  {
+    id: 222,
+    numero: "222",
+    titre: "Klist' gigo nọ, yẹyi nọ",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_222.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "6.7s.",
+      "",
+      "1. Klist' gigo nọ, yẹyi nọ",
+      "Hiẹ hihọn aihọn tọn",
+      "Owhe dodo tọn mi zẹ",
+      "Bo sọ ṣion zinvlu ji",
+      "Sẹpo hihọn 'fọnnu tọn",
+      "Sunvi kle tọn biọ yẹn mẹ.",
+      "",
+      "2. Zinvlu wẹ afọnnu yin",
+      "Yin Hiẹ ma wa po epo",
+      "Azan he ma d'ayajẹ",
+      "Di leblan' ta hihọn ṣe",
+      "Na hihọn lọ mi Jesu",
+      "Hẹn gbigbọ ṣe ni hunzọ.",
+      "",
+      "3. Wa la gbigbọ ṣe mẹ pọn",
+      "Yan zinvlu ylando tọn  yi",
+      "Hẹn hihọn 'lọn tọn go mi",
+      "Sọ gba mayise ṣe do",
+      "Bo nọ do dewe hia mi",
+      "Nọ ta di hihọn kle tọn.  Niṣẹ"
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 223,
+    numero: "223",
+    titre: "Na jọmiọn Klist' Oklunọ tọn",
+    categorie: "Kọndopọ wiwe",
+    audio: {
+      audioFile: `/audio/cantique_223.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "8s.7s.",
+      "",
+      "1. Na jọmiọn Klist' Oklunọ tọn",
+      "Wanyi 'To 'gbẹ mavọ tọn",
+      "Jọmiọn Gbigbọ Wiwe 'lọn tọn",
+      "Ni jẹte do 'ta na mi",
+      "Le wẹ mi na to wanyi mẹ",
+      "Miu lẹ po Oklunọ po",
+      "Mi ni do kọndopọ wiwe",
+      "P'aya h'aihọn ma do po.  Niṣẹ"
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 224,
+    numero: "224",
+    titre: "Azan pe hunwhẹ lọ ko wa",
+    categorie: "Tenu nududu Oklunọ tọn",
+    audio: {
+      audioFile: `/audio/cantique_224.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "C.M.    Mat.26 :29.  Ṣigba yẹn dọ hlan mi, sọn dinvie yi, yẹn ma na nu to sinsẹn  vẹn tọn he mẹ ba, Jẹ azan nẹ gbe, whenuena yẹn na nuin hẹ mi to ahọludu Otọ ṣe tọn mẹ",
+      "",
+      "1. Azan pe hunwhẹ lọ ko wa",
+      "Yẹn jọ de do na mi",
+      "Mi pọn yẹn jo 'Hun ṣe na mi",
+      "Yẹn  ni 'do fli mi gọ.",
+      "",
+      "2. E zun họludu 'Tọ ṣe tọn",
+      "Yẹn na do nu hẹ mi",
+      "Whenu avi ma na tin ba",
+      "Mi na jaya tẹgbẹ.",
+      "",
+      "3. Tẹgbẹ mi na du n'dudu he",
+      "Whẹpo jlẹ ni  do wa",
+      "Lẹdo aihọn lẹpo mẹ",
+      "Ye na du bo sọ nu.",
+      "",
+      "4. Dona olọn mẹ tọn na tin",
+      "Na mẹhe dudu lẹ",
+      "Nna to 'fin Otọ ṣe tọn ji",
+      "Wle awu nọtẹn na mi.",
+      "",
+      "5. Sigba to dinvie kọfo",
+      "Vivẹ wẹ yẹn na nu",
+      "Yẹn na nu na mitọn wutu",
+      "Kọf'awutiẹ 'ku tọn.",
+      "",
+      "6. Mi ma gan yọn tugbigba ṣe",
+      "Mi ma 'o mọ gigo ṣe",
+      "Ṣigba mi t'ehe wa tẹgbẹ",
+      "Bo do to finfin mi.  Niṣẹ."
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 225,
+    numero: "225",
+    titre: "Wa, Jesu do dewe hia",
+    categorie: "Sinṣen wiwe",
+    audio: {
+      audioFile: `/audio/cantique_225.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "7s      Ps.30 :8.  Ogbe Oklunọ tọn to zungbo whan",
+      "",
+      "1. Wa, Jesu do dewe hia",
+      "Wa, bo hẹn mi ni yọn We",
+      "Wa, hẹn gbigbọ lẹ hunzọ",
+      "Wa, do na mi whẹ' mi n'yi.",
+      "",
+      "2. Wa, na gboj'ayi mitọn",
+      "Wa, mi ni yin donanọ",
+      "Wa, dọho jijọhọ tọ",
+      "Wa, dona yise mitọn.",
+      "",
+      "3. Wa, yan ayi awe sẹ",
+      "Wa, plọn ovẹ vivẹ mi",
+      "Wa, na wany'ayi mitọn",
+      "Dọn gbigbọ mitọn y'aga.",
+      "",
+      "4. Wa, dọ ayi mitọn jaya",
+      "Wa, dọ hiẹ lọ wẹ yẹn de",
+      "Wa, whla lẹngbọ Towe.",
+      "Wa, di na lẹngbọ Towe.  Niṣẹ."
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 226,
+    numero: "226",
+    titre: "Wa mi nọpọ ji pipa han",
+    categorie: "Oylọ",
+    audio: {
+      audioFile: `/audio/cantique_226.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "C.M.",
+      "",
+      "1. Wa mi nọpọ ji pipa han",
+      "Po angẹli lẹ po",
+      "Fọtọn fọtọn he lẹdo 'fin",
+      "Dopo wẹ aya yetọn",
+      "",
+      "2. Lengbọvu lọ mehe ye hu",
+      "Wẹ jẹ ye n'ze daga",
+      "Ye hanji vivẹvivẹ dọ",
+      "U wẹ jẹ ye ni pa.",
+      "",
+      "3. T'we wẹ huhlọn po gigo po",
+      "Hiẹ wẹ yẹyi jẹ hẹ",
+      "Opẹ he nu ma sọgan jlẹ",
+      "Towe wẹ Oklunọ",
+      "",
+      "4. Nudida 'yigba po lọn po",
+      "Po agahomẹ po",
+      "To 'hu mẹ p'aigba glọ po",
+      "To 'Klunọ ze d'aga.",
+      "",
+      "5. Agun plọnji olọn tọn lẹ",
+      "He t'awhan fun 'kẹ mẹ",
+      "Ye pipa han ji mla 'Họlu",
+      "He to'fin Etọn ji. Niṣẹ"
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 227,
+    numero: "227",
+    titre: "Plọn mi Oklunọ le yẹ nọ",
+    categorie: "Whẹntintọn po E zun whedenu po",
+    audio: {
+      audioFile: `/audio/cantique_227.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "L.M.    1Sam.3 :10.  « To hodọ, na devi Towe tọ sise »",
+      "",
+      "1. Plọn mi Oklunọ le yẹ nọ",
+      "Yin hodọtọ na Họ Towe",
+      "Le a din mi do, yẹn ni din",
+      "Ovi Towe he danbu lẹ",
+      "",
+      "2. Do mi Oklunọ yẹn ni do",
+      "Danpetọ lẹ ali Towe",
+      "Yin mi Oklunọ na sọgan",
+      "Yi mana do yin gbetọ lẹ.",
+      "",
+      "3. Na huhlọn mi, bo ze afọ",
+      "Ṣe ni lodo t'awinyan ji",
+      "Na do dlẹn alọ whlẹngan tọn",
+      "Hlan mẹ sisiọ ylando mẹ lẹ.",
+      "",
+      "4. Plọn mi Oklunọ yẹn ni do",
+      "Yi plọn dagbẹ do plọn mẹ lẹ",
+      "Na ho ṣe ni y'awa do zlọn",
+      "Jẹ nuglọ alidọn lẹ tọn.",
+      "",
+      "5. Na gbọjẹ vivi Towe mi",
+      "Nado yọn le e jẹ do nado",
+      "Dọho Towe po dẹdẹ po",
+      "Na ye mẹhe agbọ ko pe",
+      "",
+      "6. Jesu yi gọfla T'we na mi",
+      "Yi do ho ṣe mẹ ni gọ fla",
+      "Na linlen po ho ṣe lẹ po",
+      "Gọ na wanyi po jlo T'we po",
+      "",
+      "7. Zan mi Oklunọ yedọ yẹn",
+      "Le hiẹ jlo do whelẹponu",
+      "Kaka nnado mọ Hiẹ lọsu",
+      "P'ayajẹ po to gigo mẹ.  Niṣẹ."
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 228,
+    numero: "228",
+    titre: "Wẹnzangun 'Klunọ tọn",
+    categorie: "Azọn Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_228.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "S.M.    Mat.24 :46.  « Donanọ wẹ afanumẹ nẹ, whenuena kluno etoọ wa, mẹhe e na mọ to mọ wa »",
+      "",
+      "1. Wẹnzangun 'Klunọ tọn",
+      "Mi nọte t'azọn kọn",
+      "Mi bọ whla Ho Wiwe Etọn",
+      "Mi sa t'al' Etọn họ",
+      "",
+      "2. Hihọn mitọn ni ta",
+      "Mi vọ zowhan jlado",
+      "Mi bla gbaja mitọn lilo",
+      "Yinkọ Etọn dobu.",
+      "",
+      "3. Họ dewe Jesu dọ",
+      "E ma sọ den do we",
+      "Yin Ewọ ko huhuhọn lọ",
+      "Na mi n'do hun nẸ plaun.",
+      "",
+      "4. Wezangun Etọn wẹ",
+      "Me ye mọ do le lẹ",
+      "Aya mẹ e na mọ 'Klunọ",
+      "Bo yi jegbakun nẹ.",
+      "",
+      "5. Na Klisti lọsu wẹ",
+      "Na wa tẹ tafo nẹ",
+      "E na zedevi lọ d'aga",
+      "T'angẹli lẹ sẹnsẹn.  Niṣẹ."
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 229,
+    numero: "229",
+    titre: "Jesu Oklunọ wẹ yin",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_229.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "D.7s.6s.   Mat.16 :18.  « Podọ ose he ji yẹn na do agun ṣe dọ »",
+      "",
+      "1. Jesu Oklunọ wẹ yin",
+      "Dodo agun Etọn tọn",
+      "Osin po ho Etọn po",
+      "Wẹ E do vọ e da",
+      "E sọn lọn mẹ bo yii do",
+      "Basi asi Etọn",
+      "'Hun Etọn E do họ ẹ",
+      "Bo sọ ku na ẹ ga.",
+      "",
+      "2. Sọn fi lẹpo ye san ye",
+      "Sigba ye yin dopo",
+      "Klunọ dopo y'se dopo",
+      "Po baptis dopo po",
+      "'Yin dopowẹ ye pipa",
+      "Nudu dopo du ye te",
+      "Podọ dopo yan ye tẹ",
+      "Gbọn jọmiọn dali.",
+      "",
+      "3. Yin aihọn tle vlẹ ye",
+      "Whenuena tukla wa",
+      "Y'avun po plọn giglọ po",
+      "Tlẹ sọ hẹn kiklan wa",
+      "Mẹ wiwe lẹ na dawha",
+      "Dọ na e na dẹn sọ ?",
+      "Ozan avi tọn na zun",
+      "Ohan ayajẹ tọn.",
+      "",
+      "4. To tugbigba lẹpo mẹ",
+      "Po tukla 'gbẹ tọn po",
+      "E to nukun do godo",
+      "Ogbẹ madopodo",
+      "Kaka ewọ na do mọ",
+      "Numimọ gigo tọn",
+      "Agun daho 'whangbatọ",
+      "Bo yin agun he gbọjẹ.",
+      "",
+      "5. T'aihọn mẹ e kọndopo",
+      "Po Ganhunupo po",
+      "Bo sọ dọ kọdopọ po",
+      "Ye he damlon lẹ po",
+      "A ! donanọ wiwe wẹ",
+      "Oklunọ yi na mi",
+      "Mi ni do nọ di ye lẹ",
+      "Bo nọ hẹ wẹ t'aga.  Niṣẹ."
+    ],
+    tonalite: { note: "D" }
+  },
+  {
+    id: 230,
+    numero: "230",
+    titre: "Note awhanvipẹ",
+    categorie: "Hokọnamẹ",
+    audio: {
+      audioFile: `/audio/cantique_230.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "S.M.    Walọ.22 :16. « Tite na ye ni baptisi we bo sọ klọ ylando towe lẹ",
+      "",
+      "1. Note awhanvipẹ",
+      "Yi 'nu towe do dọ",
+      "Dopa dọ 'vọ we aihọn",
+      "Na Jesu towe tọn.",
+      "",
+      "2. Fọn yẹ ni baptis we",
+      "Bo lẹ ylan towe sẹ",
+      "Wa nu alẹ hẹ Jiyẹwhe",
+      "Bo yise to egbe.",
+      "",
+      "3. Towe we Okluno",
+      "P'ahọludu lọ po",
+      "Sa litayi na aṣẹ he",
+      "Aṣẹ 'Klunọ tọn wẹ.",
+      "",
+      "4. A ma yin towe ba",
+      "Adavo Klisti tọn",
+      "Ye kan yinkọ towe dopọ",
+      "Po mẹ wiwe lẹ po",
+      "",
+      "5. Do gbaja Jesu tọn",
+      "Diọ nukun sọ lẹgba",
+      "Le awhan lọ na siyẹn sọ",
+      "Hiẹ wẹ na gbawhan lọ.",
+      "",
+      "6. Jẹgbakun dagbe wẹ",
+      "Vivi wẹ ohan lọ",
+      "Whenu ye na bẹ 'gblan lẹ pli",
+      "Do whlengantọ lọ de.  Niṣẹ."
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 231,
+    numero: "231",
+    titre: "Otọ ṣe whenu ndan bo bu",
+    categorie: "Whẹntintọn po E zun whedenu po",
+    audio: {
+      audioFile: `/audio/cantique_231.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "8.8.8.4.  Mat.26 :42.  « Ojlo Towe ni yin wiwa »",
+      "",
+      "1. Otọ ṣe whenu ndan bo bu",
+      "S'ali Towe ji gbẹ mẹ li",
+      "Plon mi na yẹn ni dọ le dọ",
+      "Wa 'jlo Towe.",
+      "",
+      "2. Yin mima ṣe aihon tọn ylan",
+      "Plọn mi na yi bo ma so hlun",
+      "Na hodẹ he A plọn mi dọ",
+      "Wa 'jlo Towe.",
+      "",
+      "3. Yin epo yẹn dopo kẹdẹ",
+      "Hẹnnu po họntọn po ma tin",
+      "To taliayi mẹ yẹn na dọ",
+      "Wa 'jlo Towe.",
+      "",
+      "4. Yin Hie na yi nutindo ṣe",
+      "Nu he hoakuẹ he to yẹn si",
+      "Nna jo na We, ndọ Towe wẹ",
+      "Wa 'jlo Towe.",
+      "",
+      "5. Sa mion homẹ na lindọn ṣe",
+      "Gbigbọ Towe ni nọ he mi",
+      "Ehe po lẹ po asi We",
+      "Wa 'jlo Towe.",
+      "",
+      "6. Jla wanyin ṣe do egbesọ",
+      "Bo sọ de onu lọ lẹ sẹ",
+      "He ma dike na yẹn ni dọ",
+      "Wa 'jlo Towe.",
+      "",
+      "7. Yin gbigbo ṣe ṣi t'aihọn mẹ",
+      "Fihe yọn hugan 'ihọn mẹ",
+      "We yẹn na to han ji tẹgbẹ",
+      "Wa 'jlo Towe.  Niṣẹ."
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 232,
+    numero: "232",
+    titre: "Whla dopo wẹ na mi mẹ po",
+    categorie: "Oya, oku po fọnsọnku Jesu tọn po",
+    audio: {
+      audioFile: `/audio/cantique_232.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "C.M.    Heb.10 :10.  « Ye hẹn mi zun wiwe gbọn yiyi agbasa Jesu Klisti tọn do sanvọ whla dopo akan dali »",
+      "",
+      "1. Whla dopo wẹ na mi mẹ po",
+      "E jo gbigbọ Etọn",
+      "Mi dẹ to satin Towe kọn",
+      "Whlengantọ mitọn wẹ.",
+      "",
+      "2. Avọ dopo lọ pipe wẹ",
+      "Wẹ mi na do tẹgbẹ",
+      "E ta gigo 'Tọn to mi mẹ",
+      "To azan popo gbe.",
+      "",
+      "3. Di le Alọn nọ ṣite do",
+      "To fi wiwe hugan",
+      "Bo no yi ohun lẹwe tọn",
+      "Hunhun do agba ji.",
+      "",
+      "4. Mọwẹ to yẹsu lọ godo",
+      "Yewhenọgan mitọn",
+      "Sọ awu hia to lọn mẹ",
+      "Ni do wa fli mi gọ.",
+      "",
+      "5. Finẹ E to vẹvẹ na mi",
+      "T'adusi J'yẹwhe tọn",
+      "Bo sọ dọ huhlon ni jẹte",
+      "Do'ta na mẹ 'Tọ lẹ.",
+      "",
+      "6. Fi le mi to 'ku Towe flin",
+      "Kaka Hie na lẹ wa",
+      "Wa tẹ agba T'we do mi mẹ",
+      "Le mi sisepọ We.  Niṣẹ."
+    ],
+    tonalite: { note: "C" }
+  },
+  {
+    id: 233,
+    numero: "233",
+    titre: "Nse gbe wanyi T'we tọn",
+    categorie: "Owanyi Jiwheyẹwhe tọn",
+    audio: {
+      audioFile: `/audio/cantique_233.mp3`,
+      hasAudio: true
+    },
+    paroles: [
+      "S.M.  Jelem.31 :3. « Yẹn ko yi owanyi madopodo de yiwan na we »",
+      "",
+      "1. Nse gbe wanyi T'we tọn",
+      "Bo 'Hun he sisa pọn",
+      "Yẹn mọ Whlengantọ he ku lọ",
+      "Yẹn ji họntọn hẹ Mau.",
+      "",
+      "2. Aiha se mọ gbọjẹ",
+      "Bo sọ mọ jijọho",
+      "Jijọho he 'ihọn ma gan yi",
+      "E to te kaka yi.",
+      "",
+      "3. Nudepope he jọ",
+      "Whlepọn kavi oyu",
+      "Kọndopọ ohun Etọn tọn",
+      "Hẹn mi sẹpọ yakẹ.",
+      "",
+      "4. Wanyi ṣe sọgan miọn",
+      "Aya ṣe gan zlọn li",
+      "Jijọho ṣe po ewọ po",
+      "Ma gan sẹtẹn gbede.",
+      "",
+      "5. Ewọ ma sọgan diọ",
+      "Klisti ma gan ku ba",
+      "Wanyi Etọn ji n gbojẹ do",
+      "Po nugbo Etọn po.  Niṣẹ."
+    ],
+    tonalite: { note: "C" }
   }
 ];
 

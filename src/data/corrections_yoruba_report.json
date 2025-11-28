@@ -1,0 +1,1098 @@
+{
+  "date": "2025-11-28T13:54:13.490Z",
+  "totalCorrections": 182,
+  "corrections": [
+    {
+      "numero": "014",
+      "titre": "Ẹjẹ ka tẹl'ofin",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Ipe"
+    },
+    {
+      "numero": "015",
+      "titre": "Ibinu Rẹ ti de tan",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Ipe"
+    },
+    {
+      "numero": "017",
+      "titre": "K'onigbagbọ duro",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Idanwo ati Isegun Onigbagbọ"
+    },
+    {
+      "numero": "019",
+      "titre": "Onigbagbọ k'yo j'alailoye",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "020",
+      "titre": "'Bo ni Jehofa kọlẹ si?",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "023",
+      "titre": "'Lorun wo lo to Jehofa",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Agbara Olorun"
+    },
+    {
+      "numero": "024",
+      "titre": "Wọn ti wa gbo ọrọ Rẹ",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "025",
+      "titre": "Jehofa! ọlorun wo lo",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "026",
+      "titre": "Oluwa mi",
+      "ancienne": "Adura",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "027",
+      "titre": "Iwe Mimọ ti Jesu",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "028",
+      "titre": "Ọna Jesu ha o si jẹ tooro",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Ipe"
+    },
+    {
+      "numero": "029",
+      "titre": "Nigbat'Olorun Jehofa da mi",
+      "ancienne": "Awọn Ewe",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "030",
+      "titre": "K'onigbagbọ ronu wọn wo",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Iṣẹ Olorun"
+    },
+    {
+      "numero": "031",
+      "titre": "B'enia ko ba mọ",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "035",
+      "titre": "Wa Ẹmi Mimọ wa",
+      "ancienne": "Adura",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "040",
+      "titre": "Gbekẹlẹ, onigbagbọ",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Idanwo ati Isegun Onigbagbọ"
+    },
+    {
+      "numero": "046",
+      "titre": "Bawo l'emi o se gbọran",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Ibaniwi"
+    },
+    {
+      "numero": "048",
+      "titre": "Ara mi o digbọṣe",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Irinajo ati Idagbere"
+    },
+    {
+      "numero": "049",
+      "titre": "Jesu mo fẹ eran Rẹ",
+      "ancienne": "Isin Mimọ",
+      "nouvelle": "Onje alẹ Oluwa"
+    },
+    {
+      "numero": "051",
+      "titre": "Jesu l'agbara mi",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Agbara Olorun"
+    },
+    {
+      "numero": "052",
+      "titre": "Jesu iwọ l'Oluwa mi",
+      "ancienne": "Adura",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "053",
+      "titre": "Awọn Mimọ ko ṣe beru",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "054",
+      "titre": "Mo fẹ ki 'nu mi jẹ mimọ",
+      "ancienne": "Adura",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "057",
+      "titre": "A nbẹ laye sibe",
+      "ancienne": "Iyin",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "058",
+      "titre": "Jesu awa nreti",
+      "ancienne": "Adura",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "059",
+      "titre": "Jesu wo ọmọ ọdọ Rẹ",
+      "ancienne": "Adura",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "060",
+      "titre": "Awọn wo ni yi bi 'rawọ",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "061",
+      "titre": "Iwọ ti 'ṣe Ẹlẹda mi",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "064",
+      "titre": "Ni ẹhin aiye yi",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "067",
+      "titre": "Onigbagbọ mura",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Idanwo ati Isegun Onigbagbọ"
+    },
+    {
+      "numero": "069",
+      "titre": "Jesu wa ba wa sọrọ",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "070",
+      "titre": "Oju kan wa ki torugbe",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Agbara Olorun"
+    },
+    {
+      "numero": "071",
+      "titre": "Fohun ibukun lat'ọrun",
+      "ancienne": "Adura",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "075",
+      "titre": "O tọ si wa, Olorun wa",
+      "ancienne": "Iyin",
+      "nouvelle": "Owurọ"
+    },
+    {
+      "numero": "076",
+      "titre": "Aiye yi jẹ inu oko",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "077",
+      "titre": "Ẹ ti nifẹ s'afẹ aiye",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Ipe"
+    },
+    {
+      "numero": "081",
+      "titre": "Mo fẹ ma gbọ itan na",
+      "ancienne": "Iyin",
+      "nouvelle": "Ifẹ Olorun"
+    },
+    {
+      "numero": "082",
+      "titre": "Oke kan nbẹ jina rere",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "084",
+      "titre": "Hosana e kọrin s'oke",
+      "ancienne": "Awọn Ewe",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "085",
+      "titre": "Mo fi ete lasan",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "087",
+      "titre": "A fi ipilẹ yi le'lẹ",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "088",
+      "titre": "Ba wa pe ninu ile yi",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "089",
+      "titre": "Iwọ ko ri b'o ti dun to",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Irinajo ati Idagbere"
+    },
+    {
+      "numero": "091",
+      "titre": "Jesu wa ba wa pe",
+      "ancienne": "Adura",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "092",
+      "titre": "Oluwa mi mo ke pe O",
+      "ancienne": "Adura",
+      "nouvelle": "Ebe fun idariji ẹṣẹ"
+    },
+    {
+      "numero": "094",
+      "titre": "Oluwa mi mo fẹ ki nfi",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Awọn Ewe"
+    },
+    {
+      "numero": "095",
+      "titre": "Ninu gbogbo ewu oru",
+      "ancienne": "Iyin",
+      "nouvelle": "Owurọ"
+    },
+    {
+      "numero": "096",
+      "titre": "Ọjọ.oni lọ tan",
+      "ancienne": "Iyin",
+      "nouvelle": "Alẹ"
+    },
+    {
+      "numero": "100",
+      "titre": "Baba jọwọ gb'adura wa",
+      "ancienne": "Adura",
+      "nouvelle": "Irinajo ati Idagbere"
+    },
+    {
+      "numero": "101",
+      "titre": "Ọjọ nla l'ọjọ ti mo yan",
+      "ancienne": "Iyin",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "102",
+      "titre": "Gbogbo isẹ ti awa nsẹ",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "103",
+      "titre": "Gbogbo ẹyin ti nbẹ laiye",
+      "ancienne": "Iyin",
+      "nouvelle": "Ibaniwi"
+    },
+    {
+      "numero": "104",
+      "titre": "'Gbati 'danwo ba yi mi ka",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "105",
+      "titre": "Tete pada wa si'le rẹ",
+      "ancienne": "Ipe",
+      "nouvelle": "Ironupiwada"
+    },
+    {
+      "numero": "106",
+      "titre": "Jesu ẹjẹ Rẹ nikan ni",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Onje alẹ Oluwa"
+    },
+    {
+      "numero": "107",
+      "titre": "Isin Jesu lo dara",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "108",
+      "titre": "Jesu Olugbala",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "109",
+      "titre": "Mo f'ara mi fun ọ",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "110",
+      "titre": "Kini Jesu yọ tun sẹ",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "111",
+      "titre": "Ko mi Oluwa, jẹ ki nle",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "112",
+      "titre": "Ba mi sọrọ Oluwa mi",
+      "ancienne": "Adura",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "114",
+      "titre": "Dirọ mọ bibeli b'ohun gbogbo tan",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "115",
+      "titre": "Ninu abo ti Jehofa",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "117",
+      "titre": "Gbo ohun Jesu lo wipe",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "118",
+      "titre": "Ọlọrun iranlọwọ wa",
+      "ancienne": "Adura",
+      "nouvelle": "Idanwo ati Isegun Onigbagbọ"
+    },
+    {
+      "numero": "121",
+      "titre": "Jesu mu ire na wa",
+      "ancienne": "Iyin",
+      "nouvelle": "Adura"
+    },
+    {
+      "numero": "122",
+      "titre": "Igbagbo mi nwọ O",
+      "ancienne": "Adura",
+      "nouvelle": "Igbagbọ, irapada ati abo"
+    },
+    {
+      "numero": "124",
+      "titre": "Obinrin t'a bi ni Israẹl",
+      "ancienne": "Awọn Obinrin",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "128",
+      "titre": "E yọ ninu Oluwa, ẹ yọ",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "130",
+      "titre": "Jesu ye titi aiye",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "131",
+      "titre": "Ija d'opin ogun si tan",
+      "ancienne": "Iyin",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "132",
+      "titre": "Krist'Oluwa ji loni",
+      "ancienne": "Iyin",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "133",
+      "titre": "Onisẹgun nla wa nihin",
+      "ancienne": "Iyin",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "134",
+      "titre": "E fun 'pe na kikan",
+      "ancienne": "Ipe",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "136",
+      "titre": "Jesu Ọrọ Rẹ ye",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "137",
+      "titre": "Ki l'o le w'ẹsẹ mi nu?",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "138",
+      "titre": "O ti to Jesu lo fun 'wẹnumọ bi?",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "139",
+      "titre": "Apata aiyeraye",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Igbagbọ, irapada ati abo"
+    },
+    {
+      "numero": "140",
+      "titre": "Gba aiye mi Oluwa",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "142",
+      "titre": "Nigbat'gbi aiye yi ba yi lu ọ",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Idanwo ati Isegun Onigbagbọ"
+    },
+    {
+      "numero": "143",
+      "titre": "Uno sunmọ O, Ọlọrun",
+      "ancienne": "Adura",
+      "nouvelle": "Igbe aiye onigbagbọ"
+    },
+    {
+      "numero": "144",
+      "titre": "Ẹlẹṣẹ: Mo nfẹ 'bukun",
+      "ancienne": "Adura",
+      "nouvelle": "Ebe fun idariji ẹṣẹ"
+    },
+    {
+      "numero": "145",
+      "titre": "Ji! Ọkan mi ba orun ji",
+      "ancienne": "Iyin",
+      "nouvelle": "Owurọ"
+    },
+    {
+      "numero": "146",
+      "titre": "Imọlẹ ọrọ didun yi",
+      "ancienne": "Adura",
+      "nouvelle": "Owurọ"
+    },
+    {
+      "numero": "147",
+      "titre": "Jesu orun ododo",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "148",
+      "titre": "Bi Krist' ti da ọkan mi nde",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Igbagbọ, irapada ati abo"
+    },
+    {
+      "numero": "149",
+      "titre": "Irapada itan iyanu",
+      "ancienne": "Iyin",
+      "nouvelle": "Igbagbọ, irapada ati abo"
+    },
+    {
+      "numero": "151",
+      "titre": "Oluwa, ṣanu, dariji",
+      "ancienne": "Adura",
+      "nouvelle": "Ebe fun idariji ẹṣẹ"
+    },
+    {
+      "numero": "152",
+      "titre": "Oluwa, b'agbowode ni",
+      "ancienne": "Adura",
+      "nouvelle": "Ebe fun idariji ẹṣẹ"
+    },
+    {
+      "numero": "153",
+      "titre": "'Wọ Oluwa Oke",
+      "ancienne": "Adura",
+      "nouvelle": "Ebe fun idariji ẹṣẹ"
+    },
+    {
+      "numero": "154",
+      "titre": "Alaimo ni emi",
+      "ancienne": "Adura",
+      "nouvelle": "Ebe fun idariji ẹṣẹ"
+    },
+    {
+      "numero": "156",
+      "titre": "Bi mo ti ri, lai ṣ'awawi",
+      "ancienne": "Ipe",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "157",
+      "titre": "Mo fi gbogbo rẹ fun Jesu",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Ebe fun idariji ẹṣẹ"
+    },
+    {
+      "numero": "158",
+      "titre": "Ọkan are ile kan mbẹ",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "160",
+      "titre": "K'Ọlọrun sọ ọ k'a tun pade",
+      "ancienne": "Adura",
+      "nouvelle": "Irinajo ati Idagbere"
+    },
+    {
+      "numero": "161",
+      "titre": "E wolẹ f'Ọba Ologo julo",
+      "ancienne": "Iyin",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "163",
+      "titre": "Wa s'adura oorọ",
+      "ancienne": "Adura",
+      "nouvelle": "Owurọ"
+    },
+    {
+      "numero": "165",
+      "titre": "Jesu, a fe pade",
+      "ancienne": "Isin Mimọ",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "166",
+      "titre": "Mimọ, Mimọ, Mimọ, Olodumare",
+      "ancienne": "Iyin",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "169",
+      "titre": "Ẹlẹṣẹ, ẹ yipada",
+      "ancienne": "Ipe",
+      "nouvelle": "Ibaniwi"
+    },
+    {
+      "numero": "170",
+      "titre": "Igba mi d'ọwọ Rẹ",
+      "ancienne": "Adura",
+      "nouvelle": "Igbe aiye onigbagbọ"
+    },
+    {
+      "numero": "171",
+      "titre": "Gbati mo ri agbelebu",
+      "ancienne": "Iyin",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "172",
+      "titre": "Itan iyanu t'ifẹ!",
+      "ancienne": "Iyin",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "173",
+      "titre": "Onigbagbo, ẹ bu s'ayọ",
+      "ancienne": "Iyin",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "174",
+      "titre": "Wa s'ọdọ mi, Oluwa mi",
+      "ancienne": "Adura",
+      "nouvelle": "Owurọ"
+    },
+    {
+      "numero": "176",
+      "titre": "Yika or'itẹ Ọlọrun",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Awọn Ewe"
+    },
+    {
+      "numero": "177",
+      "titre": "Ọjọ ibukun y'o si rọ",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "178",
+      "titre": "Mo nduro lori ileri Krist'Ọba",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Idanwo ati Isegun Onigbagbọ"
+    },
+    {
+      "numero": "181",
+      "titre": "Ọkan mi nyọ ninu Oluwa",
+      "ancienne": "Ayọ",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "182",
+      "titre": "Wa ba mi gbe",
+      "ancienne": "Igbadura",
+      "nouvelle": "Alẹ"
+    },
+    {
+      "numero": "183",
+      "titre": "Jesu, bukun wa k'a to lọ",
+      "ancienne": "Igbadura",
+      "nouvelle": "Alẹ"
+    },
+    {
+      "numero": "184",
+      "titre": "N'nu gbogbo ayida aiye",
+      "ancienne": "Iyin",
+      "nouvelle": "Idanwo ati Isegun Onigbagbọ"
+    },
+    {
+      "numero": "186",
+      "titre": "Ẹ wa k'a jọ jumọ kọrin",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Ipe"
+    },
+    {
+      "numero": "187",
+      "titre": "Ẹ yin, e yin, gbogb'ẹnyin ọmọde",
+      "ancienne": "Ọmọde",
+      "nouvelle": "Awọn Ewe"
+    },
+    {
+      "numero": "188",
+      "titre": "Sọ itan ti Jesu fun mi",
+      "ancienne": "Ọmọde",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "189",
+      "titre": "Ji 'ṣe Rẹ nde Jesu",
+      "ancienne": "Igbadura",
+      "nouvelle": "Iṣẹ Olorun"
+    },
+    {
+      "numero": "190",
+      "titre": "Oluwa mbọ aiye yo mi",
+      "ancienne": "Wiwa Kristi",
+      "nouvelle": "Ipadabọ Oluwa wa"
+    },
+    {
+      "numero": "192",
+      "titre": "Olugbala wa ọwọn",
+      "ancienne": "Iyin",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "193",
+      "titre": "Wa, ẹnyin ọlọtọ",
+      "ancienne": "Iyin",
+      "nouvelle": "Ipe"
+    },
+    {
+      "numero": "194",
+      "titre": "Oluwa, emi sa ti gb'ohun Rẹ",
+      "ancienne": "Adura",
+      "nouvelle": "Ironupiwada"
+    },
+    {
+      "numero": "196",
+      "titre": "Ki nle jinlẹ ninu ifẹ Jesu",
+      "ancienne": "Adura",
+      "nouvelle": "Igbe aiye onigbagbọ"
+    },
+    {
+      "numero": "198",
+      "titre": "Iye mbẹ fun awọn ti nwọ Jesu l'oke",
+      "ancienne": "Ipe",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "199",
+      "titre": "Ẹ ma tẹsiwaju, Kristian ọlọgun",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Igbe aiye onigbagbọ"
+    },
+    {
+      "numero": "200",
+      "titre": "A ki Jesu t'a kan mo 'gi",
+      "ancienne": "Iyin",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "202",
+      "titre": "Jesu mo gb'agbelebu mi",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Igbe aiye onigbagbọ"
+    },
+    {
+      "numero": "203",
+      "titre": "'Gbat'O ba de, gbat'O ba de",
+      "ancienne": "Wiwa Kristi",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "204",
+      "titre": "Ọlọrun aiye at'ọrun",
+      "ancienne": "Iyin",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "205",
+      "titre": "Ninu igbi omi okun aiye ti nlu mi",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Idanwo ati Isegun Onigbagbọ"
+    },
+    {
+      "numero": "206",
+      "titre": "Iwọ Ọrọ Ọlọrun",
+      "ancienne": "Ibaniwi",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "207",
+      "titre": "Oluwa mi jiya fun mi",
+      "ancienne": "Iyin",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "208",
+      "titre": "Mo ntẹsiwaju l'ọna na",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Ipadabọ Oluwa wa"
+    },
+    {
+      "numero": "209",
+      "titre": "Inu mi dun pe Baba wa ọrun",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "210",
+      "titre": "Ọlọrun wa mbẹ larin wa",
+      "ancienne": "Adura",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "211",
+      "titre": "Mo mọ p'Oludande mi mbẹ",
+      "ancienne": "Igboya ati ireti",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "213",
+      "titre": "Isun kan wa t'o kun f'ẹjẹ",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Onje alẹ Oluwa"
+    },
+    {
+      "numero": "214",
+      "titre": "Mo ti ni Jesu l'ọrẹ, O j'ohun gbogbo fun mi",
+      "ancienne": "Ifẹ Olorun",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "215",
+      "titre": "O da mi l'oju! Mo ni Jesu",
+      "ancienne": "Iyin",
+      "nouvelle": "Igboya ati ireti"
+    },
+    {
+      "numero": "217",
+      "titre": "Aye ha wa fun Jesu bi?",
+      "ancienne": "Ipe",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "218",
+      "titre": "Sọ itan kan na fun mi",
+      "ancienne": "Ipe",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "219",
+      "titre": "Mo fẹ ma sọ itan na",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Isọji Ẹmi"
+    },
+    {
+      "numero": "220",
+      "titre": "Titi lae, Iwọ l'Oluwa",
+      "ancienne": "Iyin",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "221",
+      "titre": "Wa sọdọ mi, Emi ọrun",
+      "ancienne": "Adura",
+      "nouvelle": "Irinajo ati Idagbere"
+    },
+    {
+      "numero": "222",
+      "titre": "Krist' Ọlọgọ, Ọlọla",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "223",
+      "titre": "K'ore ọfẹ Krist' Oluwa",
+      "ancienne": "Adura",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "224",
+      "titre": "Ọjọ ko ase na l'eyi",
+      "ancienne": "Isin Mimọ",
+      "nouvelle": "Onje alẹ Oluwa"
+    },
+    {
+      "numero": "225",
+      "titre": "Wa, Jesu fi ara han",
+      "ancienne": "Adura",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "226",
+      "titre": "Jek'a jumọ korin iyin",
+      "ancienne": "Iyin",
+      "nouvelle": "Ipe"
+    },
+    {
+      "numero": "227",
+      "titre": "Ko mi Oluwa, bi a ti",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Irinajo ati Idagbere"
+    },
+    {
+      "numero": "229",
+      "titre": "Jesu Oluwa n'ise",
+      "ancienne": "Ijọ",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "230",
+      "titre": "Duro, ọmọ ọgun",
+      "ancienne": "Baptisi",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "231",
+      "titre": "Baba mi 'gba mba nṣako lọ",
+      "ancienne": "Adura",
+      "nouvelle": "Irinajo ati Idagbere"
+    },
+    {
+      "numero": "232",
+      "titre": "Lẹkansọsọ fun gbogbo wa",
+      "ancienne": "Adura",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "233",
+      "titre": "Mo gb'ohun ifẹ Rẹ",
+      "ancienne": "Adura",
+      "nouvelle": "Ifẹ Olorun"
+    },
+    {
+      "numero": "234",
+      "titre": "Awa yin ifẹ Rẹ",
+      "ancienne": "Ijọ",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "235",
+      "titre": "Ara, ọlufẹ ninu Krist'",
+      "ancienne": "Ijọ",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "237",
+      "titre": "Jesu, f'ẹṣẹ mi mulẹ",
+      "ancienne": "Adura",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "238",
+      "titre": "Larin ewu at'ọsi",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Idanwo ati Isegun Onigbagbọ"
+    },
+    {
+      "numero": "239",
+      "titre": "Ja ija rere t'igbagbọ",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "241",
+      "titre": "Ọm'ọgun Kristi dide",
+      "ancienne": "Iṣẹ Olorun",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "242",
+      "titre": "Jesu mo juba, mo yin Ọ,",
+      "ancienne": "Adura",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "247",
+      "titre": "Yin Ọlọrun Alagbara",
+      "ancienne": "Iyin",
+      "nouvelle": "Isin Mimọ"
+    },
+    {
+      "numero": "248",
+      "titre": "Gbọ 'gbe ayọ Oluwa de",
+      "ancienne": "Iyin",
+      "nouvelle": "Ipadabọ Oluwa wa"
+    },
+    {
+      "numero": "249",
+      "titre": "Ori ti a f'ẹgun de",
+      "ancienne": "Adura",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "250",
+      "titre": "Gbogbo ẹjẹ ẹran",
+      "ancienne": "Adura",
+      "nouvelle": "Onje alẹ Oluwa"
+    },
+    {
+      "numero": "251",
+      "titre": "A nkọrin 'yin s'enit'O ku",
+      "ancienne": "Iyin",
+      "nouvelle": "Iya, iku ati ajinde Jesu"
+    },
+    {
+      "numero": "252",
+      "titre": "Lẹkan si, a ranṣẹ si ọ",
+      "ancienne": "Adura",
+      "nouvelle": "Ipe"
+    },
+    {
+      "numero": "254",
+      "titre": "Ore-ọfe! bo ti dun to!",
+      "ancienne": "Adura",
+      "nouvelle": "Iribọmi, iyasọtọ ati idapọ mimọ"
+    },
+    {
+      "numero": "255",
+      "titre": "Ko s'ọrẹ bi Jesu onirẹlẹ",
+      "ancienne": "Adura",
+      "nouvelle": "Ifẹ Olorun"
+    },
+    {
+      "numero": "256",
+      "titre": "Ọlọrun mi, 'gbati mo l'eru 'yanu",
+      "ancienne": "Iyin",
+      "nouvelle": "Agbara Olorun"
+    },
+    {
+      "numero": "258",
+      "titre": "Ọmọdẹ, e sunmọ'Ọlọrun",
+      "ancienne": "Adura",
+      "nouvelle": "Awọn Ewe"
+    },
+    {
+      "numero": "259",
+      "titre": "Jesu onirẹlẹ",
+      "ancienne": "Adura",
+      "nouvelle": "Awọn Ewe"
+    },
+    {
+      "numero": "260",
+      "titre": "K'awa to pari ekọ wa",
+      "ancienne": "Adura",
+      "nouvelle": "Irinajo ati Idagbere"
+    },
+    {
+      "numero": "261",
+      "titre": "Alejo kan ma nkankun,",
+      "ancienne": "Adura",
+      "nouvelle": "Ihinrere"
+    },
+    {
+      "numero": "262",
+      "titre": "Awọn t'o gbekele Oluwa",
+      "ancienne": "Adura",
+      "nouvelle": "Ijagun Ẹmi"
+    },
+    {
+      "numero": "263",
+      "titre": "Oluwa li Apata wa",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "266",
+      "titre": "A fi ipile yi le'le",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "267",
+      "titre": "O fun mi l'edidi",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "268",
+      "titre": "Tire titi lae l'awa ṣe",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "270",
+      "titre": "Ma tọju wa Baba ọrun",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "272",
+      "titre": "Ọlọrun Betel' ẹniti",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "273",
+      "titre": "Ọrẹ bi Jesu ko si laiye yi",
+      "ancienne": "Adura",
+      "nouvelle": "Iyin"
+    },
+    {
+      "numero": "275",
+      "titre": "Olugbala, gb'ohun mi",
+      "ancienne": "Adura",
+      "nouvelle": "Ebe fun idariji ẹṣẹ"
+    }
+  ]
+}

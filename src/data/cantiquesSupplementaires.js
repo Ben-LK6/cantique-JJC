@@ -5,6 +5,11 @@ export const cantiquesSupplementaires = [
     numero: "028",
     titre: "Aliho Jesu tọn jan bo sọ jlọ",
     categorie: "Oylọ",
+    language: "goun",
+    audio: {
+      audioFile: `/audio/cantique_028.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "22S",
       "",
@@ -33,6 +38,11 @@ export const cantiquesSupplementaires = [
     numero: "029",
     titre: "Whenu Yẹwhe Jehovah ko da mi",
     categorie: "Hokọnamẹ",
+    language: "goun",
+    audio: {
+      audioFile: `/audio/cantique_029.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.Z. Howhin.23 :22.",
       "",
@@ -74,6 +84,11 @@ export const cantiquesSupplementaires = [
     numero: "030",
     titre: "Yiseno lẹ ni lennu pọn",
     categorie: "Azọn Jiwheyẹwhe tọn",
+    language: "goun",
+    audio: {
+      audioFile: `/audio/cantique_030.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "K.S.",
       "",
@@ -101,6 +116,11 @@ export const cantiquesSupplementaires = [
     numero: "031",
     titre: "Eyin mẹde ma yọn",
     categorie: "Wedagbe",
+    language: "goun",
+    audio: {
+      audioFile: `/audio/cantique_031.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "G.SS. Joh.17 :7-9",
       "",

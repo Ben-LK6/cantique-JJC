@@ -199,12 +199,10 @@ function App() {
           </div>
         </main>
 
-        {/* Bottom Navigation - Mobile Only - Seulement sur l'accueil */}
-        {currentPage === 'home' && (
-          <div className="lg:hidden bottom-nav-container safe-area-bottom">
-            <BottomNav currentPage={currentPage} onNavigate={navigateTo} />
-          </div>
-        )}
+        {/* Bottom Navigation - Mobile Only - Sur toutes les pages */}
+        <div className="lg:hidden bottom-nav-container safe-area-bottom">
+          <BottomNav currentPage={currentPage} onNavigate={navigateTo} />
+        </div>
       </div>
     </div>
   );

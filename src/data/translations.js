@@ -118,7 +118,19 @@ export const translations = {
     evening: "Soir",
     thanksgiving: "Action de grâces",
     family: "Famille",
-    wisdom: "Sagesse"
+    wisdom: "Sagesse",
+    
+    // Audio
+    audioRecording: "Enregistrement audio",
+    record: "Enregistrer",
+    stop: "Arrêter",
+    listen: "Écouter",
+    pause: "Pause",
+    download: "Télécharger",
+    delete: "Supprimer",
+    newRecording: "Nouvel enregistrement",
+    recordingSaved: "Enregistrement sauvegardé",
+    microphoneError: "Impossible d'accéder au microphone"
   },
   
   en: {
@@ -239,7 +251,19 @@ export const translations = {
     evening: "Evening",
     thanksgiving: "Thanksgiving",
     family: "Family",
-    wisdom: "Wisdom"
+    wisdom: "Wisdom",
+    
+    // Audio
+    audioRecording: "Audio Recording",
+    record: "Record",
+    stop: "Stop",
+    listen: "Listen",
+    pause: "Pause",
+    download: "Download",
+    delete: "Delete",
+    newRecording: "New Recording",
+    recordingSaved: "Recording saved",
+    microphoneError: "Cannot access microphone"
   }
 };
 

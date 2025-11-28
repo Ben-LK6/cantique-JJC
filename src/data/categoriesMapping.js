@@ -41,8 +41,8 @@ export const categoriesMapping = {
   97: "Alọwle", 98: "Alọwle", 99: "Alọwle",
   
   // Gbezan yisenọ tọn
-  143: "Gbezan yisenọ tọn", 170: "Gbezan yisenọ tọn", 196: "Gbezan yisenọ tọn", 
-  199: "Gbezan yisenọ tọn", 202: "Gbezan yisenọ tọn",
+  143: "Gbẹzan yisenọ tọn", 170: "Gbẹzan yisenọ tọn", 196: "Gbẹzan yisenọ tọn", 
+  199: "Gbẹzan yisenọ tọn", 202: "Gbẹzan yisenọ tọn",
   
   // Whlẹpọn po awhangba yisenọ tọn po
   17: "Whlẹpọn po awhangba yisenọ tọn po", 40: "Whlẹpọn po awhangba yisenọ tọn po", 

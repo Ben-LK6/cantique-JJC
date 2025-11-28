@@ -5,6 +5,8 @@ import { getCantiqueById } from '../utils/cantiqueUtils';
 import { getTonalityColor, getTonalityBadgeClass, getTonalityTextClass } from '../utils/tonalityColors';
 
 import { t } from '../data/translations';
+import AudioPlayer from '../components/common/AudioPlayer';
+import { getAudioMetadata } from '../utils/audioUtils';
 
 const CantiqueDetail = ({ cantiqueId, onBack }) => {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -233,6 +235,25 @@ const handleShare = () => {
               </div>
             </div>
           </motion.div>
+
+          {/* Lecteur Audio */}
+          {(() => {
+            const audioData = getAudioMetadata(cantique);
+            return audioData && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="mb-6"
+              >
+                <AudioPlayer 
+                  audioFile={audioData.audioFile}
+                  title={audioData.title}
+                  numero={audioData.numero}
+                />
+              </motion.div>
+            );
+          })()}
 
           {/* Paroles */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md">

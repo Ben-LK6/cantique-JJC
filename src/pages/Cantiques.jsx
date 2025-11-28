@@ -1,8 +1,9 @@
-import { Music } from 'lucide-react';
+import { Music, Volume2 } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { getCantiques, getCategories, clearCache } from '../utils/cantiqueUtils';
 import { getTonalityBadgeClass, getTonalityTextClass } from '../utils/tonalityColors';
 import FilterButton from '../components/common/FilterButton';
+import { getAudioMetadata } from '../utils/audioUtils';
 import { t } from '../data/translations';
 
 const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedTheme }) => {
@@ -148,11 +149,19 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
                       >
                         {cantique.categorie}
                       </span>
-                      <div className="flex items-center gap-1">
-                        <Music size={14} className={getTonalityTextClass(cantique.tonalite.note)} />
-                        <span className={`px-2 py-1 rounded-full text-xs font-bold ${getTonalityBadgeClass(cantique.tonalite.note)}`}>
-                          {cantique.tonalite.note}
-                        </span>
+                      <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-1">
+                          <Music size={14} className={getTonalityTextClass(cantique.tonalite.note)} />
+                          <span className={`px-2 py-1 rounded-full text-xs font-bold ${getTonalityBadgeClass(cantique.tonalite.note)}`}>
+                            {cantique.tonalite.note}
+                          </span>
+                        </div>
+                        {getAudioMetadata(cantique) && (
+                          <div className="flex items-center gap-1 px-2 py-1 bg-green-100 dark:bg-green-900/20 rounded-full">
+                            <Volume2 size={12} className="text-green-600 dark:text-green-400" />
+                            <span className="text-xs font-medium text-green-600 dark:text-green-400">Audio</span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

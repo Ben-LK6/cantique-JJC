@@ -5,6 +5,11 @@ export const cantiquesYoruba = [
     numero: "001",
     titre: "Ẹ wa ki a jumọpọ sin Jesu",
     categorie: "Ipe",
+    language: "yoruba",
+    audio: {
+      audioFile: `/audio/cantique_001.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. PZ",
       "1. Ẹ wa ki a jumọpọ sin Jesu",
@@ -36,6 +41,10 @@ export const cantiquesYoruba = [
     numero: "002",
     titre: "Siṣẹ, siṣẹ fun Jesu",
     categorie: "Iṣẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_002.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s.6s.",
       "1. Siṣẹ, siṣẹ fun Jesu",
@@ -72,6 +81,10 @@ export const cantiquesYoruba = [
     numero: "003",
     titre: "Ẹ dupe fun Jehofa",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_003.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.7s.",
       "1. Ẹ dupe fun Jehofa",
@@ -106,6 +119,10 @@ export const cantiquesYoruba = [
     numero: "004",
     titre: "Aiye titun na lawa nlọ",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_004.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s.47 Isa.65:17-19.",
       "1. Aiye titun na lawa nlọ",
@@ -136,6 +153,10 @@ export const cantiquesYoruba = [
     numero: "005",
     titre: "Ẹ bu s'ayọ, onigbagbọ",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_005.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Ẹ bu s'ayọ, onigbagbọ",
       "Isimi de tan",
@@ -177,6 +198,10 @@ export const cantiquesYoruba = [
     numero: "006",
     titre: "Iyoku Israẹli",
     categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_006.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Iyoku Israẹli",
       "Pada s'ọdọ Jesu",
@@ -212,6 +237,10 @@ export const cantiquesYoruba = [
     numero: "007",
     titre: "Jesu l'eni owon mi",
     categorie: "Ifẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_007.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Joh.3:16. 15:14. Gal.1:4",
       "1. Jesu l'eni owon mi",
@@ -248,6 +277,10 @@ export const cantiquesYoruba = [
     numero: "008",
     titre: "Awọn wo ni ọmọ Jakobu",
     categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_008.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Awọn wo ni ọmọ Jakobu",
       "Awọn to jẹ ọmọ Israẹli",
@@ -287,6 +320,10 @@ export const cantiquesYoruba = [
     numero: "009",
     titre: "Satani l'o ndẹru ba ni",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_009.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Mat.10:39. Jak.1:12. Ifthan.2:10.",
       "1. Satani l'o ndẹru ba ni",
@@ -321,6 +358,10 @@ export const cantiquesYoruba = [
     numero: "010",
     titre: "Ẹ fi ogo fun Jehofa",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_010.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "LM Joh.3:15,17.",
       "1. Ẹ fi ogo fun Jehofa",
@@ -356,6 +397,10 @@ export const cantiquesYoruba = [
     numero: "011",
     titre: "Rant'ofin ti Jehofa ṣe",
     categorie: "Ibaniwi",
+    audio: {
+      audioFile: `/audio/cantique_011.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "PMC Deut.5:7",
       "1. Rant'ofin ti Jehofa ṣe",
@@ -397,6 +442,10 @@ export const cantiquesYoruba = [
     numero: "012",
     titre: "Ẹyin ti o fẹran Jesu",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_012.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.M.",
       "1. Ẹyin ti o fẹran Jesu",
@@ -431,6 +480,10 @@ export const cantiquesYoruba = [
     numero: "013",
     titre: "Tani fẹ bọ oriṣa?",
     categorie: "Ibaniwi",
+    audio: {
+      audioFile: `/audio/cantique_013.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.7.",
       "1. Tani fẹ bọ oriṣa?",
@@ -465,7 +518,11 @@ export const cantiquesYoruba = [
     id: 14,
     numero: "014",
     titre: "Ẹjẹ ka tẹl'ofin",
-    categorie: "Ibaniwi",
+    categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_014.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "5s. Mat.22:36-40.",
       "1. Ẹjẹ ka tẹl'ofin",
@@ -501,7 +558,11 @@ export const cantiquesYoruba = [
     id: 15,
     numero: "015",
     titre: "Ibinu Rẹ ti de tan",
-    categorie: "Ibaniwi",
+    categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_015.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6S.7. Isa.42:14-15. Mat.24:21.",
       "1. Ibinu Rẹ ti de tan",
@@ -552,6 +613,10 @@ export const cantiquesYoruba = [
     numero: "016",
     titre: "Siṣẹ rẹ ma ti wa simi",
     categorie: "Iṣẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_016.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "LM Joh.14:12. II Tim.4:5",
       "1. Siṣẹ rẹ ma ti wa simi",
@@ -585,7 +650,11 @@ export const cantiquesYoruba = [
     id: 17,
     numero: "017",
     titre: "K'onigbagbọ duro",
-    categorie: "Igboya ati ireti",
+    categorie: "Idanwo ati Isegun Onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_017.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.H. Joh.1:2,12.",
       "",
@@ -628,6 +697,10 @@ export const cantiquesYoruba = [
     numero: "018",
     titre: "Ẹ ma fi inu didun",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_018.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s. Orin Daf. 95:1-2. 96:3,9.",
       "1. Ẹ ma fi inu didun",
@@ -661,7 +734,11 @@ export const cantiquesYoruba = [
     id: 19,
     numero: "019",
     titre: "Onigbagbọ k'yo j'alailoye",
-    categorie: "Ibaniwi",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_019.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "12s Owe.24:5. Mat.10:16. Efes.5:7.",
       "1. Onigbagbọ k'yo j'alailoye",
@@ -702,7 +779,11 @@ export const cantiquesYoruba = [
     id: 20,
     numero: "020",
     titre: "'Bo ni Jehofa kọlẹ si?",
-    categorie: "Ibaniwi",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_020.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.K. Isa.66:1-2. Ise.7:48-49. 17:24. Heb.9:11.",
       "1. 'Bo ni Jehofa kọlẹ si?",
@@ -733,6 +814,10 @@ export const cantiquesYoruba = [
     numero: "021",
     titre: "Oluwa mi mo njade lọ",
     categorie: "Iṣẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_021.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "5s. 8s Mat.10:19-20.",
       "1. Oluwa mi mo njade lọ",
@@ -766,6 +851,10 @@ export const cantiquesYoruba = [
     numero: "022",
     titre: "O sẹun Jehofa",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_022.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Gal.1:15.",
       "1. O sẹun Jehofa",
@@ -801,7 +890,11 @@ export const cantiquesYoruba = [
     id: 23,
     numero: "023",
     titre: "'Lorun wo lo to Jehofa",
-    categorie: "Ibaniwi",
+    categorie: "Agbara Olorun",
+    audio: {
+      audioFile: `/audio/cantique_023.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.O. Isa.46:5",
       "1. 'Lorun wo lo to Jehofa",
@@ -831,7 +924,11 @@ export const cantiquesYoruba = [
     id: 24,
     numero: "024",
     titre: "Wọn ti wa gbo ọrọ Rẹ",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_024.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7ss I Pet.3:15",
       "1. Wọn ti wa gbo ọrọ Rẹ",
@@ -866,7 +963,11 @@ export const cantiquesYoruba = [
     id: 25,
     numero: "025",
     titre: "Jehofa! ọlorun wo lo",
-    categorie: "Igboya ati ireti",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_025.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Js Orin Daf. 89:8",
       "1. Jehofa! ọlorun wo lo",
@@ -909,7 +1010,11 @@ export const cantiquesYoruba = [
     id: 26,
     numero: "026",
     titre: "Oluwa mi",
-    categorie: "Adura",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_026.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "SS",
       "1. Oluwa mi",
@@ -936,7 +1041,11 @@ export const cantiquesYoruba = [
     id: 27,
     numero: "027",
     titre: "Iwe Mimọ ti Jesu",
-    categorie: "Ibaniwi",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_027.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s",
       "1. Iwe Mimọ ti Jesu",
@@ -970,7 +1079,11 @@ export const cantiquesYoruba = [
     id: 28,
     numero: "028",
     titre: "Ọna Jesu ha o si jẹ tooro",
-    categorie: "Igboya ati ireti",
+    categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_028.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "22s",
       "1. Ọna Jesu ha o si jẹ tooro",
@@ -996,7 +1109,11 @@ export const cantiquesYoruba = [
     id: 29,
     numero: "029",
     titre: "Nigbat'Olorun Jehofa da mi",
-    categorie: "Awọn Ewe",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_029.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.Z. Owe. 23:22.",
       "1. Nigbat'Olorun Jehofa da mi;",
@@ -1037,7 +1154,11 @@ export const cantiquesYoruba = [
     id: 30,
     numero: "030",
     titre: "K'onigbagbọ ronu wọn wo",
-    categorie: "Ibaniwi",
+    categorie: "Iṣẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_030.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "K.S.",
       "1. K'onigbagbọ ronu wọn wo",
@@ -1067,7 +1188,11 @@ export const cantiquesYoruba = [
     id: 31,
     numero: "031",
     titre: "B'enia ko ba mọ",
-    categorie: "Ibaniwi",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_031.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "G. SS. Joh.17:7-9",
       "1. B'enia ko ba mọ",
@@ -1117,6 +1242,10 @@ export const cantiquesYoruba = [
     numero: "032",
     titre: "Melọ l'a le ranti",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_032.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Rom.5:8-11. I Pet.3:18-19.",
       "1. Melọ l'a le ranti",
@@ -1156,6 +1285,10 @@ export const cantiquesYoruba = [
     numero: "033",
     titre: "Onigbagbọ nibo l'e nlọ",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_033.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.P.S. Isa.65:17-19",
       "1. Onigbagbọ nibo l'e nlọ",
@@ -1193,6 +1326,10 @@ export const cantiquesYoruba = [
     numero: "034",
     titre: "Oluwa mi Jesu",
     categorie: "Iṣẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_034.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Joh.17:1-23",
       "1. Oluwa mi Jesu",
@@ -1231,7 +1368,11 @@ export const cantiquesYoruba = [
     id: 35,
     numero: "035",
     titre: "Wa Ẹmi Mimọ wa",
-    categorie: "Adura",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_035.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Joh. 14:26.",
       "1. Wa Ẹmi Mimọ wa",
@@ -1266,6 +1407,10 @@ export const cantiquesYoruba = [
     numero: "036",
     titre: "O gbọdọ gbadura",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_036.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M. Mat.18:19-20.",
       "1. O gbọdọ gbadura",
@@ -1300,6 +1445,10 @@ export const cantiquesYoruba = [
     numero: "037",
     titre: "Ẹ wa ka jo yin Jesu",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_037.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "N.N.S.",
       "1. Ẹ wa ka jo yin Jesu",
@@ -1329,6 +1478,10 @@ export const cantiquesYoruba = [
     numero: "038",
     titre: "Ẹmi ba l'ẹgberun ahọn",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_038.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Orin Daf.145:1.",
       "1. Ẹmi ba l'ẹgberun ahọn",
@@ -1363,6 +1516,10 @@ export const cantiquesYoruba = [
     numero: "039",
     titre: "Ohun Ore Ofẹ",
     categorie: "Ifẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_039.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.P.M. Gal. 1:4. Efes.2:8-9.",
       "1. Ohun Ore Ofẹ",
@@ -1398,7 +1555,11 @@ export const cantiquesYoruba = [
     id: 40,
     numero: "040",
     titre: "Gbekẹlẹ, onigbagbọ",
-    categorie: "Igboya ati ireti",
+    categorie: "Idanwo ati Isegun Onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_040.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6SS Isa.8:10. Rom.8:31.",
       "1. Gbekẹlẹ, onigbagbọ",
@@ -1427,6 +1588,10 @@ export const cantiquesYoruba = [
     numero: "041",
     titre: "Ẹ ma dupe fun Jesu",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_041.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s 6s. 5 Isa.53:5-6.",
       "1. Ẹ ma dupe fun Jesu",
@@ -1472,6 +1637,10 @@ export const cantiquesYoruba = [
     numero: "042",
     titre: "Ẹmi o fi'nu didun mi",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_042.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. I Kọrint.1:26",
       "1. Ẹmi o fi'nu didun mi",
@@ -1511,6 +1680,10 @@ export const cantiquesYoruba = [
     numero: "043",
     titre: "Tani 'ṣe ọrẹ otitọ",
     categorie: "Ifẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_043.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.4s. Joh.15:14.",
       "1. Tani 'ṣe ọrẹ otitọ",
@@ -1556,6 +1729,10 @@ export const cantiquesYoruba = [
     numero: "044",
     titre: "Nipa agbara Jehofa",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_044.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.4s.",
       "1. Nipa agbara Jehofa",
@@ -1592,6 +1769,10 @@ export const cantiquesYoruba = [
     numero: "045",
     titre: "Ni ojọ Mimọ yi",
     categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_045.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Mat. 28:1.",
       "1. Ni ojọ Mimọ yi",
@@ -1620,7 +1801,11 @@ export const cantiquesYoruba = [
     id: 46,
     numero: "046",
     titre: "Bawo l'emi o se gbọran",
-    categorie: "Igboya ati ireti",
+    categorie: "Ibaniwi",
+    audio: {
+      audioFile: `/audio/cantique_046.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "O.O.S. Mat. 4:10.",
       "1. Bawo l'emi o se gbọran",
@@ -1645,6 +1830,10 @@ export const cantiquesYoruba = [
     numero: "047",
     titre: "Ẹmi gbekẹlẹ Jesu",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_047.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.7.",
       "1. Ẹmi gbekẹlẹ Jesu",
@@ -1673,7 +1862,11 @@ export const cantiquesYoruba = [
     id: 48,
     numero: "048",
     titre: "Ara mi o digbọṣe",
-    categorie: "Igboya ati ireti",
+    categorie: "Irinajo ati Idagbere",
+    audio: {
+      audioFile: `/audio/cantique_048.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s II Kọrint.11:11-14",
       "1. Ara mi o digbọṣe",
@@ -1703,7 +1896,11 @@ export const cantiquesYoruba = [
     id: 49,
     numero: "049",
     titre: "Jesu mo fẹ eran Rẹ",
-    categorie: "Isin Mimọ",
+    categorie: "Onje alẹ Oluwa",
+    audio: {
+      audioFile: `/audio/cantique_049.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s. Luk.22:14-20",
       "1. Jesu mo fẹ eran Rẹ",
@@ -1728,6 +1925,10 @@ export const cantiquesYoruba = [
     numero: "050",
     titre: "Ẹ yin Jesu Oluwa wa",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_050.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "1. Ẹ yin Jesu Oluwa wa",
@@ -1761,7 +1962,11 @@ export const cantiquesYoruba = [
     id: 51,
     numero: "051",
     titre: "Jesu l'agbara mi",
-    categorie: "Igboya ati ireti",
+    categorie: "Agbara Olorun",
+    audio: {
+      audioFile: `/audio/cantique_051.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Orin Daf. 147:4.",
       "1. Jesu l'agbara mi",
@@ -1780,7 +1985,11 @@ export const cantiquesYoruba = [
     id: 52,
     numero: "052",
     titre: "Jesu iwọ l'Oluwa mi",
-    categorie: "Adura",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_052.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Jesu iwọ l'Oluwa mi",
@@ -1809,7 +2018,11 @@ export const cantiquesYoruba = [
     id: 53,
     numero: "053",
     titre: "Awọn Mimọ ko ṣe beru",
-    categorie: "Igboya ati ireti",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_053.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Gen. 22:13-18",
       "1. Awọn Mimọ ko ṣe beru",
@@ -1843,7 +2056,11 @@ export const cantiquesYoruba = [
     id: 54,
     numero: "054",
     titre: "Mo fẹ ki 'nu mi jẹ mimọ",
-    categorie: "Adura",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_054.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Mo fẹ ki 'nu mi jẹ mimọ",
@@ -1873,6 +2090,10 @@ export const cantiquesYoruba = [
     numero: "055",
     titre: "Ma koja mi Olugbala",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_055.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.5s.",
       "1. Ma koja mi Olugbala",
@@ -1902,6 +2123,10 @@ export const cantiquesYoruba = [
     numero: "056",
     titre: "Gbeke rẹ le Jesu",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_056.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "SM",
       "1. Gbeke rẹ le Jesu",
@@ -1930,7 +2155,11 @@ export const cantiquesYoruba = [
     id: 57,
     numero: "057",
     titre: "A nbẹ laye sibe",
-    categorie: "Iyin",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_057.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "1. A nbẹ laye sibe",
@@ -1964,7 +2193,11 @@ export const cantiquesYoruba = [
     id: 58,
     numero: "058",
     titre: "Jesu awa nreti",
-    categorie: "Adura",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_058.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Mat.18:19-26.",
       "1. Jesu awa nreti",
@@ -1988,7 +2221,11 @@ export const cantiquesYoruba = [
     id: 59,
     numero: "059",
     titre: "Jesu wo ọmọ ọdọ Rẹ",
-    categorie: "Adura",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_059.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Jesu wo ọmọ ọdọ Rẹ",
@@ -2017,7 +2254,11 @@ export const cantiquesYoruba = [
     id: 60,
     numero: "060",
     titre: "Awọn wo ni yi bi 'rawọ",
-    categorie: "Igboya ati ireti",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_060.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s.4s.7. Ifi.19:6-8.",
       "1. Awọn wo ni yi bi 'rawọ",
@@ -2061,7 +2302,11 @@ export const cantiquesYoruba = [
     id: 61,
     numero: "061",
     titre: "Iwọ ti 'ṣe Ẹlẹda mi",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_061.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "1. Iwọ ti 'ṣe Ẹlẹda mi",
@@ -2091,6 +2336,10 @@ export const cantiquesYoruba = [
     numero: "062",
     titre: "Ki lo ṣe t'ẹ fi nbanujẹ",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_062.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Joh.5:28.",
       "1. Ki lo ṣe t'ẹ fi nbanujẹ",
@@ -2110,6 +2359,10 @@ export const cantiquesYoruba = [
     numero: "063",
     titre: "Ẹ gb'ohun to t'ọrun wa",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_063.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s",
       "1. Ẹ gb'ohun to t'ọrun wa",
@@ -2133,7 +2386,11 @@ export const cantiquesYoruba = [
     id: 64,
     numero: "064",
     titre: "Ni ẹhin aiye yi",
-    categorie: "Igboya ati ireti",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_064.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M. Ifih.21:4.",
       "1. Ni ẹhin aiye yi",
@@ -2165,6 +2422,10 @@ export const cantiquesYoruba = [
     numero: "065",
     titre: "A o pade laiye na",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_065.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.",
       "1. A o pade laiye na",
@@ -2202,6 +2463,10 @@ export const cantiquesYoruba = [
     numero: "066",
     titre: "Ara, onigbagbọ",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_066.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.",
       "1. Ara, onigbagbọ",
@@ -2231,7 +2496,11 @@ export const cantiquesYoruba = [
     id: 67,
     numero: "067",
     titre: "Onigbagbọ mura",
-    categorie: "Igboya ati ireti",
+    categorie: "Idanwo ati Isegun Onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_067.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "P.M.",
       "1. Onigbagbọ mura",
@@ -2248,6 +2517,10 @@ export const cantiquesYoruba = [
     numero: "068",
     titre: "Jesu, O sọ ninu ifẹ",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_068.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Mat.18:19-20.",
       "1. Jesu, O sọ ninu ifẹ",
@@ -2271,7 +2544,11 @@ export const cantiquesYoruba = [
     id: 69,
     numero: "069",
     titre: "Jesu wa ba wa sọrọ",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_069.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s",
       "1. Jesu wa ba wa sọrọ",
@@ -2290,7 +2567,11 @@ export const cantiquesYoruba = [
     id: 70,
     numero: "070",
     titre: "Oju kan wa ki torugbe",
-    categorie: "Igboya ati ireti",
+    categorie: "Agbara Olorun",
+    audio: {
+      audioFile: `/audio/cantique_070.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Isa.40:28.",
       "1. Oju kan wa ki torugbe",
@@ -2314,7 +2595,11 @@ export const cantiquesYoruba = [
     id: 71,
     numero: "071",
     titre: "Fohun ibukun lat'ọrun",
-    categorie: "Adura",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_071.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "1. Fohun ibukun lat'ọrun",
@@ -2344,6 +2629,10 @@ export const cantiquesYoruba = [
     numero: "072",
     titre: "Jesu, baba ọmọde",
     categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_072.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s. Mat.10:14.",
       "1. Jesu, baba ọmọde",
@@ -2363,6 +2652,10 @@ export const cantiquesYoruba = [
     numero: "073",
     titre: "Jesu, iwọ l'a gbekẹlẹ",
     categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_073.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Jesu, iwọ l'a gbekẹlẹ",
@@ -2382,6 +2675,10 @@ export const cantiquesYoruba = [
     numero: "074",
     titre: "Jesu duro ninu ifẹ",
     categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_074.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Mlak.10:16.",
       "1. Jesu duro ninu ifẹ",
@@ -2405,7 +2702,11 @@ export const cantiquesYoruba = [
     id: 75,
     numero: "075",
     titre: "O tọ si wa, Olorun wa",
-    categorie: "Iyin",
+    categorie: "Owurọ",
+    audio: {
+      audioFile: `/audio/cantique_075.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Orin Daf. 92:1.",
       "1. O tọ si wa, Olorun wa",
@@ -2439,7 +2740,11 @@ export const cantiquesYoruba = [
     id: 76,
     numero: "076",
     titre: "Aiye yi jẹ inu oko",
-    categorie: "Ibaniwi",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_076.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "K.S. Mat.13:24-30, 36-43",
       "1. Aiye yi jẹ inu oko",
@@ -2476,7 +2781,11 @@ export const cantiquesYoruba = [
     id: 77,
     numero: "077",
     titre: "Ẹ ti nifẹ s'afẹ aiye",
-    categorie: "Ibaniwi",
+    categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_077.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. I Joh.2:15",
       "1. Ẹ ti nifẹ s'afẹ aiye",
@@ -2501,6 +2810,10 @@ export const cantiquesYoruba = [
     numero: "078",
     titre: "Lẹhin aiye ibajẹ yi",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_078.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Lẹhin aiye ibajẹ yi",
@@ -2525,6 +2838,10 @@ export const cantiquesYoruba = [
     numero: "079",
     titre: "Ogo ni fun O Jesu",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_079.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s.6s.",
       "1. Ogo ni fun O Jesu",
@@ -2557,6 +2874,10 @@ export const cantiquesYoruba = [
     numero: "080",
     titre: "Jesu fi itẹ Rẹ silẹ",
     categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_080.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Jesu fi itẹ Rẹ silẹ",
@@ -2585,7 +2906,11 @@ export const cantiquesYoruba = [
     id: 81,
     numero: "081",
     titre: "Mo fẹ ma gbọ itan na",
-    categorie: "Iyin",
+    categorie: "Ifẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_081.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s.6s.",
       "1. Mo fẹ ma gbọ itan na",
@@ -2612,7 +2937,11 @@ export const cantiquesYoruba = [
     id: 82,
     numero: "082",
     titre: "Oke kan nbẹ jina rere",
-    categorie: "Ifẹ Olorun",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_082.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Oke kan nbẹ jina rere",
@@ -2647,6 +2976,10 @@ export const cantiquesYoruba = [
     numero: "083",
     titre: "Jesu 'wọ onirele",
     categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_083.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6s.5s",
       "1. Jesu 'wọ onirele",
@@ -2670,7 +3003,11 @@ export const cantiquesYoruba = [
     id: 84,
     numero: "084",
     titre: "Hosana e kọrin s'oke",
-    categorie: "Awọn Ewe",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_084.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Hosana e kọrin s'oke",
@@ -2709,7 +3046,11 @@ export const cantiquesYoruba = [
     id: 85,
     numero: "085",
     titre: "Mo fi ete lasan",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_085.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "1. Mo fi ete lasan",
@@ -2739,6 +3080,10 @@ export const cantiquesYoruba = [
     numero: "086",
     titre: "Baba wa ti nbẹ li ọrun",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_086.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Baba wa ti nbẹ li ọrun",
@@ -2767,7 +3112,11 @@ export const cantiquesYoruba = [
     id: 87,
     numero: "087",
     titre: "A fi ipilẹ yi le'lẹ",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_087.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "1. A fi ipilẹ yi le'lẹ",
@@ -2791,7 +3140,11 @@ export const cantiquesYoruba = [
     id: 88,
     numero: "088",
     titre: "Ba wa pe ninu ile yi",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_088.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "1. Ba wa pe ninu ile yi",
@@ -2815,7 +3168,11 @@ export const cantiquesYoruba = [
     id: 89,
     numero: "089",
     titre: "Iwọ ko ri b'o ti dun to",
-    categorie: "Ifẹ Olorun",
+    categorie: "Irinajo ati Idagbere",
+    audio: {
+      audioFile: `/audio/cantique_089.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Orin Daf.133:1-3",
       "1. Iwọ ko ri b'o ti dun to",
@@ -2840,6 +3197,10 @@ export const cantiquesYoruba = [
     numero: "090",
     titre: "Jesu fẹran mi daju",
     categorie: "Ifẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_090.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Jesu fẹran mi daju",
       "Bibeli lo sọ fun mi",
@@ -2872,7 +3233,11 @@ export const cantiquesYoruba = [
     id: 91,
     numero: "091",
     titre: "Jesu wa ba wa pe",
-    categorie: "Adura",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_091.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Jesu wa ba wa pe",
       "'Nu agbara Rẹ",
@@ -2900,7 +3265,11 @@ export const cantiquesYoruba = [
     id: 92,
     numero: "092",
     titre: "Oluwa mi mo ke pe O",
-    categorie: "Adura",
+    categorie: "Ebe fun idariji ẹṣẹ",
+    audio: {
+      audioFile: `/audio/cantique_092.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Oluwa mi mo ke pe O",
       "Jesu jọwọ ran mi lọwọ",
@@ -2926,6 +3295,10 @@ export const cantiquesYoruba = [
     numero: "093",
     titre: "Oluwa ni agbara mi",
     categorie: "Iṣẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_093.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Oluwa ni agbara mi",
       "Uno jẹ akọni ni Rẹ",
@@ -2963,7 +3336,11 @@ export const cantiquesYoruba = [
     id: 94,
     numero: "094",
     titre: "Oluwa mi mo fẹ ki nfi",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_094.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s.",
       "1. Oluwa mi mo fẹ ki nfi",
@@ -2999,7 +3376,11 @@ export const cantiquesYoruba = [
     id: 95,
     numero: "095",
     titre: "Ninu gbogbo ewu oru",
-    categorie: "Iyin",
+    categorie: "Owurọ",
+    audio: {
+      audioFile: `/audio/cantique_095.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Ninu gbogbo ewu oru",
@@ -3028,7 +3409,11 @@ export const cantiquesYoruba = [
     id: 96,
     numero: "096",
     titre: "Ọjọ.oni lọ tan",
-    categorie: "Iyin",
+    categorie: "Alẹ",
+    audio: {
+      audioFile: `/audio/cantique_096.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.5.6.5. Owe.3:24.",
       "1. Ọjọ.oni lọ tan",
@@ -3048,6 +3433,10 @@ export const cantiquesYoruba = [
     numero: "097",
     titre: "Ire t'a su ni Eden",
     categorie: "Igbeyawo",
+    audio: {
+      audioFile: `/audio/cantique_097.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Ire t'a su ni Eden",
       "Ni 'gbeyawo kini",
@@ -3086,6 +3475,10 @@ export const cantiquesYoruba = [
     numero: "098",
     titre: "Oluwa wa paṣẹ Rẹ",
     categorie: "Igbeyawo",
+    audio: {
+      audioFile: `/audio/cantique_098.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s",
       "1. Oluwa wa paṣẹ Rẹ",
@@ -3123,6 +3516,10 @@ export const cantiquesYoruba = [
     numero: "099",
     titre: "Oluwa f'ara han daju",
     categorie: "Igbeyawo",
+    audio: {
+      audioFile: `/audio/cantique_099.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Oluwa f'ara han daju",
@@ -3151,7 +3548,11 @@ export const cantiquesYoruba = [
     id: 100,
     numero: "100",
     titre: "Baba jọwọ gb'adura wa",
-    categorie: "Adura",
+    categorie: "Irinajo ati Idagbere",
+    audio: {
+      audioFile: `/audio/cantique_100.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Mat.8:23-27.",
       "1. Baba jọwọ gb'adura wa",
@@ -3175,7 +3576,11 @@ export const cantiquesYoruba = [
     id: 101,
     numero: "101",
     titre: "Ọjọ nla l'ọjọ ti mo yan",
-    categorie: "Iyin",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_101.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Owe.16:20",
       "1. Ọjọ nla l'ọjọ ti mo yan",
@@ -3207,7 +3612,11 @@ export const cantiquesYoruba = [
     id: 102,
     numero: "102",
     titre: "Gbogbo isẹ ti awa nsẹ",
-    categorie: "Ibaniwi",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_102.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Gbogbo isẹ ti awa nsẹ",
@@ -3236,7 +3645,11 @@ export const cantiquesYoruba = [
     id: 103,
     numero: "103",
     titre: "Gbogbo ẹyin ti nbẹ laiye",
-    categorie: "Iyin",
+    categorie: "Ibaniwi",
+    audio: {
+      audioFile: `/audio/cantique_103.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Orin Daf.100:1-5",
       "1. Gbogbo ẹyin ti nbẹ laiye",
@@ -3265,7 +3678,11 @@ export const cantiquesYoruba = [
     id: 104,
     numero: "104",
     titre: "'Gbati 'danwo ba yi mi ka",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_104.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s.4",
       "1. 'Gbati 'danwo ba yi mi ka",
@@ -3313,7 +3730,11 @@ export const cantiquesYoruba = [
     id: 105,
     numero: "105",
     titre: "Tete pada wa si'le rẹ",
-    categorie: "Ipe",
+    categorie: "Ironupiwada",
+    audio: {
+      audioFile: `/audio/cantique_105.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Tete pada wa si'le rẹ",
@@ -3342,7 +3763,11 @@ export const cantiquesYoruba = [
     id: 106,
     numero: "106",
     titre: "Jesu ẹjẹ Rẹ nikan ni",
-    categorie: "Ifẹ Olorun",
+    categorie: "Onje alẹ Oluwa",
+    audio: {
+      audioFile: `/audio/cantique_106.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "1. Jesu ẹjẹ Rẹ nikan ni",
@@ -3366,7 +3791,11 @@ export const cantiquesYoruba = [
     id: 107,
     numero: "107",
     titre: "Isin Jesu lo dara",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_107.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s.",
       "1. Isin Jesu lo dara",
@@ -3385,7 +3814,11 @@ export const cantiquesYoruba = [
     id: 108,
     numero: "108",
     titre: "Jesu Olugbala",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_108.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "1. Jesu Olugbala",
@@ -3404,7 +3837,11 @@ export const cantiquesYoruba = [
     id: 109,
     numero: "109",
     titre: "Mo f'ara mi fun ọ",
-    categorie: "Ifẹ Olorun",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_109.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6s. Joh.10:15",
       "1. Mo f'ara mi fun ọ",
@@ -3434,7 +3871,11 @@ export const cantiquesYoruba = [
     id: 110,
     numero: "110",
     titre: "Kini Jesu yọ tun sẹ",
-    categorie: "Ifẹ Olorun",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_110.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s",
       "1. Kini Jesu yọ tun sẹ",
@@ -3458,7 +3899,11 @@ export const cantiquesYoruba = [
     id: 111,
     numero: "111",
     titre: "Ko mi Oluwa, jẹ ki nle",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_111.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "1. Ko mi Oluwa, jẹ ki nle",
@@ -3477,7 +3922,11 @@ export const cantiquesYoruba = [
     id: 112,
     numero: "112",
     titre: "Ba mi sọrọ Oluwa mi",
-    categorie: "Adura",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_112.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s.",
       "1. Ba mi sọrọ Oluwa mi",
@@ -3503,6 +3952,10 @@ export const cantiquesYoruba = [
     numero: "113",
     titre: "Kini uno fun Ọlọrun mi",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_113.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Kini uno fun Ọlọrun mi",
@@ -3521,7 +3974,11 @@ export const cantiquesYoruba = [
     id: 114,
     numero: "114",
     titre: "Dirọ mọ bibeli b'ohun gbogbo tan",
-    categorie: "Ibaniwi",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_114.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Jos.1:8. II Tim.3:16. Orin Daf..119:105.",
       "1. Dirọ mọ bibeli b'ohun gbogbo tan",
@@ -3549,7 +4006,11 @@ export const cantiquesYoruba = [
     id: 115,
     numero: "115",
     titre: "Ninu abo ti Jehofa",
-    categorie: "Igboya ati ireti",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_115.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "1. Ninu abo ti Jehofa",
@@ -3569,6 +4030,10 @@ export const cantiquesYoruba = [
     numero: "116",
     titre: "Ọrẹ wo lo tun to Jesu",
     categorie: "Ifẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_116.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s.",
       "1. Ọrẹ wo lo tun to Jesu",
@@ -3604,7 +4069,11 @@ export const cantiquesYoruba = [
     id: 117,
     numero: "117",
     titre: "Gbo ohun Jesu lo wipe",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_117.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s. Mat.24:14. Mark.13:10. 16:15-16",
       "1. Gbo ohun Jesu lo wipe",
@@ -3649,7 +4118,11 @@ export const cantiquesYoruba = [
     id: 118,
     numero: "118",
     titre: "Ọlọrun iranlọwọ wa",
-    categorie: "Adura",
+    categorie: "Idanwo ati Isegun Onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_118.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Ọlọrun iranlọwọ wa",
@@ -3674,6 +4147,10 @@ export const cantiquesYoruba = [
     numero: "119",
     titre: "E jẹ k'a fi'nu didun",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_119.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s Orin Daf. 136.",
       "1. E jẹ k'a fi'nu didun",
@@ -3718,6 +4195,10 @@ export const cantiquesYoruba = [
     numero: "120",
     titre: "Ọlọrun wa ainipekun",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_120.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Ọlọrun wa ainipekun",
@@ -3751,7 +4232,11 @@ export const cantiquesYoruba = [
     id: 121,
     numero: "121",
     titre: "Jesu mu ire na wa",
-    categorie: "Iyin",
+    categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_121.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s. C.M.",
       "1. Jesu mu ire na wa",
@@ -3780,7 +4265,11 @@ export const cantiquesYoruba = [
     id: 122,
     numero: "122",
     titre: "Igbagbo mi nwọ O",
-    categorie: "Adura",
+    categorie: "Igbagbọ, irapada ati abo",
+    audio: {
+      audioFile: `/audio/cantique_122.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6s.4s. Orin Daf. 123:2",
       "1. Igbagbo mi nwọ O",
@@ -3822,6 +4311,10 @@ export const cantiquesYoruba = [
     numero: "123",
     titre: "Kede iyin Rẹ ka",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_123.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "1. Kede iyin Rẹ ka",
@@ -3850,7 +4343,11 @@ export const cantiquesYoruba = [
     id: 124,
     numero: "124",
     titre: "Obinrin t'a bi ni Israẹl",
-    categorie: "Awọn Obinrin",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_124.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Obinrin t'a bi ni Israẹl",
@@ -3885,6 +4382,10 @@ export const cantiquesYoruba = [
     numero: "125",
     titre: "Jesu Olugbala",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_125.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M.",
       "1. Jesu Olugbala",
@@ -3914,6 +4415,10 @@ export const cantiquesYoruba = [
     numero: "126",
     titre: "Arakunrin, arabinrin",
     categorie: "Ibaniwi",
+    audio: {
+      audioFile: `/audio/cantique_126.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Arakunrin, arabinrin",
@@ -3943,6 +4448,10 @@ export const cantiquesYoruba = [
     numero: "127",
     titre: "Ogo ni f'Oluwa to ṣe ohun nla",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_127.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11.11.11.11.& Ref. Orin Daf. 29:2. \"Ẹ fi ogo fun Oluwa\"",
       "1. Ogo ni f'Oluwa to ṣe ohun nla",
@@ -3974,7 +4483,11 @@ export const cantiquesYoruba = [
     id: 128,
     numero: "128",
     titre: "E yọ ninu Oluwa, ẹ yọ",
-    categorie: "Igboya ati ireti",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_128.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. & Ref",
       "1. E yọ ninu Oluwa, ẹ yọ",
@@ -4015,6 +4528,10 @@ export const cantiquesYoruba = [
     numero: "129",
     titre: "Ewe ti Ọba ọrun",
     categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_129.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.7. Gal.4:7. \"Iwọ ki isẹ ẹru mọ bikọsẹ ọmọ\"",
       "1. Ewe ti Ọba ọrun",
@@ -4053,7 +4570,11 @@ export const cantiquesYoruba = [
     id: 130,
     numero: "130",
     titre: "Jesu ye titi aiye",
-    categorie: "Igboya ati ireti",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_130.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.8.7.8.4. Ifih.1:18. Kiyesi i, Emi mbẹ laye titi lae. Amin.",
       "1. Jesu ye titi aiye",
@@ -4092,7 +4613,11 @@ export const cantiquesYoruba = [
     id: 131,
     numero: "131",
     titre: "Ija d'opin ogun si tan",
-    categorie: "Iyin",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_131.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.8.8.4. Orin Daf. 98:1. E korin titun si Oluwa nitori O ti sẹ ohun iyanu.",
       "1. Ija d'opin ogun si tan,",
@@ -4126,7 +4651,11 @@ export const cantiquesYoruba = [
     id: 132,
     numero: "132",
     titre: "Krist'Oluwa ji loni",
-    categorie: "Iyin",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_132.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.7. & Haleluya Mark.16:6. O jinde, ko si nihin.",
       "1. Krist'Oluwa ji loni - Haleluya!",
@@ -4166,7 +4695,11 @@ export const cantiquesYoruba = [
     id: 133,
     numero: "133",
     titre: "Onisẹgun nla wa nihin",
-    categorie: "Iyin",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_133.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7. Fil.2:9. Orukọ ti o bori gbogbo orukọ.",
       "1. Onisẹgun nla wa nihin",
@@ -4220,7 +4753,11 @@ export const cantiquesYoruba = [
     id: 134,
     numero: "134",
     titre: "E fun 'pe na kikan",
-    categorie: "Ipe",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_134.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.6.6.8.8. Ias. 61:1. O ti ran mi lọ lati kede isisile tubu fun awọn onde",
       "1. E fun 'pe na kikan,",
@@ -4261,6 +4798,10 @@ export const cantiquesYoruba = [
     numero: "135",
     titre: "Ẹlẹṣẹ, wa s'ọdọ Jesu",
     categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_135.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7. Isa. 1:18. \"Oluwa wipe, wa nisisiyi, bi ẹsẹ nyin ba ri bi ododo, nwọn o fun bi sno\"",
       "1. Ẹlẹṣẹ, wa s'ọdọ Jesu",
@@ -4289,7 +4830,11 @@ export const cantiquesYoruba = [
     id: 136,
     numero: "136",
     titre: "Jesu Ọrọ Rẹ ye",
-    categorie: "Ibaniwi",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_136.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.6.6. Orin Daf.119:105. Ọrọ rẹ li fitila fun ẹsẹ mi.",
       "1. Jesu Ọrọ Rẹ ye",
@@ -4328,7 +4873,11 @@ export const cantiquesYoruba = [
     id: 137,
     numero: "137",
     titre: "Ki l'o le w'ẹsẹ mi nu?",
-    categorie: "Ifẹ Olorun",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_137.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.8.7.8.7 & Ref. I Joh.1:17.",
       "1. Ki l'o le w'ẹsẹ mi nu?",
@@ -4363,7 +4912,11 @@ export const cantiquesYoruba = [
     id: 138,
     numero: "138",
     titre: "O ti to Jesu lo fun 'wẹnumọ bi?",
-    categorie: "Ifẹ Olorun",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_138.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11.11.11.11 & Ref Ifih.1:5.",
       "1. O ti to Jesu lo fun 'wẹnumọ bi?",
@@ -4399,7 +4952,11 @@ export const cantiquesYoruba = [
     id: 139,
     numero: "139",
     titre: "Apata aiyeraye",
-    categorie: "Igboya ati ireti",
+    categorie: "Igbagbọ, irapada ati abo",
+    audio: {
+      audioFile: `/audio/cantique_139.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.D. Orin Daf.27:5.",
       "1. Apata aiyeraye",
@@ -4436,7 +4993,11 @@ export const cantiquesYoruba = [
     id: 140,
     numero: "140",
     titre: "Gba aiye mi Oluwa",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_140.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.7. Rom.12:1. Ki eyin ki o fi ara yin fun Ọlọrun ni ẹbọ aye mimọ.",
       "1. Gba aiye mi Oluwa",
@@ -4476,6 +5037,10 @@ export const cantiquesYoruba = [
     numero: "141",
     titre: "'Gbat'a b'Oluwa rin",
     categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_141.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "PZ 7.6. 7.6.D Mat.11:29",
       "1. 'Gbat'a b'Oluwa rin",
@@ -4527,7 +5092,11 @@ export const cantiquesYoruba = [
     id: 142,
     numero: "142",
     titre: "Nigbat'gbi aiye yi ba yi lu ọ",
-    categorie: "Igboya ati ireti",
+    categorie: "Idanwo ati Isegun Onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_142.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11.11.11.11 & Ref Rom.8:18 Nitori mo ṣiro rẹ pe, iya igba isisniyi ko yẹ lati fi se akawe ogo ti a o fi han ninu wa.",
       "1. Nigbat'gbi aiye yi ba yi lu ọ,",
@@ -4564,7 +5133,11 @@ export const cantiquesYoruba = [
     id: 143,
     numero: "143",
     titre: "Uno sunmọ O, Ọlọrun",
-    categorie: "Adura",
+    categorie: "Igbe aiye onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_143.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.4.6.4.6.6.4. Orin Daf. 143:10 Jẹ ki emi rẹ didara fa mi lọ ni ilẹ ti o teju",
       "1. Uno sunmọ O, Ọlọrun",
@@ -4613,7 +5186,11 @@ export const cantiquesYoruba = [
     id: 144,
     numero: "144",
     titre: "Ẹlẹṣẹ: Mo nfẹ 'bukun",
-    categorie: "Adura",
+    categorie: "Ebe fun idariji ẹṣẹ",
+    audio: {
+      audioFile: `/audio/cantique_144.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.7. Luk.18:13. .... Sugbọn o lu ara rẹ ni ọkan aya, o wipe, Ọlọrun ṣanu fun mi, emi ẹlẹṣẹ.",
       "1. Ẹlẹṣẹ: Mo nfẹ 'bukun",
@@ -4652,7 +5229,11 @@ export const cantiquesYoruba = [
     id: 145,
     numero: "145",
     titre: "Ji! Ọkan mi ba orun ji",
-    categorie: "Iyin",
+    categorie: "Owurọ",
+    audio: {
+      audioFile: `/audio/cantique_145.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Orin Daf. 108:2.\"Emi tikara mi yo si ji ni kutukutu\"",
       "1. Ji! Ọkan mi ba orun ji",
@@ -4691,7 +5272,11 @@ export const cantiquesYoruba = [
     id: 146,
     numero: "146",
     titre: "Imọlẹ ọrọ didun yi",
-    categorie: "Adura",
+    categorie: "Owurọ",
+    audio: {
+      audioFile: `/audio/cantique_146.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Orin Daf. 91:4. \"Yio fi iye rẹ bo ọ\"",
       "1. Imọlẹ ọrọ didun yi",
@@ -4715,7 +5300,11 @@ export const cantiquesYoruba = [
     id: 147,
     numero: "147",
     titre: "Jesu orun ododo",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_147.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.7.7.7.7.3. Orin Daf. 5:3. \"Ohun mi ni iwọ o gbo li owurọ, Oluwa\"",
       "1. Jesu orun ododo,",
@@ -4759,7 +5348,11 @@ export const cantiquesYoruba = [
     id: 148,
     numero: "148",
     titre: "Bi Krist' ti da ọkan mi nde",
-    categorie: "Igboya ati ireti",
+    categorie: "Igbagbọ, irapada ati abo",
+    audio: {
+      audioFile: `/audio/cantique_148.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. & Ref. Joh.8:32. \"E o si mọ otitọ, otitọ yoo si sọ yin di ominira\"",
       "1. Bi Krist' ti da ọkan mi nde,",
@@ -4789,7 +5382,11 @@ export const cantiquesYoruba = [
     id: 149,
     numero: "149",
     titre: "Irapada itan iyanu",
-    categorie: "Iyin",
+    categorie: "Igbagbọ, irapada ati abo",
+    audio: {
+      audioFile: `/audio/cantique_149.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.8.9.8. & Ref. Orin Daf.48:8. \"Bi awa ti gbo, beẹ ni awa ri i ni ilu Oluwa awọn ọmọ ogun\"",
       "1. Irapada itan iyanu,",
@@ -4826,6 +5423,10 @@ export const cantiquesYoruba = [
     numero: "150",
     titre: "\"Hosanna s'Ọmọ Dafidi\"",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_150.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Mat. 21:9. \"Ijo enia ti nlọ niwaju, ati eyi ti ntọ wọn leyin, nkigbe wipe Hosanna fun Ọmọ Dafidi.",
       "1. \"Hosanna s'Ọmọ Dafidi\"",
@@ -4859,7 +5460,11 @@ export const cantiquesYoruba = [
     id: 151,
     numero: "151",
     titre: "Oluwa, ṣanu, dariji",
-    categorie: "Adura",
+    categorie: "Ebe fun idariji ẹṣẹ",
+    audio: {
+      audioFile: `/audio/cantique_151.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. A.Onid.10:15. Awa ti ṣẹ, ohunkohun ti o ba tọ ni oju rẹ ni ki o fi wa ṣẹ, sa gba wa ni oni yii, awa bẹ ọ.",
       "1. Oluwa, ṣanu, dariji;",
@@ -4898,7 +5503,11 @@ export const cantiquesYoruba = [
     id: 152,
     numero: "152",
     titre: "Oluwa, b'agbowode ni",
-    categorie: "Adura",
+    categorie: "Ebe fun idariji ẹṣẹ",
+    audio: {
+      audioFile: `/audio/cantique_152.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Luk.18:13. ṣaanu fun mi, emi ẹlẹṣẹ.",
       "1. Oluwa, b'agbowode ni,",
@@ -4932,7 +5541,11 @@ export const cantiquesYoruba = [
     id: 153,
     numero: "153",
     titre: "'Wọ Oluwa Oke",
-    categorie: "Adura",
+    categorie: "Ebe fun idariji ẹṣẹ",
+    audio: {
+      audioFile: `/audio/cantique_153.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Orin. Daf. 84:2. Ọkan mi nfa nitoọtọ, o tile pa ọngbẹ fun agbala Oluwa; aya mi ati ara mi nkigbe si Ọlọrun alaaye.",
       "1. 'Wọ Oluwa Oke",
@@ -4966,7 +5579,11 @@ export const cantiquesYoruba = [
     id: 154,
     numero: "154",
     titre: "Alaimo ni emi",
-    categorie: "Adura",
+    categorie: "Ebe fun idariji ẹṣẹ",
+    audio: {
+      audioFile: `/audio/cantique_154.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Joh. 42:6. Emi korira ara mi, mo si ronupiwada ṣe toto ninu ekuru ati eeru.",
       "1. Alaimo ni emi,",
@@ -5001,6 +5618,10 @@ export const cantiquesYoruba = [
     numero: "155",
     titre: "B'orun ti nran l'orọ",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_155.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6s Orin Daf. Emi o ma fi ibukun fun Oluwa nigba gbogbo. Iyin Rẹ yio ma wa li enu mi titi.",
       "1. B'orun ti nran l'orọ",
@@ -5051,7 +5672,11 @@ export const cantiquesYoruba = [
     id: 156,
     numero: "156",
     titre: "Bi mo ti ri, lai ṣ'awawi",
-    categorie: "Ipe",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_156.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.8.8.6. Joh.1:29. \"Woo Ọdọ agutan Ọlọrun\"",
       "1. Bi mo ti ri, lai ṣ'awawi",
@@ -5090,7 +5715,11 @@ export const cantiquesYoruba = [
     id: 157,
     numero: "157",
     titre: "Mo fi gbogbo rẹ fun Jesu",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Ebe fun idariji ẹṣẹ",
+    audio: {
+      audioFile: `/audio/cantique_157.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7. & Ref Mat.10:28. \"Woo, awa ti fi gbogbo nkan silẹ, awa si ti tọ ọ lẹhin\"",
       "1. Mo fi gbogbo rẹ fun Jesu",
@@ -5132,7 +5761,11 @@ export const cantiquesYoruba = [
     id: 158,
     numero: "158",
     titre: "Ọkan are ile kan mbẹ",
-    categorie: "Igboya ati ireti",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_158.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. & Ref. Mat.24:13. 'Sugbon ẹniti o ba f'oriti i titi de opin, oun na li a o gbala\"",
       "1. Ọkan are ile kan mbẹ",
@@ -5167,6 +5800,10 @@ export const cantiquesYoruba = [
     numero: "159",
     titre: "A tun pe mi s'idi 'ṣẹ mi",
     categorie: "Iṣẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_159.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Rom.12:11. \"Ṅi ti iṣẹ ṣiṣẹ, ẹ mase ṣọlẹ\"",
       "1. A tun pe mi s'idi 'ṣẹ mi",
@@ -5195,7 +5832,11 @@ export const cantiquesYoruba = [
     id: 160,
     numero: "160",
     titre: "K'Ọlọrun sọ ọ k'a tun pade",
-    categorie: "Adura",
+    categorie: "Irinajo ati Idagbere",
+    audio: {
+      audioFile: `/audio/cantique_160.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.8.8.9. & Ref. Deut. 31:8. Oluwa on ni o nlọ saju rẹ, on ni yio pelu rẹ.",
       "1. K'Ọlọrun sọ ọ k'a tun pade",
@@ -5231,7 +5872,11 @@ export const cantiquesYoruba = [
     id: 161,
     numero: "161",
     titre: "E wolẹ f'Ọba Ologo julo",
-    categorie: "Iyin",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_161.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10.10.11.11. Orin Daf.104:1. \"Oluwa Ọlọrun mi, iwọ tobi jọjọ.",
       "1. E wolẹ f'Ọba Ologo julo",
@@ -5271,6 +5916,10 @@ export const cantiquesYoruba = [
     numero: "162",
     titre: "Gbogbo aiye, gbe Jesu ga",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_162.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Ifih.17:14. \"Oun li Oluwa awọn Oluwa ati Ọba awọn ọba\"",
       "1. Gbogbo aiye, gbe Jesu ga,",
@@ -5309,7 +5958,11 @@ export const cantiquesYoruba = [
     id: 163,
     numero: "163",
     titre: "Wa s'adura oorọ",
-    categorie: "Adura",
+    categorie: "Owurọ",
+    audio: {
+      audioFile: `/audio/cantique_163.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Orin Daf. 55:17. \"Li alẹ, li owurọ ati li osan li emi o ma gbadura\"",
       "1. Wa s'adura oorọ",
@@ -5339,6 +5992,10 @@ export const cantiquesYoruba = [
     numero: "164",
     titre: "Baba mi gbọ t'emi",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_164.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.6.6. Orin Daf. 61:1. 'Gbọ ẹkun mi, Ọlọrun; fiye si adura mi.",
       "1. Baba mi gbọ t'emi,",
@@ -5367,7 +6024,11 @@ export const cantiquesYoruba = [
     id: 165,
     numero: "165",
     titre: "Jesu, a fe pade",
-    categorie: "Isin Mimọ",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_165.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.8.8.6.D Eks.16:25. \"...Nitori oni ni ọjọ isinmi fun Oluwa\"",
       "1. Jesu, a fe pade",
@@ -5403,7 +6064,11 @@ export const cantiquesYoruba = [
     id: 166,
     numero: "166",
     titre: "Mimọ, Mimọ, Mimọ, Olodumare",
-    categorie: "Iyin",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_166.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11.12.12.10. Ifih.4:8. \"Wọn ko simi li ọsan ati li oru wipe Mimọ, Mimọ, Mimọ Oluwa Ọlọrun Olodumare\"",
       "1. Mimọ, Mimọ, Mimọ, Olodumare,",
@@ -5433,6 +6098,10 @@ export const cantiquesYoruba = [
     numero: "167",
     titre: "Oluwa ọrun on aiye",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_167.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Orin Daf. 116:12. \"Kili emi o san fun Oluwa nitori gbogbo ore Rẹ\"",
       "1. Oluwa ọrun on aiye",
@@ -5487,6 +6156,10 @@ export const cantiquesYoruba = [
     numero: "168",
     titre: "Aye si mbe! Ile Od'agutan",
     categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_168.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10.10.10. Luk.14:22. \"A ṣẹ bi o ti wi tan, aye si mbe sibe\"",
       "1. Aye si mbe! Ile Od'agutan",
@@ -5541,7 +6214,11 @@ export const cantiquesYoruba = [
     id: 169,
     numero: "169",
     titre: "Ẹlẹṣẹ, ẹ yipada",
-    categorie: "Ipe",
+    categorie: "Ibaniwi",
+    audio: {
+      audioFile: `/audio/cantique_169.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "17.7.7.7.D Esek.33:11. \"Ẹ yipada kuro ninu ọna buburu nyin. Nitori kini ẹnyin o ṣe ku?",
       "1. Ẹlẹṣẹ, ẹ yipada,",
@@ -5586,7 +6263,11 @@ export const cantiquesYoruba = [
     id: 170,
     numero: "170",
     titre: "Igba mi d'ọwọ Rẹ",
-    categorie: "Adura",
+    categorie: "Igbe aiye onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_170.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Orin Daf.31:15. \"Igba mi mbe li ọwọ Rẹ\"",
       "1. Igba mi d'ọwọ Rẹ",
@@ -5620,7 +6301,11 @@ export const cantiquesYoruba = [
     id: 171,
     numero: "171",
     titre: "Gbati mo ri agbelebu",
-    categorie: "Iyin",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_171.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Gal.6:14. \"Ki a maṣe ri pe emi nṣọgọ, bikọṣe ninu Agbelebu Jesu Kristi Oluwa wa\"",
       "1. Gbati mo ri agbelebu",
@@ -5649,7 +6334,11 @@ export const cantiquesYoruba = [
     id: 172,
     numero: "172",
     titre: "Itan iyanu t'ifẹ!",
-    categorie: "Iyin",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_172.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.6.7.6.8.8.8.7. & Ref. Joh.3:16. \"Ọlọrun fẹ araiye to be ge, O fi Ọmọ bibi Rẹ fun ni.",
       "1. Itan iyanu t'ifẹ!",
@@ -5691,7 +6380,11 @@ export const cantiquesYoruba = [
     id: 173,
     numero: "173",
     titre: "Onigbagbo, ẹ bu s'ayọ",
-    categorie: "Iyin",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_173.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7.8.7. Mat.2:2. \"Awa si wa foribalẹ fun\"",
       "1. Onigbagbo, ẹ bu s'ayọ",
@@ -5735,7 +6428,11 @@ export const cantiquesYoruba = [
     id: 174,
     numero: "174",
     titre: "Wa s'ọdọ mi, Oluwa mi",
-    categorie: "Adura",
+    categorie: "Owurọ",
+    audio: {
+      audioFile: `/audio/cantique_174.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Orin Daf. 101:2. \"Nigbawo ni iwọ o tọ mi wa?\"",
       "1. Wa s'ọdọ mi, Oluwa mi,",
@@ -5770,6 +6467,10 @@ export const cantiquesYoruba = [
     numero: "175",
     titre: "Mase huwa ẹṣẹ",
     categorie: "Ibaniwi",
+    audio: {
+      audioFile: `/audio/cantique_175.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.5.6.5. Jak.4:7. \"Kọjuja si eṣu, on a si sa kuro lọdọ nyin\"",
       "1. Mase huwa ẹṣẹ",
@@ -5808,7 +6509,11 @@ export const cantiquesYoruba = [
     id: 176,
     numero: "176",
     titre: "Yika or'itẹ Ọlọrun",
-    categorie: "Igboya ati ireti",
+    categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_176.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Ifih.7:1. Nwọn ti fọ asọ igunwa wọn nọn si sọ wọn di funfun ninu Eje Ọdọ-agutan.",
       "1. Yika or'itẹ Ọlọrun,",
@@ -5852,7 +6557,11 @@ export const cantiquesYoruba = [
     id: 177,
     numero: "177",
     titre: "Ọjọ ibukun y'o si rọ",
-    categorie: "Igboya ati ireti",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_177.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.7.8.7. & Esek.34:26. \"Ọjọ ibukun yọ si rọ\"",
       "1. Ọjọ ibukun y'o si rọ",
@@ -5888,7 +6597,11 @@ export const cantiquesYoruba = [
     id: 178,
     numero: "178",
     titre: "Mo nduro lori ileri Krist'Ọba",
-    categorie: "Igboya ati ireti",
+    categorie: "Idanwo ati Isegun Onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_178.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "II Korint.1:20 \"Bi o ti wu ki ileri Ọlọrun pọ to, ninu rẹ ni Bẹni....\"",
       "1. Mo nduro lori ileri Krist'Ọba",
@@ -5925,6 +6638,10 @@ export const cantiquesYoruba = [
     numero: "179",
     titre: "'Bugbe Rẹ ti l'ewa to!",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_179.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s Orin Daf.84:1. \"Ago rẹ wọnú ti li ewa to. Oluwa!\"",
       "1. 'Bugbe Rẹ ti l'ewa to!",
@@ -5970,6 +6687,10 @@ export const cantiquesYoruba = [
     numero: "180",
     titre: "A f'ọpe f'Ọlọrun",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_180.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.7.6.7.6.6.6.6. I Kro.29:13. \"Nje nisisiyi, Ọlọrun wa, awa dupe lọwọ Rẹ, a si yin Oruko ogo Rẹ\"",
       "1. A f'ọpe f'Ọlọrun",
@@ -6005,7 +6726,11 @@ export const cantiquesYoruba = [
     id: 181,
     numero: "181",
     titre: "Ọkan mi nyọ ninu Oluwa",
-    categorie: "Ayọ",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_181.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.8.9.8.& Ref. Filip.4:4. Nje nisisiyi, E",
       "ma yọ ninu Oluwa nigba gbogbo. E ma",
@@ -6045,7 +6770,11 @@ export const cantiquesYoruba = [
     id: 182,
     numero: "182",
     titre: "Wa ba mi gbe",
-    categorie: "Igbadura",
+    categorie: "Alẹ",
+    audio: {
+      audioFile: `/audio/cantique_182.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10.10.10.10. Luk. 24:29. Ba wa duro,",
       "nitori o di ọjọ alẹ.",
@@ -6086,7 +6815,11 @@ export const cantiquesYoruba = [
     id: 183,
     numero: "183",
     titre: "Jesu, bukun wa k'a to lọ",
-    categorie: "Igbadura",
+    categorie: "Alẹ",
+    audio: {
+      audioFile: `/audio/cantique_183.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.8.8.D.Isa. 60:20. Nitori Oluwa yio je",
       "imọlẹ ainipẹkun fun ọ",
@@ -6129,7 +6862,11 @@ export const cantiquesYoruba = [
     id: 184,
     numero: "184",
     titre: "N'nu gbogbo ayida aiye",
-    categorie: "Iyin",
+    categorie: "Idanwo ati Isegun Onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_184.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Orin Daf.34:1. Emi o ma fi",
       "ibukun fun Oluwa nigba gbogbo",
@@ -6166,6 +6903,10 @@ export const cantiquesYoruba = [
     numero: "185",
     titre: "Ọba ogo, alafia",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_185.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.4.7.4.5.7.4. Orin Daf. Ki awọn ti o",
       "fẹ igbala rẹ ki o ma wi nigba gbogbo pe:",
@@ -6204,7 +6945,11 @@ export const cantiquesYoruba = [
     id: 186,
     numero: "186",
     titre: "Ẹ wa k'a jọ jumọ kọrin",
-    categorie: "Ifẹ Olorun",
+    categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_186.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.8.6.8.6.8.8.8.6. I Joh.4:8. Ifẹ ni Ọlọrun",
       "",
@@ -6250,7 +6995,11 @@ export const cantiquesYoruba = [
     id: 187,
     numero: "187",
     titre: "Ẹ yin, e yin, gbogb'ẹnyin ọmọde",
-    categorie: "Ọmọde",
+    categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_187.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Ẹ yin, e yin, gbogb'ẹnyin ọmọde",
       "Ifẹ li Ọlọrun.",
@@ -6270,7 +7019,11 @@ export const cantiquesYoruba = [
     id: 188,
     numero: "188",
     titre: "Sọ itan ti Jesu fun mi",
-    categorie: "Ọmọde",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_188.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.4s.5s.4s.",
       "",
@@ -6316,7 +7069,11 @@ export const cantiquesYoruba = [
     id: 189,
     numero: "189",
     titre: "Ji 'ṣe Rẹ nde Jesu",
-    categorie: "Igbadura",
+    categorie: "Iṣẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_189.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. & Ref Hab. Oluwa, mu iṣẹ re soji",
       "",
@@ -6356,7 +7113,11 @@ export const cantiquesYoruba = [
     id: 190,
     numero: "190",
     titre: "Oluwa mbọ aiye yo mi",
-    categorie: "Wiwa Kristi",
+    categorie: "Ipadabọ Oluwa wa",
+    audio: {
+      audioFile: `/audio/cantique_190.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Orin Daf.96:13. O mbọ lati",
       "ṣe idajọ",
@@ -6393,6 +7154,10 @@ export const cantiquesYoruba = [
     numero: "191",
     titre: "Iyanu ni Ọlọrun mi",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_191.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Isa. 57:15. \"Emi ngbe ibi giga ati mimọ, ati inu ẹniti o li ẹmi irobinujẹ ati irẹlẹ pẹlu.\"",
       "1. Iyanu ni Ọlọrun mi",
@@ -6436,7 +7201,11 @@ export const cantiquesYoruba = [
     id: 192,
     numero: "192",
     titre: "Olugbala wa ọwọn",
-    categorie: "Iyin",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_192.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s.6s. I Pet. 1:8. \"Ẹniti ẹnyin fẹ lati ri\"",
       "1. Olugbala wa ọwọn",
@@ -6475,7 +7244,11 @@ export const cantiquesYoruba = [
     id: 193,
     numero: "193",
     titre: "Wa, ẹnyin ọlọtọ",
-    categorie: "Iyin",
+    categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_193.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.10.5.6. & Ref Luk2:15. \"Ẹ jẹ ki a lọ tara si Betlehemu\"",
       "1. Wa, ẹnyin ọlọtọ",
@@ -6514,7 +7287,11 @@ export const cantiquesYoruba = [
     id: 194,
     numero: "194",
     titre: "Oluwa, emi sa ti gb'ohun Rẹ",
-    categorie: "Adura",
+    categorie: "Ironupiwada",
+    audio: {
+      audioFile: `/audio/cantique_194.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "12s.11s Joh.17:10 \"Tire sa ni gbogbo ohun ti iṣe temi, temi si ni Tire\"",
       "1. Oluwa, emi sa ti gb'ohun Rẹ",
@@ -6551,6 +7328,10 @@ export const cantiquesYoruba = [
     numero: "195",
     titre: "Wa s'ọdọ Jesu mase duro",
     categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_195.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.9.9.6. Isa.55:13. \"Ẹ wa sọdọ mi, ẹ gbọ, ọkan nyin yio si ye.\"",
       "1. Wa s'ọdọ Jesu mase duro",
@@ -6580,7 +7361,11 @@ export const cantiquesYoruba = [
     id: 196,
     numero: "196",
     titre: "Ki nle jinlẹ ninu ifẹ Jesu",
-    categorie: "Adura",
+    categorie: "Igbe aiye onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_196.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10s.5s. Heb. 6:1. \"Ki a lọ si pipe\"",
       "1. Ki nle jinlẹ ninu ifẹ Jesu",
@@ -6617,6 +7402,10 @@ export const cantiquesYoruba = [
     numero: "197",
     titre: "Ọkan mi, yin Ọba ọrun",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_197.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.6.8.4.D. Orin Daf.104:33. \"Emi o ma korin si Oluwa nigbati mo wa laye\"",
       "1. Ọkan mi, yin Ọba ọrun",
@@ -6660,7 +7449,11 @@ export const cantiquesYoruba = [
     id: 198,
     numero: "198",
     titre: "Iye mbẹ fun awọn ti nwọ Jesu l'oke",
-    categorie: "Ipe",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_198.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11s Isa. 45:22. \"Kọju si mi, ki a si gba nyin la\"",
       "1. Iye mbẹ fun awọn ti nwọ Jesu l'oke",
@@ -6707,7 +7500,11 @@ export const cantiquesYoruba = [
     id: 199,
     numero: "199",
     titre: "Ẹ ma tẹsiwaju, Kristian ọlọgun",
-    categorie: "Igboya ati ireti",
+    categorie: "Igbe aiye onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_199.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11s Deut.31:6. \"Ẹ ṣe giri ki ẹ si mu aya le\"",
       "1. Ẹ ma tẹsiwaju, Kristian ọlọgun",
@@ -6747,7 +7544,11 @@ export const cantiquesYoruba = [
     id: 200,
     numero: "200",
     titre: "A ki Jesu t'a kan mo 'gi",
-    categorie: "Iyin",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_200.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s. 7s. Mark. 12:10. \"Okuta ti awọn ọmọlẹ ko silẹ on na li o di pataki igun ile\"",
       "1. A ki Jesu t'a kan mo 'gi",
@@ -6793,6 +7594,10 @@ export const cantiquesYoruba = [
     numero: "201",
     titre: "Kọrin ayọ si Oluwa",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_201.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Isa.42:11. \"Je ki awọn ti ngbe apata kọrin\"",
       "1. Kọrin ayọ si Oluwa",
@@ -6841,7 +7646,11 @@ export const cantiquesYoruba = [
     id: 202,
     numero: "202",
     titre: "Jesu mo gb'agbelebu mi",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Igbe aiye onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_202.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s. Mark.10:21. \"Si wa gbe agbelebu, ki o si ma tọ mi lẹhin\"",
       "1. Jesu mo gb'agbelebu mi",
@@ -6886,7 +7695,11 @@ export const cantiquesYoruba = [
     id: 203,
     numero: "203",
     titre: "'Gbat'O ba de, gbat'O ba de",
-    categorie: "Wiwa Kristi",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_203.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.6.8.5.",
       "1. 'Gbat'O ba de, gbat'O ba de",
@@ -6916,7 +7729,11 @@ export const cantiquesYoruba = [
     id: 204,
     numero: "204",
     titre: "Ọlọrun aiye at'ọrun",
-    categorie: "Iyin",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_204.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Joh. 1:4. \"Ninu Rẹ ni iye wa, iye na si ni imọlẹ araiye\"",
       "1. Ọlọrun aiye at'ọrun",
@@ -6950,7 +7767,11 @@ export const cantiquesYoruba = [
     id: 205,
     numero: "205",
     titre: "Ninu igbi omi okun aiye ti nlu mi",
-    categorie: "Igboya ati ireti",
+    categorie: "Idanwo ati Isegun Onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_205.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "12s.10s. Heb.6:19. \"Idakoro okan ireti ti o daju ti o si duro sinsin\"",
       "1. Ninu igbi omi okun aiye ti nlu mi",
@@ -6980,7 +7801,11 @@ export const cantiquesYoruba = [
     id: 206,
     numero: "206",
     titre: "Iwọ Ọrọ Ọlọrun",
-    categorie: "Ibaniwi",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_206.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s.6s Kol.3:16. \"Ẹ je ki Oro Kristi ma gbe inu nyin li ọọlọpọ\"",
       "1. Iwọ Ọrọ Ọlọrun",
@@ -7025,7 +7850,11 @@ export const cantiquesYoruba = [
     id: 207,
     numero: "207",
     titre: "Oluwa mi jiya fun mi",
-    categorie: "Iyin",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_207.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s. Ifih.5:12. \"Yiye li odo agutan na ti a ti pa\"",
       "1. Oluwa mi jiya fun mi",
@@ -7067,7 +7896,11 @@ export const cantiquesYoruba = [
     id: 208,
     numero: "208",
     titre: "Mo ntẹsiwaju l'ọna na",
-    categorie: "Igboya ati ireti",
+    categorie: "Ipadabọ Oluwa wa",
+    audio: {
+      audioFile: `/audio/cantique_208.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Orin Daf.61:2 \"Fa mi lo si Apata ti o ga ju mi lọ\"",
       "1. Mo ntẹsiwaju l'ọna na",
@@ -7109,7 +7942,11 @@ export const cantiquesYoruba = [
     id: 209,
     numero: "209",
     titre: "Inu mi dun pe Baba wa ọrun",
-    categorie: "Ifẹ Olorun",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_209.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Mal.1:2. \"Ẹmi ti fẹ nyin, li Oluwa wi\"",
       "1. Inu mi dun pe Baba wa ọrun",
@@ -7151,7 +7988,11 @@ export const cantiquesYoruba = [
     id: 210,
     numero: "210",
     titre: "Ọlọrun wa mbẹ larin wa",
-    categorie: "Adura",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_210.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s. Esek 34:26. \"Ẹmi o si se awọn ati ibi ti o yi oke mi ka ni ibukun; emi o si jẹ ki ọjọ ki o rọ ni akoko rẹ, ọjọ ibukun yoo wa.\"",
       "1. Ọlọrun wa mbẹ larin wa",
@@ -7187,7 +8028,11 @@ export const cantiquesYoruba = [
     id: 211,
     numero: "211",
     titre: "Mo mọ p'Oludande mi mbẹ",
-    categorie: "Igboya ati ireti",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_211.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "9.8.9.8. Job.19:25 \"Àti emi, emi mọ pe Oludande mi mbẹ li aye\"",
       "1. Mo mọ p'Oludande mi mbẹ",
@@ -7222,6 +8067,10 @@ export const cantiquesYoruba = [
     numero: "212",
     titre: "Ma tọju mi Jehofa nla",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_212.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s. 7s. Orin Daf. 73:24. \"Iwọ o fi ọwọ Rẹ tọ mi li ọna ati nigbehin, Iwọ o gba mi sinu ogo\"",
       "1. Ma tọju mi Jehofa nla",
@@ -7258,7 +8107,11 @@ export const cantiquesYoruba = [
     id: 213,
     numero: "213",
     titre: "Isun kan wa t'o kun f'ẹjẹ",
-    categorie: "Ifẹ Olorun",
+    categorie: "Onje alẹ Oluwa",
+    audio: {
+      audioFile: `/audio/cantique_213.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Sek.13:1 \"Ni ọjọ na, isun kan yoo si silẹ fun ile Dafidi\"",
       "1. Isun kan wa t'o kun f'ẹjẹ",
@@ -7292,7 +8145,11 @@ export const cantiquesYoruba = [
     id: 214,
     numero: "214",
     titre: "Mo ti ni Jesu l'ọrẹ, O j'ohun gbogbo fun mi",
-    categorie: "Ifẹ Olorun",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_214.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Orin Sol. 2:16. \"Olufe mi ni temi, emi si ni tire, o n je laarin awọn lili\"",
       "1. Mo ti ni Jesu l'ọrẹ, O j'ohun gbogbo fun mi",
@@ -7329,7 +8186,11 @@ export const cantiquesYoruba = [
     id: 215,
     numero: "215",
     titre: "O da mi l'oju! Mo ni Jesu",
-    categorie: "Iyin",
+    categorie: "Igboya ati ireti",
+    audio: {
+      audioFile: `/audio/cantique_215.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. O da mi l'oju! Mo ni Jesu",
       "Itowo adun ọrun l'eyi je",
@@ -7359,6 +8220,10 @@ export const cantiquesYoruba = [
     numero: "216",
     titre: "Yin Oluwa Olodumare",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_216.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "14.14.4.7.8. Kol.1:16. \"Nitori ninu Rẹ li a ti da ohun gbogbo, ohun ti mbẹ li orun ati ohun ti mbẹ li aiye\"",
       "1. Yin Oluwa Olodumare",
@@ -7395,7 +8260,11 @@ export const cantiquesYoruba = [
     id: 217,
     numero: "217",
     titre: "Aye ha wa fun Jesu bi?",
-    categorie: "Ipe",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_217.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s. Ifih.3:20 \"Kiyesi i, mo duro li ẹnu ọna ilẹkun, mo si nkankun\"",
       "1. Aye ha wa fun Jesu bi?",
@@ -7431,7 +8300,11 @@ export const cantiquesYoruba = [
     id: 218,
     numero: "218",
     titre: "Sọ itan kan na fun mi",
-    categorie: "Ipe",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_218.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D. 7s. 6s I Joh. 4:10. \"Ninu eyi ni ifẹ wa, ki ise pe awa fẹ Ọlọrun sugbon On fẹ wa\"",
       "1. Sọ itan kan na fun mi",
@@ -7476,7 +8349,11 @@ export const cantiquesYoruba = [
     id: 219,
     numero: "219",
     titre: "Mo fẹ ma sọ itan na",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Isọji Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_219.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s. 6s. Isa.52:7 \"Ẹṣẹ ẹniti o mu ihinrere wa ti dara lo lori awọn oke\"",
       "1. Mo fẹ ma sọ itan na",
@@ -7521,7 +8398,11 @@ export const cantiquesYoruba = [
     id: 220,
     numero: "220",
     titre: "Titi lae, Iwọ l'Oluwa",
-    categorie: "Iyin",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_220.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s.7s. Ekun Jerem. 5:19 \"Iwọ Oluwa li o wa laelae\"",
       "1. Titi lae, Iwọ l'Oluwa",
@@ -7563,7 +8444,11 @@ export const cantiquesYoruba = [
     id: 221,
     numero: "221",
     titre: "Wa sọdọ mi, Emi ọrun",
-    categorie: "Adura",
+    categorie: "Irinajo ati Idagbere",
+    audio: {
+      audioFile: `/audio/cantique_221.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D. 7s. 6s.",
       "1. Wa sọdọ mi, Emi ọrun",
@@ -7602,7 +8487,11 @@ export const cantiquesYoruba = [
     id: 222,
     numero: "222",
     titre: "Krist' Ọlọgọ, Ọlọla",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_222.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.7s.",
       "1. Krist' Ọlọgọ, Ọlọla,",
@@ -7632,7 +8521,11 @@ export const cantiquesYoruba = [
     id: 223,
     numero: "223",
     titre: "K'ore ọfẹ Krist' Oluwa",
-    categorie: "Adura",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_223.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s. 7s.",
       "1. K'ore ọfẹ Krist' Oluwa",
@@ -7650,7 +8543,11 @@ export const cantiquesYoruba = [
     id: 224,
     numero: "224",
     titre: "Ọjọ ko ase na l'eyi",
-    categorie: "Isin Mimọ",
+    categorie: "Onje alẹ Oluwa",
+    audio: {
+      audioFile: `/audio/cantique_224.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Mat.26:29. \"Ẹmi ki yio mu ninu ajara yi mọ, titi yio fi di ọjọ na, nigbati emi o si ba nyin mu u ni titun ni ijọba Baba mi\"",
       "1. Ọjọ ko ase na l'eyi",
@@ -7689,7 +8586,11 @@ export const cantiquesYoruba = [
     id: 225,
     numero: "225",
     titre: "Wa, Jesu fi ara han",
-    categorie: "Adura",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_225.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s. Orin Daf. 30:8. \"Ẹmi kigbe pe Ọ, Oluwa\"",
       "1. Wa, Jesu fi ara han,",
@@ -7718,7 +8619,11 @@ export const cantiquesYoruba = [
     id: 226,
     numero: "226",
     titre: "Jek'a jumọ korin iyin",
-    categorie: "Iyin",
+    categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_226.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M.",
       "1. Jek'a jumọ korin iyin",
@@ -7752,7 +8657,11 @@ export const cantiquesYoruba = [
     id: 227,
     numero: "227",
     titre: "Ko mi Oluwa, bi a ti",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Irinajo ati Idagbere",
+    audio: {
+      audioFile: `/audio/cantique_227.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. I Sam. 3:10. \"Ma wi, nitori iranṣẹ rẹ ngbo\"",
       "1. Ko mi Oluwa, bi a ti",
@@ -7797,6 +8706,10 @@ export const cantiquesYoruba = [
     numero: "228",
     titre: "Iranṣẹ Oluwa",
     categorie: "Iṣẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_228.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Mat.24:46 \"Alabukun li ọmọ ọdọ na, nigbati Oluwa rẹ ba de, ẹniti yio ba a ki o ma ṣe bẹ\"",
       "1. Iranṣẹ Oluwa",
@@ -7830,7 +8743,11 @@ export const cantiquesYoruba = [
     id: 229,
     numero: "229",
     titre: "Jesu Oluwa n'ise",
-    categorie: "Ijọ",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_229.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s. 6s. Mat. 16:18. \"Ori apata yi li emi o si ko ijọ mi le\"",
       "1. Jesu Oluwa n'ise",
@@ -7883,7 +8800,11 @@ export const cantiquesYoruba = [
     id: 230,
     numero: "230",
     titre: "Duro, ọmọ ọgun",
-    categorie: "Baptisi",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_230.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Ise. 22:16. \"Dide ki a si baptisi rẹ ki o si wẹ ẹṣẹ rẹ nu, ki o si ma pe oruko Oluwa\"",
       "1. Duro, ọmọ ọgun",
@@ -7922,7 +8843,11 @@ export const cantiquesYoruba = [
     id: 231,
     numero: "231",
     titre: "Baba mi 'gba mba nṣako lọ",
-    categorie: "Adura",
+    categorie: "Irinajo ati Idagbere",
+    audio: {
+      audioFile: `/audio/cantique_231.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.8.8.4. Mat.26:42 \"Ifẹ Tire ni ki a se\"",
       "1. Baba mi 'gba mba nṣako lọ",
@@ -7966,7 +8891,11 @@ export const cantiquesYoruba = [
     id: 232,
     numero: "232",
     titre: "Lẹkansọsọ fun gbogbo wa",
-    categorie: "Adura",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_232.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Heb. 10:10. \"A ti sọ wa di mimọ nipa ẹbọ Jesu Kristi lẹkansọsọ\"",
       "1. Lẹkansọsọ fun gbogbo wa",
@@ -8005,7 +8934,11 @@ export const cantiquesYoruba = [
     id: 233,
     numero: "233",
     titre: "Mo gb'ohun ifẹ Rẹ",
-    categorie: "Adura",
+    categorie: "Ifẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_233.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Jerem. 31:3. \"Emi fi ifẹni aiyeraiye fẹ ọ\"",
       "1. Mo gb'ohun ifẹ Rẹ",
@@ -8039,7 +8972,11 @@ export const cantiquesYoruba = [
     id: 234,
     numero: "234",
     titre: "Awa yin ifẹ Rẹ",
-    categorie: "Ijọ",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_234.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Ise. 4:32. \"Ijọ awọn ti o gbagbọ si wa li ọkan kan ati inu kan\"",
       "1. Awa yin ifẹ Rẹ",
@@ -8078,7 +9015,11 @@ export const cantiquesYoruba = [
     id: 235,
     numero: "235",
     titre: "Ara, ọlufẹ ninu Krist'",
-    categorie: "Ijọ",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_235.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Gal. 2:9. \"Nwọn si fi ọwọ-ọtun idapọ fun\"",
       "1. Ara, ọlufẹ ninu Krist'",
@@ -8113,6 +9054,10 @@ export const cantiquesYoruba = [
     numero: "236",
     titre: "Si Ọ, Ọlutunu ọrun",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_236.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8.8.6. Orin Daf. 145:5. \"Emi o sọrọ iyin ọlanla Rẹ ti o lọgọ, ati ti iṣẹ iyanu Rẹ\"",
       "1. Si Ọ, Ọlutunu ọrun",
@@ -8141,7 +9086,11 @@ export const cantiquesYoruba = [
     id: 237,
     numero: "237",
     titre: "Jesu, f'ẹṣẹ mi mulẹ",
-    categorie: "Adura",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_237.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s I Korin. 3:11. \"Nitori ipilẹ miran ni enikan ko le fi lele, ju eyiti a ti fi lele ti iṣe Jesu Kristi\"",
       "1. Jesu, f'ẹṣẹ mi mulẹ",
@@ -8195,7 +9144,11 @@ export const cantiquesYoruba = [
     id: 238,
     numero: "238",
     titre: "Larin ewu at'ọsi",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Idanwo ati Isegun Onigbagbọ",
+    audio: {
+      audioFile: `/audio/cantique_238.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7s Eks.14:15. \"Sọ fun awọn Israẹli ki nwọn ki o tẹsiwaju\"",
       "1. Larin ewu at'ọsi",
@@ -8229,7 +9182,11 @@ export const cantiquesYoruba = [
     id: 239,
     numero: "239",
     titre: "Ja ija rere t'igbagbọ",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_239.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "LM I Tim. 1:18-19 \"Ja ogun rere, ma ni igbagbọ\"",
       "1. Ja ija rere t'igbagbọ",
@@ -8259,6 +9216,10 @@ export const cantiquesYoruba = [
     numero: "240",
     titre: "B'orukọ Jesu ti dun to",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_240.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Orin Sol. 1:3. \"Orukọ Rẹ dabi ikunra ti a tu jade\"",
       "1. B'orukọ Jesu ti dun to",
@@ -8294,7 +9255,11 @@ export const cantiquesYoruba = [
     id: 241,
     numero: "241",
     titre: "Ọm'ọgun Kristi dide",
-    categorie: "Iṣẹ Olorun",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_241.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Efes.6:11. Ẹ gbe gbogbo ihamọra Ọlọrun wọ\"",
       "1. Ọm'ọgun Kristi dide",
@@ -8333,7 +9298,11 @@ export const cantiquesYoruba = [
     id: 242,
     numero: "242",
     titre: "Jesu mo juba, mo yin Ọ,",
-    categorie: "Adura",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_242.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Orin Daf. 37:4. \"Ṣe inu didun si Oluwa pẹlu\"",
       "1. Jesu mo juba, mo yin Ọ,",
@@ -8368,6 +9337,10 @@ export const cantiquesYoruba = [
     numero: "243",
     titre: "Ọlọrun ijinlẹ julọ",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_243.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Orin Daf. 145:3. \"Awamaridi si ni titobi Rẹ\"",
       "1. Ọlọrun ijinlẹ julọ",
@@ -8407,6 +9380,10 @@ export const cantiquesYoruba = [
     numero: "244",
     titre: "Ọna ara l'Ọlọrun wa",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_244.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Nahum.1:3. \"Ọlọrun ni ọna Rẹ ninu aja ati ninu iji\"",
       "1. Ọna ara l'Ọlọrun wa",
@@ -8446,6 +9423,10 @@ export const cantiquesYoruba = [
     numero: "245",
     titre: "\"Gbati mo ronu anu Rẹ",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_245.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Orin Daf. \"Okun tita bọ sọdọ mi ni ibi daradara lọto, emi ni ogun rere\"",
       "1. \"Gbati mo ronu anu Rẹ",
@@ -8490,6 +9471,10 @@ export const cantiquesYoruba = [
     numero: "246",
     titre: "Awọn ọrun nsọrọ ogo",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_246.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Orin Daf. 19:1. \"Awọn ọrun nsọrọ Ogo Ọlọrun; ati ofurufu nfi iṣẹ ọwọ Rẹ han\"",
       "1. Awọn ọrun nsọrọ ogo",
@@ -8528,7 +9513,11 @@ export const cantiquesYoruba = [
     id: 247,
     numero: "247",
     titre: "Yin Ọlọrun Alagbara",
-    categorie: "Iyin",
+    categorie: "Isin Mimọ",
+    audio: {
+      audioFile: `/audio/cantique_247.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Orin Daf. 8:1. \"Oluwa, Oluwa wa, orukọ Rẹ ti ni iyin to ni gbogbo aiye\"",
       "1. Yin Ọlọrun Alagbara",
@@ -8567,7 +9556,11 @@ export const cantiquesYoruba = [
     id: 248,
     numero: "248",
     titre: "Gbọ 'gbe ayọ Oluwa de",
-    categorie: "Iyin",
+    categorie: "Ipadabọ Oluwa wa",
+    audio: {
+      audioFile: `/audio/cantique_248.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Isa. 61:1. \"Oluwa ti fi ami ororo yan mi lati wasu ihinrere\"",
       "1. Gbọ 'gbe ayọ Oluwa de",
@@ -8596,7 +9589,11 @@ export const cantiquesYoruba = [
     id: 249,
     numero: "249",
     titre: "Ori ti a f'ẹgun de",
-    categorie: "Adura",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_249.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.7s. 6s. Joh.19:5. \"Nitorina Jesu jade wa ti On ti ade ẹgun\"",
       "1. Ori ti a f'ẹgun de",
@@ -8641,7 +9638,11 @@ export const cantiquesYoruba = [
     id: 250,
     numero: "250",
     titre: "Gbogbo ẹjẹ ẹran",
-    categorie: "Adura",
+    categorie: "Onje alẹ Oluwa",
+    audio: {
+      audioFile: `/audio/cantique_250.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Heb. 10:4. \"Ko ṣe iṣẹ fun ẹjẹ akọ malu ati ewurẹ lati mu ẹṣẹ kuro\"",
       "1. Gbogbo ẹjẹ ẹran",
@@ -8675,7 +9676,11 @@ export const cantiquesYoruba = [
     id: 251,
     numero: "251",
     titre: "A nkọrin 'yin s'enit'O ku",
-    categorie: "Iyin",
+    categorie: "Iya, iku ati ajinde Jesu",
+    audio: {
+      audioFile: `/audio/cantique_251.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Heb.12:2. \"Ki nma wọ Jesu....ti o farada agbelebu\"",
       "1. A nkọrin 'yin s'enit'O ku",
@@ -8709,7 +9714,11 @@ export const cantiquesYoruba = [
     id: 252,
     numero: "252",
     titre: "Lẹkan si, a ranṣẹ si ọ",
-    categorie: "Adura",
+    categorie: "Ipe",
+    audio: {
+      audioFile: `/audio/cantique_252.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s. 7s. Ise. 16:31. \"Gba Jesu Kristi Oluwa gbo, ao si gba ọ la\"",
       "1. Lẹkan si, a ranṣẹ si ọ",
@@ -8752,6 +9761,10 @@ export const cantiquesYoruba = [
     numero: "253",
     titre: "Aṣegun ati ajogun li a jẹ",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_253.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11.11.11.11. & Ref. Rom.8:37. \"Ọpẹ ni fun ọrun, ẹniti nyo ayo isegun lori wa\"",
       "1. Aṣegun ati ajogun li a jẹ",
@@ -8782,7 +9795,11 @@ export const cantiquesYoruba = [
     id: 254,
     numero: "254",
     titre: "Ore-ọfe! bo ti dun to!",
-    categorie: "Adura",
+    categorie: "Iribọmi, iyasọtọ ati idapọ mimọ",
+    audio: {
+      audioFile: `/audio/cantique_254.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Rom.5:17. \"Awọn ti o ti gba ọpọlọpọ ore ọfe ati ẹbun ọdọdọ yio jọba ninu iye\"",
       "1. Ore-ọfe! bo ti dun to!",
@@ -8811,7 +9828,11 @@ export const cantiquesYoruba = [
     id: 255,
     numero: "255",
     titre: "Ko s'ọrẹ bi Jesu onirẹlẹ",
-    categorie: "Adura",
+    categorie: "Ifẹ Olorun",
+    audio: {
+      audioFile: `/audio/cantique_255.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Owe. 18:24. \"Ọrẹ kan mbẹ ti o fi ara mọni ju arakunrin lọ\"",
       "1. Ko s'ọrẹ bi Jesu onirẹlẹ",
@@ -8849,7 +9870,11 @@ export const cantiquesYoruba = [
     id: 256,
     numero: "256",
     titre: "Ọlọrun mi, 'gbati mo l'eru 'yanu",
-    categorie: "Iyin",
+    categorie: "Agbara Olorun",
+    audio: {
+      audioFile: `/audio/cantique_256.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "1. Ọlọrun mi, 'gbati mo l'eru 'yanu",
       "Kiyesi iṣẹ ti ọwọ Rẹ se,",
@@ -8885,6 +9910,10 @@ export const cantiquesYoruba = [
     numero: "257",
     titre: "Gbo orin awọn angẹli",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_257.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Orin Daf.50:23. \"Ẹnikẹni ti o ba ru ẹbọ iyin, o yin mi logo\"",
       "1. Gbo orin awọn angẹli",
@@ -8921,7 +9950,11 @@ export const cantiquesYoruba = [
     id: 258,
     numero: "258",
     titre: "Ọmọdẹ, e sunmọ'Ọlọrun",
-    categorie: "Adura",
+    categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_258.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Orin Daf.96:2. \"E korin si Oluwa\"",
       "1. Ọmọdẹ, e sunmọ'Ọlọrun",
@@ -8950,7 +9983,11 @@ export const cantiquesYoruba = [
     id: 259,
     numero: "259",
     titre: "Jesu onirẹlẹ",
-    categorie: "Adura",
+    categorie: "Awọn Ewe",
+    audio: {
+      audioFile: `/audio/cantique_259.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "6.5.6.5. Joh.8:32. E o si mo otito, otito yio si sọ nyin di ọmọnira",
       "1. Jesu onirẹlẹ",
@@ -8984,7 +10021,11 @@ export const cantiquesYoruba = [
     id: 260,
     numero: "260",
     titre: "K'awa to pari ekọ wa",
-    categorie: "Adura",
+    categorie: "Irinajo ati Idagbere",
+    audio: {
+      audioFile: `/audio/cantique_260.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Mat.13:8. \"Omiran si bọ si ile rere, o si sọ eso\"",
       "1. K'awa to pari ekọ wa",
@@ -9008,7 +10049,11 @@ export const cantiquesYoruba = [
     id: 261,
     numero: "261",
     titre: "Alejo kan ma nkankun,",
-    categorie: "Adura",
+    categorie: "Ihinrere",
+    audio: {
+      audioFile: `/audio/cantique_261.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Ifih.3:20. \"Mo duro li ẹnu ilẹkun mo si nkankun\"",
       "1. Alejo kan ma nkankun,",
@@ -9053,7 +10098,11 @@ export const cantiquesYoruba = [
     id: 262,
     numero: "262",
     titre: "Awọn t'o gbekele Oluwa",
-    categorie: "Adura",
+    categorie: "Ijagun Ẹmi",
+    audio: {
+      audioFile: `/audio/cantique_262.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.C. 145. II Korin.12:9. \"Ore-ọfe mi to fun ọ\"",
       "1. Awọn t'o gbekele Oluwa",
@@ -9089,7 +10138,11 @@ export const cantiquesYoruba = [
     id: 263,
     numero: "263",
     titre: "Oluwa li Apata wa",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_263.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "Isa. 32:2. \"Bi ojiji apata nla\"",
       "1. Oluwa li Apata wa",
@@ -9126,6 +10179,10 @@ export const cantiquesYoruba = [
     numero: "264",
     titre: "Ọlọrun aiyeraiye t'a ko le ri",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_264.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "11s. I Tim. 1: 17. \"Ọba aiyeraiye, aidibajẹ, airi, Ọlọrun kanṣọṣọ\"",
       "1. Ọlọrun aiyeraiye t'a ko le ri",
@@ -9160,6 +10217,10 @@ export const cantiquesYoruba = [
     numero: "265",
     titre: "\"Fẹ enikeji rẹ\"",
     categorie: "Adura",
+    audio: {
+      audioFile: `/audio/cantique_265.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Mat.19:19. \"....Ati ki iwo fẹ aladugbo rẹ\"",
       "1. \"Fẹ enikeji rẹ\"",
@@ -9193,7 +10254,11 @@ export const cantiquesYoruba = [
     id: 266,
     numero: "266",
     titre: "A fi ipile yi le'le",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_266.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M.",
       "1. A fi ipile yi le'le",
@@ -9232,7 +10297,11 @@ export const cantiquesYoruba = [
     id: 267,
     numero: "267",
     titre: "O fun mi l'edidi",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_267.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "S.M. Luk.7:42. \"Nigbati nwọn ko ni ti nwọn o san, tunutinu li o dariji awọn mejeji\"",
       "1. O fun mi l'edidi",
@@ -9266,7 +10335,11 @@ export const cantiquesYoruba = [
     id: 268,
     numero: "268",
     titre: "Tire titi lae l'awa ṣe",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_268.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Orin Daf. 119:94. \"Tire ni emi, gba mi\"",
       "1. Tire titi lae l'awa ṣe",
@@ -9306,6 +10379,10 @@ export const cantiquesYoruba = [
     numero: "269",
     titre: "Uno f'ọkan ọpẹ korin 'yin",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_269.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "L.M. Mark.7:37. \"O se ohun gbogbo daradara\"",
       "1. Uno f'ọkan ọpẹ korin 'yin",
@@ -9334,7 +10411,11 @@ export const cantiquesYoruba = [
     id: 270,
     numero: "270",
     titre: "Ma tọju wa Baba ọrun",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_270.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "8s. 7s. Eks. 33:14. Oju mi yio ma ba ọ lọ, emi o si fun ọ ni simi\"",
       "1. Ma tọju wa Baba ọrun",
@@ -9365,6 +10446,10 @@ export const cantiquesYoruba = [
     numero: "271",
     titre: "Jesu nikan li a nwasu",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_271.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "D.8s.7s. Ise. 8:35. \"\"Filippi .... O si wasu Jesu fun u\"",
       "1. Jesu nikan li a nwasu",
@@ -9413,7 +10498,11 @@ export const cantiquesYoruba = [
     id: 272,
     numero: "272",
     titre: "Ọlọrun Betel' ẹniti",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_272.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "C.M. Orin Daf. 46:11\"Oluwa awọn ọmọ ogun wa pelu wa\"",
       "1. Ọlọrun Betel' ẹniti",
@@ -9437,7 +10526,11 @@ export const cantiquesYoruba = [
     id: 273,
     numero: "273",
     titre: "Ọrẹ bi Jesu ko si laiye yi",
-    categorie: "Adura",
+    categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_273.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "10.9.10.9. & Ref. Mat.28:20. \"Jesu sọ fun wọn pe .......... emi wa pẹlu yin nigbagbogbo,.titi o fi de opin aiye\"",
       "1. Ọrẹ bi Jesu ko si laiye yi",
@@ -9464,6 +10557,10 @@ export const cantiquesYoruba = [
     numero: "274",
     titre: "'Gbati ipe Oluwa ba dun,",
     categorie: "Iyin",
+    audio: {
+      audioFile: `/audio/cantique_274.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "15.11.15.11. & Ref I Korinti. 15:52. \"Nitori ipe yo dun\"",
       "1. 'Gbati ipe Oluwa ba dun,",
@@ -9500,7 +10597,11 @@ export const cantiquesYoruba = [
     id: 275,
     numero: "275",
     titre: "Olugbala, gb'ohun mi",
-    categorie: "Adura",
+    categorie: "Ebe fun idariji ẹṣẹ",
+    audio: {
+      audioFile: `/audio/cantique_275.mp3`,
+      hasAudio: true
+    },
     paroles: [
       "7.6.7.6.D. & Ref. Orin Daf. 102:1. \"Gbo adura mi: Oluwa\"",
       "1. Olugbala, gb'ohun mi",
