@@ -753,7 +753,7 @@ export const cantiques = [
     id: 19,
     numero: "019",
     titre: "Yisenọ ma na yin wunvinọ",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_019.mp3`,
       hasAudio: true
@@ -800,7 +800,7 @@ export const cantiques = [
     id: 20,
     numero: "020",
     titre: "Fie jehovah gbahọ do ?",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_020.mp3`,
       hasAudio: true
@@ -1000,7 +1000,7 @@ export const cantiques = [
     id: 25,
     numero: "025",
     titre: "Jehovah ! Yẹwhe tẹ ka wẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_025.mp3`,
       hasAudio: true
@@ -1172,7 +1172,7 @@ export const cantiques = [
     id: 29,
     numero: "029",
     titre: "Whenu Yẹwhe Jehovah ko da mi",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_029.mp3`,
       hasAudio: true
@@ -2411,7 +2411,7 @@ export const cantiques = [
     id: 61,
     numero: "061",
     titre: "Ojọtọ agbasa se tọn",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_061.mp3`,
       hasAudio: true
@@ -2581,7 +2581,7 @@ export const cantiques = [
     id: 66,
     numero: "066",
     titre: "Yisenọ mi kuo",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_066.mp3`,
       hasAudio: true
@@ -2669,7 +2669,7 @@ export const cantiques = [
     id: 69,
     numero: "069",
     titre: "Jesu wa dọho hẹ mi",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_069.mp3`,
       hasAudio: true
@@ -2987,7 +2987,7 @@ export const cantiques = [
     id: 79,
     numero: "079",
     titre: "Gigo jẹ hẹ we Jesu",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_079.mp3`,
       hasAudio: true
@@ -3208,7 +3208,7 @@ export const cantiques = [
     id: 85,
     numero: "085",
     titre: "Yẹn yi 'nuflo tata",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_085.mp3`,
       hasAudio: true
@@ -3279,7 +3279,7 @@ export const cantiques = [
     id: 87,
     numero: "087",
     titre: "Mi yi dodo he do ayi",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_087.mp3`,
       hasAudio: true
@@ -3308,7 +3308,7 @@ export const cantiques = [
     id: 88,
     numero: "088",
     titre: "Wa gọ na mi to 'họ he mẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_088.mp3`,
       hasAudio: true
@@ -3800,7 +3800,7 @@ export const cantiques = [
     id: 102,
     numero: "102",
     titre: "Azon mi to wiwa lepo",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_102.mp3`,
       hasAudio: true
@@ -3869,7 +3869,7 @@ export const cantiques = [
     id: 104,
     numero: "104",
     titre: "Whenuena whlepọn lẹdo mi",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_104.mp3`,
       hasAudio: true
@@ -4070,7 +4070,7 @@ export const cantiques = [
     id: 110,
     numero: "110",
     titre: "Etẹ Jesu na sọ wa",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_110.mp3`,
       hasAudio: true
@@ -5208,7 +5208,7 @@ export const cantiques = [
     id: 139,
     numero: "139",
     titre: "Awinyan Madopodo",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_139.mp3`,
       hasAudio: true
@@ -5685,7 +5685,7 @@ export const cantiques = [
     id: 150,
     numero: "150",
     titre: "Hosana hlan 'vi David' tọn",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_150.mp3`,
       hasAudio: true
@@ -5943,7 +5943,7 @@ export const cantiques = [
     id: 156,
     numero: "156",
     titre: "Le yẹn mọ do, 'nu madọn mẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_156.mp3`,
       hasAudio: true
@@ -7220,7 +7220,7 @@ export const cantiques = [
     id: 185,
     numero: "185",
     titre: "'Hol' Gigonọ, yẹyinọ",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_185.mp3`,
       hasAudio: true
@@ -7471,7 +7471,7 @@ export const cantiques = [
     id: 191,
     numero: "191",
     titre: "Jawu wẹ Jiwheyẹwhe ṣe",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_191.mp3`,
       hasAudio: true
@@ -7728,7 +7728,7 @@ export const cantiques = [
     id: 197,
     numero: "197",
     titre: "Yẹn na nọ jihan hlan Oklunọ",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_197.mp3`,
       hasAudio: true
@@ -8024,7 +8024,7 @@ export const cantiques = [
     id: 203,
     numero: "203",
     titre: "Whenu E na wa, whenu e na wa",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_203.mp3`,
       hasAudio: true
@@ -8846,7 +8846,7 @@ export const cantiques = [
     id: 222,
     numero: "222",
     titre: "Klist' gigo nọ, yẹyi nọ",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_222.mp3`,
       hasAudio: true
@@ -9109,7 +9109,7 @@ export const cantiques = [
     id: 229,
     numero: "229",
     titre: "Jesu Oklunọ wẹ yin",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_229.mp3`,
       hasAudio: true
@@ -9168,7 +9168,7 @@ export const cantiques = [
     id: 230,
     numero: "230",
     titre: "Note awhanvipẹ",
-    categorie: "Hokọnamẹ",
+    categorie: "Autres",
     audio: {
       audioFile: `/audio/cantique_230.mp3`,
       hasAudio: true

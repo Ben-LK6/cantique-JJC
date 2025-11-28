@@ -185,9 +185,17 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
         </div>
       </div>
 
-      {/* Bouton Flottant de Filtre - Position fixe mobile */}
-      <div className="fixed right-4 bottom-20 lg:bottom-4 z-50">
-        <FilterButton 
+      {/* Bouton Flottant de Filtre - Position fixe optimisée pour mobile */}
+      <div
+        className="fixed z-50"
+        style={{
+          right: '1rem',
+          bottom: '5rem',
+          // S'assure que le bouton est toujours au-dessus de la barre de navigation
+          // et visible sur tous les téléphones
+        }}
+      >
+        <FilterButton
           options={allCategories}
           selected={selectedTheme}
           onSelect={setSelectedTheme}

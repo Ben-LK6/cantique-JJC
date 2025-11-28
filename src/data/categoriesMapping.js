@@ -135,13 +135,13 @@ export const categoriesMapping = {
 // Fonction pour obtenir la catégorie d'un cantique
 export function getCategorieByNumero(numero) {
   const num = parseInt(numero);
-  return categoriesMapping[num] || "Hokọnamẹ"; // Catégorie par défaut
+  return categoriesMapping[num] || "Autres"; // Catégorie par défaut
 }
 
-// Liste de toutes les catégories disponibles
+// Liste de toutes les catégories disponibles (dans l'ordre du mapping)
 export const categories = [
   "Afọnnu",
-  "Tenu", 
+  "Tenu",
   "Pipa",
   "Opẹ",
   "Oylọ",
@@ -150,7 +150,7 @@ export const categories = [
   "Owanyi Jiwheyẹwhe tọn",
   "Yopovu lẹ",
   "Alọwle",
-  "Gbezan yisenọ tọn",
+  "Gbẹzan yisenọ tọn",
   "Whlẹpọn po awhangba yisenọ tọn po",
   "Azọn Jiwheyẹwhe tọn",
   "Awhanfunnfun gbigbọ tọn",
