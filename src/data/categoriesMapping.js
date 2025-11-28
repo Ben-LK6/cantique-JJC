@@ -34,8 +34,8 @@ export const categoriesMapping = {
   233: "Owanyi Jiwheyẹwhe tọn", 255: "Owanyi Jiwheyẹwhe tọn",
   
   // Yopovu lẹ
-  72: "Yopovu lẹ", 73: "Yopovu lẹ", 74: "Yopovu lẹ", 80: "Yopovu lẹ", 83: "Yopovu lẹ", 
-  94: "Yopovu lẹ", 129: "Yopovu lẹ", 176: "Yopovu lẹ", 187: "Yopovu lẹ", 258: "Yopovu lẹ", 259: "Yopovu lẹ",
+  72: "Yọpọvu lẹ", 73: "Yọpọvu lẹ", 74: "Yọpọvu lẹ", 80: "Yọpọvu lẹ", 83: "Yọpọvu lẹ", 
+  94: "Yọpọvu lẹ", 129: "Yọpọvu lẹ", 176: "Yọpọvu lẹ", 187: "Yọpọvu lẹ", 258: "Yọpọvu lẹ", 259: "Yopovu lẹ",
   
   // Alọwle
   97: "Alọwle", 98: "Alọwle", 99: "Alọwle",
@@ -45,24 +45,24 @@ export const categoriesMapping = {
   199: "Gbẹzan yisenọ tọn", 202: "Gbẹzan yisenọ tọn",
   
   // Whlẹpọn po awhangba yisenọ tọn po
-  17: "Whlẹpọn po awhangba yisenọ tọn po", 40: "Whlẹpọn po awhangba yisenọ tọn po", 
-  67: "Whlẹpọn po awhangba yisenọ tọn po", 194: "Whlẹpọn po awhangba yisenọ tọn po", 
-  118: "Whlẹpọn po awhangba yisenọ tọn po", 142: "Whlẹpọn po awhangba yisenọ tọn po", 
-  178: "Whlẹpọn po awhangba yisenọ tọn po", 184: "Whlẹpọn po awhangba yisenọ tọn po", 
-  205: "Whlẹpọn po awhangba yisenọ tọn po", 238: "Whlẹpọn po awhangba yisenọ tọn po", 
-  223: "Whlẹpọn po awhangba yisenọ tọn po", 235: "Whlẹpọn po awhangba yisenọ tọn po", 
-  237: "Whlẹpọn po awhangba yisenọ tọn po", 254: "Whlẹpọn po awhangba yisenọ tọn po",
+  17: "Whlepọn po awhangba yisenọ tọn po", 40: "Whlepọn po awhangba yisenọ tọn po", 
+  67: "Whlepọn po awhangba yisenọ tọn po", 194: "Whlepọn po awhangba yisenọ tọn po", 
+  118: "Whlepọn po awhangba yisenọ tọn po", 142: "Whlepọn po awhangba yisenọ tọn po", 
+  178: "Whlepọn po awhangba yisenọ tọn po", 184: "Whlepọn po awhangba yisenọ tọn po", 
+  205: "Whlepọn po awhangba yisenọ tọn po", 238: "Whlepọn po awhangba yisenọ tọn po", 
+  223: "Whlepọn po awhangba yisenọ tọn po", 235: "Whlepọn po awhangba yisenọ tọn po", 
+  237: "Whlepọn po awhangba yisenọ tọn po", 254: "Whlepọn po awhangba yisenọ tọn po",
   
   // Azọn Jiwheyẹwhe tọn
   2: "Azọn Jiwheyẹwhe tọn", 16: "Azọn Jiwheyẹwhe tọn", 21: "Azọn Jiwheyẹwhe tọn", 
   30: "Azọn Jiwheyẹwhe tọn", 34: "Azọn Jiwheyẹwhe tọn", 93: "Azọn Jiwheyẹwhe tọn", 
   159: "Azọn Jiwheyẹwhe tọn", 189: "Azọn Jiwheyẹwhe tọn", 228: "Azọn Jiwheyẹwhe tọn",
   
-  // Awhanfunnfun gbigbọ tọn
-  130: "Awhanfunnfun gbigbọ tọn", 136: "Awhanfunnfun gbigbọ tọn", 158: "Awhanfunnfun gbigbọ tọn", 
-  177: "Awhanfunnfun gbigbọ tọn", 181: "Awhanfunnfun gbigbọ tọn", 198: "Awhanfunnfun gbigbọ tọn", 
-  209: "Awhanfunnfun gbigbọ tọn", 210: "Awhanfunnfun gbigbọ tọn", 211: "Awhanfunnfun gbigbọ tọn", 
-  214: "Awhanfunnfun gbigbọ tọn",
+  // Awhanfunfun gbigbọ tọn
+  130: "Awhanfunfun gbigbọ tọn", 136: "Awhanfunfun gbigbọ tọn", 158: "Awhanfunfun gbigbọ tọn", 
+  177: "Awhanfunfun gbigbọ tọn", 181: "Awhanfunfun gbigbọ tọn", 198: "Awhanfunfun gbigbọ tọn", 
+  209: "Awhanfunfun gbigbọ tọn", 210: "Awhanfunfun gbigbọ tọn", 211: "Awhanfunfun gbigbọ tọn", 
+  214: "Awhanfunfun gbigbọ tọn",
   
   // Huhlọn Jiwheyẹwhe tọn
   23: "Huhlọn Jiwheyẹwhe tọn", 35: "Huhlọn Jiwheyẹwhe tọn", 51: "Huhlọn Jiwheyẹwhe tọn", 
@@ -120,9 +120,9 @@ export const categoriesMapping = {
   160: "Whẹntintọn po E zun whedenu po", 221: "Whẹntintọn po E zun whedenu po", 227: "Whẹntintọn po E zun whedenu po", 
   231: "Whẹntintọn po E zun whedenu po", 260: "Whẹntintọn po E zun whedenu po",
   
-  // Yise, fligo po hihọ po
-  122: "Yise, fligo po hihọ po", 239: "Yise, fligo po hihọ po", 148: "Yise, fligo po hihọ po", 
-  149: "Yise, fligo po hihọ po",
+  // Yise, fligọ po hihọ po
+  122: "Yise, fligọ po hihọ po", 239: "Yise, fligọ po hihọ po", 148: "Yise, fligọ po hihọ po", 
+  149: "Yise, fligọ po hihọ po",
   
   // Hokọnamẹ
   11: "Hokọnamẹ", 13: "Hokọnamẹ", 46: "Hokọnamẹ", 103: "Hokọnamẹ", 126: "Hokọnamẹ", 
@@ -148,12 +148,12 @@ export const categories = [
   "Odẹ",
   "Wedagbe",
   "Owanyi Jiwheyẹwhe tọn",
-  "Yopovu lẹ",
+  "Yọpọvu lẹ",
   "Alọwle",
   "Gbẹzan yisenọ tọn",
-  "Whlẹpọn po awhangba yisenọ tọn po",
+  "Whlepọn po awhangba yisenọ tọn po",
   "Azọn Jiwheyẹwhe tọn",
-  "Awhanfunnfun gbigbọ tọn",
+  "Awhanfunfun gbigbọ tọn",
   "Huhlọn Jiwheyẹwhe tọn",
   "Kọndopọ wiwe",
   "Adọgbo po todido po",
@@ -165,7 +165,7 @@ export const categories = [
   "Lẹnvojo",
   "Finfọn gbigbọ tọn",
   "Whẹntintọn po E zun whedenu po",
-  "Yise, fligo po hihọ po",
+  "Yise, fligọ po hihọ po",
   "Hokọnamẹ",
   "Gigọwa Oklunọ tọn",
   "Autres"
