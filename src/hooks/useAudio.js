@@ -56,19 +56,25 @@ export const useAudio = (cantique) => {
     };
   }, [audioMetadata?.audioFile]);
 
-  const togglePlay = () => {
+  const togglePlay = async () => {
     const audio = audioRef.current;
     if (!audio || hasError) return;
 
     if (isPlaying) {
       audio.pause();
+      setIsPlaying(false);
     } else {
-      audio.play().catch(error => {
+      try {
+        // Pour Safari iOS: charger explicitement avant de jouer
+        audio.load();
+        await audio.play();
+        setIsPlaying(true);
+      } catch (error) {
         console.error('Erreur de lecture audio:', error);
         setHasError(true);
-      });
+        setIsPlaying(false);
+      }
     }
-    setIsPlaying(!isPlaying);
   };
 
   const seek = (time) => {
