@@ -14,6 +14,7 @@ const ModernHeader = ({
   rightButtons
 }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
   return (
     <div className="nav-theme sticky top-0 z-50 shadow-lg">
       <div className="px-4 py-4">
@@ -77,9 +78,13 @@ const ModernHeader = ({
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary-300" size={18} />
               <input
                 type="text"
+                value={searchValue}
                 placeholder={t('easySearch')}
                 className="w-full pl-11 pr-4 py-3 bg-white/10 backdrop-blur-md text-white placeholder-primary-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/20 transition-all border border-white/20"
-                onChange={(e) => onSearch && onSearch(e.target.value)}
+                onChange={(e) => {
+                  setSearchValue(e.target.value);
+                  onSearch && onSearch(e.target.value);
+                }}
                 autoFocus
               />
             </div>

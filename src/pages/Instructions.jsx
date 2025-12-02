@@ -81,33 +81,44 @@ const Instructions = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 
 
       <div className="p-4 lg:p-6">
         <div className="max-w-3xl mx-auto space-y-6">
           
-          <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 text-white">
+          <div 
+            className="rounded-2xl p-8 text-white"
+            style={{
+              background: 'linear-gradient(to right, var(--color-primary-600), var(--color-primary-800))'
+            }}
+          >
             <h1 className="text-2xl lg:text-3xl font-bold mb-3">
               {t('userGuide')}
             </h1>
-            <p className="text-primary-100">
+            <p style={{ color: 'var(--color-primary-100)' }}>
               {t('discoverFeatures')}
             </p>
           </div>
 
           {sections.map((section, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
+            <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                  <section.icon className="text-primary-700" size={24} />
+                <div 
+                  className="w-12 h-12 rounded-lg flex items-center justify-center"
+                  style={{ backgroundColor: 'var(--color-primary-100)' }}
+                >
+                  <section.icon style={{ color: 'var(--color-primary-700)' }} size={24} />
                 </div>
-                <h3 className="text-lg font-bold text-gray-800">{section.title}</h3>
+                <h3 className="text-lg font-bold text-gray-800 dark:text-white">{section.title}</h3>
               </div>
               <ol className="space-y-2 ml-4">
                 {section.steps.map((step, stepIndex) => (
-                  <li key={stepIndex} className="flex items-start gap-3 text-gray-700">
-                    <span className="flex-shrink-0 w-6 h-6 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                  <li key={stepIndex} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
+                    <span 
+                      className="flex-shrink-0 w-6 h-6 text-white rounded-full flex items-center justify-center text-sm font-semibold"
+                      style={{ backgroundColor: 'var(--color-primary-600)' }}
+                    >
                       {stepIndex + 1}
                     </span>
                     <span className="pt-0.5">{step}</span>
@@ -117,68 +128,82 @@ const Instructions = () => {
             </div>
           ))}
 
-          <div className="bg-primary-50 rounded-xl p-6">
-            <h3 className="text-lg font-bold text-primary-800 mb-4">💡 {t('tipsAndTricks')}</h3>
-            <ul className="space-y-3 text-primary-700">
+          <div 
+            className="rounded-xl p-6"
+            style={{ backgroundColor: 'var(--color-primary-50)' }}
+          >
+            <h3 
+              className="text-lg font-bold mb-4"
+              style={{ color: 'var(--color-primary-800)' }}
+            >💡 {t('tipsAndTricks')}</h3>
+            <ul 
+              className="space-y-3"
+              style={{ color: 'var(--color-primary-700)' }}
+            >
               <li className="flex items-start gap-3">
-                <span className="text-primary-600 mt-1">✓</span>
+                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
                 <span>L'application fonctionne hors ligne ! Téléchargez-la une fois et utilisez-la partout.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-600 mt-1">✓</span>
+                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
                 <span>Ajoutez vos cantiques favoris pour un accès rapide pendant les cultes.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-600 mt-1">✓</span>
+                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
                 <span>Utilisez la recherche rapide en tapant le numéro du cantique directement.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-600 mt-1">✓</span>
+                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
                 <span>Ajustez la taille de police pour une meilleure lisibilité selon vos besoins.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-600 mt-1">✓</span>
+                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
                 <span>Partagez vos cantiques préférés avec vos frères et sœurs en Christ !</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <h3 className="text-lg font-bold text-gray-800 mb-4">❓ {t('frequentQuestions')}</h3>
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+            <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-4">❓ {t('frequentQuestions')}</h3>
             <div className="space-y-4">
               <div>
-                <p className="font-semibold text-gray-800 mb-1">
+                <p className="font-semibold text-gray-800 dark:text-white mb-1">
                   L'application nécessite-t-elle internet ?
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   Non ! Une fois téléchargée, l'application fonctionne entièrement hors ligne.
                 </p>
               </div>
               <div>
-                <p className="font-semibold text-gray-800 mb-1">
+                <p className="font-semibold text-gray-800 dark:text-white mb-1">
                   Comment ajouter de nouveaux cantiques ?
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   Les cantiques sont mis à jour régulièrement. Assurez-vous d'avoir la dernière version de l'application.
                 </p>
               </div>
               <div>
-                <p className="font-semibold text-gray-800 mb-1">
+                <p className="font-semibold text-gray-800 dark:text-white mb-1">
                   Puis-je utiliser l'application pendant le culte ?
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   Absolument ! C'est l'un des objectifs principaux de l'application. Mettez votre téléphone en mode silencieux.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-sm text-center">
-            <h3 className="text-lg font-bold text-gray-800 mb-2">{t('needHelp')}</h3>
-            <p className="text-gray-600 mb-4">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm text-center">
+            <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">{t('needHelp')}</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
               Si vous avez des questions ou rencontrez des problèmes, n'hésitez pas à nous contacter.
             </p>
-            <button className="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors">
+            <button 
+              className="inline-block px-6 py-3 text-white rounded-lg transition-colors"
+              style={{ backgroundColor: 'var(--color-primary-600)' }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--color-primary-700)'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = 'var(--color-primary-600)'}
+            >
               {t('contactSupport')}
             </button>
           </div>

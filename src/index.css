@@ -215,7 +215,7 @@
   --tw-gradient-to: #1a1a1a !important;
 }
 
-/* Utilisation des variables CSS */
+/* Utilisation des variables CSS - Mode clair et sombre */
 .bg-primary-50 { background-color: var(--color-primary-50) !important; }
 .bg-primary-100 { background-color: var(--color-primary-100) !important; }
 .bg-primary-200 { background-color: var(--color-primary-200) !important; }
@@ -259,6 +259,15 @@
 .text-primary-400 { color: var(--color-primary-400) !important; }
 .text-primary-500 { color: var(--color-primary-500) !important; }
 .text-primary-600 { color: var(--color-primary-600) !important; }
+
+/* Forcer l'application en mode clair */
+:root:not(.dark) .text-primary-600 { color: var(--color-primary-600) !important; }
+:root:not(.dark) .bg-primary-600 { background-color: var(--color-primary-600) !important; }
+:root:not(.dark) .bg-primary-50 { background-color: var(--color-primary-50) !important; }
+:root:not(.dark) .text-primary-800 { color: var(--color-primary-800) !important; }
+:root:not(.dark) .border-primary-600 { border-color: var(--color-primary-600) !important; }
+:root:not(.dark) .from-primary-600 { --tw-gradient-from: var(--color-primary-600) !important; }
+:root:not(.dark) .to-primary-800 { --tw-gradient-to: var(--color-primary-800) !important; }
 .text-primary-700 { color: var(--color-primary-700) !important; }
 .text-primary-800 { color: var(--color-primary-800) !important; }
 
@@ -788,9 +797,9 @@ body {
   border-color: #374151 !important;
 }
 
-/* Onglets actifs en mode sombre */
+/* Onglets actifs en mode sombre - respecter le thème */
 .dark .bg-primary-600 {
-  background-color: #3b82f6 !important;
+  background-color: var(--color-primary-600) !important;
   color: #ffffff !important;
 }
 
