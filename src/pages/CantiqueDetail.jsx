@@ -1,21 +1,34 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, Heart, Music, Volume2, Play, Pause, Share2 } from 'lucide-react';
+import { ArrowLeft, Heart, Music, Volume2, Play, Pause, Share2, Headphones, Settings } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getCantiqueById } from '../utils/cantiqueUtils';
 import { getTonalityColor, getTonalityBadgeClass, getTonalityTextClass } from '../utils/tonalityColors';
+import { useTransposition } from '../hooks/useTransposition';
+import { transposeNote } from '../utils/transposeUtils';
 
 import { t } from '../data/translations';
-import AudioPlayer from '../components/common/AudioPlayer';
+
 import { getAudioMetadata } from '../utils/audioUtils';
 
 const CantiqueDetail = ({ cantiqueId, onBack }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'medium');
   const [isAutoScrolling, setIsAutoScrolling] = useState(false);
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const [audioPlaybackRate, setAudioPlaybackRate] = useState(1);
+  const [showAudioControls, setShowAudioControls] = useState(false);
+  const [showTransposition, setShowTransposition] = useState(false);
+  const [semitones, setSemitones] = useState(0);
+
+  const [volume, setVolume] = useState(0.7);
   const scrollIntervalRef = useRef(null);
-  const audioRef = useRef(null);
+  const cantiqueAudioRef = useRef(null);
 
   const cantique = getCantiqueById(cantiqueId);
+  const audioData = getAudioMetadata(cantique);
+  
+  // Hook de transposition
+  const transposition = useTransposition(cantique?.tonalite?.note || 'C', cantiqueId);
 
 useEffect(() => {
   const savedFontSize = localStorage.getItem('fontSize') || 'medium';
@@ -23,6 +36,20 @@ useEffect(() => {
   
   const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
   setIsFavorite(favorites.includes(cantiqueId));
+
+  // Audio event listeners et effets
+  const audio = cantiqueAudioRef.current;
+  if (audio) {
+    const handleEnded = () => setIsAudioPlaying(false);
+    audio.addEventListener('ended', handleEnded);
+    
+
+    
+    return () => {
+      audio.removeEventListener('ended', handleEnded);
+      stopAutoScroll();
+    };
+  }
 
   return () => {
     stopAutoScroll();
@@ -44,13 +71,11 @@ useEffect(() => {
   };
 
 const playTonality = () => {
-  // Créer un contexte audio et jouer la tonalité
   try {
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
     
-    // Fréquences des notes
     const frequencies = {
       'C': 261.63, 'D': 293.66, 'E': 329.63, 'F': 349.23,
       'G': 392.00, 'A': 440.00, 'B': 493.88
@@ -59,17 +84,20 @@ const playTonality = () => {
     oscillator.connect(gainNode);
     gainNode.connect(audioContext.destination);
     
-    oscillator.frequency.setValueAtTime(frequencies[cantique.tonalite.note] || 440, audioContext.currentTime);
-    oscillator.type = 'sine';
+    // Jouer la note transposée
+    const transposedNote = transposeNote(cantique.tonalite.note, semitones);
+    const baseFreq = frequencies[transposedNote] || frequencies[cantique.tonalite.note] || 440;
     
-    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    oscillator.frequency.setValueAtTime(baseFreq, audioContext.currentTime);
+    oscillator.type = 'triangle';
+    
+    gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
     gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1.5);
     
     oscillator.start(audioContext.currentTime);
     oscillator.stop(audioContext.currentTime + 1.5);
   } catch (error) {
     console.log('Erreur audio:', error);
-    // Fallback: vibration si disponible
     if (navigator.vibrate) {
       navigator.vibrate(200);
     }
@@ -124,6 +152,42 @@ const handleShare = () => {
   }
 };
 
+const toggleAudioPlay = async () => {
+  const audio = cantiqueAudioRef.current;
+  if (!audio || !audioData) return;
+
+  if (isAudioPlaying) {
+    audio.pause();
+    setIsAudioPlaying(false);
+  } else {
+    try {
+      audio.load();
+      await audio.play();
+      setIsAudioPlaying(true);
+    } catch (error) {
+      console.error('Erreur audio:', error);
+    }
+  }
+};
+
+const changeAudioSpeed = (rate) => {
+  const audio = cantiqueAudioRef.current;
+  if (audio) {
+    audio.playbackRate = rate * Math.pow(2, semitones / 12);
+    setAudioPlaybackRate(rate);
+  }
+};
+
+
+
+const changeVolume = (newVolume) => {
+  setVolume(newVolume);
+  const audio = cantiqueAudioRef.current;
+  if (audio) {
+    audio.volume = newVolume;
+  }
+};
+
 
   if (!cantique) {
     return (
@@ -140,8 +204,8 @@ const handleShare = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Audio caché pour la tonalité */}
-      <audio ref={audioRef} src={cantique.tonalite.audioFile} />
+      {/* Audio du cantique */}
+      {audioData && <audio ref={cantiqueAudioRef} src={audioData.audioFile} preload="metadata" />}
 
       {/* Header */}
       <div className="bg-gradient-to-br from-primary-600 to-primary-800 text-white px-4 py-4 sticky top-0 z-40 shadow-lg">
@@ -166,13 +230,6 @@ const handleShare = () => {
               className="p-2 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm"
             >
               <Heart size={20} fill={isFavorite ? 'currentColor' : 'none'} />
-            </motion.button>
-            <motion.button
-              whileTap={{ scale: 0.9 }}
-              onClick={playTonality}
-              className="p-2 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm"
-            >
-              <Volume2 size={20} />
             </motion.button>
           </div>
         </div>
@@ -225,35 +282,168 @@ const handleShare = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                <div className="flex items-center gap-2">
+                  <Music size={16} className={getTonalityTextClass(cantique.tonalite.note)} />
+                  <span className="font-medium">{t('tonality')}:</span>
+                  <span className={`px-3 py-1 rounded-full text-sm font-bold ${getTonalityBadgeClass(transposeNote(cantique.tonalite.note, semitones))}`}>
+                    {transposeNote(cantique.tonalite.note, semitones)}
+                  </span>
+                </div>
+              </div>
+              
+              {/* Contrôles Audio */}
               <div className="flex items-center gap-2">
-                <Music size={16} className={getTonalityTextClass(cantique.tonalite.note)} />
-                <span className="font-medium">{t('tonality')}:</span>
-                <span className={`px-3 py-1 rounded-full text-sm font-bold ${getTonalityBadgeClass(cantique.tonalite.note)}`}>
-                  {cantique.tonalite.note}
-                </span>
+                <motion.button
+                  whileTap={{ scale: 0.95 }}
+                  onClick={playTonality}
+                  className="flex items-center gap-1 px-3 py-1.5 bg-primary-100 hover:bg-primary-200 dark:bg-primary-900 dark:hover:bg-primary-800 text-primary-700 dark:text-primary-300 rounded-lg transition-colors"
+                >
+                  <Volume2 size={14} />
+                  <span className="text-xs font-medium">Tonalité</span>
+                </motion.button>
+                
+                {audioData && (
+                  <>
+                    <motion.button
+                      whileTap={{ scale: 0.95 }}
+                      onClick={toggleAudioPlay}
+                      className={`p-1.5 rounded-lg transition-colors ${
+                        isAudioPlaying 
+                          ? 'bg-red-100 hover:bg-red-200 text-red-600 dark:bg-red-900 dark:text-red-300'
+                          : 'bg-green-100 hover:bg-green-200 text-green-600 dark:bg-green-900 dark:text-green-300'
+                      }`}
+                    >
+                      {isAudioPlaying ? <Pause size={14} /> : <Headphones size={14} />}
+                    </motion.button>
+                    
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+                      {audioPlaybackRate}x
+                    </span>
+                    
+                    <motion.button
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => setShowAudioControls(!showAudioControls)}
+                      className="p-1.5 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-300 rounded-lg transition-colors"
+                    >
+                      <Settings size={14} />
+                    </motion.button>
+                  </>
+                )}
               </div>
             </div>
+            
+            {/* Panneau de contrôles avancés */}
+            {showAudioControls && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="mt-4 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600"
+              >
+                <div className="space-y-4">
+                  {/* Volume */}
+                  <div>
+                    <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">Volume</h4>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-gray-500">🔇</span>
+                      <input
+                        type="range"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={volume}
+                        onChange={(e) => changeVolume(parseFloat(e.target.value))}
+                        className="flex-1 h-1 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer"
+                      />
+                      <span className="text-xs text-gray-500">🔊</span>
+                      <span className="text-xs font-medium text-gray-600 dark:text-gray-400 min-w-[30px]">
+                        {Math.round(volume * 100)}%
+                      </span>
+                    </div>
+                  </div>
+                  
+                  {/* Vitesse de lecture */}
+                  <div>
+                    <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">Vitesse de lecture</h4>
+                    <div className="grid grid-cols-3 gap-1">
+                      {[0.5, 0.75, 1, 1.25, 1.5, 2].map(rate => (
+                        <button
+                          key={rate}
+                          onClick={() => changeAudioSpeed(rate)}
+                          className={`px-2 py-1 text-xs rounded transition-colors ${
+                            audioPlaybackRate === rate
+                              ? 'bg-primary-600 text-white'
+                              : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500'
+                          }`}
+                        >
+                          {rate}x
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Transposition */}
+                  {cantique?.tonalite?.note && (
+                    <div>
+                      <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">Transposition</h4>
+                      <div className="flex items-center justify-center gap-3">
+                        <button
+                          onClick={() => {
+                            const newValue = Math.max(-6, semitones - 1);
+                            setSemitones(newValue);
+                            const audio = cantiqueAudioRef.current;
+                            if (audio) {
+                              audio.preservesPitch = false;
+                              audio.playbackRate = audioPlaybackRate * Math.pow(2, newValue / 12);
+                            }
+                          }}
+                          disabled={semitones <= -6}
+                          className="w-8 h-8 rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-sm font-bold transition"
+                          title="Bémol (-1/2 ton)"
+                        >
+                          ♭
+                        </button>
+
+                        <div className="flex items-center gap-2 min-w-[60px] justify-center">
+                          <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                            {transposeNote(cantique.tonalite.note, semitones)}
+                          </span>
+                          {semitones !== 0 && (
+                            <span className="text-xs text-gray-500 dark:text-gray-400">
+                              ({semitones > 0 ? '+' : ''}{semitones})
+                            </span>
+                          )}
+                        </div>
+
+                        <button
+                          onClick={() => {
+                            const newValue = Math.min(6, semitones + 1);
+                            setSemitones(newValue);
+                            const audio = cantiqueAudioRef.current;
+                            if (audio) {
+                              audio.preservesPitch = false;
+                              audio.playbackRate = audioPlaybackRate * Math.pow(2, newValue / 12);
+                            }
+                          }}
+                          disabled={semitones >= 6}
+                          className="w-8 h-8 rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-sm font-bold transition"
+                          title="Dièse (+1/2 ton)"
+                        >
+                          ♯
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            )}
+            
+
           </motion.div>
 
-          {/* Lecteur Audio */}
-          {(() => {
-            const audioData = getAudioMetadata(cantique);
-            return audioData && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="mb-6"
-              >
-                <AudioPlayer 
-                  audioFile={audioData.audioFile}
-                  title={audioData.title}
-                  numero={audioData.numero}
-                />
-              </motion.div>
-            );
-          })()}
+
 
           {/* Paroles */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md">

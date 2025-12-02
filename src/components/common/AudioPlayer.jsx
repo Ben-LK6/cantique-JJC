@@ -2,8 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { t } from '../../data/translations';
+import { transposeNote } from '../../utils/transposeUtils';
 
-const AudioPlayer = ({ audioFile, title, numero }) => {
+const AudioPlayer = ({ audioFile, title, numero, tonalite }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -11,6 +12,8 @@ const AudioPlayer = ({ audioFile, title, numero }) => {
   const [isMuted, setIsMuted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [playbackRate, setPlaybackRate] = useState(1);
+  const [semitones, setSemitones] = useState(0);
 
   const audioRef = useRef(null);
 
@@ -166,28 +169,105 @@ const AudioPlayer = ({ audioFile, title, numero }) => {
             </div>
           </div>
 
-          {/* Contrôles de volume */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={toggleMute}
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-            >
-              {isMuted || volume === 0 ? (
-                <VolumeX size={16} className="text-gray-600 dark:text-gray-400" />
-              ) : (
-                <Volume2 size={16} className="text-gray-600 dark:text-gray-400" />
-              )}
-            </button>
-            
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.1"
-              value={isMuted ? 0 : volume}
-              onChange={handleVolumeChange}
-              className="flex-1 h-1 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer"
-            />
+          {/* Contrôles de volume, vitesse et transposition */}
+          <div className="flex items-center gap-4 mb-3">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={toggleMute}
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+              >
+                {isMuted || volume === 0 ? (
+                  <VolumeX size={16} className="text-gray-600 dark:text-gray-400" />
+                ) : (
+                  <Volume2 size={16} className="text-gray-600 dark:text-gray-400" />
+                )}
+              </button>
+              
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.1"
+                value={isMuted ? 0 : volume}
+                onChange={handleVolumeChange}
+                className="w-20 h-1 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer"
+              />
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-gray-600 dark:text-gray-400 min-w-[35px]">
+                Vitesse:
+              </span>
+              <select
+                value={playbackRate}
+                onChange={(e) => {
+                  const rate = parseFloat(e.target.value);
+                  setPlaybackRate(rate);
+                  if (audioRef.current) {
+                    audioRef.current.playbackRate = rate * Math.pow(2, semitones / 12);
+                  }
+                }}
+                className="text-xs bg-gray-200 dark:bg-gray-700 border-0 rounded px-2 py-1 text-gray-700 dark:text-gray-300"
+              >
+                <option value={0.5}>0.5x</option>
+                <option value={0.75}>0.75x</option>
+                <option value={1}>1x</option>
+                <option value={1.25}>1.25x</option>
+                <option value={1.5}>1.5x</option>
+              </select>
+            </div>
+
+            {/* Contrôle de transposition intégré */}
+            {tonalite?.note && (
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-gray-600 dark:text-gray-400 min-w-[20px]">
+                  Ton:
+                </span>
+                
+                <button
+                  onClick={() => {
+                    const newValue = Math.max(-6, semitones - 1);
+                    setSemitones(newValue);
+                    if (audioRef.current) {
+                      audioRef.current.preservesPitch = false;
+                      audioRef.current.playbackRate = playbackRate * Math.pow(2, newValue / 12);
+                    }
+                  }}
+                  disabled={semitones <= -6}
+                  className="w-6 h-6 rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-xs font-bold transition"
+                  title="Bémol (-1/2 ton)"
+                >
+                  ♭
+                </button>
+
+                <div className="flex items-center gap-1 min-w-[40px] justify-center">
+                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    {transposeNote(tonalite.note, semitones)}
+                  </span>
+                  {semitones !== 0 && (
+                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                      ({semitones > 0 ? '+' : ''}{semitones})
+                    </span>
+                  )}
+                </div>
+
+                <button
+                  onClick={() => {
+                    const newValue = Math.min(6, semitones + 1);
+                    setSemitones(newValue);
+                    if (audioRef.current) {
+                      audioRef.current.preservesPitch = false;
+                      audioRef.current.playbackRate = playbackRate * Math.pow(2, newValue / 12);
+                    }
+                  }}
+                  disabled={semitones >= 6}
+                  className="w-6 h-6 rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-xs font-bold transition"
+                  title="Dièse (+1/2 ton)"
+                >
+                  ♯
+                </button>
+              </div>
+            )}
           </div>
         </>
       )}
