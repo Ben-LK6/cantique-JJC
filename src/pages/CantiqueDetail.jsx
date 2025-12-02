@@ -22,6 +22,7 @@ const CantiqueDetail = ({ cantiqueId, onBack }) => {
 
   const [volume, setVolume] = useState(0.7);
   const scrollIntervalRef = useRef(null);
+  const scrollTimeoutRef = useRef(null);
   const cantiqueAudioRef = useRef(null);
 
   const cantique = getCantiqueById(cantiqueId);
@@ -123,10 +124,8 @@ const playTonality = () => {
     }, 80); // Toutes les 80ms
     
     // Arrêter automatiquement après 60 secondes
-    setTimeout(() => {
-      if (isAutoScrolling) {
-        stopAutoScroll();
-      }
+    scrollTimeoutRef.current = setTimeout(() => {
+      stopAutoScroll();
     }, 60000);
   };
 
@@ -136,6 +135,10 @@ const playTonality = () => {
     if (scrollIntervalRef.current) {
       clearInterval(scrollIntervalRef.current);
       scrollIntervalRef.current = null;
+    }
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+      scrollTimeoutRef.current = null;
     }
   };
 

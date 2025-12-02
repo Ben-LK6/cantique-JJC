@@ -11,7 +11,7 @@ export const cantiquesYoruba = [
       hasAudio: true
     },
     paroles: [
-      "1. PZ",
+      "PZ",
       "1. Ẹ wa ki a jumọpọ sin Jesu",
       "Gbogb'ẹyin orilẹ ede",
       "Ore ti Jesu ṣe fun araiye",

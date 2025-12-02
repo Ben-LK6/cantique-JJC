@@ -1,4 +1,4 @@
-import { Home, Book, Heart, MapPin, Info, Settings, HandHeart, Languages } from 'lucide-react';
+import { Home, Book, Heart, Info, Settings, HandHeart, Languages } from 'lucide-react';
 import { t } from '../../data/translations';
 
 const Sidebar = ({ onNavigate, currentPage }) => {
@@ -8,7 +8,7 @@ const Sidebar = ({ onNavigate, currentPage }) => {
     { icon: Book, label: t('cantiques'), path: 'cantiques' },
     { icon: HandHeart, label: t('prayers'), path: 'prayers' },
     { icon: Heart, label: t('favorites'), path: 'favoris' },
-    { icon: MapPin, label: t('findChurch'), path: 'churches' },
+
     { icon: Languages, label: t('cantiqueLanguage'), path: 'cantique-language' },
     { icon: Info, label: t('instructions'), path: 'instructions' },
     { icon: Info, label: t('about'), path: 'about' },

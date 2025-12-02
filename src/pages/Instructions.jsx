@@ -1,4 +1,4 @@
-import { Book, Search, Heart, Play, Share2, Download, Settings, MapPin } from 'lucide-react';
+import { Book, Search, Heart, Play, Share2, Download, Settings } from 'lucide-react';
 import { t } from '../data/translations';
 
 const Instructions = () => {
@@ -8,8 +8,9 @@ const Instructions = () => {
       title: "Comment utiliser les Cantiques",
       steps: [
         "Cliquez sur 'Cantiques' dans le menu principal",
+        "Choisissez la langue (Goun 🇧🇯 ou Yoruba 🇳🇬) via 'Langue des cantiques'",
         "Utilisez la barre de recherche pour trouver un cantique par numéro ou titre",
-        "Filtrez par thème (Louange, Adoration, etc.)",
+        "Filtrez par catégorie avec le bouton flottant en bas à droite",
         "Cliquez sur un cantique pour l'ouvrir et voir les paroles complètes"
       ]
     },
@@ -18,10 +19,23 @@ const Instructions = () => {
       title: "Défilement Automatique",
       steps: [
         "Ouvrez un cantique",
-        "Cliquez sur le bouton 'Défilement auto' en haut",
-        "Les paroles défileront automatiquement",
+        "Cliquez sur le bouton 'Play' flottant en bas à droite",
+        "Les paroles défileront automatiquement à vitesse constante",
         "Cliquez sur 'Pause' pour arrêter le défilement",
-        "Vous pouvez ajuster la vitesse dans les paramètres"
+        "Le défilement s'arrête automatiquement après 60 secondes"
+      ]
+    },
+    {
+      icon: Settings,
+      title: "Transposition et Audio",
+      steps: [
+        "Ouvrez un cantique avec une tonalité",
+        "Cliquez sur l'icône ⚙️ pour ouvrir les contrôles avancés",
+        "Utilisez ♭ et ♯ pour transposer la tonalité (±6 demi-tons)",
+        "Écoutez la tonalité avec le bouton 'Tonalité'",
+        "Si disponible, écoutez l'audio avec le bouton 🎧",
+        "Ajustez la vitesse de lecture (0.5x à 2x)",
+        "Contrôlez le volume avec le curseur"
       ]
     },
     {
@@ -40,30 +54,9 @@ const Instructions = () => {
       title: "Partager un Cantique",
       steps: [
         "Ouvrez le cantique que vous souhaitez partager",
-        "Cliquez sur le bouton 'Partager'",
+        "Cliquez sur le bouton 'Partager' flottant",
         "Choisissez l'application (WhatsApp, Facebook, etc.)",
         "Le cantique sera partagé avec vos contacts"
-      ]
-    },
-    {
-      icon: Download,
-      title: "Télécharger en PDF",
-      steps: [
-        "Ouvrez un cantique",
-        "Cliquez sur le bouton 'PDF'",
-        "Le cantique sera téléchargé en format PDF",
-        "Vous pourrez l'imprimer ou le sauvegarder"
-      ]
-    },
-    {
-      icon: MapPin,
-      title: "Trouver une Église",
-      steps: [
-        "Cliquez sur 'Trouver une église' dans le menu",
-        "Utilisez la recherche pour filtrer par ville",
-        "Consultez les adresses et horaires des cultes",
-        "Cliquez sur 'Itinéraire' pour ouvrir Google Maps",
-        "Cliquez sur 'Appeler' pour contacter l'église"
       ]
     },
     {
@@ -71,11 +64,11 @@ const Instructions = () => {
       title: "Personnaliser l'Application",
       steps: [
         "Allez dans 'Paramètres' via le menu",
-        "Choisissez votre couleur préférée",
+        "Choisissez votre thème de couleur (Bleu, Vert, Violet, Rouge, Orange, Rose, Bleu clair)",
         "Activez/Désactivez le mode sombre",
-        "Ajustez la taille de la police",
-        "Changez la langue de l'application",
-        "Activez/Désactivez le son de tonalité"
+        "Ajustez la taille de la police (Petit, Moyen, Grand)",
+        "Changez la langue de l'interface",
+        "Les préférences sont sauvegardées automatiquement"
       ]
     }
   ];
@@ -146,19 +139,35 @@ const Instructions = () => {
               </li>
               <li className="flex items-start gap-3">
                 <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
-                <span>Ajoutez vos cantiques favoris pour un accès rapide pendant les cultes.</span>
+                <span>275 cantiques disponibles en Goun 🇧🇯 et Yoruba 🇳🇬.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
-                <span>Utilisez la recherche rapide en tapant le numéro du cantique directement.</span>
+                <span>Transposition musicale avancée avec sauvegarde par cantique.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
-                <span>Ajustez la taille de police pour une meilleure lisibilité selon vos besoins.</span>
+                <span>Lecture audio des tonalités avec contrôles de vitesse et volume.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
-                <span>Partagez vos cantiques préférés avec vos frères et sœurs en Christ !</span>
+                <span>7 thèmes de couleurs dynamiques + mode sombre adaptatif.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span>Recherche intelligente avec filtres par catégories.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span>Défilement automatique intelligent avec arrêt temporisé.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span>Système de favoris avec synchronisation locale.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span>Interface responsive optimisée mobile et desktop.</span>
               </li>
             </ul>
           </div>
@@ -176,10 +185,26 @@ const Instructions = () => {
               </div>
               <div>
                 <p className="font-semibold text-gray-800 dark:text-white mb-1">
-                  Comment ajouter de nouveaux cantiques ?
+                  Comment changer la langue des cantiques ?
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Les cantiques sont mis à jour régulièrement. Assurez-vous d'avoir la dernière version de l'application.
+                  Allez dans le menu 'Langue des cantiques' pour basculer entre Goun et Yoruba. Les cantiques se mettent à jour automatiquement.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-white mb-1">
+                  Comment utiliser la transposition ?
+                </p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Ouvrez un cantique, cliquez sur ⚙️, puis utilisez ♭ et ♯ pour ajuster la tonalité. Vos préférences sont sauvegardées par cantique.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-white mb-1">
+                  Combien de cantiques sont disponibles ?
+                </p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  L'application contient 275 cantiques en Goun et Yoruba, avec des catégories variées pour tous les moments de culte.
                 </p>
               </div>
               <div>
