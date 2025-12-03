@@ -9,9 +9,19 @@ const Prayers = () => {
 
   useEffect(() => {
     setDevotional(getDailyDevotional());
+    
+    // Écouter les changements de langue
+    const handleStorageChange = (e) => {
+      if (e.key === 'language') {
+        setDevotional(getDailyDevotional());
+      }
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
-  if (!devotional) return <div>Chargement...</div>;
+  if (!devotional) return <div>{t('loading') || 'Loading...'}</div>;
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
@@ -37,7 +47,7 @@ const Prayers = () => {
           >
             <div className="flex items-center gap-2 mb-4">
               <BookOpen size={20} />
-              <h3 className="font-bold uppercase tracking-wide text-sm">Verset du jour</h3>
+              <h3 className="font-bold uppercase tracking-wide text-sm">{t('verseOfDay')}</h3>
             </div>
             <p className="text-lg italic leading-relaxed mb-4">
               "{devotional.verset.texte}"
@@ -56,7 +66,7 @@ const Prayers = () => {
           >
             <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
               <HandHeart className="text-primary-600" size={24} />
-              Exhortation
+              {t('exhortation') || 'Exhortation'}
             </h3>
             <p className="text-gray-700 leading-relaxed">
               {devotional.exhortation}
@@ -70,7 +80,7 @@ const Prayers = () => {
             transition={{ delay: 0.4 }}
             className="bg-white rounded-2xl p-6 shadow-lg"
           >
-            <h3 className="text-xl font-bold text-gray-800 mb-4">🙏 Prière</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-4">🙏 {t('prayer') || 'Prière'}</h3>
             <p className="text-gray-700 leading-relaxed italic mb-4">
               {devotional.priere}
             </p>
