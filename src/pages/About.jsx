@@ -21,7 +21,7 @@ const About = () => {
             </div>
             <h1 className="text-3xl font-bold mb-2">{t('appTitle')}</h1>
             <p style={{ color: 'var(--color-primary-100)' }}>Application officielle de cantiques</p>
-            <p style={{ color: 'var(--color-primary-200)' }} className="text-sm mt-2">Version 2.0.0 - Édition Complète</p>
+            <p style={{ color: 'var(--color-primary-200)' }} className="text-sm mt-2">Version 1.0.0 - Édition Complète</p>
           </div>
 
           {/* À propos de l'église */}
@@ -45,8 +45,8 @@ const About = () => {
               Application moderne de cantiques pour l'église JJC, conçue pour enrichir votre expérience de louange et de prière avec des fonctionnalités avancées.
             </p>
             <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-4">
-              <p className="text-primary-800 dark:text-primary-300 font-medium mb-2">Fonctionnalités disponibles :</p>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+              <p className="text-primary-800 dark:text-white font-medium mb-2">Fonctionnalités disponibles :</p>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-200">
                 <li>✓ 275 cantiques en Goun et Yoruba</li>
                 <li>✓ Recherche instantanée par numéro ou titre</li>
                 <li>✓ Filtrage par catégories thématiques</li>
@@ -91,44 +91,41 @@ const About = () => {
               <Calendar className="text-primary-600" size={24} />
               <h3 className="text-xl font-bold text-gray-800 dark:text-white">Programme du culte</h3>
             </div>
-            <div 
-              className="rounded-lg p-4 mb-4"
-              style={{ backgroundColor: 'var(--color-primary-50)' }}
-            >
-              <h4 
-                className="font-bold text-lg mb-3 flex items-center gap-2"
-                style={{ color: 'var(--color-primary-800)' }}
-              >
+            <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-4 mb-4">
+              <h4 className="font-bold text-lg mb-3 flex items-center gap-2 text-primary-800 dark:text-primary-200">
                 <Church size={18} />
                 Temple de Gankpodo
               </h4>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <Clock size={16} style={{ color: 'var(--color-primary-600)' }} className="mt-1 flex-shrink-0" />
+                  <Clock size={16} className="mt-1 flex-shrink-0 text-primary-600 dark:text-primary-400" />
                   <div>
                     <p className="font-semibold text-gray-800 dark:text-white">Dimanche</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">8h30 - 9h30 : École de dimanche des enfants</p>
+                    <div className="text-sm text-gray-600 dark:text-gray-200 space-y-1">
+                      <p>8h30 - 9h30 : École de dimanche des enfants</p>
+                      <p>9h30 - 12h00/13h00 : Culte</p>
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Clock size={16} style={{ color: 'var(--color-primary-600)' }} className="mt-1 flex-shrink-0" />
+                  <Clock size={16} className="mt-1 flex-shrink-0 text-primary-600 dark:text-primary-400" />
                   <div>
                     <p className="font-semibold text-gray-800 dark:text-white">Lundi</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">6h00 - 7h00 : Prière pour la semaine</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-200">6h00 - 7h00 : Prière pour la semaine</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Clock size={16} style={{ color: 'var(--color-primary-600)' }} className="mt-1 flex-shrink-0" />
+                  <Clock size={16} className="mt-1 flex-shrink-0 text-primary-600 dark:text-primary-400" />
                   <div>
                     <p className="font-semibold text-gray-800 dark:text-white">Mardi</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">20h00 - 21h30 : Étude biblique</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-200">20h00 - 21h30 : Étude biblique</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Clock size={16} style={{ color: 'var(--color-primary-600)' }} className="mt-1 flex-shrink-0" />
+                  <Clock size={16} className="mt-1 flex-shrink-0 text-primary-600 dark:text-primary-400" />
                   <div>
                     <p className="font-semibold text-gray-800 dark:text-white">Vendredi</p>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                    <div className="text-sm text-gray-600 dark:text-gray-200 space-y-1">
                       <p><span className="font-medium">Premier vendredi :</span></p>
                       <p className="ml-4">• 10h00 - 18h00 : Jeûne et prière</p>
                       <p className="ml-4">• 00h00 - 05h00 : Prière de nuit</p>

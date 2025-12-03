@@ -50,7 +50,7 @@ const CantiqueLanguage = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-24">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-24">
       {/* Message de sauvegarde */}
       {showSaved && (
         <motion.div
@@ -86,7 +86,7 @@ const CantiqueLanguage = ({ onNavigate }) => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-2xl p-6 shadow-md"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md"
           >
             <div className="space-y-4">
               {cantiqueLanguages.map(lang => (
@@ -96,25 +96,22 @@ const CantiqueLanguage = ({ onNavigate }) => {
                   onClick={() => setCantiqueLanguage(lang.value)}
                   className={`w-full flex items-center gap-4 p-5 rounded-xl border-2 transition-all ${
                     cantiqueLanguage === lang.value 
-                      ? 'shadow-md' 
-                      : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700'
+                      ? 'shadow-md border-primary-600 bg-primary-50 dark:bg-primary-900/30 dark:border-primary-500' 
+                      : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700 bg-white dark:bg-gray-800'
                   }`}
-                  style={cantiqueLanguage === lang.value ? {
-                    borderColor: 'var(--color-primary-600)',
-                    backgroundColor: 'var(--color-primary-50)'
-                  } : {}}
                 >
                   <div className="text-4xl">{lang.flag}</div>
                   <div className="flex-1 text-left">
                     <h3 
-                      className="text-lg font-bold"
-                      style={{
-                        color: cantiqueLanguage === lang.value ? 'var(--color-primary-700)' : undefined
-                      }}
+                      className={`text-lg font-bold ${
+                        cantiqueLanguage === lang.value 
+                          ? 'text-primary-700 dark:text-primary-300' 
+                          : 'text-gray-800 dark:text-white'
+                      }`}
                     >
                       {lang.name}
                     </h3>
-                    <p className="text-gray-600 text-sm">{lang.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">{lang.description}</p>
                   </div>
                   {cantiqueLanguage === lang.value && (
                     <CheckCircle size={24} style={{ color: 'var(--color-primary-600)' }} />

@@ -120,13 +120,19 @@ const playTonality = () => {
     
     // Défilement simple et continu
     scrollIntervalRef.current = setInterval(() => {
+      // Vérifier si on a atteint la fin de la page
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // Si on est proche de la fin (moins de 100px), arrêter le défilement
+      if (scrollTop + windowHeight >= documentHeight - 100) {
+        stopAutoScroll();
+        return;
+      }
+      
       window.scrollBy(0, 2); // 2px à chaque fois
     }, 80); // Toutes les 80ms
-    
-    // Arrêter automatiquement après 60 secondes
-    scrollTimeoutRef.current = setTimeout(() => {
-      stopAutoScroll();
-    }, 60000);
   };
 
   const stopAutoScroll = () => {

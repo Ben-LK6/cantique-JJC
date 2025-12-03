@@ -83,12 +83,19 @@ const Favorites = ({ onSelectCantique }) => {
                     <div
                       key={cantique.id}
                       onClick={() => onSelectCantique && onSelectCantique(cantique.id)}
-                      className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all cursor-pointer border-l-4 border-primary-600"
+                      className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm hover:shadow-md transition-all cursor-pointer border-l-4"
+                      style={{ borderLeftColor: 'var(--color-primary-600)' }}
                     >
                       <div className="flex items-start gap-4">
                         {/* Numéro */}
-                        <div className="flex-shrink-0 w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center">
-                          <span className="text-primary-700 font-bold text-lg">
+                        <div 
+                          className="flex-shrink-0 w-14 h-14 rounded-lg flex items-center justify-center"
+                          style={{ backgroundColor: 'var(--color-primary-100)' }}
+                        >
+                          <span 
+                            className="font-bold text-lg"
+                            style={{ color: 'var(--color-primary-700)' }}
+                          >
                             {cantique.numero}
                           </span>
                         </div>
@@ -96,13 +103,19 @@ const Favorites = ({ onSelectCantique }) => {
                         {/* Infos */}
                         <div className="flex-1">
                           <div className="flex items-start justify-between gap-2">
-                            <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-1">
                               {cantique.titre}
                             </h3>
                             <Heart size={18} className="text-red-500 flex-shrink-0" fill="currentColor" />
                           </div>
                           <div className="flex items-center gap-2 text-sm text-gray-500">
-                            <span className="px-2 py-1 bg-primary-50 text-primary-700 rounded">
+                            <span 
+                              className="px-2 py-1 rounded"
+                              style={{ 
+                                backgroundColor: 'var(--color-primary-50)', 
+                                color: 'var(--color-primary-700)' 
+                              }}
+                            >
                               {cantique.categorie}
                             </span>
                             <Music size={14} />
@@ -131,7 +144,8 @@ const Favorites = ({ onSelectCantique }) => {
                   {favoritePrayers.map(prayer => (
                     <div
                       key={prayer.id}
-                      className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all cursor-pointer border-l-4 border-primary-600"
+                      className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm hover:shadow-md transition-all cursor-pointer border-l-4"
+                      style={{ borderLeftColor: 'var(--color-primary-600)' }}
                     >
                       <div className="flex items-start gap-4">
                         {/* Icône */}

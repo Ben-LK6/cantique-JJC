@@ -3,6 +3,7 @@ import { getRandomVerset } from '../data/versetsTranslations';
 // Générer une exhortation et prière basée sur le verset du jour
 export const getDailyDevotional = () => {
   const verset = getRandomVerset();
+  const language = localStorage.getItem('language') || 'fr';
   
   const devotionals = {
     // Thèmes français
@@ -41,49 +42,27 @@ export const getDailyDevotional = () => {
     courage: {
       exhortation: "Le courage chrétien ne vient pas de l'absence de peur, mais de la présence de Dieu avec nous. Quand il dit 'ne crains rien', c'est parce qu'il promet d'être à nos côtés dans chaque épreuve.",
       priere: "Dieu fidèle, quand la peur m'envahit, rappelle-moi ta présence constante. Donne-moi le courage de faire ce qui est juste, de témoigner de ta bonté et de marcher dans tes voies. Amen."
-    },
-    
-    // Thèmes anglais (traductions)
-    praise: {
-      exhortation: "Praise is not just an expression of gratitude, it's an act of faith that proclaims God's greatness. When we praise, we lift our hearts above circumstances and connect to God's eternal joy.",
-      priere: "Lord, may our hearts overflow with praise for your goodness. Help us to praise you not only in good times, but also in trials. May our entire life be a song of praise to your glory. Amen."
-    },
-    love: {
-      exhortation: "God's love for us is unconditional and eternal. He loves us not because of what we do, but because of who we are: his beloved children. This love must transform our hearts and our relationships with others.",
-      priere: "Lord, thank you for your perfect love that casts out all fear. Help us to love as you have loved us, with patience, kindness and forgiveness. May your love overflow from our hearts to those around us. Amen."
-    },
-    strength: {
-      exhortation: "Our strength doesn't come from our own abilities, but from Christ who strengthens us. In our weaknesses, his power is made perfect. Let us lean on him in every challenge of life.",
-      priere: "Almighty God, in my weaknesses, be my strength. When I am discouraged, lift me up. When I doubt my abilities, remind me that I can do all things through Christ who strengthens me. Amen."
-    },
-    trust: {
-      exhortation: "Trust in God is not an emotion, it's a deliberate choice to rely on his faithfulness. Even when we don't understand his ways, we can trust in his perfect character and his love for us.",
-      priere: "Heavenly Father, help me to trust you with all my heart. When paths are uncertain, may your Word be my light. Teach me to lean on you and not on my own understanding. Amen."
-    },
-    joy: {
-      exhortation: "Christian joy is not a fleeting feeling, but a deep reality that comes from our relationship with God. It can coexist with sadness and shine even in darkness.",
-      priere: "God of all comfort, thank you for the joy you place in our hearts. Even in difficult times, help us to rejoice in you. May your joy be our strength today. Amen."
-    },
-    peace: {
-      exhortation: "The peace that God gives us is not like that of the world. It remains even in the midst of life's storms. This peace comes from trusting in his sovereignty and his goodness toward us.",
-      priere: "Prince of peace, calm the storms in our hearts and give us your peace that surpasses all understanding. Help us to be peacemakers in our family, our community and our world. Amen."
-    },
-    priorities: {
-      exhortation: "In a world that pulls us in all directions, God calls us to establish clear priorities. Seeking first his kingdom means aligning our values, decisions and actions with his will.",
-      priere: "Lord, help me to order my life according to your priorities. May I seek first your kingdom and your righteousness. Guide my daily choices so they reflect your heart and your will. Amen."
-    },
-    rest: {
-      exhortation: "The rest that Jesus offers is not just physical, it's rest for the soul. He invites us to lay down our burdens, our worries and our efforts to earn his love. In him, we find true peace.",
-      priere: "Jesus, thank you for inviting me to come to you with all my burdens. Teach me to rest in you, to trust in your grace and to find in you the rest my soul needs. Amen."
-    },
-    courage: {
-      exhortation: "Christian courage doesn't come from the absence of fear, but from God's presence with us. When he says 'do not fear', it's because he promises to be by our side in every trial.",
-      priere: "Faithful God, when fear overwhelms me, remind me of your constant presence. Give me courage to do what is right, to witness to your goodness and to walk in your ways. Amen."
     }
   };
 
-  // Sélectionner une exhortation basée sur le thème exact du verset
-  const devotional = devotionals[verset.theme] || devotionals.confiance;
+  // Mapper les thèmes anglais vers français si nécessaire
+  const themeMapping = {
+    'praise': 'louange',
+    'love': 'amour', 
+    'strength': 'force',
+    'trust': 'confiance',
+    'joy': 'joie',
+    'peace': 'paix',
+    'priorities': 'priorités',
+    'rest': 'repos',
+    'courage': 'courage'
+  };
+  
+  // Utiliser le thème français ou mapper depuis l'anglais
+  const frenchTheme = language === 'fr' ? verset.theme : (themeMapping[verset.theme] || 'confiance');
+  
+  // Sélectionner toujours une exhortation française
+  const devotional = devotionals[frenchTheme] || devotionals.confiance;
 
   return {
     verset,
