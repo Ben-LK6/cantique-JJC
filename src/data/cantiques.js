@@ -3933,7 +3933,7 @@ export const cantiques = [
       "C.M",
       "",
       "1. Hiẹ lẹgọ wa 'whe towe gbe",
-      "Tọ towe wẹ ylọ we",
+      "Tọ towe wẹ yiylọ we",
       "A sọ yin dindanpetọ blo",
       "To ylando towe mẹ",
       "",
