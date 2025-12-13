@@ -33,7 +33,7 @@ const Prayers = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-6"
           >
-            <div className="flex items-center justify-center gap-2 text-primary-600 mb-2">
+            <div className="flex items-center justify-center gap-2 text-pink-600 mb-2">
               <Calendar size={20} />
               <span className="font-medium">{devotional.date}</span>
             </div>
@@ -43,7 +43,7 @@ const Prayers = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-6 shadow-xl text-white mb-6"
+            className="bg-gradient-to-br from-pink-500 to-pink-700 rounded-2xl p-6 shadow-xl text-white mb-6"
           >
             <div className="flex items-center gap-2 mb-4">
               <BookOpen size={20} />
@@ -52,7 +52,7 @@ const Prayers = () => {
             <p className="text-lg italic leading-relaxed mb-4">
               "{devotional.verset.texte}"
             </p>
-            <p className="text-primary-100 font-semibold">
+            <p className="text-pink-100 font-semibold">
               — {devotional.verset.reference}
             </p>
           </motion.div>
@@ -65,7 +65,7 @@ const Prayers = () => {
             className="bg-white rounded-2xl p-6 shadow-lg mb-6"
           >
             <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-              <HandHeart className="text-primary-600" size={24} />
+              <HandHeart className="text-pink-600" size={24} />
               {t('exhortation') || 'Exhortation'}
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -85,7 +85,7 @@ const Prayers = () => {
               {devotional.priere}
             </p>
             <div className="text-center">
-              <span className="text-2xl font-bold text-primary-600">Amen</span>
+              <span className="text-2xl font-bold text-pink-600">Amen</span>
             </div>
           </motion.div>
         </div>

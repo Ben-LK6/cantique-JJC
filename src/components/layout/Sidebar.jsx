@@ -22,17 +22,17 @@ const Sidebar = ({ onNavigate, currentPage }) => {
   return (
     <aside className="h-full w-72 bg-white dark:bg-gray-800 shadow-2xl flex flex-col pt-16 lg:pt-0">
         {/* Logo / Header */}
-        <div className="p-6 bg-gradient-to-br from-primary-600 to-primary-800 dark:from-gray-700 dark:to-gray-900 text-white">
+        <div className="p-6 bg-gradient-to-br from-pink-600 to-pink-800 dark:from-gray-700 dark:to-gray-900 text-white">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-16 h-16 rounded-full overflow-hidden">
               <img src="/images/logo.jpeg" alt="JJC Logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <h1 className="text-xl font-bold">{t('appTitle')}</h1>
-              <p className="text-xs text-primary-100">v1.0.0</p>
+              <p className="text-xs text-pink-100">v1.0.0</p>
             </div>
           </div>
-          <p className="text-sm text-primary-100">{t('cantiques')} & {t('prayers')}</p>
+          <p className="text-sm text-pink-100">{t('cantiques')} & {t('prayers')}</p>
         </div>
 
         {/* Menu Items */}
@@ -44,13 +44,13 @@ const Sidebar = ({ onNavigate, currentPage }) => {
                 key={index}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all mb-2 menu-item ${
                   isActive 
-                    ? 'bg-primary-600 text-white shadow-md' 
-                    : 'text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400'
+                    ? 'bg-pink-600 text-white shadow-md' 
+                    : 'text-gray-700 dark:text-gray-200 hover:bg-pink-50 dark:hover:bg-pink-900/20 hover:text-pink-600 dark:hover:text-pink-400'
                 }`}
                 onClick={() => handleNavigation(item.path)}
               >
-                <item.icon size={20} />
-                <span className="font-medium">{item.label}</span>
+                <item.icon size={20} className={isActive ? 'text-white' : 'text-pink-600 dark:text-pink-400'} />
+                <span className={`font-medium ${isActive ? 'text-white' : ''}`}>{item.label}</span>
               </button>
             );
           })}

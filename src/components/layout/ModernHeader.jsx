@@ -1,6 +1,6 @@
-import { ArrowLeft, Search, Menu } from 'lucide-react';
+import { ArrowLeft, Search, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { t } from '../../data/translations';
 
 const ModernHeader = ({ 
@@ -15,9 +15,43 @@ const ModernHeader = ({
 }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  const popoverRef = useRef(null);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (!isSearchOpen) return;
+    const onDocClick = (e) => {
+      if (!popoverRef.current) return;
+      if (!popoverRef.current.contains(e.target)) {
+        setIsSearchOpen(false);
+      }
+    };
+    const onKey = (e) => {
+      if (e.key === 'Escape') setIsSearchOpen(false);
+    };
+    document.addEventListener('mousedown', onDocClick);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDocClick);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [isSearchOpen]);
+
+  useEffect(() => {
+    if (!isSearchOpen) return;
+    // small timeout to ensure popover is mounted before focusing
+    const t = setTimeout(() => {
+      if (inputRef.current) {
+        inputRef.current.focus();
+        // trigger initial search / refresh of list (empty string will show all)
+        onSearch && onSearch(searchValue || '');
+      }
+    }, 60);
+    return () => clearTimeout(t);
+  }, [isSearchOpen]);
   return (
-    <div className="nav-theme sticky top-0 z-50 shadow-lg">
-      <div className="px-4 py-4">
+    <div className="nav-theme fixed top-0 left-0 right-0 z-50 shadow-lg">
+      <div className="px-4 py-4 relative">
         {/* Top Row */}
         <div className="flex items-center justify-between mb-3">
           {/* Left Side */}
@@ -26,7 +60,7 @@ const ModernHeader = ({
               <motion.button
                 whileTap={{ scale: 0.9 }}
                 onClick={onBack}
-                className="p-2 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm"
+                className="header-icon-btn p-0 bg-white/14"
               >
                 <ArrowLeft size={20} className="text-white" />
               </motion.button>
@@ -34,18 +68,20 @@ const ModernHeader = ({
               <motion.button
                 whileTap={{ scale: 0.9 }}
                 onClick={onMenuClick}
-                className="p-2 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm lg:hidden"
+                className="header-icon-btn p-0 bg-gradient-to-br from-pink-500 to-pink-600 lg:hidden"
               >
-                <Menu size={20} className="text-white" />
+                <div className="w-full h-full flex items-center justify-center rounded-lg">
+                  <Menu size={20} className="text-white" strokeWidth={2.2} />
+                </div>
               </motion.button>
             ) : null}
             
             <div className="flex-1">
-              <h1 className="text-xl font-bold text-white flex items-center gap-2">
+              <h1 className="header-font text-2xl md:text-3xl lg:text-4xl font-extrabold text-white flex items-center gap-2 leading-tight">
                 {title}
               </h1>
               {subtitle && (
-                <p className="text-xs text-primary-100">{subtitle}</p>
+                <p className="text-sm text-pink-100 mt-1">{subtitle}</p>
               )}
             </div>
           </div>
@@ -53,11 +89,12 @@ const ModernHeader = ({
           {/* Right Side */}
           {showSearch && (
             <motion.button
-              whileTap={{ scale: 0.9 }}
+              whileTap={{ scale: 0.96 }}
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2.5 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm"
+              className="header-icon-btn bg-white/12"
+              title={t('search')}
             >
-              <Search size={20} className="text-white" strokeWidth={2.5} />
+              <Search size={20} className="text-pink-100" strokeWidth={2.2} />
             </motion.button>
           )}
           
@@ -69,24 +106,45 @@ const ModernHeader = ({
         {/* Search Bar - Apparaît seulement quand l'icône est cliquée */}
         {showSearch && isSearchOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            className="absolute right-4 top-full mt-1 -translate-y-2 z-50 w-72 sm:w-80 max-w-full"
+            ref={popoverRef}
           >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary-300" size={18} />
-              <input
-                type="text"
-                value={searchValue}
-                placeholder={t('easySearch')}
-                className="w-full pl-11 pr-4 py-3 bg-white/10 backdrop-blur-md text-white placeholder-primary-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/20 transition-all border border-white/20"
-                onChange={(e) => {
-                  setSearchValue(e.target.value);
-                  onSearch && onSearch(e.target.value);
-                }}
-                autoFocus
-              />
+            <div className="bg-white rounded-3xl shadow-2xl border border-pink-50 p-1">
+              <div className="flex items-center gap-2 px-3 py-2">
+                <Search className="text-pink-400" size={18} />
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={searchValue}
+                  placeholder={t('easySearch')}
+                  className="flex-1 bg-transparent text-pink-700 placeholder-pink-300 focus:outline-none text-sm"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      onSearch && onSearch(searchValue);
+                    }
+                    if (e.key === 'Escape') {
+                      setIsSearchOpen(false);
+                    }
+                  }}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    setSearchValue(v);
+                    onSearch && onSearch(v);
+                  }}
+                  autoFocus
+                />
+                <button
+                  aria-label="Close search"
+                  onClick={() => setIsSearchOpen(false)}
+                  className="p-1.5 rounded-lg text-pink-500 hover:bg-pink-50"
+                >
+                  <X size={16} />
+                </button>
+              </div>
             </div>
           </motion.div>
         )}

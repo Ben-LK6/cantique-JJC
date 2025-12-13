@@ -1,6 +1,7 @@
 import { Home, Settings, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { t } from '../../data/translations';
+import { createPortal } from 'react-dom';
 
 const BottomNav = ({ currentPage, onNavigate }) => {
   const navItems = [
@@ -9,10 +10,13 @@ const BottomNav = ({ currentPage, onNavigate }) => {
     { icon: Settings, label: t('settings'), path: 'settings' },
   ];
 
-  return (
-    <div className="w-full">
+  const nav = (
+    <div
+      className="fixed bottom-0 left-0 right-0 z-[99999] backdrop-blur-sm border-t border-white/10"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom, 12px)', position: 'fixed' }}
+    >
       <div className="relative">
-        {/* Barre principale - Bleu dégradé */}
+        {/* Barre principale - rose dégradé */}
         <div className="nav-theme shadow-2xl">
           <div className="flex items-center justify-around px-3 py-2 relative">
             {navItems.map((item, index) => {
@@ -39,15 +43,15 @@ const BottomNav = ({ currentPage, onNavigate }) => {
                     }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <Icon 
-                      size={20} 
-                      className={`${isActive ? 'text-white drop-shadow-lg' : 'text-primary-200 dark:text-primary-300'}`}
+                        <Icon 
+                          size={20} 
+                          className={`${isActive ? 'text-white drop-shadow-lg' : 'text-pink-200 dark:text-pink-300'}`}
                       strokeWidth={isActive ? 2.5 : 2}
                     />
                   </motion.div>
-                  <span className={`text-xs mt-1 font-semibold ${
-                    isActive ? 'text-white' : 'text-primary-200 dark:text-primary-300'
-                  }`}>
+                       <span className={`text-xs mt-1 font-semibold ${
+                         isActive ? 'text-white' : 'text-pink-200 dark:text-pink-300'
+                       }`}>
                     {item.label}
                   </span>
                 </motion.button>
@@ -92,6 +96,12 @@ const BottomNav = ({ currentPage, onNavigate }) => {
       </div>
     </div>
   );
+
+  if (typeof document !== 'undefined') {
+    return createPortal(nav, document.body);
+  }
+
+  return nav;
 };
 
 export default BottomNav;

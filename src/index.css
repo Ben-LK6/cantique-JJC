@@ -148,6 +148,18 @@
   --color-primary-800: #075985;
 }
 
+:root[data-theme="indigo"] {
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+}
+
 /* Mode Sombre */
 .dark {
   background-color: #1a1a1a;
@@ -239,18 +251,38 @@
   background: linear-gradient(to bottom right, var(--color-primary-600), var(--color-primary-800)) !important;
 }
 
-/* Navigation avec thème dynamique */
+/* Navigation: fixed rose theme to match app accent */
 .nav-theme {
-  background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-700), var(--color-primary-800)) !important;
+  background: linear-gradient(to right, #f472b6, #ec4899, #db2777) !important;
 }
 
 .nav-button-theme {
-  background: linear-gradient(to bottom right, var(--color-primary-500), var(--color-primary-600), var(--color-primary-700)) !important;
+  background: linear-gradient(to bottom right, #ec4899, #db2777, #be185d) !important;
 }
 
 .nav-pulse-theme {
-  background-color: var(--color-primary-400) !important;
+  background-color: rgba(219, 39, 119, 0.28) !important; /* soft pink pulse */
 }
+
+/* Import a readable, modern display font for headers */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+/* Header font helper */
+.header-font {
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Reusable icon button style for header */
+.header-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.header-icon-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(219,39,119,0.12); }
 
 .text-primary-50 { color: var(--color-primary-50) !important; }
 .text-primary-100 { color: var(--color-primary-100) !important; }
@@ -315,6 +347,24 @@ input, textarea, select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+/* Ensure images and media don't overflow on mobile */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent long words or unbroken strings from overflowing containers */
+* {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Prefer vertical panning, avoid accidental horizontal pan/zoom */
+html, body, #root {
+  touch-action: pan-y;
 }
 
 /* Bottom nav fixe */

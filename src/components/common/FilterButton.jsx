@@ -1,7 +1,7 @@
 import { Filter, X, Check } from 'lucide-react';
 import { useState } from 'react';
 
-const FilterButton = ({ options, selected, onSelect, color = 'primary', label = 'Filtrer' }) => {
+const FilterButton = ({ options, selected, onSelect, color = 'primary', label = 'Filtrer', floating = false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const colorVariants = {
@@ -10,6 +10,12 @@ const FilterButton = ({ options, selected, onSelect, color = 'primary', label = 
       badge: 'bg-white text-primary-600',
       selected: 'bg-primary-600 text-white',
       hover: 'hover:bg-primary-50'
+    },
+    pink: {
+      button: 'from-pink-500 to-pink-600',
+      badge: 'bg-white text-pink-600',
+      selected: 'bg-pink-600 text-white',
+      hover: 'hover:bg-pink-50'
     },
     purple: {
       button: 'from-purple-500 to-purple-600',
@@ -24,28 +30,42 @@ const FilterButton = ({ options, selected, onSelect, color = 'primary', label = 
   return (
     <>
       {/* Bouton Flottant - Position fixe optimisée pour mobile */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 text-sm font-semibold active:opacity-90 transition-opacity"
-        style={{
-          background: 'linear-gradient(to right, var(--color-primary-500), var(--color-primary-600))',
-          touchAction: 'manipulation'
-        }}
-      >
-        <Filter size={16} />
-        <span>{label}</span>
-        {selected !== 'Tous' && selected !== 'Toutes' && (
-          <span
-            className="text-xs px-1.5 py-0.5 rounded-full font-bold"
-            style={{
-              backgroundColor: 'white',
-              color: 'var(--color-primary-600)'
-            }}
+      {floating ? (
+        <div className="flex flex-col items-center">
+          <button
+            onClick={() => setIsOpen(true)}
+            className={`w-20 h-20 rounded-full shadow-xl flex items-center justify-center text-white active:opacity-90 transition-opacity nav-button-theme`}
+            style={{ touchAction: 'manipulation' }}
+            aria-label={label}
           >
-            1
-          </span>
-        )}
-      </button>
+            <Filter size={20} />
+          </button>
+          <span className="text-sm font-semibold text-pink-600 mt-2">{label}</span>
+        </div>
+      ) : (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 text-sm font-semibold active:opacity-90 transition-opacity"
+          style={{
+            background: 'linear-gradient(to right, var(--color-primary-500), var(--color-primary-600))',
+            touchAction: 'manipulation'
+          }}
+        >
+          <Filter size={16} />
+          <span>{label}</span>
+          {selected !== 'Tous' && selected !== 'Toutes' && (
+            <span
+              className="text-xs px-1.5 py-0.5 rounded-full font-bold"
+              style={{
+                backgroundColor: 'white',
+                color: 'var(--color-primary-600)'
+              }}
+            >
+              1
+            </span>
+          )}
+        </button>
+      )}
 
       {/* Overlay + Menu Popup */}
       {isOpen && (

@@ -1,8 +1,8 @@
 import { Music, Volume2 } from 'lucide-react';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { getCantiques, getCategories, clearCache } from '../utils/cantiqueUtils';
 import { getTonalityBadgeClass, getTonalityTextClass } from '../utils/tonalityColors';
-import FilterButton from '../components/common/FilterButton';
+// FilterButton replaced by a compact Home-style categories control on this page
 import { getAudioMetadata } from '../utils/audioUtils';
 import { t } from '../data/translations';
 
@@ -63,17 +63,36 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
   const currentLanguage = localStorage.getItem('cantiqueLanguage') || 'fon';
   const languageLabel = currentLanguage === 'yoruba' ? t('yoruba') + ' 🇳🇬' : t('fon') + ' 🇧🇯';
 
+  const [showCategories, setShowCategories] = useState(false);
+  const categoriesRef = useRef(null);
+
+  // Close categories menu when clicking outside (mobile friendly)
+  useEffect(() => {
+    function handleOutside(e) {
+      if (showCategories && categoriesRef.current && !categoriesRef.current.contains(e.target)) {
+        setShowCategories(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleOutside);
+    document.addEventListener('touchstart', handleOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleOutside);
+      document.removeEventListener('touchstart', handleOutside);
+    };
+  }, [showCategories]);
+
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       {/* Indication de la langue */}
       <div 
         className="px-4 py-2 border-b"
         style={{
-          background: 'linear-gradient(to right, var(--color-primary-50), var(--color-primary-100))',
-          borderColor: 'var(--color-primary-200)'
+          background: 'linear-gradient(to right, #fdf2f8, #fce7f3)',
+          borderColor: '#fbcfe8'
         }}
       >
-        <p className="text-xs font-medium text-center" style={{ color: 'var(--color-primary-700)' }}>
+        <p className="text-xs font-medium text-center" style={{ color: '#be185d' }}>
           🌍 {t('language')}: <span className="font-bold">{languageLabel}</span>
         </p>
       </div>
@@ -83,11 +102,11 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
         <div 
           className="px-4 py-3 border-b"
           style={{
-            backgroundColor: 'var(--color-primary-50)',
-            borderColor: 'var(--color-primary-100)'
+            backgroundColor: '#fdf2f8',
+            borderColor: '#fce7f3'
           }}
         >
-          <p className="text-sm font-medium text-center" style={{ color: 'var(--color-primary-700)' }}>
+          <p className="text-sm font-medium text-center" style={{ color: '#be185d' }}>
             📚 {t('activeFilter')} : <span className="font-bold">{selectedTheme}</span>
           </p>
         </div>
@@ -102,7 +121,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
               {filteredCantiques.length} {filteredCantiques.length > 1 ? t('cantiques_plural') : t('cantique')}
             </p>
             {searchTerm && (
-              <p className="text-sm" style={{ color: 'var(--color-primary-600)' }}>
+              <p className="text-sm" style={{ color: '#db2777' }}>
                 🔍 "{searchTerm}"
               </p>
             )}
@@ -114,13 +133,13 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
                 key={cantique.id}
                 onClick={() => onSelectCantique(cantique.id)}
                 className="bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow cursor-pointer border-l-4"
-                style={{ borderLeftColor: 'var(--color-primary-600)' }}
+                style={{ borderLeftColor: '#db2777' }}
               >
                 {/* Gradient Background subtil */}
-                <div 
+                  <div 
                   className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16 opacity-50"
                   style={{
-                    background: `linear-gradient(to bottom right, var(--color-primary-50), transparent)`
+                    background: `linear-gradient(to bottom right, #fdf2f8, transparent)`
                   }}
                 ></div>
                 
@@ -131,7 +150,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
                     <div className="flex items-center gap-2 mb-2">
                       <span 
                         className="px-2 py-1 text-white rounded-lg text-sm font-bold"
-                        style={{ backgroundColor: 'var(--color-primary-600)' }}
+                        style={{ backgroundColor: '#db2777' }}
                       >
                         {cantique.numero}
                       </span>
@@ -143,8 +162,8 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
                       <span 
                         className="px-3 py-1 rounded-full text-xs font-semibold"
                         style={{
-                          backgroundColor: 'var(--color-primary-50)',
-                          color: 'var(--color-primary-700)'
+                          backgroundColor: '#fdf2f8',
+                          color: '#be185d'
                         }}
                       >
                         {cantique.categorie}
@@ -185,23 +204,46 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
         </div>
       </div>
 
-      {/* Bouton Flottant de Filtre - Position fixe optimisée pour mobile */}
-      <div
-        className="fixed z-50"
-        style={{
-          right: '1rem',
-          bottom: '5rem',
-          // S'assure que le bouton est toujours au-dessus de la barre de navigation
-          // et visible sur tous les téléphones
-        }}
-      >
-        <FilterButton
-          options={allCategories}
-          selected={selectedTheme}
-          onSelect={setSelectedTheme}
-          color="primary"
-          label={t('categories')}
-        />
+      {/* Petit bouton catégories (design identique à l'accueil) */}
+      <div className="fixed z-50" style={{ right: '1rem', bottom: '5rem' }}>
+        <div className="relative" ref={categoriesRef}>
+          <button
+            onClick={() => setShowCategories(!showCategories)}
+            aria-expanded={showCategories}
+            aria-label={t ? t('categories') : 'Catégories'}
+            className="px-3 py-2 rounded-lg bg-white border border-pink-100 shadow-sm flex items-center gap-2 text-pink-700 hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-pink-200"
+          >
+            <span className="text-lg">🎶</span>
+            <span className="text-sm font-semibold">{t ? t('categories') : 'Catégories'}</span>
+            <span className="ml-2 text-pink-500">{showCategories ? '▾' : '▴'}</span>
+          </button>
+
+          {showCategories && (
+            <div
+              className="mt-1 w-60 mx-auto bg-white rounded-2xl shadow-xl border border-pink-50 max-h-64 overflow-auto z-50 p-0 text-sm absolute left-1/2 transform -translate-x-1/2"
+              style={{ bottom: 'calc(100% + 10px)' }}
+            >
+              <div className="divide-y divide-pink-50">
+                {allCategories.map((categorie, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setSelectedTheme(categorie);
+                      setShowCategories(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-4 py-3 text-pink-800 text-left hover:bg-pink-50 focus:bg-pink-50"
+                  >
+                    <div className="w-8 h-8 rounded-md bg-pink-50 flex items-center justify-center text-sm">🎵</div>
+                    <div className="flex-1">
+                      <div className="font-medium">{categorie}</div>
+                    </div>
+                    <div className="text-xs text-pink-400">›</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

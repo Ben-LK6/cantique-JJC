@@ -51,7 +51,7 @@ const Favorites = ({ onSelectCantique }) => {
               onClick={() => setActiveTab('cantiques')}
               className={`flex-1 py-3 rounded-lg font-medium transition-colors ${
                 activeTab === 'cantiques'
-                  ? 'bg-primary-600 text-white'
+                  ? 'bg-pink-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -61,7 +61,7 @@ const Favorites = ({ onSelectCantique }) => {
               onClick={() => setActiveTab('prayers')}
               className={`flex-1 py-3 rounded-lg font-medium transition-colors ${
                 activeTab === 'prayers'
-                  ? 'bg-primary-600 text-white'
+                  ? 'bg-pink-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -84,17 +84,17 @@ const Favorites = ({ onSelectCantique }) => {
                       key={cantique.id}
                       onClick={() => onSelectCantique && onSelectCantique(cantique.id)}
                       className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm hover:shadow-md transition-all cursor-pointer border-l-4"
-                      style={{ borderLeftColor: 'var(--color-primary-600)' }}
+                      style={{ borderLeftColor: '#db2777' }}
                     >
                       <div className="flex items-start gap-4">
                         {/* Numéro */}
                         <div 
                           className="flex-shrink-0 w-14 h-14 rounded-lg flex items-center justify-center"
-                          style={{ backgroundColor: 'var(--color-primary-100)' }}
+                          style={{ backgroundColor: '#fce7f3' }}
                         >
                           <span 
                             className="font-bold text-lg"
-                            style={{ color: 'var(--color-primary-700)' }}
+                            style={{ color: '#be185d' }}
                           >
                             {cantique.numero}
                           </span>
@@ -112,8 +112,8 @@ const Favorites = ({ onSelectCantique }) => {
                             <span 
                               className="px-2 py-1 rounded"
                               style={{ 
-                                backgroundColor: 'var(--color-primary-50)', 
-                                color: 'var(--color-primary-700)' 
+                                backgroundColor: '#fdf2f8', 
+                                color: '#be185d' 
                               }}
                             >
                               {cantique.categorie}

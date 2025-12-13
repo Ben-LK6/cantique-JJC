@@ -37,6 +37,36 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Logo animations removed - static larger logo used on Home */
+
+/* Flower particle animations */
+.flower {
+  position: absolute;
+  opacity: 0;
+  transform-origin: center;
+}
+.flower-1 { animation: flower-pop-1 1100ms cubic-bezier(.2,.8,.2,1) forwards; }
+.flower-2 { animation: flower-pop-2 1250ms cubic-bezier(.2,.8,.2,1) forwards; }
+.flower-3 { animation: flower-pop-3 1400ms cubic-bezier(.2,.8,.2,1) forwards; }
+
+@keyframes flower-pop-1 {
+  0% { transform: translate(0,0) scale(0.6); opacity: 1; }
+  40% { transform: translate(-36px,-46px) scale(1); opacity: 0.9; }
+  100% { transform: translate(-56px,-72px) scale(0.8); opacity: 0; }
+}
+@keyframes flower-pop-2 {
+  0% { transform: translate(0,0) scale(0.5); opacity: 1; }
+  40% { transform: translate(46px,-28px) scale(1); opacity: 0.9; }
+  100% { transform: translate(72px,-44px) scale(0.8); opacity: 0; }
+}
+@keyframes flower-pop-3 {
+  0% { transform: translate(0,0) scale(0.5); opacity: 1; }
+  40% { transform: translate(18px,52px) scale(1); opacity: 0.9; }
+  100% { transform: translate(28px,80px) scale(0.8); opacity: 0; }
+}
+
+/* Heart animation removed */
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

@@ -83,13 +83,13 @@ const Instructions = () => {
           <div 
             className="rounded-2xl p-8 text-white"
             style={{
-              background: 'linear-gradient(to right, var(--color-primary-600), var(--color-primary-800))'
+              background: 'linear-gradient(to right, #db2777, #9f1239)'
             }}
           >
             <h1 className="text-2xl lg:text-3xl font-bold mb-3">
               {t('userGuide')}
             </h1>
-            <p style={{ color: 'var(--color-primary-100)' }}>
+            <p style={{ color: '#fce7f3' }}>
               {t('discoverFeatures')}
             </p>
           </div>
@@ -99,9 +99,9 @@ const Instructions = () => {
               <div className="flex items-center gap-3 mb-4">
                 <div 
                   className="w-12 h-12 rounded-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'var(--color-primary-100)' }}
+                  style={{ backgroundColor: '#fce7f3' }}
                 >
-                  <section.icon style={{ color: 'var(--color-primary-700)' }} size={24} />
+                  <section.icon style={{ color: '#be185d' }} size={24} />
                 </div>
                 <h3 className="text-lg font-bold text-gray-800 dark:text-white">{section.title}</h3>
               </div>
@@ -110,7 +110,7 @@ const Instructions = () => {
                   <li key={stepIndex} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
                     <span 
                       className="flex-shrink-0 w-6 h-6 text-white rounded-full flex items-center justify-center text-sm font-semibold"
-                      style={{ backgroundColor: 'var(--color-primary-600)' }}
+                      style={{ backgroundColor: '#db2777' }}
                     >
                       {stepIndex + 1}
                     </span>
@@ -123,50 +123,50 @@ const Instructions = () => {
 
           <div 
             className="rounded-xl p-6"
-            style={{ backgroundColor: 'var(--color-primary-50)' }}
+            style={{ backgroundColor: '#fdf2f8' }}
           >
             <h3 
               className="text-lg font-bold mb-4"
-              style={{ color: 'var(--color-primary-800)' }}
+              style={{ color: '#9f1239' }}
             >💡 {t('tipsAndTricks')}</h3>
             <ul 
               className="space-y-3"
-              style={{ color: 'var(--color-primary-700)' }}
+              style={{ color: '#be185d' }}
             >
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span style={{ color: '#db2777' }} className="mt-1">✓</span>
                 <span>{t('offlineWorks')}</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span style={{ color: '#db2777' }} className="mt-1">✓</span>
                 <span>{t('hymnsAvailable')}</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span style={{ color: '#db2777' }} className="mt-1">✓</span>
                 <span>{t('advancedTransposition')}</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span style={{ color: '#db2777' }} className="mt-1">✓</span>
                 <span>{t('audioPlayback')}</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span style={{ color: '#db2777' }} className="mt-1">✓</span>
                 <span>{t('colorThemes')}</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span style={{ color: '#db2777' }} className="mt-1">✓</span>
                 <span>{t('smartSearch')}</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span style={{ color: '#db2777' }} className="mt-1">✓</span>
                 <span>{t('autoScrollSmart')}</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span style={{ color: '#db2777' }} className="mt-1">✓</span>
                 <span>{t('favoritesSystem')}</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--color-primary-600)' }} className="mt-1">✓</span>
+                <span style={{ color: '#db2777' }} className="mt-1">✓</span>
                 <span>{t('responsiveInterface')}</span>
               </li>
             </ul>
@@ -225,9 +225,9 @@ const Instructions = () => {
             </p>
             <button 
               className="inline-block px-6 py-3 text-white rounded-lg transition-colors"
-              style={{ backgroundColor: 'var(--color-primary-600)' }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--color-primary-700)'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = 'var(--color-primary-600)'}
+              style={{ backgroundColor: '#db2777' }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = '#9f1239'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = '#db2777'}
             >
               {t('contactSupport')}
             </button>

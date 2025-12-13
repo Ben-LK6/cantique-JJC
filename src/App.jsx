@@ -184,12 +184,16 @@ function App() {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
-        {/* Header */}
+        {/* Header (fixed) */}
         {headerConfig && (
-          <ModernHeader 
-            {...headerConfig}
-            onMenuClick={() => setShowSidebar(!showSidebar)}
-          />
+          <>
+            <ModernHeader 
+              {...headerConfig}
+              onMenuClick={() => setShowSidebar(!showSidebar)}
+            />
+            {/* Spacer to account for the fixed header height */}
+            <div className="h-20 lg:h-24" aria-hidden="true" />
+          </>
         )}
 
         {/* Page Content */}
@@ -199,10 +203,11 @@ function App() {
           </div>
         </main>
 
-        {/* Bottom Navigation - Mobile Only - Sur toutes les pages */}
-        <div className="lg:hidden bottom-nav-container safe-area-bottom">
-          <BottomNav currentPage={currentPage} onNavigate={navigateTo} />
-        </div>
+        {/* end of inner flex-1 container */}
+      </div>
+      {/* Bottom Navigation - Mobile Only - moved to root so it's outside scroll containers */}
+      <div className="lg:hidden bottom-nav-container safe-area-bottom">
+        <BottomNav currentPage={currentPage} onNavigate={navigateTo} />
       </div>
     </div>
   );

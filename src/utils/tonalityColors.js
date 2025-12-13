@@ -1,10 +1,10 @@
 // Utilitaire pour associer les couleurs aux tonalités musicales
 export const getTonalityColor = (note) => {
-  // Utiliser le thème actuel pour toutes les tonalités
+  // Utiliser la palette rose comme accent principal pour les tonalités
   return {
-    bgClass: 'bg-primary-500',
-    textClass: 'text-primary-600',
-    color: 'var(--color-primary-500)'
+    bgClass: 'bg-pink-500',
+    textClass: 'text-pink-600',
+    color: '#ec4899'
   };
 };
 
@@ -23,10 +23,10 @@ export const applyTonalityTheme = (note) => {
 
 // Obtenir la couleur d'arrière-plan pour une tonalité
 export const getTonalityBadgeClass = (note) => {
-  return 'bg-primary-500 text-white';
+  return 'bg-pink-500 text-white';
 };
 
 // Obtenir la couleur de texte pour une tonalité
 export const getTonalityTextClass = (note) => {
-  return 'text-primary-600';
+  return 'text-pink-600';
 };
