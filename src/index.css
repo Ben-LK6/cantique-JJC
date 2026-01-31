@@ -1,6 +1,63 @@
+/* Correction visibilité texte input de recherche */
+input[type="text"], input[type="search"] {
+  color: #111 !important;
+  background: #fff !important;
+}
+
+.dark input[type="text"], .dark input[type="search"] {
+  color: #fff !important;
+  background: #222 !important;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Empêcher le zoom et le scroll horizontal sur mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  touch-action: pan-y pinch-zoom;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Empêcher le débordement horizontal */
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Cacher le bottom nav en mode paysage sur mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .bottom-nav-container {
+    display: none;
+  }
+  
+  /* Réduire le padding bottom quand le nav est caché */
+  .pb-nav-compact {
+    padding-bottom: 0 !important;
+  }
+}
+
+/* Animation pour le badge de filtre */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
 
 /* Animations pour les éléments musicaux */
 @keyframes float {

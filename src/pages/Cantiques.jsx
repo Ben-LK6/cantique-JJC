@@ -64,7 +64,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
   const languageLabel = currentLanguage === 'yoruba' ? t('yoruba') + ' 🇳🇬' : t('fon') + ' 🇧🇯';
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-20">
+    <div className="min-h-screen bg-gray-50 pb-20 fixed inset-0 w-full overflow-x-hidden touch-pan-y" style={{maxWidth:'100vw'}}>
       {/* Indication de la langue */}
       <div 
         className="px-4 py-2 border-b"
@@ -95,7 +95,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
 
       {/* Liste des cantiques */}
       <div className="p-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl mx-auto w-full">
           {/* Compteur */}
           <div className="flex items-center justify-between mb-4">
             <p className="text-gray-600 text-sm font-medium">
@@ -108,7 +108,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mx-auto" style={{maxWidth:'100vw',overflowX:'hidden'}}>
             {filteredCantiques.map((cantique, index) => (
               <div
                 key={cantique.id}

@@ -1,5 +1,5 @@
-import { ArrowLeft, Search, Menu } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ArrowLeft, Search, Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { t } from '../../data/translations';
 
@@ -9,11 +9,14 @@ const ModernHeader = ({
   onBack, 
   showSearch, 
   onSearch,
+  onSearchClose,
   showMenu,
   onMenuClick,
-  rightButtons
+  rightButtons,
+  icon
 }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  // Synchroniser la valeur locale avec le searchTerm global si besoin
   const [searchValue, setSearchValue] = useState('');
   return (
     <div className="nav-theme sticky top-0 z-50 shadow-lg">
@@ -42,6 +45,7 @@ const ModernHeader = ({
             
             <div className="flex-1">
               <h1 className="text-xl font-bold text-white flex items-center gap-2">
+                {icon && <span className="text-2xl">{icon}</span>}
                 {title}
               </h1>
               {subtitle && (
@@ -54,10 +58,25 @@ const ModernHeader = ({
           {showSearch && (
             <motion.button
               whileTap={{ scale: 0.9 }}
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2.5 bg-white/20 hover:bg-white/30 rounded-xl transition-colors backdrop-blur-sm"
+              onClick={() => {
+                setIsSearchOpen(!isSearchOpen);
+                if (isSearchOpen) {
+                  setSearchValue('');
+                  onSearch && onSearch('');
+                  onSearchClose && onSearchClose();
+                }
+              }}
+              className={`p-2.5 rounded-xl transition-all backdrop-blur-sm ${
+                isSearchOpen 
+                  ? 'bg-white/30 hover:bg-white/40' 
+                  : 'bg-white/20 hover:bg-white/30'
+              }`}
             >
-              <Search size={20} className="text-white" strokeWidth={2.5} />
+              {isSearchOpen ? (
+                <X size={20} className="text-white" strokeWidth={2.5} />
+              ) : (
+                <Search size={20} className="text-white" strokeWidth={2.5} />
+              )}
             </motion.button>
           )}
           
@@ -67,29 +86,35 @@ const ModernHeader = ({
         </div>
 
         {/* Search Bar - Apparaît seulement quand l'icône est cliquée */}
-        {showSearch && isSearchOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden"
-          >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary-300" size={18} />
-              <input
-                type="text"
-                value={searchValue}
-                placeholder={t('easySearch')}
-                className="w-full pl-11 pr-4 py-3 bg-white/10 backdrop-blur-md text-white placeholder-primary-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/20 transition-all border border-white/20"
-                onChange={(e) => {
-                  setSearchValue(e.target.value);
-                  onSearch && onSearch(e.target.value);
-                }}
-                autoFocus
-              />
-            </div>
-          </motion.div>
-        )}
+        <AnimatePresence>
+          {showSearch && isSearchOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0, marginTop: 0 }}
+              animate={{ opacity: 1, height: 'auto', marginTop: 8 }}
+              exit={{ opacity: 0, height: 0, marginTop: 0 }}
+              transition={{ duration: 0.2, ease: 'easeInOut' }}
+              className="overflow-hidden"
+            >
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60" size={18} />
+                <input
+                  type="text"
+                  value={searchValue}
+                  placeholder={t('easySearch')}
+                  className="w-full pl-11 pr-4 py-3.5 bg-white/95 backdrop-blur-md text-gray-800 placeholder-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-white shadow-lg transition-all border-2 border-white/50"
+                  onChange={e => {
+                    const val = e.target.value;
+                    setSearchValue(val);
+                    onSearch && onSearch(val);
+                  }}
+                  autoFocus
+                  spellCheck={false}
+                  autoComplete="off"
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

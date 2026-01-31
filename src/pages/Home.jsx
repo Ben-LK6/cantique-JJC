@@ -118,7 +118,7 @@ const Home = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="h-full relative overflow-hidden pb-24">
+    <div className="w-full max-w-full relative flex flex-col flex-1" style={{height:'100%', minHeight:'0', maxHeight:'none'}}>
       {/* Fond avec dégradé et éléments musicaux */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-slate-900">
         {/* Clés de sol flottantes avec animations */}
@@ -190,9 +190,10 @@ const Home = ({ onNavigate }) => {
       </div>
       
       {/* Contenu principal */}
-      <div className="relative z-10">
+      {/* Contenu principal qui prend tout l'espace sauf le footer */}
+      <div className="relative z-10 flex flex-col flex-1 w-full max-w-full overflow-hidden" style={{minHeight:0, height:'100%', flex:'1 1 auto'}}>
       {/* Hero Section */}
-      <div className="pt-12 pb-8 px-6 text-center">
+      <div className="pt-4 pb-2 px-2 text-center w-full max-w-full flex-shrink-0">
         {/* Logo */}
         <div className="mb-6">
           <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg">
@@ -212,8 +213,8 @@ const Home = ({ onNavigate }) => {
       </div>
 
       {/* Actions Principales */}
-      <div className="px-6 mb-8">
-        <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+      <div className="px-2 mb-2 w-full max-w-full flex-shrink-0">
+        <div className="grid grid-cols-2 gap-3 w-full max-w-md mx-auto">
           {quickActions.map((action, index) => {
             const Icon = action.icon;
             
@@ -242,7 +243,7 @@ const Home = ({ onNavigate }) => {
 
       {/* Verset du jour - Carte améliorée */}
       {currentVerset && (
-        <div className="mx-6 mb-8">
+        <div className="mx-2 mb-2 flex-shrink-0">
           <div className="relative overflow-hidden">
             {/* Carte avec dégradé basé sur le thème */}
             <div 
@@ -302,20 +303,24 @@ const Home = ({ onNavigate }) => {
       )}
       
       {/* Sélecteur de Catégorie */}
-      <div className="mx-6 relative z-50">
+      <div className="mx-2 relative z-50 flex-shrink-0 mb-0">
         {/* Dropdown des catégories - apparaît au-dessus */}
         {showCategories && (
-          <div className="absolute bottom-full left-0 right-0 mb-2 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden max-h-80 overflow-y-auto z-50">
+          <div 
+            className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 bg-white/80 dark:bg-gray-900/80 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden max-h-72 overflow-y-auto z-50 backdrop-blur-lg animate-fade-in"
+            style={{ minWidth: 240, maxWidth: 340, width: '90%' }}
+          >
             {categoriesList.map((categorie, index) => (
               <button
                 key={index}
                 onClick={() => handleCategorieSelect(categorie.name)}
-                className="w-full px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors text-left border-b border-gray-100 dark:border-gray-700 last:border-b-0"
+                className="w-full px-5 py-3 hover:bg-primary-50/60 dark:hover:bg-primary-900/30 transition-all text-left border-b border-gray-100 dark:border-gray-700 last:border-b-0 focus:outline-none focus:bg-primary-100/60 dark:focus:bg-primary-900/40"
+                style={{transition: 'background 0.2s, box-shadow 0.2s'}}
               >
-                <div className="flex items-center gap-3">
-                  <span className="text-lg">{categorie.emoji}</span>
+                <div className="flex items-center gap-4">
+                  <span className="text-xl">{categorie.emoji}</span>
                   <div>
-                    <h3 className="font-medium text-gray-900 dark:text-white text-sm">{categorie.name}</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-white text-base drop-shadow-sm">{categorie.name}</h3>
                     <p className="text-xs text-gray-500 dark:text-gray-400">{categorie.count} cantique{categorie.count > 1 ? 's' : ''}</p>
                   </div>
                 </div>
@@ -327,15 +332,9 @@ const Home = ({ onNavigate }) => {
         {/* Bouton flèche */}
         <button
           onClick={() => setShowCategories(!showCategories)}
-          className="w-full rounded-xl p-4 shadow-lg text-white transition-all flex items-center justify-center gap-2"
+          className="w-full rounded-xl p-3 shadow-lg text-white transition-all flex items-center justify-center gap-2 min-h-[48px]"
           style={{
             background: 'linear-gradient(to bottom right, var(--color-primary-600), var(--color-primary-700))',
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.background = 'linear-gradient(to bottom right, var(--color-primary-700), var(--color-primary-800))';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.background = 'linear-gradient(to bottom right, var(--color-primary-600), var(--color-primary-700))';
           }}
         >
           <Music size={20} />
@@ -343,6 +342,8 @@ const Home = ({ onNavigate }) => {
           {showCategories ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
         </button>
       </div>
+
+      {/* Correction layout : le contenu occupe tout l'espace au-dessus du footer fixe, sans overflow global */}
       
 
       </div>

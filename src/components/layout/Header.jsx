@@ -11,13 +11,14 @@ const Header = ({ title = t('home'), showSearch = false, onSearch }) => {
 
           {/* Search Bar (si activé) */}
           {showSearch && (
-            <div className="flex-1 max-w-md ml-4">
+            <div className="flex-1 max-w-xs ml-2">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" size={18} />
                 <input
                   type="text"
                   placeholder={t('easySearch')}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full pl-9 pr-4 py-1.5 border border-gray-200 dark:border-gray-600 rounded-full bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-400 transition-all duration-150 text-sm placeholder-gray-400 dark:placeholder-gray-500"
+                  style={{ minHeight: '38px', fontWeight: 500, boxShadow: '0 2px 8px 0 rgba(31,38,135,0.06)' }}
                   onChange={(e) => onSearch && onSearch(e.target.value)}
                 />
               </div>

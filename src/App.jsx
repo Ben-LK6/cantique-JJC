@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import BottomNav from './components/layout/BottomNav';
 import ModernHeader from './components/layout/ModernHeader';
 import Sidebar from './components/layout/Sidebar';
@@ -22,6 +23,13 @@ function App() {
   const [showSidebar, setShowSidebar] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTheme, setSelectedTheme] = useState('');
+
+  // États pour le swipe
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const [slideDirection, setSlideDirection] = useState(0); // -1 = left, 1 = right, 0 = none
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
 
   // localStorage sécurisé
   const safeGetItem = (key, defaultValue) => {
@@ -67,6 +75,99 @@ function App() {
     safeSetItem('theme', theme);
   }, [theme]);
 
+  // Gestion du swipe horizontal pour les pages principales
+  const minSwipeDistance = 80; // Distance minimale pour changer de page
+  const dragThreshold = 30; // Seuil pour commencer à voir l'animation
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+    setIsDragging(false);
+  };
+
+  const onTouchMove = (e) => {
+    const currentTouch = e.targetTouches[0].clientX;
+    setTouchEnd(currentTouch);
+    
+    if (touchStart) {
+      const distance = currentTouch - touchStart;
+      
+      // Vérifier si on est sur une page swipable
+      const swipablePages = ['home', 'cantique-language', 'settings'];
+      const currentIndex = swipablePages.indexOf(currentPage);
+      
+      if (currentIndex === -1) return;
+      
+      // Empêcher le drag si on est aux extrémités
+      if ((currentIndex === 0 && distance > 0) || 
+          (currentIndex === swipablePages.length - 1 && distance < 0)) {
+        return;
+      }
+      
+      // Activer le dragging seulement si on dépasse le seuil
+      if (Math.abs(distance) > dragThreshold) {
+        setIsDragging(true);
+        // Réduire le mouvement pour un effet plus naturel (30% de la distance)
+        setDragOffset(distance * 0.3);
+      }
+    }
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) {
+      setDragOffset(0);
+      setIsDragging(false);
+      return;
+    }
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    // Ordre des pages swipables
+    const swipablePages = ['home', 'cantique-language', 'settings'];
+    const currentIndex = swipablePages.indexOf(currentPage);
+    
+    // Réinitialiser le drag
+    setDragOffset(0);
+    setIsDragging(false);
+    
+    // Ne pas permettre le swipe si on n'est pas sur une page swipable
+    if (currentIndex === -1) return;
+    
+    if (isLeftSwipe && currentIndex < swipablePages.length - 1) {
+      // Swipe vers la gauche -> page suivante
+      setSlideDirection(1);
+      navigateTo(swipablePages[currentIndex + 1]);
+    } else if (isRightSwipe && currentIndex > 0) {
+      // Swipe vers la droite -> page précédente
+      setSlideDirection(-1);
+      navigateTo(swipablePages[currentIndex - 1]);
+    }
+  };
+
+  // Variants pour les animations de page
+  const pageVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? '100%' : '-100%',
+      opacity: 0
+    }),
+    center: {
+      x: 0,
+      opacity: 1
+    },
+    exit: (direction) => ({
+      x: direction > 0 ? '-100%' : '100%',
+      opacity: 0
+    })
+  };
+
+  const pageTransition = {
+    type: 'tween',
+    ease: 'anticipate',
+    duration: 0.4
+  };
+
 
   const navigateTo = (page, themeFilter = '') => {
     setCurrentPage(page);
@@ -89,13 +190,15 @@ function App() {
   const getHeaderConfig = () => {
     switch (currentPage) {
       case 'home':
-        return { title: t('home'), showMenu: true };
+        return { title: t('home'), showMenu: true, icon: '🏠' };
       case 'cantiques':
         return { 
           title: t('cantiques'), 
           showSearch: true, 
           showMenu: true,
-          onSearch: (term) => setSearchTerm(term)
+          onSearch: (term) => setSearchTerm(term),
+          onSearchClose: () => setSearchTerm(''),
+          icon: '📖'
         };
       case 'cantique-detail':
         return null;
@@ -104,22 +207,24 @@ function App() {
           title: t('prayers'), 
           showSearch: true, 
           showMenu: true,
-          onSearch: (term) => setSearchTerm(term)
+          onSearch: (term) => setSearchTerm(term),
+          onSearchClose: () => setSearchTerm(''),
+          icon: '🙏'
         };
       case 'favoris':
-        return { title: t('myFavorites'), showMenu: true };
+        return { title: t('myFavorites'), showMenu: true, icon: '❤️' };
       case 'churches':
-        return { title: t('findChurch'), showSearch: true, showMenu: true };
+        return { title: t('findChurch'), showSearch: true, showMenu: true, icon: '⛪' };
       case 'about':
-        return { title: t('about'), showMenu: true };
+        return { title: t('about'), showMenu: true, icon: 'ℹ️' };
       case 'settings':
-        return { title: t('settings'), showMenu: true };
+        return { title: t('settings'), showMenu: true, icon: '⚙️' };
       case 'cantique-language':
-        return { title: t('cantiqueLanguageTitle'), showMenu: true };
+        return { title: t('cantiqueLanguageTitle'), showMenu: true, icon: '🌍' };
       case 'instructions':
-        return { title: t('instructions'), showMenu: true };
+        return { title: t('instructions'), showMenu: true, icon: '📋' };
       default:
-        return { title: t('appTitle'), showMenu: true };
+        return { title: t('appTitle'), showMenu: true, icon: '🎵' };
     }
   };
 
@@ -193,10 +298,31 @@ function App() {
         )}
 
         {/* Page Content */}
-        <main className="flex-1 overflow-y-auto scroll-container pb-nav-compact lg:pb-0">
-          <div className="min-h-full">
-            {renderPage()}
-          </div>
+        <main 
+          className="flex-1 overflow-hidden relative lg:overflow-y-auto lg:pb-0"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
+          <AnimatePresence mode="wait" custom={slideDirection}>
+            <motion.div
+              key={currentPage}
+              custom={slideDirection}
+              variants={pageVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={pageTransition}
+              style={{
+                x: isDragging ? dragOffset : undefined
+              }}
+              className={`absolute inset-0 scroll-container pb-nav-compact lg:pb-0 lg:relative ${currentPage === 'home' ? 'overflow-y-hidden' : 'overflow-y-auto'}`}
+            >
+              <div className="min-h-full">
+                {renderPage()}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </main>
 
         {/* Bottom Navigation - Mobile Only - Sur toutes les pages */}
