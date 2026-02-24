@@ -1,5 +1,6 @@
 import { Filter, X, Check } from 'lucide-react';
 import { useState, useRef, useLayoutEffect, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 const FilterButton = ({ options = [], selected, onSelect = () => {}, color = 'primary', label = 'Filtrer' }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,22 +11,26 @@ const FilterButton = ({ options = [], selected, onSelect = () => {}, color = 'pr
     if (!btnRef.current) return;
     const rect = btnRef.current.getBoundingClientRect();
     const popupWidth = Math.min(window.innerWidth * 0.9, 340);
-    const left = rect.left + rect.width / 2 - popupWidth / 2;
+    // Anchor popup next to the button: prefer aligning its right edge
+    // with the button's right edge so it appears next to the floating button.
+    let left = rect.left + rect.width - popupWidth;
     const boundedLeft = Math.max(8, Math.min(left, window.innerWidth - popupWidth - 8));
-    const bottom = window.innerHeight - rect.top + 8;
+    // Place the popup just above the button (so it opens near the button at bottom)
+    const bottom = Math.max(8, window.innerHeight - rect.bottom + 8);
 
     setPopupStyle({
       position: 'fixed',
       left: `${boundedLeft}px`,
       bottom: `${bottom}px`,
-      minWidth: 240,
-      maxWidth: 340,
-      width: '90vw',
+      minWidth: 200,
+      maxWidth: popupWidth,
+      width: `${Math.min(320, popupWidth)}px`,
       borderRadius: '1.25rem',
       boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
       background: 'rgba(255,255,255,0.9)',
       backdropFilter: 'blur(10px)',
       WebkitBackdropFilter: 'blur(10px)',
+      touchAction: 'pan-y',
       overflow: 'hidden',
       maxHeight: '44vh',
       border: '1px solid rgba(0,0,0,0.06)',
@@ -85,35 +90,50 @@ const FilterButton = ({ options = [], selected, onSelect = () => {}, color = 'pr
 
       {isOpen && (
         <>
-          <div onClick={() => setIsOpen(false)} className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40" />
+          {typeof document !== 'undefined' ? createPortal(
+            <>
+              <div
+                onPointerDown={(e) => { e.preventDefault(); e.stopPropagation(); setIsOpen(false); }}
+                onTouchStart={(e) => { e.preventDefault(); e.stopPropagation(); setIsOpen(false); }}
+                className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+              />
 
-          <div style={popupStyle} className="animate-fade-in">
-            <div className="flex items-center justify-between px-4 py-2 border-b bg-white/80 dark:bg-gray-900/80">
-              <h3 className="text-base font-bold text-gray-800">{label}</h3>
-              <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-gray-100 rounded-full transition-colors active:bg-gray-200" style={{ touchAction: 'manipulation' }}>
-                <X size={18} />
-              </button>
-            </div>
+              <div
+                style={popupStyle}
+                className="animate-fade-in z-50"
+                onPointerDown={(e) => { e.stopPropagation(); }}
+                onTouchStart={(e) => { e.stopPropagation(); }}
+                onWheel={(e) => { e.stopPropagation(); }}
+              >
+                <div className="flex items-center justify-between px-4 py-2 border-b bg-white/80 dark:bg-gray-900/80">
+                  <h3 className="text-base font-bold text-gray-800">{label}</h3>
+                  <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-gray-100 rounded-full transition-colors active:bg-gray-200" style={{ touchAction: 'manipulation' }}>
+                    <X size={18} />
+                  </button>
+                </div>
 
-            <div className="overflow-y-auto p-2" style={{ maxHeight: 'calc(44vh - 44px)' }}>
-              <div className="space-y-1 pb-2">
-                {options.map((option) => {
-                  const isSelected = selected === option;
-                  return (
-                    <button
-                      key={option}
-                      onClick={() => handleSelect(option)}
-                      className={`w-full flex items-center justify-between px-4 py-2 rounded-xl text-base font-medium transition-all ${isSelected ? 'bg-primary-600 text-white shadow' : 'bg-white/90 dark:bg-gray-900/80 text-gray-900 dark:text-white hover:bg-primary-50/60 dark:hover:bg-primary-900/30'}`}
-                      style={{ touchAction: 'manipulation', transition: 'background 0.18s, box-shadow 0.18s' }}
-                    >
-                      <span className="truncate">{option}</span>
-                      {isSelected && <Check size={16} strokeWidth={3} />}
-                    </button>
-                  );
-                })}
+                <div className="overflow-y-auto p-2" style={{ maxHeight: 'calc(44vh - 44px)', WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}>
+                  <div className="space-y-1 pb-2">
+                    {options.map((option) => {
+                      const isSelected = selected === option;
+                      return (
+                        <button
+                          key={option}
+                          onClick={() => handleSelect(option)}
+                          className={`w-full flex items-center justify-between px-4 py-2 rounded-xl text-base font-medium transition-all ${isSelected ? 'bg-primary-600 text-white shadow' : 'bg-white/90 dark:bg-gray-900/80 text-gray-900 dark:text-white hover:bg-primary-50/60 dark:hover:bg-primary-900/30'}`}
+                          style={{ touchAction: 'manipulation', transition: 'background 0.18s, box-shadow 0.18s' }}
+                        >
+                          <span className="truncate">{option}</span>
+                          {isSelected && <Check size={16} strokeWidth={3} />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </>,
+            document.body
+          ) : null}
         </>
       )}
     </>

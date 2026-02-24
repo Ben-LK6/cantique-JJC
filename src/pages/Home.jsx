@@ -307,8 +307,8 @@ const Home = ({ onNavigate }) => {
         {/* Dropdown des catégories - apparaît au-dessus */}
         {showCategories && (
           <div 
-            className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 bg-white/80 dark:bg-gray-900/80 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden max-h-72 overflow-y-auto z-50 backdrop-blur-lg animate-fade-in"
-            style={{ minWidth: 240, maxWidth: 340, width: '90%' }}
+            className="absolute sm:left-full sm:top-1/2 left-1/2 bottom-full transform -translate-x-1/2 sm:translate-x-0 sm:-translate-y-1/2 sm:ml-3 mb-3 bg-white/80 dark:bg-gray-900/80 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden max-h-72 overflow-y-auto z-50 backdrop-blur-lg animate-fade-in"
+            style={{ minWidth: 200, maxWidth: 340, width: 280 }}
           >
             {categoriesList.map((categorie, index) => (
               <button

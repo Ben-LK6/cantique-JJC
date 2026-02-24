@@ -64,7 +64,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
   const languageLabel = currentLanguage === 'yoruba' ? t('yoruba') + ' 🇳🇬' : t('fon') + ' 🇧🇯';
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-20 fixed inset-0 w-full overflow-x-hidden touch-pan-y" style={{maxWidth:'100vw'}}>
+    <div className="min-h-screen bg-gray-50 pb-20 w-full overflow-x-hidden touch-pan-y" style={{maxWidth:'100vw'}}>
       {/* Indication de la langue */}
       <div 
         className="px-4 py-2 border-b"
@@ -113,7 +113,7 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
               <div
                 key={cantique.id}
                 onClick={() => onSelectCantique(cantique.id)}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow cursor-pointer border-l-4"
+                className="relative bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow cursor-pointer border-l-4"
                 style={{ borderLeftColor: 'var(--color-primary-600)' }}
               >
                 {/* Gradient Background subtil */}
