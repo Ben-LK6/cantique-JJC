@@ -340,21 +340,17 @@ const changeVolume = (newVolume) => {
                       {isAudioPlaying ? <Pause size={14} /> : <Headphones size={14} />}
                     </motion.button>
                     
-                    {audioData && (
-                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
                         {audioPlaybackRate}x
                       </span>
-                    )}
                     
-                    {audioData && (
                       <motion.button
                         whileTap={{ scale: 0.95 }}
-                        onClick={() => setShowAudioControls(!showAudioControls)}
+                        onClick={() => audioData && setShowAudioControls(!showAudioControls)}
                         className="p-1.5 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-300 rounded-lg transition-colors"
                       >
                         <Settings size={14} />
                       </motion.button>
-                    )}
                   </>
                 </div>
                 <AnimatePresence>

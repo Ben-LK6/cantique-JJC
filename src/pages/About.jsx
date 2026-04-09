@@ -142,15 +142,21 @@ const About = () => {
             <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">{t('contactSupport')}</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <Mail size={20} className="text-gray-400 dark:text-gray-500" />
-                <a href="mailto:contact@jjc.org" className="text-primary-600 dark:text-primary-400 hover:underline">
-                  contact@jjc.org
+                <Mail size={20} className="text-primary-500" />
+                <a href="mailto:jesutin@yahoo.fr" className="text-primary-600 dark:text-primary-400 hover:underline">
+                  jesutin@yahoo.fr
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone size={20} className="text-gray-400 dark:text-gray-500" />
-                <a href="tel:+229XXXXXXXX" className="text-primary-600 dark:text-primary-400 hover:underline">
-                  +229 XX XX XX XX
+                <Mail size={20} className="text-primary-500" />
+                <a href="mailto:hjesutin@gmail.com" className="text-primary-600 dark:text-primary-400 hover:underline">
+                  hjesutin@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone size={20} className="text-primary-500" />
+                <a href="tel:+22901973400020" className="text-primary-600 dark:text-primary-400 hover:underline">
+                  (229) 01 97 34 00 20
                 </a>
               </div>
             </div>
