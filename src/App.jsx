@@ -16,6 +16,7 @@ import Instructions from './pages/Instructions';
 import { t } from './data/translations';
 import { useMobileOptimization } from './components/common/MobileOptimized';
 import { initializeTheme, applyThemeColors } from './utils/themeUtils';
+import useWakeLock from './hooks/useWakeLock';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -23,6 +24,8 @@ function App() {
   const [showSidebar, setShowSidebar] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTheme, setSelectedTheme] = useState('');
+  const [navCount, setNavCount] = useState(0);
+  const [history, setHistory] = useState([]);
 
   // États pour le swipe
   const [touchStart, setTouchStart] = useState(null);
@@ -57,6 +60,7 @@ function App() {
 
   // Optimisations mobiles
   useMobileOptimization();
+  useWakeLock();
 
   // Appliquer le thème et mode sombre au chargement
   useEffect(() => {
@@ -149,7 +153,7 @@ function App() {
   // Variants pour les animations de page
   const pageVariants = {
     enter: (direction) => ({
-      x: direction > 0 ? '100%' : '-100%',
+      x: direction < 0 ? '-100%' : '100%',
       opacity: 0
     }),
     center: {
@@ -157,35 +161,45 @@ function App() {
       opacity: 1
     },
     exit: (direction) => ({
-      x: direction > 0 ? '-100%' : '100%',
+      x: direction < 0 ? '100%' : '-100%',
       opacity: 0
     })
   };
 
   const pageTransition = {
     type: 'tween',
-    ease: 'anticipate',
-    duration: 0.4
+    ease: 'easeOut',
+    duration: 0.3
   };
 
 
   const navigateTo = (page, themeFilter = '') => {
+    setHistory(prev => [...prev, { page: currentPage, searchTerm, selectedTheme }]);
     setCurrentPage(page);
     setSelectedCantiqueId(null);
     setShowSidebar(false);
     setSearchTerm('');
     setSelectedTheme(themeFilter);
+    setNavCount(c => c + 1);
   };
 
   const openCantique = (id) => {
+    setHistory(prev => [...prev, { page: currentPage, searchTerm, selectedTheme }]);
     setSelectedCantiqueId(id);
     setCurrentPage('cantique-detail');
   };
 
-  const backToCantiques = () => {
+  const goBack = () => {
+    const prev = history[history.length - 1];
+    if (!prev) return;
+    setHistory(h => h.slice(0, -1));
+    setCurrentPage(prev.page);
+    setSearchTerm(prev.searchTerm);
+    setSelectedTheme(prev.selectedTheme);
     setSelectedCantiqueId(null);
-    setCurrentPage('cantiques');
   };
+
+  const backToCantiques = () => goBack();
 
   const getHeaderConfig = () => {
     switch (currentPage) {
@@ -234,16 +248,16 @@ function App() {
         return <Home onNavigate={navigateTo} />;
       
       case 'cantiques':
-        return <Cantiques onSelectCantique={openCantique} searchTerm={searchTerm} selectedTheme={selectedTheme} />;
+        return <Cantiques key={navCount} onSelectCantique={openCantique} searchTerm={searchTerm} selectedTheme={selectedTheme} />;
       
       case 'cantique-detail':
-        return <CantiqueDetail cantiqueId={selectedCantiqueId} onBack={backToCantiques} />;
+        return <CantiqueDetail cantiqueId={selectedCantiqueId} onBack={goBack} />;
       
       case 'prayers':
         return <Prayers />;
       
       case 'favoris':
-        return <Favorites onSelectCantique={openCantique} />;
+        return <Favorites key={navCount} onSelectCantique={openCantique} />;
       
       case 'churches':
         return <FindChurch />;

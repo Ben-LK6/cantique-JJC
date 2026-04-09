@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { getDailyDevotional } from '../utils/dailyDevotional';
 import { t } from '../data/translations';
+import PageLoader from '../components/common/PageLoader';
 
 const Prayers = () => {
   const [devotional, setDevotional] = useState(null);
@@ -21,7 +22,7 @@ const Prayers = () => {
     return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
-  if (!devotional) return <div>{t('loading') || 'Loading...'}</div>;
+  if (!devotional) return <PageLoader />;
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">

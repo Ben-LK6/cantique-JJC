@@ -35,7 +35,9 @@ useEffect(() => {
   const savedFontSize = localStorage.getItem('fontSize') || 'medium';
   setFontSize(savedFontSize);
   
-  const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+  const currentLang = localStorage.getItem('cantiqueLanguage') || 'fon';
+  const key = `favorites_${currentLang}`;
+  const favorites = JSON.parse(localStorage.getItem(key) || '[]');
   setIsFavorite(favorites.includes(cantiqueId));
 
   // Audio event listeners et effets
@@ -58,7 +60,9 @@ useEffect(() => {
 }, [cantiqueId]);
 
   const toggleFavorite = () => {
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    const currentLang = localStorage.getItem('cantiqueLanguage') || 'fon';
+    const key = `favorites_${currentLang}`;
+    const favorites = JSON.parse(localStorage.getItem(key) || '[]');
     let newFavorites;
     
     if (isFavorite) {
@@ -67,7 +71,7 @@ useEffect(() => {
       newFavorites = [...favorites, cantiqueId];
     }
     
-    localStorage.setItem('favorites', JSON.stringify(newFavorites));
+    localStorage.setItem(key, JSON.stringify(newFavorites));
     setIsFavorite(!isFavorite);
   };
 

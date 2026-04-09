@@ -5,6 +5,7 @@ import { getTonalityBadgeClass, getTonalityTextClass } from '../utils/tonalityCo
 import FilterButton from '../components/common/FilterButton';
 import { getAudioMetadata } from '../utils/audioUtils';
 import { t } from '../data/translations';
+import PageLoader from '../components/common/PageLoader';
 
 const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedTheme }) => {
   const [selectedTheme, setSelectedTheme] = useState(preSelectedTheme || t('all'));
@@ -16,11 +17,13 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
   useEffect(() => {
     const loadCantiques = () => {
       setIsLoading(true);
-      const currentCantiques = getCantiques();
-      const currentCategories = getCategories();
-      setCantiques(currentCantiques);
-      setCategories([t('all'), ...currentCategories]);
-      setIsLoading(false);
+      setTimeout(() => {
+        const currentCantiques = getCantiques();
+        const currentCategories = getCategories();
+        setCantiques(currentCantiques);
+        setCategories([t('all'), ...currentCategories]);
+        setIsLoading(false);
+      }, 0);
     };
 
     loadCantiques();
@@ -62,6 +65,8 @@ const Cantiques = ({ onSelectCantique, searchTerm, selectedTheme: preSelectedThe
 
   const currentLanguage = localStorage.getItem('cantiqueLanguage') || 'fon';
   const languageLabel = currentLanguage === 'yoruba' ? t('yoruba') + ' 🇳🇬' : t('fon') + ' 🇧🇯';
+
+  if (isLoading) return <PageLoader />;
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20 w-full overflow-x-hidden touch-pan-y" style={{maxWidth:'100vw'}}>
