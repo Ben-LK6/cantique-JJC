@@ -148,7 +148,7 @@ const handleShare = () => {
   const texte = `🎵 ${cantique.titre} (N° ${cantique.numero})\n🎼 Tonalité : ${cantique.tonalite?.note || ''} | ${cantique.categorie || ''}\n\n${paroles}\n\n— Cantique JJC 🙏`;
 
   if (navigator.share) {
-    navigator.share({ title: cantique.titre, text: texte })
+    navigator.share({ text: texte })
       .catch(() => copyToClipboard(texte));
   } else {
     copyToClipboard(texte);
