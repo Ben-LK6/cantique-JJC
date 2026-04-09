@@ -10,7 +10,7 @@ import { t } from '../data/translations';
 
 import { getAudioMetadata } from '../utils/audioUtils';
 
-const CantiqueDetail = ({ cantiqueId, onBack }) => {
+const CantiqueDetail = ({ cantiqueId, onBack, scrollContainer }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'medium');
   const [isAutoScrolling, setIsAutoScrolling] = useState(false);
@@ -110,7 +110,6 @@ const playTonality = () => {
 };
 
   const toggleAutoScroll = () => {
-    console.log('Toggle clicked, current state:', isAutoScrolling);
     if (isAutoScrolling) {
       stopAutoScroll();
     } else {
@@ -119,28 +118,20 @@ const playTonality = () => {
   };
 
   const startAutoScroll = () => {
-    console.log('Starting auto scroll');
     setIsAutoScrolling(true);
-    
-    // Défilement simple et continu
     scrollIntervalRef.current = setInterval(() => {
-      // Vérifier si on a atteint la fin de la page
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      
-      // Si on est proche de la fin (moins de 100px), arrêter le défilement
-      if (scrollTop + windowHeight >= documentHeight - 100) {
+      const el = scrollContainer?.current;
+      if (!el) return;
+      const { scrollTop, scrollHeight, clientHeight } = el;
+      if (scrollTop + clientHeight >= scrollHeight - 10) {
         stopAutoScroll();
         return;
       }
-      
-      window.scrollBy(0, 2); // 2px à chaque fois
-    }, 80); // Toutes les 80ms
+      el.scrollBy({ top: 2 });
+    }, 80);
   };
 
   const stopAutoScroll = () => {
-    console.log('Stopping auto scroll');
     setIsAutoScrolling(false);
     if (scrollIntervalRef.current) {
       clearInterval(scrollIntervalRef.current);
@@ -317,7 +308,7 @@ const changeVolume = (newVolume) => {
                   <span className="text-xs font-medium">Tonalité</span>
                 </motion.button>
                 
-                {audioData && (
+                {audioData ? (
                   <>
                     <motion.button
                       whileTap={{ scale: 0.95 }}
@@ -343,6 +334,10 @@ const changeVolume = (newVolume) => {
                       <Settings size={14} />
                     </motion.button>
                   </>
+                ) : (
+                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-500 text-xs font-medium">
+                    😊 Bientôt dispo
+                  </span>
                 )}
               </div>
             </div>

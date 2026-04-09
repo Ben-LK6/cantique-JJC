@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import BottomNav from './components/layout/BottomNav';
 import ModernHeader from './components/layout/ModernHeader';
@@ -26,6 +26,7 @@ function App() {
   const [selectedTheme, setSelectedTheme] = useState('');
   const [navCount, setNavCount] = useState(0);
   const [history, setHistory] = useState([]);
+  const scrollContainerRef = useRef(null);
 
   // États pour le swipe
   const [touchStart, setTouchStart] = useState(null);
@@ -251,7 +252,7 @@ function App() {
         return <Cantiques key={navCount} onSelectCantique={openCantique} searchTerm={searchTerm} selectedTheme={selectedTheme} />;
       
       case 'cantique-detail':
-        return <CantiqueDetail cantiqueId={selectedCantiqueId} onBack={goBack} />;
+        return <CantiqueDetail cantiqueId={selectedCantiqueId} onBack={goBack} scrollContainer={scrollContainerRef} />;
       
       case 'prayers':
         return <Prayers />;
@@ -321,6 +322,7 @@ function App() {
           <AnimatePresence mode="wait" custom={slideDirection}>
             <motion.div
               key={currentPage}
+              ref={scrollContainerRef}
               custom={slideDirection}
               variants={pageVariants}
               initial="enter"
