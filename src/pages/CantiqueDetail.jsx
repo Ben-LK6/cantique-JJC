@@ -127,8 +127,8 @@ const playTonality = () => {
         stopAutoScroll();
         return;
       }
-      el.scrollBy({ top: 2 });
-    }, 80);
+      el.scrollBy({ top: 1 });
+    }, 100);
   };
 
   const stopAutoScroll = () => {
@@ -144,15 +144,28 @@ const playTonality = () => {
   };
 
 const handleShare = () => {
+  const paroles = cantique.paroles?.join('\n') || '';
+  const texte = `🎵 ${cantique.titre} (N° ${cantique.numero})\n🎼 Tonalité : ${cantique.tonalite?.note || ''} | ${cantique.categorie || ''}\n\n${paroles}\n\n— Cantique JJC 🙏`;
+
   if (navigator.share) {
-    navigator.share({
-      title: `${cantique.titre} - Cantique JJC`,
-      text: `Découvrez le cantique n°${cantique.numero} : ${cantique.titre}`,
-      url: window.location.href,
-    }).catch(err => console.log('Erreur de partage:', err));
+    navigator.share({ title: cantique.titre, text: texte })
+      .catch(() => copyToClipboard(texte));
   } else {
-    navigator.clipboard.writeText(window.location.href);
-    alert(t('linkCopied'));
+    copyToClipboard(texte);
+  }
+};
+
+const copyToClipboard = (texte) => {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(texte).then(() => alert('✅ Cantique copié ! Tu peux le coller où tu veux 😊'));
+  } else {
+    const el = document.createElement('textarea');
+    el.value = texte;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert('✅ Cantique copié ! Tu peux le coller où tu veux 😊');
   }
 };
 

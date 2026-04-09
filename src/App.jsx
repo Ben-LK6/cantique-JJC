@@ -211,6 +211,8 @@ function App() {
           title: t('cantiques'), 
           showSearch: true, 
           showMenu: true,
+          showBack: searchTerm !== '' || selectedTheme !== '',
+          onBack: () => navigateTo('cantiques'),
           onSearch: (term) => setSearchTerm(term),
           onSearchClose: () => setSearchTerm(''),
           icon: '📖'
@@ -308,6 +310,7 @@ function App() {
         {headerConfig && (
           <ModernHeader 
             {...headerConfig}
+            onBack={headerConfig.showBack ? headerConfig.onBack : undefined}
             onMenuClick={() => setShowSidebar(!showSidebar)}
           />
         )}
