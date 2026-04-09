@@ -21,6 +21,7 @@ const CantiqueDetail = ({ cantiqueId, onBack, scrollContainer }) => {
   const [semitones, setSemitones] = useState(0);
 
   const [volume, setVolume] = useState(0.7);
+  const [noAudioMsg, setNoAudioMsg] = useState(false);
   const scrollIntervalRef = useRef(null);
   const scrollTimeoutRef = useRef(null);
   const cantiqueAudioRef = useRef(null);
@@ -170,8 +171,12 @@ const copyToClipboard = (texte) => {
 };
 
 const toggleAudioPlay = async () => {
+  if (!audioData) {
+    setNoAudioMsg(true);
+    setTimeout(() => setNoAudioMsg(false), 3000);
+    return;
+  }
   const audio = cantiqueAudioRef.current;
-  if (!audio || !audioData) return;
 
   if (isAudioPlaying) {
     audio.pause();
@@ -311,7 +316,8 @@ const changeVolume = (newVolume) => {
               </div>
               
               {/* Contrôles Audio */}
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col items-end gap-1">
+                <div className="flex items-center gap-2">
                 <motion.button
                   whileTap={{ scale: 0.95 }}
                   onClick={playTonality}
@@ -321,7 +327,6 @@ const changeVolume = (newVolume) => {
                   <span className="text-xs font-medium">Tonalité</span>
                 </motion.button>
                 
-                {audioData ? (
                   <>
                     <motion.button
                       whileTap={{ scale: 0.95 }}
@@ -335,23 +340,35 @@ const changeVolume = (newVolume) => {
                       {isAudioPlaying ? <Pause size={14} /> : <Headphones size={14} />}
                     </motion.button>
                     
-                    <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
-                      {audioPlaybackRate}x
-                    </span>
+                    {audioData && (
+                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+                        {audioPlaybackRate}x
+                      </span>
+                    )}
                     
-                    <motion.button
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => setShowAudioControls(!showAudioControls)}
-                      className="p-1.5 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-300 rounded-lg transition-colors"
-                    >
-                      <Settings size={14} />
-                    </motion.button>
+                    {audioData && (
+                      <motion.button
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => setShowAudioControls(!showAudioControls)}
+                        className="p-1.5 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-300 rounded-lg transition-colors"
+                      >
+                        <Settings size={14} />
+                      </motion.button>
+                    )}
                   </>
-                ) : (
-                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-500 text-xs font-medium">
-                    😊 Bientôt dispo
-                  </span>
-                )}
+                </div>
+                <AnimatePresence>
+                  {noAudioMsg && (
+                    <motion.span
+                      initial={{ opacity: 0, y: -4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0 }}
+                      className="text-xs text-amber-500 font-medium"
+                    >
+                      Pas encore disponible
+                    </motion.span>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
             
